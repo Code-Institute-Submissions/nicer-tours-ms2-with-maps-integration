@@ -1,7 +1,7 @@
 function initMap() {
     
     const map = new google.maps.Map(document.getElementById("map-canvas"), {
-        zoom: 12,
+        zoom: 13,
         center: { lat: 43.70313, lng: 7.26608 },
     });
 
@@ -17,8 +17,9 @@ function initMap() {
         if ($(".attraction").is(":hidden")) {
             $("#prom").show();
         }
-        $(window).scrollTop($("#prom").position().top);
-        map.setZoom(13)
+        $("#prom").get(0).scrollIntoView();
+        map.setZoom(13);
+        map.setCenter({ lat: 43.70313, lng: 7.26608 })
     })
     
 //Place Masséna marker
@@ -32,8 +33,9 @@ function initMap() {
         if ($(".attraction").is(":hidden")) {
             $("#placeMassena").show();
         }
-        $(window).scrollTop($("#placeMassena").position().top);
-        map.setZoom(13)
+        $("#placeMassena").get(0).scrollIntoView();
+        map.setZoom(13);
+        map.setCenter({ lat: 43.70313, lng: 7.26608 })
     })
     
 //Apollo Statue marker
@@ -47,8 +49,9 @@ function initMap() {
         if ($(".attraction").is(":hidden")) {
             $("#apollo").show();
         }
-        $(window).scrollTop($("#apollo").position().top);
-        map.setZoom(13)
+        $("#apollo").get(0).scrollIntoView();
+        map.setZoom(13);
+        map.setCenter({ lat: 43.70313, lng: 7.26608 })
     })
     
 //Opera House marker
@@ -62,8 +65,9 @@ function initMap() {
         if ($(".attraction").is(":hidden")) {
             $("#operaHouse").show();
         }
-        $(window).scrollTop($("#operaHouse").position().top);
-        map.setZoom(13)
+        $("#operaHouse").get(0).scrollIntoView();
+        map.setZoom(13);
+        map.setCenter({ lat: 43.70313, lng: 7.26608 })
     })
 
 //Flower Market marker
@@ -77,8 +81,9 @@ function initMap() {
         if ($(".attraction").is(":hidden")) {
             $("#flowerMarket").show();
         }
-        $(window).scrollTop($("#flowerMarket").position().top);
-        map.setZoom(13)
+        $("#flowerMarket").get(0).scrollIntoView();
+        map.setZoom(13);
+        map.setCenter({ lat: 43.70313, lng: 7.26608 })
     })
 
 //St Reparate Church marker
@@ -92,8 +97,9 @@ function initMap() {
         if ($(".attraction").is(":hidden")) {
             $("#stReparateChurch").show();
         }
-        $(window).scrollTop($("#stReparateChurch").position().top);
-        map.setZoom(13)
+        $("#stReparateChurch").get(0).scrollIntoView();
+        map.setZoom(13);
+        map.setCenter({ lat: 43.70313, lng: 7.26608 })
     })
 
 //Castle Hill View Point marker
@@ -107,8 +113,9 @@ function initMap() {
         if ($(".attraction").is(":hidden")) {
             $("#castleHillView").show();
         }
-        $(window).scrollTop($("#castleHillView").position().top);
-        map.setZoom(13)
+        $("#castleHillView").get(0).scrollIntoView();
+        map.setZoom(13);
+        map.setCenter({ lat: 43.70313, lng: 7.26608 })
     })
 
 //Castle Hill marker
@@ -122,8 +129,9 @@ function initMap() {
         if ($(".attraction").is(":hidden")) {
             $("#castleHill").show();
         }
-        $(window).scrollTop($("#castleHill").position().top);
-        map.setZoom(13)
+        $("#castleHill").get(0).scrollIntoView();
+        map.setZoom(13);
+        map.setCenter({ lat: 43.70313, lng: 7.26608 })
     })
 
 //Rauba-Capeù Memorial marker
@@ -137,8 +145,9 @@ function initMap() {
         if ($(".attraction").is(":hidden")) {
             $("#raubaCapeu").show();
         }
-        $(window).scrollTop($("#raubaCapeu").position().top);
-        map.setZoom(13)
+        $("#raubaCapeu").get(0).scrollIntoView();
+        map.setZoom(13);
+        map.setCenter({ lat: 43.70313, lng: 7.26608 })
     })
 
 //Nice Port marker
@@ -152,8 +161,9 @@ function initMap() {
         if ($(".attraction").is(":hidden")) {
             $("#portLympia").show();
         }
-        $(window).scrollTop($("#portLympia").position().top);
-        map.setZoom(13)
+        $("#portLympia").get(0).scrollIntoView();
+        map.setZoom(13);
+        map.setCenter({ lat: 43.70313, lng: 7.26608 })
     })
 
 //Lazaret Cave marker
@@ -167,8 +177,9 @@ function initMap() {
         if ($(".attraction").is(":hidden")) {
             $("#lazaret").show();
         }
-        $(window).scrollTop($("#lazaret").position().top);
-        map.setZoom(13)
+        $("#lazaret").get(0).scrollIntoView();
+        map.setZoom(13);
+        map.setCenter({ lat: 43.70313, lng: 7.26608 })
     })
 
 //Nice View Point marker
@@ -182,8 +193,9 @@ function initMap() {
         if ($(".attraction").is(":hidden")) {
             $("#bayOfAngelsView").show();
         }
-        $(window).scrollTop($("#bayOfAngelsView").position().top);
-        map.setZoom(13)
+        $("#bayOfAngelsView").get(0).scrollIntoView();
+        map.setZoom(13);
+        map.setCenter({ lat: 43.70313, lng: 7.26608 })
     })
 
 //Arènes de Cimiez marker
@@ -197,8 +209,9 @@ function initMap() {
         if ($(".attraction").is(":hidden")) {
             $("#arenesDeCimiez").show();
         }
-        $(window).scrollTop($("#arenesDeCimiez").position().top);
-        map.setZoom(13)
+        $("#arenesDeCimiez").get(0).scrollIntoView();
+        map.setZoom(13);
+        map.setCenter({ lat: 43.70313, lng: 7.26608 })
     })
 
 //Matisse Museum marker
@@ -212,8 +225,9 @@ function initMap() {
         if ($(".attraction").is(":hidden")) {
             $("#matisse").show();
         }
-        $(window).scrollTop($("#matisse").position().top);
-        map.setZoom(13)
+        $("#matisse").get(0).scrollIntoView();
+        map.setZoom(13);
+        map.setCenter({ lat: 43.70313, lng: 7.26608 })
     });
 
 //Archaeology Museum marker
@@ -227,8 +241,9 @@ function initMap() {
         if ($(".attraction").is(":hidden")) {
             $("#archaeology").show();
         }
-        $(window).scrollTop($("#archaeology").position().top);
-        map.setZoom(13)
+        $("#archaeology").get(0).scrollIntoView();
+        map.setZoom(13);
+        map.setCenter({ lat: 43.70313, lng: 7.26608 })
     })
     
 //Cimiez Monastery marker
@@ -242,13 +257,30 @@ function initMap() {
         if ($(".attraction").is(":hidden")) {
             $("#cimiezMonastery").show();
         }
-        $(window).scrollTop($("#cimiezMonastery").position().top);
-        map.setZoom(13)
+        $("#cimiezMonastery").get(0).scrollIntoView();
+        map.setZoom(13);
+        map.setCenter({ lat: 43.70313, lng: 7.26608 })
+    })
+
+//Notre Dame marker
+    let markerNotreDame = new google.maps.Marker({
+        position: new google.maps.LatLng(43.703672, 7.265758),
+        map: map,
+        title: "Notre-Dame de l’Assomption Basilica"
+    })
+    google.maps.event.addListener(markerNotreDame, "click", function() {
+        $(".output").append(notreDame)
+        if ($(".attraction").is(":hidden")) {
+            $("#notreDame").show();
+        }
+        $("#notreDame").get(0).scrollIntoView();
+        map.setZoom(13);
+        map.setCenter({ lat: 43.70313, lng: 7.26608 })
     })
 
 //Russian Cathedral marker
     let markerRussianCathedral = new google.maps.Marker({
-        position: new google.maps.LatLng(43.705208, 7.253892),
+        position: new google.maps.LatLng(43.703810, 7.253920),
         map: map,
         title: "St. Nicholas Russian Orthodox Cathedral"
     })
@@ -257,8 +289,9 @@ function initMap() {
         if ($(".attraction").is(":hidden")) {
             $("#russianCathedral").show();
         }
-        $(window).scrollTop($("#russianCathedral").position().top);
-        map.setZoom(13)
+        $("#russianCathedral").get(0).scrollIntoView();
+        map.setZoom(13);
+        map.setCenter({ lat: 43.70313, lng: 7.26608 })
     })
 
 //---------------------------------------------------------------------------------------------------- Marker Clustering
@@ -280,6 +313,7 @@ function initMap() {
             markerMatisseMuseum, 
             markerArchaeologyMuseum,
             markerCimiezMonastery,
+            markerNotreDame,
             markerRussianCathedral
         ];
 
@@ -288,11 +322,45 @@ function initMap() {
         "https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m",
     });
 
+    
+
 
 //---------------------------------------------------------------------------------------------------- Information about markers
 
 
 //---------------------------------------------------------------------------------------------------- jQuery
+//-------------------------------------------------- Section Zooms
+//Cimiez zoom
+    $(".btn-cimiez").on("click", function() {
+        map.setZoom(17);
+        map.setCenter({lat: 43.720333, lng: 7.277311})
+    })
+
+//Old Town Zoom
+    $(".btn-old-town").on("click", function() {
+        map.setZoom(16);
+        map.setCenter({lat: 43.695709, lng: 7.268124})
+    })
+
+//Castle Hill Zoom
+    $(".btn-castle-hill").on("click", function() {
+        map.setZoom(17);
+        map.setCenter({lat: 43.694306, lng: 7.281073})
+    })
+
+//Port Lympia Zoom
+    $(".btn-the-port").on("click", function() {
+        map.setZoom(16);
+        map.setCenter({lat: 43.693313, lng: 7.290793})
+    })
+
+//Russian Church Zoom
+    $(".btn-russian-cathedral").on("click", function() {
+        map.setZoom(16);
+        map.setCenter({lat: 43.704697, lng: 7.259707})
+    })
+
+//-------------------------------------------------- Buttons
 // Close Info Box
     $(".poi-close").on("click", function() {
         $(this).parents(".attraction").hide();
@@ -301,11 +369,12 @@ function initMap() {
 // Close all Info boxes and reset map zoom
     $(".poi-close-all").on("click", function() {
         $(".attraction").hide();
-        map.setZoom(12);
+        map.setZoom(13);
+        $("#map-container").get(0).scrollIntoView();
     })
 // Back To Map
     $(".back-to-map").on("click", function() {
-        $(window).scrollTop($("#map-container").position().top);
+        $("#map-container").get(0).scrollIntoView();
     })
 
 }
