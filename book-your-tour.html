@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css">
+    <title>Nicer Tours | Book Now</title>
+</head>
+
+<body>
+    <header class="hero-and-navigation">
+        <!-- Container from Bootstrap -->
+        <div class="container-fluid header-section">
+            <div class="row">
+                <div class="col-sm-12 banner-image home-and-nice-banner">
+                    <!-- Navbar from Bootstrap, heavily modified, including: 
+                    Color chages for active links: Bootstrap Studio https://bootstrapstudio.io/forums/topic/change-color-of-the-active-state-of-nav-link/; 
+                    Hamburger toggle icon color from Bootstrap icons (https://icons.getbootstrap.com/icons/list/) 
+                    Also, see CSS file (.navbar-brand-nicer-tours-active, .navbar-personalised .navbar-nav > .active > a) for more details. -->
+                    <nav class="navbar navbar-expand-lg navbar-personalised bg-personalised">                     
+                        <a class="navbar-brand navbar-brand-nicer-tours" href="index.html"><h1>Nicer Tours</h1></a>                       
+                        <div class="collapse navbar-collapse" id="navbarTogglerNicerTours">
+                            <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link" href="tour-of-nice.html"><h2>Nice</h2></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="tour-of-monaco.html"><h2>Monaco</h2></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="tour-of-st-paul-de-vence.html"><h2>St. Paul de Vence</h2></a>
+                            </li>
+                            </ul>
+                        </div>                        
+                        <button class="navbar-toggler custom-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarTogglerNicerTours" aria-controls="navbarTogglerNicerTours" aria-expanded="false" aria-label="Toggle navigation">
+                            <svg width="1em" height="1em" viewbox="0 0 16 16" class="bi bi-list" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="color:white;">
+                            <path fill-rule="evenodd" d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                            </svg>
+                        </button>
+                    </nav>                   
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="booking-page-and-form">
+        <!-- Container from Bootstrap -->
+        <div class="container-fluid book-now-container">
+            <div class="row justify-content-center">
+                <div class="col-lg-9">
+                    <div class="row">                    
+                        <div class="col-sm-4 enjoy-your-tour-text">
+                            <!--Back button from w3schools.com  https://www.w3schools.com/jsref/met_his_back.asp -->
+                                <button type="button" class="btn btn-light btn-block btn-back" onclick="goBack()">Back</button>                                   
+                                    <p>The whole team here at Nicer Tours wishes you a great tour and a fabulous vacation!</p>
+                                    <p>Before booking your tour, please make sure you have read our Terms and Conditions.</p>
+                                <button type="button" class="btn btn-light d-block btn-t-and-c-modal" data-toggle="modal" data-target="#t-and-cModal">Terms & Conditions</button>
+                        </div>
+
+                        <div class="col-sm-8 book-now book-now-description">
+                            <h2>Book Your Tour:</h2>
+                            <!-- General <form> code from what I've learned so far from the modules. Further elements from as credited below -->
+                            <form class="booking-form">
+                                <input class="book-now-form-name" type="text" name="book-now-name" id="book-now-name" placeholder="Name" required />
+                                <input class="book-now-form-email" type="email" name="book-now-email" id="book-now-email" placeholder="Email" required />
+                                <!-- From w3schools.com https://www.w3schools.com/tags/att_select_required.asp -->
+                                <input class="book-now-form-tel" type="tel" name="tel" id="tel" placeholder="Phone incl. Country Code / WhatsApp" required />
+                                
+                                <div class="tour-tour-date-and-number-of-pax">
+                                    <label for="tour">Choose your tour:</label>
+                                    <select name="tour" id="tour" required>
+                                        <!-- Added empty value to dropdown menu as code validator threw up a warning.
+                                        Code from Stack Overflow
+                                        https://stackoverflow.com/questions/22237658/html5-validation-error-with-select-required-attribute -->
+                                        <option value="">&nbsp;</option>
+                                        <option value="nice">Nice</option>
+                                        <option value="monaco">Monaco</option>
+                                        <option value="st-paul">St.-Paul-de-Vence</option>
+                                    </select>
+                                    <br>
+                                    <label for="date">Tour date:</label>
+                                    <input class="book-now-form-date" type="date" name="date" id="date" required />
+                                    <br>
+                                    <label for="quantity">No. of passengers:</label>
+                                    <input type="number" id="quantity" name="quantity" min="1" max="8">
+                                    <br>
+                                    <label for="discount-code">Discount Code:</label>
+                                    <input class="discount-code" type="text" name="discount-code" id="discount-code" placeholder="Enter code" />
+                                </div>
+
+                                <div class="tour-option">
+                                    <p>Tour Option:</p>
+                                    <label for="guaranteed-departure">Guaranteed Departure</label>
+                                    <input type="radio" id="guaranteed-departure" name="option" value="guaranteed-departure" checked >
+                                    <label for="flexibility">Flexible Departure</label>
+                                    <input type="radio" id="flexibility" name="option" value="flexibility">
+                                    <br>
+                                    <label for="t-and-c"> I accept Nicer Tours <a href="terms-and-conditions.html" data-toggle="modal" data-target="#t-and-cModal">Terms & Conditions</a></label>
+                                    <input type="checkbox" id="t-and-c" name="t-and-c" value="onfirm-t-and-c" required>
+                                    <br> 
+                                </div>
+                                <!-- End of from w3schools.com -->
+
+                                <div class="form-row text-center">
+                                    <div class="col">
+                                        <button type="submit" class="btn btn-light btn-go-to-payment">Proceed To Payment</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="t-and-c-modal">
+        <!-- Modal code from Bootstrap) -->
+        <div class="modal fade" id="t-and-cModal" tabindex="-1" role="dialog" aria-labelledby="t-and-c-Label" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 class="modal-title" id="t-and-c-Label">Terms and Conditions:</h3>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>These are Nicer Tour's terms and conditions.</p>
+                        <p>There will surely be something in them that needs an asterisk.*</p> 
+                        <p>Evenutally, I'll put the Accept T&C checkbox from the form here, and only allow the form to trigger once this has been checked. But at the moment, I don't know how to do that.</p>
+                        <p class="small-text">*Like this!</p>                       
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-light" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+    <!-- Container elements from Bootstrap, Social media icons from Font-Awesome -->
+        <div class="container-fluid footer-section">
+            <div class="row justify-content-center">
+                <div class="col-sm-9">
+                    <div class="slogan">
+                        <h3>The Nicest tours you'll find in Nice!</h3>
+                    </div>
+                    <div class="social-media-icons">
+                        <ul class="list-inline icons">
+                            <li class="list-inline-item">
+                                <a href="https://fr-fr.facebook.com" target="_blank"><i class="fa fa-facebook-f" aria-hidden="true"></i></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="https://twitter.com" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="https://www.instagram.com" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="https://www.tripadvisor.com" target="_blank"><i class="fa fa-tripadvisor" aria-hidden="true"></i></a>
+                            </li>
+                            <!-- Open in WhatsApp link source code from https://www.bybrand.io/docs/en/article/add-whatsapp-call/ -->
+                            <li class="list-inline-item">
+                                <a href="https://api.whatsapp.com/send?phone=+33493555555" target="_blank"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="row footer-sections">
+                        <div class="col-sm-6 company-location">
+                            <h4>Contact Us:</h4>
+                            <!-- I wanted class="address" but found Emmet prompted me for <address>. 
+                            Credit for w3schools (https://www.w3schools.com/tags/tag_address.asp) for proper use. -->
+                            <address>
+                                Nicer Tours<br>
+                                Rue de Nice<br>
+                                06000<br>
+                                NICE <br>
+                                FRANCE<br>
+                                <a href="mailto:nicertours@nicertours.com">nicertours@nicertours.com</a><br>
+                                <a href="tel:+33493555555">(+33) 4 93 55 55 55</a>
+                            </address>
+                        </div>
+                        <div class="col-sm-6 tours-offered">
+                            <h4>Our Tours:</h4>
+                                <ul class="footer-navigation">
+                                    <li class="footer-nav-item">
+                                        <a id="nice-footer" class="footer-nav-link" href="tour-of-nice.html">Nice</a>
+                                    </li>
+                                    <li class="footer-nav-item">
+                                        <a id="monaco-footer" class="footer-nav-link" href="tour-of-monaco.html">Monaco</a>
+                                    </li>
+                                    <li class="footer-nav-item">
+                                        <a id="st-p-footer" class="footer-nav-link" href="tour-of-st-paul-de-vence.html">St. Paul de Vence</a>
+                                    </li>
+                                </ul>
+                            <hr>
+                            <p>We also offer "made to measure" private tours. Contact us for more details.</p>
+                        </div>
+                    </div>
+                    <div class="copyright">Copyright 2020 Justin Sawyer</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!--Back button from w3schools.com  https://www.w3schools.com/jsref/met_his_back.asp -->
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

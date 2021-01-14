@@ -1,0 +1,657 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Poiret+One&display=swap');
+
+/* ----------------------------------------- General */
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Poiret One", sans-serif;
+}
+
+p {
+    font-family: "Open Sans", sans-serif;
+}
+
+a {
+    color: rgba(0,47,167,0.75);
+}
+
+hr {
+    margin-top: 1rem;
+    margin-bottom: 8px;
+    border: 0;
+    border-top: 1px solid transparent;
+}
+
+.btn {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 100;
+}
+
+.btn-light {
+    background-color: rgba(0,47,167,0.75);
+    border: 1px solid white;
+    color: white;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.btn-light:hover {
+    background-color: white;
+    border: 1px solid rgba(0,47,167,0.75);
+    color: rgba(0,47,167,0.75);
+}
+
+.small-text {
+    text-align: right;
+    font-size: 80%;
+    font-weight: 400;
+}
+
+/* ----------------------------------------- Banner image */
+
+.banner-image {
+    background: url("../images/panorama-of-nice.jpg");
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 360px;
+}
+
+.banner-image-monaco-banner {
+    background: url("../images/panorama-of-monaco.jpg");
+    background-position: top;;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 360px;
+}
+
+.banner-image-st-paul-banner {
+    background: url("../images/panorama-of-st-paul-de-vence.jpg");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 360px;
+}
+
+/* ----------------------------------------- Call to Action */
+
+#call-to-action-tour-page {
+        margin-bottom: 16px;
+    }
+
+/* For credit of .call-to-action, .call-to-action-text and @keyframes see lines 62 to 68 of index.html 
+or lines 58 to 64 of tour-of-monaco.html*/
+.call-to-action {
+    border-radius: 4.8px;
+    background-color: rgba(255,147,0,0.75);
+    padding-left: 32px;
+    padding-top: 64px;
+    padding-right: 32px;
+    padding-bottom: 64px;
+    text-align: left;
+}
+
+.call-to-action-title {
+    font-family: "Poiret One", sans-serif;
+    color: white;
+    margin-bottom: 0px;
+}
+
+.call-to-action-text {
+    font-family: "Poiret One", sans-serif;
+    color:rgba(0,47,167,0.75);
+    border-radius: 4.8px;
+    animation: blinker 2s linear infinite;
+    font-size: x-large;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.btn-discount {
+    color: rgba(0,47,167,0.75);
+    background-color: rgba(255,255,255,0.75);
+    border: 0;
+    margin-bottom: 6px;
+    padding: 6px 12px!important;
+    border-radius: 4px!important;
+}
+
+.btn-discount:hover {
+    background-color: rgba(0,47,167,0.75);
+    color: white;
+}
+
+/* ----------------------------------------- Navigation */
+
+.navbar-personalised {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    padding: 0;
+    min-height:52px;
+    overflow: hidden;
+    font-family: "Poiret One", sans-serif;
+    font-size: x-large;
+    background-color:rgba(0,47,167,0.75);
+}
+
+.navbar-brand-nicer-tours {
+    position: absolute; 
+    bottom: 0; 
+    color: white; 
+    padding: 8px 16px;
+}
+
+.navbar-brand-nicer-tours > h1,
+.navbar-brand-nicer-tours > h2 {
+    font-size: 24px;
+    line-height: 36px;
+    margin-bottom: 0;
+}
+
+#navbarTogglerNicerTours {
+    text-align:right;
+}
+
+.nav-link {
+    color: white;
+}
+
+.nav-link a:active {
+    background-color: white;
+    color: rgba(0,47,167,0.75);
+}
+
+.custom-toggler {
+    border-color: rgba(255,255,255,1);
+    margin-right: 16px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    width: 46px;
+    height: 40px;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+.navbar-nav .nav-link {
+    padding-right: 16px;
+    padding-left: 16px;
+}
+
+.navbar-brand-nicer-tours:hover,
+.nav-item > a:hover {
+    color: white;
+}
+
+.navbar-brand-nicer-tours-active {
+    color: rgba(0, 47, 167, 0.75);
+    background-color: white;
+}
+
+/*from https://bootstrapstudio.io/forums/topic/change-color-of-the-active-state-of-nav-link/ */
+.navbar-brand-nicer-tours-active:hover,
+.navbar-brand-nicer-tours-active:focus,
+.navbar-personalised .navbar-nav > .active > a,
+.navbar-personalised .navbar-nav > .active > a:hover,
+.navbar-personalised .navbar-nav > .active > a:focus {
+color: rgba(0, 47, 167, 0.75);
+background-color: white;
+}
+/*end of from https://bootstrapstudio.io/forums/topic/change-color-of-the-active-state-of-nav-link/ */
+
+.navbar-brand-nicer-tours:hover,
+.nav-item > a:hover,
+.nav-item > h2:hover {
+    color: rgba(0,47,167,0.75);
+    background-color: rgba(255,255,255,0.75);
+}
+
+.nav-item h1,
+.nav-item h2 {
+    font-size: 24px;
+    line-height: 36px;
+    margin-bottom: 0;
+}
+
+/* ----------------------------------------- Section main page */
+
+.flex {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.nicer-tours-slogan,
+.promotion,
+.tour-destinations,
+.tour-options,
+.tour-reviews {
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    text-align: center;
+}
+
+.tour-reviews {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.nicer-tours-slogan {
+    padding-top: 16px;
+}
+
+#guaranteed-departure,
+#flexibility {
+    text-align: center;
+}
+
+.guaranteed-departure-text,
+.flexibility-text,
+.guaranteed-departure-option-expanded,
+.flexibility-option-expanded {
+    text-align: justify;
+}
+
+#how-guaranteed-departure-works,
+#how-flexibility-works {
+    margin: 0 16px;
+}
+
+.btn-guaranteed-departure,
+.btn-guaranteed-departure-modal,
+.btn-flexibility,
+.btn-flexibility-modal {
+    width: 100%;
+}
+
+/* ----------------------------------------- Reviews */
+
+/* Carousel from Bootstrap */
+.carousel-inner-reviews-mobile {
+    width: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.card {
+    border: 0;
+}
+
+.card-body {
+    padding: 16px 0;
+}
+
+.img-thumbnail {
+    border: 0;
+    border-radius: 50%;
+}
+
+.review-block {
+    padding: 16px;
+}
+
+.left-review-name,
+.left-review-text {
+    text-align: left;
+}
+
+.right-review-name,
+.right-review-text {
+    text-align: right;
+}
+
+#first-reviewer-photo,
+#third-reviewer-photo {
+    float: right;
+}
+
+#second-reviewer-photo,
+#fourth-reviewer-photo {
+    float: left;
+}
+
+#first-reviewer-photo,
+#second-reviewer-photo {
+    width: 150px;
+}
+
+.first-reviewer-photo-carousel,
+.third-reviewer-photo-carousel {
+    float: right;
+    width: 100px;
+}
+
+.second-reviewer-photo-carousel,
+.fourth-reviewer-photo-carousel {
+    float: left;
+    width: 100px;
+}
+
+/* ----------------------------------------- Section tour pages */
+
+.tour-main-content {
+    padding: 16px;
+}
+
+/*Carousels from Bootstrap */
+.carousel-nice,
+.carousel-monaco,
+.carousel-st-paul {
+    margin-bottom: 16px;
+}
+
+/* Text placement within carousel from Stack Overflow (https://stackoverflow.com/questions/25095260/bootstrap-caption-outside-carousel) */
+.carousel-caption {
+    bottom: -20px;
+}
+
+.carousel-text-description {
+    font-family: "Poiret One", sans-serif; 
+    font-size: 1.25rem;
+}
+
+.description-buttons {
+    padding-bottom: 16px;
+}
+
+.btn-description {
+        color: rgba(0,47,167,0.75);
+        background-color: rgba(255,255,255,0.75);
+        border: 1px solid rgba(0,47,167,0.75);
+        margin-bottom: 6px;
+        padding: 6px 12px!important;
+        border-radius: 4px!important;
+}
+
+.btn-description:active,
+.btn-description:focus {
+    background-color: rgba(0,47,167,0.75)!important;
+    color: white!important;
+    border: 1px solid rgba(0,47,167,0.75)!important;
+    box-shadow: none;
+}
+
+.btn-description:not(:disabled):not(.disabled).active, 
+.btn-description:not(:disabled):not(.disabled):active, 
+.show>.btn-description.dropdown-toggle {
+color: white!important;
+background-color: rgba(0,47,167,0.75)!important;
+border-color: rgba(0,47,167,0.75)!important;
+}
+
+.times-and-availability {
+    width: 50%;
+}
+
+/* ----------------------------------------- Contact Us Modal */
+
+.contact-us-form-name,
+.contact-us-form-email,
+.contact-us-form-message,
+.contact-us-review-form-name,
+.contact-us-review-form-email,
+.contact-us-review-form-message {
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+/* ----------------------------------------- Book now page */
+
+.book-now-container {
+    padding: 16px;
+}
+
+.btn-go-to-payment,
+.btn-t-and-c-modal,
+.btn-back {
+    width: 100%;
+    margin-top: 0;
+}
+
+.btn-t-and-c-modal,
+.btn-back {
+    margin-bottom: 16px;
+}
+
+.booking-form {
+    text-align: center;
+}
+
+/* ----------------------------------------- Book Now Form */
+
+.book-now-form-name,
+.book-now-form-email,
+.book-now-form-tel {
+    width: 100%;
+    margin-bottom: 16px;
+    margin-left: 1px;
+    margin-right: 1px;
+}
+
+.book-now-form-date {
+    width: auto;
+}
+
+.tour-option p {
+    margin-top: 16px;
+    margin-bottom: 0;
+}
+
+/* ----------------------------------------- Review Received page */
+
+.comment-recd {
+    text-align: center;
+}
+
+/* ----------------------------------------- Google Maps Tour of Nice */
+#map-container {
+    margin-bottom: 16px;
+    height: 0;
+    padding: 56.25% 0 0 0;
+    margin: auto;
+    position: relative;
+}
+
+#map-canvas {
+    /*height: 500px;*/
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    transition: width 0.4s ease-in-out;
+}
+
+#map {
+    margin: 0 auto;
+}
+
+.info-container {
+    overflow: hidden;
+    padding-bottom: 32px;
+    padding-left: 16px;
+    padding-right: 16px;
+    display: none;
+}
+
+.poi-title {
+    text-align: center;
+    color: red;
+}
+
+.attraction {
+    /*height: 500px;*/
+    position: relative;
+    margin-bottom: 16px;
+}
+
+.attraction-text {
+    /*height: 500px;*/
+    overflow: auto;
+}
+
+.image-attraction {
+    padding-bottom: 16px;
+}
+
+.image-credit {
+    font-size: x-small;
+}
+
+/*.poi-close,
+.add-to-itin {
+    position: absolute;
+    right: 16px;
+}*/
+
+.poi-close-all {
+    position: relative;
+    margin-top: 32px;
+}
+
+.hideClass {
+    display: none;
+}
+
+@media screen and (max-width: 992px) {
+    .poi-close {
+        text-align: right;
+    }
+
+}
+
+/* ----------------------------------------- Footer */
+
+.footer-section {
+    background-color: rgba(0, 47, 167, 0.75);
+    color:white;
+    padding-top: 16px;
+}
+
+.slogan {
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.company-location,
+.tours-offered {
+    font-weight: 100;
+}
+
+.company-location a,
+.icons a {
+    color: white;
+}
+
+.email-address {
+    padding-bottom: 10px;
+}
+
+.footer-navigation {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.social-media-icons {
+    text-align: center;
+    font-size: 24px;
+    letter-spacing: 5px;
+}
+
+.copyright {
+    text-align: center;
+    font-family: "Open Sans", sans-serif;
+    margin-bottom: 16px;
+    font-weight: 100;
+}
+
+.footer-nav-item > a {
+    color: white;
+}
+
+/* ----------------------------------------- Screen size */
+
+
+@media screen and (max-width: 1023px) {
+    .tour-destinations {
+        order: 1;
+    }
+
+    .promotion {
+        order: 2;
+    }
+
+    .call-to-action {
+        padding-top: 32px;
+        padding-bottom: 32px;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .company-location,
+    .tours-offered,
+    .social-media-icons {
+        text-align: center;
+    }
+
+    .company-location,
+    .tours-offered {
+        padding-bottom: 16px;
+    }
+
+    .call-to-action {
+        padding-top: 32px;
+        padding-bottom: 32px;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .btn-review {
+        width: 100%;
+    }
+
+    .times {
+        font-size: 1.5rem;
+    }
+
+    .price-list {
+        font-size: 1.25rem;
+    }
+
+    .btn-description {
+        color: rgba(0,47,167,0.75);
+        background-color: rgba(255,255,255,0.75);
+        border: 1px solid rgba(0,47,167,0.75);
+        margin-bottom: 6px;
+        padding: 6px 12px!important;
+        border-radius: 4px!important;
+    }
+
+    .btn-description:active,
+    .btn-description:focus {
+        background-color: rgba(0,47,167,0.75)!important;
+        color: white!important;
+        border: 1px solid rgba(0,47,167,0.75)!important;
+        box-shadow: none;
+    }
+
+    .btn-description:not(:disabled):not(.disabled).active, 
+    .btn-description:not(:disabled):not(.disabled):active, 
+    .show>.btn-description.dropdown-toggle {
+    color: white!important;
+    background-color: rgba(0,47,167,0.75)!important;
+    border-color: rgba(0,47,167,0.75)!important;
+    }
+
+}
+
+
+

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css">
+    <title>Nicer Tours | Review Received</title>
+</head>
+
+<body>
+    <header class="hero-and-navigation">
+    <!-- Container from Bootstrap -->
+        <div class="container-fluid header-section">
+            <div class="row">
+                <div class="col-sm-12 banner-image home-and-nice-banner">
+
+                    <!-- Navbar from Bootstrap, heavily modified, including: 
+                    Color chages for active links: Bootstrap Studio https://bootstrapstudio.io/forums/topic/change-color-of-the-active-state-of-nav-link/; 
+                    Hamburger toggle icon color from Bootstrap icons (https://icons.getbootstrap.com/icons/list/) 
+                    Also, see CSS file (.navbar-brand-nicer-tours-active, .navbar-personalised .navbar-nav > .active > a) for more details. -->
+
+                    <nav class="navbar navbar-expand-lg navbar-personalised bg-personalised">
+                        <a class="navbar-brand navbar-brand-nicer-tours" href="index.html"><h1>Nicer Tours</h1></a>                       
+                        <div class="collapse navbar-collapse" id="navbarTogglerNicerTours">
+                            <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="tour-of-nice.html"><h2>Nice <span class="sr-only">(current)</span></h2></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="tour-of-monaco.html"><h2>Monaco</h2></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="tour-of-st-paul-de-vence.html"><h2>St. Paul de Vence</h2></a>
+                            </li>
+                            </ul>
+                        </div>                       
+                        <button class="navbar-toggler custom-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarTogglerNicerTours" aria-controls="navbarTogglerNicerTours" aria-expanded="false" aria-label="Toggle navigation">
+                            <svg width="1em" height="1em" viewbox="0 0 16 16" class="bi bi-list" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="color:white;">
+                            <path fill-rule="evenodd" d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                            </svg>
+                        </button>                            
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="nice-tour-section">
+        <!-- Grid sizing responsive containers, dropdown, accordion, carousel and buttons from Bootstrap -->
+        <div class="container-fluid tour-main-content tour-of-nice-main-content">
+            <div class="row justify-content-center">
+                <div class="col-sm-9">
+                    <h2 class="comment-recd">Your Comment Has Been Received. Thank you!</h2>
+                    <!--Back button from w3schools.com  https://www.w3schools.com/jsref/met_his_back.asp -->
+                    <button type="button" class="btn btn-light btn-back" onclick="goBack()">Go Back To Where You Were</button>
+
+                    <div class="tour-slideshow">
+                        <!-- Text placement within carousel from Stack Overflow (https://stackoverflow.com/questions/25095260/bootstrap-caption-outside-carousel) -->
+                        <div class="carousel slide carousel-fade carousel-nice" data-interval="500" data-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                <img class="d-block w-100" src="assets/images/panorama-of-nice-resized.jpg" alt="Panorama of Nice">
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <p class="carousel-text-description">The Bay of Angels</p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                <img class="d-block w-100" src="assets/images/port-of-fontvieille-monaco.jpg" alt="Port of Fontvieille, Monaco">
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <p class="carousel-text-description">Port of Fontvieille, Monaco</p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                <img class="d-block w-100" src="assets/images/st-paul-panorama-two.jpg" alt="St.Paul-de-Vence seen from the distance">
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <p class="carousel-text-description">St.-Paul-de-Vence from a distance</p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                <img class="d-block w-100" src="assets/images/i-love-nice.jpg" alt="#IloveNice">
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <p class="carousel-text-description">#IloveNice</p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                <img class="d-block w-100" src="assets/images/panorama-of-monaco-resized.jpg" alt="Panorama of Monaco">
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <p class="carousel-text-description">Panorama of Monaco</p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                <img class="d-block w-100" src="assets/images/st-paul-art.jpg" alt="Art of the village of St.-Paul-de-Vence">
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <p class="carousel-text-description">Art of the village of St.-Paul-de-Vence</p>
+                                    </div>
+                                </div>                            
+                                <div class="carousel-item">
+                                <img class="d-block w-100" src="assets/images/promenade-du-paillon-nice.jpg" alt="Promenade du Paillon, Nice">
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <p class="carousel-text-description">Promenade du Paillon</p>
+                                    </div>
+                                </div>                               
+                                <div class="carousel-item">
+                                <img class="d-block w-100" src="assets/images/monaco-yachts.jpg" alt="Yachts of Port Hercule, Monaco">
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <p class="carousel-text-description">Yachts of Port Hercule, Monaco</p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                <img class="d-block w-100" src="assets/images/panorama-of-st-paul-de-vence-resized.jpg" alt="Panorama of St.-Paul-de-Vence">
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <p class="carousel-text-description">Panorama of St.-Paul-de-Vence</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+    <!-- Container elements from Bootstrap, Social media icons from Font-Awesome -->
+        <div class="container-fluid footer-section">
+            <div class="row justify-content-center">
+                <div class="col-sm-9">
+                    <div class="slogan">
+                        <h3>The Nicest tours you'll find in Nice!</h3>
+                    </div>
+                    <div class="social-media-icons">
+                        <ul class="list-inline icons">
+                            <li class="list-inline-item">
+                                <a href="https://fr-fr.facebook.com" target="_blank"><i class="fa fa-facebook-f" aria-hidden="true"></i></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="https://twitter.com" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="https://www.instagram.com" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="https://www.tripadvisor.com" target="_blank"><i class="fa fa-tripadvisor" aria-hidden="true"></i></a>
+                            </li>
+                            <!-- Open in WhatsApp link source code from https://www.bybrand.io/docs/en/article/add-whatsapp-call/ -->
+                            <li class="list-inline-item">
+                                <a href="https://api.whatsapp.com/send?phone=+33493555555" target="_blank"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="row footer-sections">
+                        <div class="col-sm-6 company-location">
+                            <h4>Contact Us:</h4>
+                            <!-- I wanted class="address" but found Emmet prompted me for <address>. 
+                            Credit for w3schools (https://www.w3schools.com/tags/tag_address.asp) for proper use. -->
+                            <address>
+                                Nicer Tours<br>
+                                Rue de Nice<br>
+                                06000<br>
+                                NICE <br>
+                                FRANCE<br>
+                                <a href="mailto:nicertours@nicertours.com">nicertours@nicertours.com</a><br>
+                                <a href="tel:+33493555555">(+33) 4 93 55 55 55</a>
+                            </address>
+                        </div>
+                        <div class="col-sm-6 tours-offered">
+                            <h4>Our Tours:</h4>
+                                <ul class="footer-navigation">
+                                    <li class="footer-nav-item">
+                                        <a id="nice-footer" class="footer-nav-link" href="tour-of-nice.html">Nice</a>
+                                    </li>
+                                    <li class="footer-nav-item">
+                                        <a id="monaco-footer" class="footer-nav-link" href="tour-of-monaco.html">Monaco</a>
+                                    </li>
+                                    <li class="footer-nav-item">
+                                        <a id="st-p-footer" class="footer-nav-link" href="tour-of-st-paul-de-vence.html">St. Paul de Vence</a>
+                                    </li>
+                                </ul>
+                            <hr>
+                            <p>We also offer "made to measure" private tours. Contact us for more details.</p>
+                        </div>
+                    </div>
+                    <div class="copyright">Copyright 2020 Justin Sawyer</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!--Back button from w3schools.com  https://www.w3schools.com/jsref/met_his_back.asp -->
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

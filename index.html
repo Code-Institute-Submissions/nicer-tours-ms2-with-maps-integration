@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css">
+    <title>Nicer Tours | Home</title>
+</head>
+
+<body>
+    <header class="hero-and-navigation">
+        <!-- Container from Bootstrap -->
+        <div class="container-fluid header-section">
+            <div class="row">
+                <div class="col-sm-12 banner-image home-and-nice-banner">                
+                    <!-- Navbar from Bootstrap, heavily modified, including: 
+                    Color chages for active links: Bootstrap Studio https://bootstrapstudio.io/forums/topic/change-color-of-the-active-state-of-nav-link/; 
+                    Hamburger toggle icon color from Bootstrap icons (https://icons.getbootstrap.com/icons/list/) 
+                    Also, see CSS file (.navbar-brand-nicer-tours-active, .navbar-personalised .navbar-nav > .active > a) for more details. -->                    
+                    <nav class="navbar navbar-expand-lg navbar-personalised bg-personalised">                        
+                        <a class="navbar-brand navbar-brand-nicer-tours navbar-brand-nicer-tours-active" href="index.html"><h1>Nicer Tours  <span class="sr-only">(current)</span></h1></a>                       
+                        <div class="collapse navbar-collapse" id="navbarTogglerNicerTours">
+                            <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link" href="tour-of-nice.html"><h2>Nice</h2></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="tour-of-monaco.html"><h2>Monaco</h2></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="tour-of-st-paul-de-vence.html"><h2>St. Paul de Vence</h2></a>
+                            </li>
+                            </ul>
+                        </div>                        
+                        <button class="navbar-toggler custom-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarTogglerNicerTours" aria-controls="navbarTogglerNicerTours" aria-expanded="false" aria-label="Toggle navigation">
+                            <svg width="1em" height="1em" viewbox="0 0 16 16" class="bi bi-list" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="color:white;">
+                            <path fill-rule="evenodd" d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                            </svg>
+                        </button>                                              
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Conatiner elements used for grid sizing, collapse, cards and carousel code from Bootstrap. 
+    Further credit for cards within carousels given in .tour-reviews.-->
+    
+    <main class="container col-lg-9 justify-content-center">
+        <div class="nicer-tours-slogan">
+            <h2>The Nicest tours you'll find in Nice!</h2>
+        </div>
+
+        <div class="cta-and-destinations flex">
+            <div class="home-page-promos">
+                <div class="row">                   
+                    <article class="promotion col-12">
+                        <!-- Call to action features css for .call-to-action-text from https://www.educative.io/edpresso (https://www.educative.io/edpresso/how-to-wrap-text-using-css), 
+                        Popover and script from w3schools.com 
+                        (https://www.w3schools.com/bootstrap/bootstrap_popover.asp#:~:text=To%20create%20a%20popover%2C%20add,popover%22%20attribute%20to%20an%20element.&text=Note%3A%20Popovers%20must%20be%20initialized,call%20the%20popover()%20method),
+                        data-html="true" from http://jsfiddle.net/IrvinDominin/N5WTG/ 
+                        and flashing effect from Stack Overflow (https://stackoverflow.com/questions/16344354/how-to-make-blinking-flashing-text-with-css-3),
+                        specifically this example: http://jsfiddle.net/umz8t/6490/
+                        Making it work on iOS from Stack Overflow (https://stackoverflow.com/questions/34049600/bootstrap-popover-is-not-working-on-ipad-safari) -->
+                        <div class="container call-to-action">
+                            <h2 class="display-4 call-to-action-title">10% Off!</h2>
+                            <p class="call-to-action-text">10% off all Flexibility tours to Monaco booked before September 30.</p>
+                            <a tabindex="0" role="button" class="btn btn-discount" data-placement="bottom" data-original-title="Copy this code on the <a href='book-your-tour.html'>Book Now</a> page" data-toggle="popover" data-trigger="focus" data-html="true" data-content="NICER10MONACO">Discount code</a>       
+                            <a class="btn btn-discount" href="tour-of-monaco.html" role="button">Learn More!</a>
+                            <a class="btn btn-discount" href="book-your-tour.html" role="button">Book Now!</a>
+                        </div>
+                    </article>                   
+                    <article class="tour-destinations col-12">
+                        <h3>Tour Destinations:</h3>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="tour-slideshow">
+                                    <div id="carousel-nice" class="carousel slide carousel-fade" data-interval="6000" data-ride="carousel">
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                            <img class="d-block w-100" src="assets/images/panorama-of-nice-resized.jpg" alt="Panorama of Nice">
+                                            </div>
+                                            <div class="carousel-item">
+                                            <img class="d-block w-100" src="assets/images/i-love-nice.jpg" alt="#IloveNice">
+                                            </div>
+                                            <div class="carousel-item">
+                                            <img class="d-block w-100" src="assets/images/promenade-du-paillon-nice.jpg" alt="Promenade du Paillon, Nice">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <h4 class="card-title">Nice</h4>
+                                        <p class="card-text">Prom Queen</p>
+                                        <a href="tour-of-nice.html" class="btn btn-light btn-block">Tour Nice</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="card tour-slideshow">
+                                    <div id="carousel-monaco" class="carousel slide carousel-fade" data-interval="6000" data-ride="carousel">
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                            <img class="d-block w-100" src="assets/images/port-of-fontvieille-monaco.jpg" alt="Port of Fontvieille, Monaco">
+                                            </div>
+                                            <div class="carousel-item">
+                                            <img class="d-block w-100" src="assets/images/panorama-of-monaco-resized.jpg" alt="Panorama of Monaco">
+                                            </div>
+                                            <div class="carousel-item">
+                                            <img class="d-block w-100" src="assets/images/monaco-yachts.jpg" alt="Yachts of Port Hercule, Monaco">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <h4 class="card-title">Monaco</h4>
+                                        <p class="card-text">Monte-Carlo</p>
+                                        <a href="tour-of-monaco.html" class="btn btn-light btn-block">Tour Monaco</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="card tour-slideshow">
+                                    <div id="carousel-st-paul" class="carousel slide carousel-fade" data-interval="6000" data-ride="carousel">
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                            <img class="d-block w-100" src="assets/images/st-paul-panorama-two.jpg" alt="St.Paul-de-Vence seen from the distance">
+                                            </div>
+                                            <div class="carousel-item">
+                                            <img class="d-block w-100" src="assets/images/st-paul-art.jpg" alt="Art of the village of St.-Paul-de-Vence">
+                                            </div>
+                                            <div class="carousel-item">
+                                            <img class="d-block w-100" src="assets/images/panorama-of-st-paul-de-vence-resized.jpg" alt="Panorama of St.-Paul-de-Vence">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <h4 class="card-title">St. Paul</h4>
+                                        <p class="card-text"><em>Cité</em> of light</p>
+                                        <a href="tour-of-st-paul-de-vence.html" class="btn btn-light btn-block">Tour St. Paul</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+
+        <div class="nicer-tours-tour-options">
+            <div class="row">
+                <article class="tour-options col-12">
+                    <h3>Tour Options:</h3>
+                        <div class="row">
+                        <div class="col-sm-6" id="guaranteed-departure">
+                            <h4>Guaranteed Departure:</h4>
+                            <div class="guaranteed-departure-text">
+                                <p>Ideal for those with little flexibility in their dates or those visiting the area outside of the high season. </p>
+                                <button class="btn btn-light d-none d-md-block btn-guaranteed-departure" type="button" data-toggle="collapse" data-target="#how-guaranteed-departure-works" aria-expanded="false" aria-controls="how-guaranteed-departure-works">
+                                How It Works</button>
+                                <button type="button" class="btn btn-light d-md-none btn-guaranteed-departure-modal" data-toggle="modal" data-target="#guaranteed-departureModal">How It Works</button> 
+                            </div>
+                        </div>
+                        <div class="col-sm-6" id="flexibility">
+                            <h4>Flexible Departure:</h4>
+                            <div class="flexibility-text">
+                                <p>Ideal for those who visit during the high season or for those who have flexibility in their travel dates.</p>
+                                <button class="btn btn-light d-none d-md-block btn-flexibility" type="button" data-toggle="collapse" data-target="#how-flexibility-works" aria-expanded="false" aria-controls="how-flexibility-works">
+                                How It Works</button>
+                                <button type="button" class="btn btn-light d-md-none btn-flexibility-modal" data-toggle="modal" data-target="#flexibilityModal">How It Works</button>
+                            </div>
+                        </div>
+                        <div class="collapse" id="how-guaranteed-departure-works">
+                            <div class="card card-body d-none d-md-block guaranteed-departure-option-expanded">
+                                <p>When you reserve your tour, you’ll be charged the rate advertised here.</p>
+                                <p>Your tour is guaranteed never to be cancelled, because if, on the reserved tour date, the tour does not reach the break-even 
+                                point, you accept paying the difference. 
+                                If the tour has reached the break-even point for its operation, you pay no surcharge.*</p> 
+                                <p>On the day of your tour, you will confirm the number of passengers in total on your tour, agreed with your guide, via an app. Nicer Tours then debit you the difference.</p>
+                                <p class="small-text">*Generally, the break-even point is 4 passengers per tour.</p>
+                            </div>
+                        </div>
+                        <div class="collapse" id="how-flexibility-works">
+                            <div class="card card-body d-none d-md-block flexibility-option-expanded">
+                                <p>When you reserve your tour, you’ll be charged the rate advertised here.</p>
+                                <p>However, if the tour reserved is not fully booked on the day of your reservation you accept the risk that your tour date changes or is cancelled. 
+                                Alternatively, you may be asked to either join another tour or have your tour operated by another company*.</p>
+                                <p class="small-text">*Note that Nicer Tours have many partners, however, we cannot guarantee the quality of our partners’ tours.</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+
+        <div class="nicer-tours-tour-reviews">
+            <article class="tour-reviews">
+                <h3>Tour Reviews:</h3>                
+                <!-- Code from Boostrap, but the idea of putting further elements (like cards, text) comes from https://www.youtube.com/watch?v=WBcCvNASbuc. Applies for both carousels below.-->
+                <!-- Full size reviews carousel -->
+                <div class="full-size-carousel">
+                    <div class="row">
+                        <div class="col-md-12 d-none d-md-block review-block">
+                            <div id="reviews-full-size-carousel" class="carousel slide carousel-fade" data-ride="carousel" data-interval="10000">
+                                <div class="carousel-inner carousel-inner-reviews-full-size">
+                                    <div class="carousel-item active">
+                                        <div class="row">
+                                            <div class="card col-md-6">
+                                                <div class="card-body">
+                                                    <img src="assets/images/gretchen.jpg" alt="first-reviewer-photo" class="img-thumbnail first-reviewer-photo-carousel">
+                                                    <h4 class="card-title left-review-name">Gretchen Gamongan:</h4>
+                                                    <p class="card-text left-review-text"><em>December 2019</em></p>
+                                                    <p class="card-text left-review-text">"I took this tour with my husband, and had a really wonderful day!"</p>
+                                                    <p class="card-text left-review-text">"So glad we chose the Guaranteed Departure option as we visited out of season. As it turned out, we were the only ones on the tour because of this... it was like having our own personalised tour!"</p>
+                                                </div>
+                                            </div>
+                                            <div class="card col-md-6">
+                                                <div class="card-body">
+                                                    <img src="assets/images/fenella.jpg" alt="second-reviewer-photo" class="img-thumbnail second-reviewer-photo-carousel">
+                                                    <h4 class="card-title right-review-name">Fenella Harris:</h4>
+                                                    <p class="card-text right-review-text"><em>August 2020</em></p>
+                                                    <p class="card-text right-review-text">"Our little family loved our full day tour of Monaco."</p>
+                                                    <p class="card-text right-review-text">"We're so glad we chose <em>Nicer Tours</em> as they offer such a professional service."</p>
+                                                    <p class="card-text right-review-text">"Fully recommended!"</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="row">
+                                            <div class="card col-md-6">
+                                                <div class="card-body">
+                                                    <img src="assets/images/yves.jpg" alt="third-reviewer-photo" class="img-thumbnail third-reviewer-photo-carousel">
+                                                    <h4 class="card-title left-review-name">Yves Bertillon:</h4>
+                                                    <p class="card-text left-review-text"><em>June 2018</em></p>
+                                                    <p class="card-text left-review-text">"Merveilleux!!"</p>
+                                                    <p class="card-text left-review-text">"Super heureux que nous avons pris le tour de St.-Paul-de-Vence avec <em>Nicer Tours</em>. Quel endroit, quel guide, quel tour!"</p>
+                                                </div>
+                                            </div>
+                                            <div class="card col-md-6">
+                                                <div class="card-body">
+                                                    <img src="assets/images/antonio.jpg" alt="fourth-reviewer-photo" class="img-thumbnail fourth-reviewer-photo-carousel">
+                                                    <h4 class="card-title right-review-name">Antonio Santiago:</h4>
+                                                    <p class="card-text right-review-text"><em>May 2017</em></p>
+                                                    <p class="card-text right-review-text">"Gran día con <em>Nicer Tours</em>."</p>
+                                                    <p class="card-text right-review-text">"Volveremos el año que viene para otra gira. ¡Nos vemos allí, tal vez!"</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end of full size -->
+
+                <!-- Reviews carousel for mobile and small tablets. -->
+                <div class="smaller-screens-carousel">
+                    <div class="row">
+                        <div class="col-12 d-md-none">
+                            <div id="reviews-mobile-size-carousel" class="carousel slide carousel-fade" data-interval="10000" data-ride="carousel">
+                                <div class="carousel-inner carousel-inner-reviews-mobile">
+                                    <div class="carousel-item active">
+                                        <div class="row">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <img src="assets/images/gretchen.jpg" alt="first-reviewer-photo" class="img-thumbnail first-reviewer-photo-carousel">
+                                                    <h4 class="card-title left-review-name">Gretchen Gamongan:</h4>
+                                                    <p class="card-text left-review-text"><em>December 2019</em></p>
+                                                    <p class="card-text left-review-text">"I took this tour with my husband, and had a really wonderful day!"</p>
+                                                    <p class="card-text left-review-text">"So glad we chose the Guaranteed Departure option as we visited out of season. As it turned out, we were the only ones on the tour because of this... it was like having our own personalised tour!"</p>
+                                                </div>
+                                            </div>  
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="row">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <img src="assets/images/fenella.jpg" alt="second-reviewer-photo" class="img-thumbnail second-reviewer-photo-carousel">
+                                                    <h4 class="card-title right-review-name">Fenella Harris:</h4>
+                                                    <p class="card-text right-review-text"><em>August 2020</em></p>
+                                                    <p class="card-text right-review-text">"Our little family loved our full day tour of Monaco."</p>
+                                                    <p class="card-text right-review-text">"We're so glad we chose <em>Nicer Tours</em> as they offer such a professional service."</p>
+                                                    <p class="card-text right-review-text">"Fully recommended!"</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="row">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <img src="assets/images/yves.jpg" alt="third-reviewer-photo" class="img-thumbnail third-reviewer-photo-carousel">
+                                                    <h4 class="card-title left-review-name">Yves Bertillon:</h4>
+                                                    <p class="card-text left-review-text"><em>June 2018</em></p>
+                                                    <p class="card-text left-review-text">"Merveilleux!!"</p>
+                                                    <p class="card-text left-review-text">"Super heureux que nous avons pris le tour de St.-Paul-de-Vence avec <em>Nicer Tours</em>. Quel endroit, quel guide, quel tour!"</p>
+                                                </div>
+                                            </div>  
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="row">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <img src="assets/images/antonio.jpg" alt="fourth-reviewer-photo" class="img-thumbnail fourth-reviewer-photo-carousel">
+                                                    <h4 class="card-title right-review-name">Antonio Santiago:</h4>
+                                                    <p class="card-text right-review-text"><em>May 2017</em></p>
+                                                    <p class="card-text right-review-text">"Gran día con <em>Nicer Tours</em>."</p>
+                                                    <p class="card-text right-review-text">"Volveremos el año que viene para otra gira. ¡Nos vemos allí, tal vez!"</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end of mobile carousel-->
+
+                <div class="reviews-feedback-text">
+                    <h4>We are always pleased to read feedback about our services!</h4>
+                    <a href="https://fr-fr.facebook.com" target="_blank" class="btn btn-light btn-review">Review us on Facebook <i class="fa fa-facebook-f"></i></a>
+                    <a href="https://www.tripadvisor.com" target="_blank" class="btn btn-light btn-review">Review us on TripAdvisor <i class="fa fa-tripadvisor"></i></a>
+                    <button type="button" class="btn btn-light btn-cta btn-cta-contact btn-review" data-toggle="modal" data-target="#contact-us-review">Send us your review <i class="fa fa-at"></i></button>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <aside class="modals-home-page">
+        <!-- Modals from Bootstrap -->
+        <div class="guaranteed-modal">
+            <div class="modal fade" id="guaranteed-departureModal" tabindex="-1" role="dialog" aria-labelledby="guaranteed-departure-Label" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title" id="guaranteed-departure-Label">The Guaranteed Departure Option</h4>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <p>When you reserve your tour, you’ll be charged the rate advertised here.</p>
+                            <p>Your tour is guaranteed never to be cancelled, because if, on the reserved tour date, the tour does not reach the break-even 
+                            point, you accept paying the difference. 
+                            If the tour has reached the break-even point for its operation, you pay no surcharge.*</p> 
+                            <p>On the day of your tour, you will confirm the number of passengers in total on your tour, agreed with your guide, via an app. Nicer Tours then debit you the difference.</p>
+                            <p class="small-text">*Generally, the break-even point is 4 passengers per tour.</p>                       
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-light" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="flexibility-modal">
+            <div class="modal fade" id="flexibilityModal" tabindex="-1" role="dialog" aria-labelledby="flexibility-Label" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title" id="flexibility-Label">The Flexible Departure Option</h4>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <p>When you reserve your tour, you’ll be charged the rate advertised here.</p>
+                            <p>However, if the tour reserved is not fully booked on the day of your reservation you accept the risk that your tour date changes or is cancelled. 
+                            Alternatively, you may be asked to either join another tour or have your tour operated by another company*.</p>
+                            <p class="small-text">*Note that Nicer Tours have many partners, however, we cannot guarantee the quality of our partners’ tours.</p>                       
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-light" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact-us-modal">
+            <div class="modal fade" id="contact-us-review" tabindex="-1" role="dialog" aria-labelledby="contact-us-review" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title" id="contact-us-reviewLabel">Tell us about your experience:</h4>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <!-- This <form> code is taken from the Rosie Odenkirk resumé project.-->
+                            <form class="contact-us-review-form" method="get" action="review-received.html">
+                                <input class="contact-us-review-form-name" type="text" name="name" id="name" placeholder="Name" required />
+                                <input class="contact-us-review-form-email" type="email" name="email" id="email" placeholder="Email" required />
+                                <textarea class="contact-us-review-form-message" name="message" id="message" rows="5" placeholder="Review Nicer Tours" required></textarea>
+                                <div class="form-row text-center">
+                                    <div class="col">
+                                        <p>Why not include a photo of your group on one of our tours?*</p>
+                                            <!-- w3schools https://www.w3schools.com/html/tryit.asp?filename=tryhtml_input_file -->
+                                            <label for="reviewPhoto">Select your photo:</label>
+                                            <input type="file" id="reviewPhoto" name="reviewPhoto">
+                                            <hr>
+                                        <button type="submit" class="btn btn-light">Send your review</button>
+                                    </div>
+                                </div>
+                                <p class="small-text">*You accept that Nicer Tours may use your photo and comment for publicity reasons, either on this website or elsewhere</p>
+                            </form>
+                            <!-- End of copy from Rosie Odenkirk resumé project -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <footer>
+    <!-- Container elements from Bootstrap, Social media icons from Font-Awesome -->
+        <div class="container-fluid footer-section">
+            <div class="row justify-content-center">
+                <div class="col-sm-9">
+                    <div class="slogan">
+                        <h3>The Nicest tours you'll find in Nice!</h3>
+                    </div>
+                    <div class="social-media-icons">
+                        <ul class="list-inline icons">
+                            <li class="list-inline-item">
+                                <a href="https://fr-fr.facebook.com" target="_blank"><i class="fa fa-facebook-f" aria-hidden="true"></i></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="https://twitter.com" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="https://www.instagram.com" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="https://www.tripadvisor.com" target="_blank"><i class="fa fa-tripadvisor" aria-hidden="true"></i></a>
+                            </li>
+                            <!-- Open in WhatsApp link source code from https://www.bybrand.io/docs/en/article/add-whatsapp-call/ -->
+                            <li class="list-inline-item">
+                                <a href="https://api.whatsapp.com/send?phone=+33493555555" target="_blank"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="row footer-sections">
+                        <div class="col-sm-6 company-location">
+                            <h4>Contact Us:</h4>
+                            <!-- I wanted class="address" but found Emmet prompted me for <address>. 
+                            Credit for w3schools (https://www.w3schools.com/tags/tag_address.asp) for proper use. -->
+                            <address>
+                                Nicer Tours<br>
+                                Rue de Nice<br>
+                                06000<br>
+                                NICE <br>
+                                FRANCE<br>
+                                <a href="mailto:nicertours@nicertours.com">nicertours@nicertours.com</a><br>
+                                <a href="tel:+33493555555">(+33) 4 93 55 55 55</a>
+                            </address>
+                        </div>
+                        <div class="col-sm-6 tours-offered">
+                            <h4>Our Tours:</h4>
+                                <ul class="footer-navigation">
+                                    <li class="footer-nav-item">
+                                        <a id="nice-footer" class="footer-nav-link" href="tour-of-nice.html">Nice</a>
+                                    </li>
+                                    <li class="footer-nav-item">
+                                        <a id="monaco-footer" class="footer-nav-link" href="tour-of-monaco.html">Monaco</a>
+                                    </li>
+                                    <li class="footer-nav-item">
+                                        <a id="st-p-footer" class="footer-nav-link" href="tour-of-st-paul-de-vence.html">St. Paul de Vence</a>
+                                    </li>
+                                </ul>
+                            <hr>
+                            <p>We also offer "made to measure" private tours. Contact us for more details.</p>
+                        </div>
+                    </div>
+                    <div class="copyright">Copyright 2020 Justin Sawyer</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+    <!-- Makes popover work. Froms w3schools.com https://www.w3schools.com/bootstrap/bootstrap_popover.asp#:~:text=To%20create%20a%20popover,%20add,popover%22%20attribute%20to%20an%20element.&text=Note:%20Popovers%20must%20be%20initialized,call%20the%20popover()%20method -->
+    <script>
+        $(document).ready(function(){
+            $('[data-toggle="popover"]').popover();   
+        });
+    </script>
+
+</body>
+
+</html>

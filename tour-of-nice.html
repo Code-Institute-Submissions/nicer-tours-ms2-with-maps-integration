@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css">
+
+    <!-- Google Maps API -->
+    <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAzsHDlJxaOPO3VA7I1JZqP9aqkCikuzmM&libraries=places&map_ids=a9bd3e34aaa2ce67&callback=initMap"></script>
+    
+    <title>Nicer Tours | Nice</title>
+</head>
+
+<body>
+    <header class="hero-and-navigation">
+    <!-- Container from Bootstrap -->
+        <div class="container-fluid header-section">
+            <div class="row">
+                <div class="col-sm-12 banner-image home-and-nice-banner">
+                    <!-- Navbar from Bootstrap, heavily modified, including: 
+                    Color chages for active links: Bootstrap Studio https://bootstrapstudio.io/forums/topic/change-color-of-the-active-state-of-nav-link/; 
+                    Hamburger toggle icon color from Bootstrap icons (https://icons.getbootstrap.com/icons/list/) 
+                    Also, see CSS file (.navbar-brand-nicer-tours-active, .navbar-personalised .navbar-nav > .active > a) for more details. -->
+                    <nav class="navbar navbar-expand-lg navbar-personalised bg-personalised">
+                        <a class="navbar-brand navbar-brand-nicer-tours" href="index.html"><h1>Nicer Tours</h1></a>                        
+                        <div class="collapse navbar-collapse" id="navbarTogglerNicerTours">
+                            <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="tour-of-nice.html"><h2>Nice <span class="sr-only">(current)</span></h2></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="tour-of-monaco.html"><h2>Monaco</h2></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="tour-of-st-paul-de-vence.html"><h2>St. Paul de Vence</h2></a>
+                            </li>
+                            </ul>
+                        </div>                        
+                        <button class="navbar-toggler custom-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarTogglerNicerTours" aria-controls="navbarTogglerNicerTours" aria-expanded="false" aria-label="Toggle navigation">
+                            <svg width="1em" height="1em" viewbox="0 0 16 16" class="bi bi-list" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="color:white;">
+                            <path fill-rule="evenodd" d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                            </svg>
+                        </button>                            
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="main-tour">
+        <!-- Grid sizing responsive containers, dropdown, accordion, carousel and buttons from Bootstrap -->
+        <div class="container-fluid tour-main-content tour-of-nice-main-content">
+            <div class="row justify-content-center">
+                <div class="col-sm-9">
+
+                    <div class="main-tour-text">
+                        <h2>Your Tour Of Nice:</h2>
+                        <div class="tour-slideshow">
+                            <!-- Text placement within carousel from Stack Overflow (https://stackoverflow.com/questions/25095260/bootstrap-caption-outside-carousel) -->
+                            <div class="carousel slide carousel-fade carousel-nice" data-interval="6000" data-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                    <img class="d-block w-100" src="assets/images/panorama-of-nice-resized.jpg" alt="Panorama of Nice">
+                                        <div class="carousel-caption d-none d-md-block">
+                                            <p class="carousel-text-description">The Bay of Angels</p>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                    <img class="d-block w-100" src="assets/images/i-love-nice.jpg" alt="#IloveNice">
+                                        <div class="carousel-caption d-none d-md-block">
+                                            <p class="carousel-text-description">#IloveNice</p>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                    <img class="d-block w-100" src="assets/images/promenade-du-paillon-nice.jpg" alt="Promenade du Paillon, Nice">
+                                        <div class="carousel-caption d-none d-md-block">
+                                            <p class="carousel-text-description">Promenade du Paillon</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <article id="nice-full-description">
+                            <div class="row">
+                                <div class="order-sm-9 col-sm-8">
+                                    <div class="d-none d-sm-block tour-description">
+                                        <h3>Queen of the Riviera. City of light and life.</h3>
+                                        <p>Founded by the Phoenicians and named for the Greek goddess of victory, Nike, 
+                                        the original name of Nice was <strong>Nikaïa</strong>.</p>
+                                        <p>Passing between the hands of the French, the Counts of Savoy and the House of Genoa, the city has always enjoyed a privileged position on the Mediterranean coast 
+                                        and was clearly always a prize to treasure.</p>
+                                        <p>As still it is!</p>
+                                        <p>Famed today for its Flower Market, its food and its laidback lifestyle, Nice is a prime destination for any short or long break. 
+                                        Boasting 300 days of sun a year, your tour is virtually guaranteed to take place under the blue skies of this glorious location!</p>
+                                        <p>Features of this tour:</p>
+                                    </div>
+
+                                    <div class="d-sm-none">
+                                        <h3>Queen of the Riviera. City of light and life.</h3>
+                                        <p>Features of this tour:</p>
+                                    </div>
+
+                                    <div class="description-buttons">
+                                        <button class="btn btn-light btn-description btn-old-town" type="button" data-toggle="collapse" data-target="#old-town" aria-expanded="false" aria-controls="old-town">
+                                        The Old Town</button>
+                                        <button class="btn btn-light btn-description btn-castle-hill" type="button" data-toggle="collapse" data-target="#castle-hill" aria-expanded="false" aria-controls="castle-hill">
+                                        Castle Hill</button>
+                                        <button class="btn btn-light btn-description btn-the-port" type="button" data-toggle="collapse" data-target="#the-port" aria-expanded="false" aria-controls="the-port">
+                                        Port Lympia</button>
+                                        <button class="btn btn-light btn-description btn-russian-cathedral" type="button" data-toggle="collapse" data-target="#russian-cathedral" aria-expanded="false" aria-controls="russian-cathedral">
+                                        Russian Cathedral</button>
+                                        <button class="btn btn-light btn-description btn-cimiez" type="button" data-toggle="collapse" data-target="#cimiez" aria-expanded="false" aria-controls="cimiez">
+                                        Cimiez</button>
+
+                                        <div class="collapse" id="old-town">
+                                            <div class="card card-body d-md-block the-old-town-expanded">
+                                                <p>Enjoy the atmosphere of this typically provencal market square. 
+                                                Take time to admire the beauty of the blooms coming from all over the world, 
+                                                some destined for the perfume industry (the second biggest industry of the area, after tourism), 
+                                                some for the villas, townhouses and apartments that line the Promenade…</p>
+                                            </div>
+                                        </div>
+                                    
+                                        <div class="collapse" id="castle-hill">
+                                            <div class="card card-body d-md-block castle-hill-expanded">
+                                                <p>You’ll be taken up to admire the beauty of the <em>Promenade des Anglais</em>, 
+                                                named for the English aristocrats who financed its construction. 
+                                                The perfect photo opportunity - as you can see from the banner image that heads this very page!</p>
+                                            </div>
+                                        </div>
+                                    
+                                        <div class="collapse" id="the-port">
+                                            <div class="card card-body d-md-block the-port-expanded">
+                                                <p>The man-made port basin was once at the mouth of the <em>Paillon</em> river. 
+                                                Now diverted to run underneath the city, its estuary formed the perfect basin for the port, construction of which started in 1750. 
+                                                Always destined to be a pleasure port, as Nice has not been a commercial city since the time of the Phoenicians, 
+                                                today the port is home to some of the finest motor and sailing yachts in the world.</p>
+                                            </div>
+                                        </div>
+                                    
+                                        <div class="collapse" id="russian-cathedral">
+                                            <div class="card card-body d-md-block russian-cathedral-expanded">
+                                                <p>The largest Russian Orthodox Cathedral outside of Russia, 
+                                                this magnificent House of God was built under the watchful eye of Tsar Nicholas II, frequent visitor to Nice. 
+                                                Its garden houses a shrine to the son of the Tsar, Nicholas Alexandrovich, who died of meningitis while in Nice. 
+                                                Since 2011, after a long legal dispute, the cathedral has been the property of the Russian Federation. 
+                                                Effectively, it's a little corner of Russia in the South of France. 
+                                                But don’t worry: you don’t need to bring your passports to visit the cathedral!</p>
+                                            </div>
+                                        </div>
+                                    
+                                        <div class="collapse" id="cimiez">
+                                            <div class="card card-body d-md-block cimiez-expanded">
+                                                <p>Site of the Roman city of <strong>Cemenelum</strong> and its gladiatorial arena, 
+                                                the gardens today are a grove of olive trees and boulevards named after the Jazz icons who once played at the Nice Jazz Festival. 
+                                                The park still seems to echo with the music of these festivals! 
+                                                Nestled in a corner of the park is the Matisse Museum which houses a large collection of the artist’s work. 
+                                                Matisse himself was a resident of Nice from 1917 until 1954. 
+                                                At the far end of the park you’ll find the 16th century Franciscan monastery. 
+                                                Be sure to visit Matisse’s tomb in the cemetery.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="order-9 order-sm-12 col-12 google-map">
+                                    <div id="map-container">
+                                        <div id="map-canvas">
+                                        </div>
+                                    </div>
+
+                                    <div class="container info-container">           
+                                        <div class="map-information">
+
+                                            <div class="attraction matisse" id="matisse">
+                                                <div class="row">
+
+                                                    <div class="col-12 order-1 poi-title">
+                                                        <h2>Matisse Museum</h2>
+                                                    </div>
+
+                                                    <div class="col-12 col-lg-4 order-2 attraction-image">
+                                                        <img class="image-attraction" src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Mus%C3%A9e_Matisse_Nice.JPG" alt="Matisse Museum, Nice, France" width="100%">
+                                                        <p class="image-credit"><strong>Image:</strong> Matisse Museum: Tubantia, via Wikimedia Commons</p>
+                                                    </div>
+
+                                                    <div class="col-12 col-lg-8 order-3 attraction-text">
+                                                        <h3 class="poi-sub-heading">The <i>Musée Matisse</i> is one of the must-see museums for any visitor to Nice.</h3>
+                                                        <!-- Text from http://www.nicetrotter.fr/art-musee-matisse-de-nice-cimiez-125.html and http://www.musee-matisse-nice.org/ -->
+                                                        <p class="poi-text">Inaugurated in 1963 on the second floor of the Villa des Arènes, situated within the 
+                                                        archeological site in Cimiez, the Musée Matisse holds the artist's and his heirs' gifts to the 
+                                                        City of Nice.</p>
+                                                        <p>The museum's permanent collection includes nearly 70 paintings and cut-out <i>gouaches</i>, more than 200 
+                                                        drawings, engravings, almost all of the artist's sculptures, illustrated books, around a hundred 
+                                                        photographs and objects that belonged to the painter.</p>
+                                                        <p>The Musée Matisse is part of a vast patrimonial complex of the Cimiez site that includes the Roman 
+                                                        arenas and ruins, a garden with hundred-year old olive trees, as well as the Cimiez monastery.</p>
+                                                    </div>
+
+                                                    <div class="col-12 order-12 buttons-and-links">
+                                                        <div class="row">
+                                                            <div class="col-lg-3 col-sm-5 order-lg-1 order-1 more-info" style="text-align:left">
+                                                                <a class="btn btn-light btn-block more-info" role="button" href="http://www.musee-matisse-nice.org/?_locale=en" target="_blank">Find Out More</a>
+                                                            </div>
+                                                            <div class="col-lg-3 col-sm-7 order-lg-2 order-4 add-to-itin">
+                                                                <button class="btn btn-light btn-block add-to-itin-button">Add To Itinerary</button>
+                                                            </div>
+                                                            <div class="col-lg-3 col-sm-7 order-lg-3 order-2 poi-close">
+                                                                <button class="btn btn-light btn-block poi-close-button">Close this Information Box</button>
+                                                            </div>
+                                                            <div class="col-lg-3 col-sm-5 order-lg-4 order-3 back-to-map" style="text-align:right">
+                                                                <button class="btn btn-light btn-block back-to-mapbutton">Back To Map</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                                
+                                            <div class="attraction archaeology" id="archaeology">
+                                                <div class="row">
+
+                                                    <div class="col-12 order-1 poi-title">
+                                                        <h2>Archaeology Museum</h2>
+                                                    </div>
+
+                                                    <div class="col-12 col-lg-4 order-2 attraction-image">
+                                                        <img class="image-attraction" src="https://upload.wikimedia.org/wikipedia/commons/3/39/Decumanus_Cemenelum.JPG" alt="The Arènes de Cimiez Gardens, Nice, France" width="100%">
+                                                        <p class="image-credit"><strong>Image:</strong> Archaeological Museum: Frantz-Samy, via Wikimedia Commons</p>
+                                                    </div>
+
+                                                    <div class="col-12 col-lg-8 order-3 attraction-text">
+                                                        <h3 class="poi-sub-heading">A treasure trove of artefacts dating from the Bronze to the Middle Ages.</h3>
+                                                        <!-- Text from https://frenchriviera.travel/archaeological-museum-nice/ -->
+                                                        <p class="poi-text">The most valuable items found over the years in Cimiez and near Nice have been collected 
+                                                        together in the archaeological museum in Cimiez. Some of these were excavated during archaeological research, 
+                                                        while others were found in the wrecks of ancient ships sunk near the Côte d’Azur. From 1960, the museum 
+                                                        has allowed you to see this historic heritage, and even touch and try some of the exhibits, such as a fragment 
+                                                        of Roman armor.</p>
+                                                        <p>It is worth noting that the museum stands on the location of the ancient Roman city of Cemenelum. In addition 
+                                                        to the exhibition in the building, you can also admire the ruins of the ancient bath-house from the third century. 
+                                                        The most impressive remains are of the frigidarium, a room that contained a pool of cold water.</p>
+                                                    </div>
+
+                                                    <div class="col-12 order-12 buttons-and-links">
+                                                        <div class="row">
+                                                            <div class="col-lg-3 col-sm-5 order-lg-1 order-1 more-info" style="text-align:left">
+                                                                <a class="btn btn-light more-info" role="button" href="https://frenchriviera.travel/archaeological-museum-nice/" target="_blank">Find Out More</a>
+                                                            </div>
+                                                            <div class="col-lg-3 col-sm-6 order-lg-2 order-3 add-to-itin">
+                                                                <button class="btn btn-light add-to-itin-button">Add To Itinerary</button>
+                                                            </div>
+                                                            <div class="col-lg-3 col-sm-7 order-lg-3 order-2 poi-close">
+                                                                <button class="btn btn-light poi-close-button">Close this Information Box</button>
+                                                            </div>
+                                                            <div class="col-lg-3 col-sm-6 order-lg-4 order-4 back-to-map" style="text-align:right">
+                                                                <button class="btn btn-light back-to-mapbutton">Back To Map</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="attraction arenes" id="arenes">
+                                                <div class="row">
+
+                                                    <div class="col-12 order-1 poi-title">
+                                                        <h2>The <i>Arènes de Cimiez</i> Gardens</h2>
+                                                    </div>
+
+                                                    <div class="col-12 col-lg-4 order-2 attraction-image">
+                                                        <img class="image-attraction" src="https://upload.wikimedia.org/wikipedia/commons/e/ed/Le_parc_des_ar%C3%A8nes_de_Cimiez_-_panoramio.jpg" alt="The Cimiez Gardens, Nice, France" width="100%">
+                                                        <p class="image-credit"><strong>Image:</strong> Arènes de Cimiez Gardens: Michel G, via Wikimedia Commons</p>
+                                                    </div>
+
+                                                    <div class="col-12 col-lg-8 order-3 attraction-text">
+                                                        <h3 class="poi-sub-heading">Hear the echoes of the great Jazz Stars as you stroll through the gardens.</h3>
+                                                        <!-- Text from https://en.nicetourisme.com/nice/94-jardin-des-arenes-de-cimiez -->
+                                                        <p class="poi-text">Across from the Monastery of Cimiez, this garden is a vast olive grove, with thousands of 
+                                                        centuries-old trees; the lawns are easily accessible to everyone, which makes this a favourite haunt for family 
+                                                        outings.</p>
+                                                        <p>Site of festivals such as the May Day festival, and previously home to the Nice Jazz Festival, take time to stroll 
+                                                        in the olive lined boulevards named after the Jazz Greats who have played here.</p>
+                                                    </div>
+
+                                                    <div class="col-12 order-12 buttons-and-links">
+                                                        <div class="row">
+                                                            <div class="col-lg-3 col-sm-5 order-lg-1 order-1 more-info" style="text-align:left">
+                                                                <a class="btn btn-light more-info" role="button" href="https://en.nicetourisme.com/nice/94-jardin-des-arenes-de-cimiez" target="_blank">Find Out More</a>
+                                                            </div>
+                                                            <div class="col-lg-3 col-sm-6 order-lg-2 order-3 add-to-itin">
+                                                                <button class="btn btn-light add-to-itin-button">Add To Itinerary</button>
+                                                            </div>
+                                                            <div class="col-lg-3 col-sm-7 order-lg-3 order-2 poi-close">
+                                                                <button class="btn btn-light poi-close-button">Close this Information Box</button>
+                                                            </div>
+                                                            <div class="col-lg-3 col-sm-6 order-lg-4 order-4 back-to-map" style="text-align:right">
+                                                                <button class="btn btn-light back-to-mapbutton">Back To Map</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                            <div class="attraction cimiezMonastery" id="cimiezMonastery">
+                                                <div class="row">
+
+                                                    <div class="col-12 order-1 poi-title">
+                                                        <h2>The Monastery of Cimiez</h2>
+                                                    </div>
+
+                                                    <div class="col-12 col-lg-4 order-2 attraction-image">
+                                                        <img class="image-attraction" src="https://upload.wikimedia.org/wikipedia/commons/6/61/Louis_Brea_-_Crucifixion%2C_vers_1512.jpg" alt="Louis Bréa's Crucifiction from the Cimiez Monastery, Nice, France" width="100%">
+                                                        <p class="image-credit"><strong>Image:</strong> Cimiez Monastery, Louis Brea "Crucifixion", circa 1512: Franzrycou, via Wikimedia Commons</p>
+                                                    </div>
+
+                                                    <div class="col-12 col-lg-8 order-3 attraction-text">
+                                                        <h3 class="poi-sub-heading">Brother Marc and the history of San Francisco.</h3>
+                                                        <!-- Text from https://fr.wikipedia.org/wiki/Monast%C3%A8re_de_Cimiez-->
+                                                        <p class="poi-text">The monastery of Cimiez was founded in the VIII<sup>th</sup> century by the Benedictine Order, 
+                                                        and was rebuilt by the monks of the Abbey of Saint-Pons. It brings together the Church of Our Lady of the Assumption 
+                                                        (XV<sup>th</sup> century) and the Franciscan museum that traces the Franciscan way of life in Nice from the XIII<sup>th</sup> century.</p>
+                                                        <p>The most famous of the Franciscans of Nice is Brother Marc who became <strong><i>fray Marcos de Niza</i></strong> 
+                                                        and gave, it is said, the name of the founder of his order to the site of the future city of San Francisco (California).</p>
+                                                        <p>Since 1546 , it has been occupied by the Franciscans.</p>
+                                                        <p>While here, be sure also to pay your respects to Henri Matisse, who is buried in the cemetary.</p>
+                                                    </div>
+
+                                                    <div class="col-12 order-12 buttons-and-links">
+                                                        <div class="row">
+                                                            <div class="col-lg-3 col-sm-5 order-lg-1 order-1 more-info" style="text-align:left">
+                                                                <a class="btn btn-light more-info" role="button" href="https://fr.wikipedia.org/wiki/Monast%C3%A8re_de_Cimiez" target="_blank">Find Out More</a>
+                                                            </div>
+                                                            <div class="col-lg-3 col-sm-6 order-lg-2 order-3 add-to-itin">
+                                                                <button class="btn btn-light add-to-itin-button">Add To Itinerary</button>
+                                                            </div>
+                                                            <div class="col-lg-3 col-sm-7 order-lg-3 order-2 poi-close">
+                                                                <button class="btn btn-light poi-close-button">Close this Information Box</button>
+                                                            </div>
+                                                            <div class="col-lg-3 col-sm-6 order-lg-4 order-4 back-to-map" style="text-align:right">
+                                                                <button class="btn btn-light back-to-mapbutton">Back To Map</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                            <div class="attraction flowerMarket" id="flowerMarket">
+                                                <div class="row">
+
+                                                    <div class="col-12 order-1 poi-title">
+                                                        <h2>The Flower and Provençal Market of the <i>Cours Saleya</i></h2>
+                                                    </div>
+
+                                                    <div class="col-12 col-lg-4 order-2 attraction-image">
+                                                        <img class="image-attraction" src="https://upload.wikimedia.org/wikipedia/commons/4/47/Cours_Saleya_-_Chapelle_de_la_Mis%C3%A9ricorde_-_Nice.jpeg" alt="The Cours Saleya, Nice, France" width="100%">
+                                                        <p class="image-credit"><strong>Image:</strong> Cours Saleya: Dalbera, via Wikimedia Commons</p>
+                                                    </div>
+
+                                                    <div class="col-12 col-lg-8 order-3 attraction-text">
+                                                        <h3 class="poi-sub-heading">Discover the heart of <i>Vieux Nice</i></h3>
+                                                        <!-- Text by self -->
+                                                        <p class="poi-text">The old town of Nice with its world-famous flower market - once the trading point for 35 
+                                                        tonnes of flowers per day! These flowers fed the perfume and candy industry of the region.</p>
+                                                        <p>Try the local specialities in the <i>Provençal</i> market: <strong><i>socca</i></strong>, the traditional 
+                                                        dish of the needy, made from chick peas, olive oil and water; <strong><i>niçois olives</i></strong>, the small, 
+                                                        stoned olives which are the real pizza olives...</p>
+                                                        <p>Discover the house where the painter Matisse stayed when he came to Nice to try to capture the light of the 
+                                                        city in his paintings.</p>
+                                                    </div>
+                                                    
+                                                    <div class="col-12 order-12 buttons-and-links">
+                                                        <div class="row">
+                                                            <div class="col-lg-3 col-sm-5 order-lg-1 order-1 more-info" style="text-align:left">
+                                                                <a class="btn btn-light more-info-button" role="button" href="https://fr.wikipedia.org/wiki/Cours_Saleya" target="_blank">Find Out More</a>
+                                                            </div>
+                                                            <div class="col-lg-3 col-sm-6 order-lg-2 order-3 add-to-itin">
+                                                                <button class="btn btn-light add-to-itin-button">Add To Itinerary</button>
+                                                            </div>
+                                                            <div class="col-lg-3 col-sm-7 order-lg-3 order-2 poi-close">
+                                                                <button class="btn btn-light poi-close-button">Close this Information Box</button>
+                                                            </div>
+                                                            <div class="col-lg-3 col-sm-6 order-lg-4 order-4 back-to-map" style="text-align:right">
+                                                                <button class="btn btn-light back-to-mapbutton">Back To Map</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                            <div class="attraction operaHouse" id="operaHouse">
+                                                <div class="row">
+
+                                                    <div class="col-12 order-1 poi-title">
+                                                        <h2>The Opera House</h2>
+                                                    </div>
+
+                                                    <div class="col-12 col-lg-4 order-2 attraction-image">
+                                                        <img class="image-attraction" src="https://upload.wikimedia.org/wikipedia/commons/0/03/Op%C3%A9ra_de_Nice_%28fa%C3%A7ade_nord%29.jpg" alt="The Opera House, Nice, France" width="100%">
+                                                        <p class="image-credit"><strong>Image:</strong> The Opera House: Qjafcc, via Wikimedia Commons</p>
+                                                    </div>
+
+                                                    <div class="col-12 col-lg-8 order-3 attraction-text">
+                                                        <h3 class="poi-sub-heading">From a little wooden theatre to a grand dame of the <i>Italianate</i> style</h3>
+                                                        <!-- Text by self and https://www.opera-nice.org/en/the-theater/historic -->
+                                                        <p class="poi-text">The Marchioness Alli-Maccarani acquired permission to turn her former residence into a theatre from Amadeus III, 
+                                                        King of Sardinia, under who's jurisdiction the County of Nice fell. Thus the little <i>Théâtre Maccarani</i>, named after its owners, 
+                                                        was built at the site of the present-day opera house in the 18th century.</p>
+                                                        <p>Built entirely from wood in 1776, the northern façade looked out over the city while its southern façade gave out onto the ramparts 
+                                                        of the <i>Quai du Midi</i>, today's <i>Quai des États-Unis</i>.</p>
+                                                        <p>Razed to the ground by a fire in 1881, the new opera house, <i>l'Opéra de Nice</i> rose from its ashes in 1883</p>
+                                                        <p>Today, the <i>Opéra de Nice</i> is the principal opera venue in Nice, France, and houses the <i>Ballet Nice Méditerrannée</i> 
+                                                        and the Nice Philharmonic Orchestra. It offers three types of performances: operas, ballets and classical music concerts.</p>
+                                                    </div>
+                                                    
+                                                    <div class="col-12 order-12 buttons-and-links">
+                                                        <div class="row">
+                                                            <div class="col-lg-3 col-sm-5 order-lg-1 order-1 more-info" style="text-align:left">
+                                                                <a class="btn btn-light more-info-button" role="button" href="https://www.opera-nice.org/en/the-theater/historic" target="_blank">Find Out More</a>
+                                                            </div>
+                                                            <div class="col-lg-3 col-sm-6 order-lg-2 order-3 add-to-itin">
+                                                                <button class="btn btn-light add-to-itin-button">Add To Itinerary</button>
+                                                            </div>
+                                                            <div class="col-lg-3 col-sm-7 order-lg-3 order-2 poi-close">
+                                                                <button class="btn btn-light poi-close-button">Close this Information Box</button>
+                                                            </div>
+                                                            <div class="col-lg-3 col-sm-6 order-lg-4 order-4 back-to-map" style="text-align:right">
+                                                                <button class="btn btn-light back-to-mapbutton">Back To Map</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+
+
+                                    <div class="output"></div>
+
+                                    <button class="btn btn-light btn-description btn-block poi-close-all">Close all Information Boxes</button>
+                                </div>
+
+                                <div class="order-12 order-sm-1 col-sm-4 tour-times" id="tour-of-nice-times-and-price-full">
+                                    <h3 class="times">Times and availablitiy:</h3>
+                                    <div class="row">
+                                        <div class="col-xs-6 col-sm-12 times-and-availability">
+                                            <h4 class="price-list">Price:</h4>
+                                            <p>€69 per person</p>
+                                        </div>
+                                        <div class="col-xs-6 col-sm-12 times-and-availability">
+                                            <h4 class="price-list">Departure times:</h4>
+                                            <p>9am & 2pm</p>
+                                        </div>
+                                        <div class="col-xs-6 col-sm-12 times-and-availability">
+                                            <h4 class="price-list">Days available:</h4>
+                                            <p>Daily except Friday</p>
+                                        </div>
+                                        <div class="col-xs-6 col-sm-12 times-and-availability">
+                                            <h4 class="price-list">Duration:</h4>
+                                            <p>4 hours</p>
+                                        </div>
+                                    </div>
+                                    <button type="button" class="btn btn-light btn-block btn-cta btn-cta-contact" data-toggle="modal" data-target="#contact-us-nice">Contact Us!</button>
+                                    <a href="book-your-tour.html" class="btn btn-light btn-block btn-cta btn-cta-book-now" role="button" aria-disabled="true">Book Now!</a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>            
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Contact Us Modal from Bootstrap-->
+    <div class="modal fade" id="contact-us-nice" tabindex="-1" role="dialog" aria-labelledby="contact-us-nice" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="contact-us-niceLabel">Contact Us About The Tour Of Nice</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <!-- This <form> code is taken from the Rosie Odenkirk resumé project.-->
+                    <form class="contact-us-tour-of-nice-form" method="post" action="review-received.html" target="_blank">
+                        <input class="contact-us-form-name" type="text" name="name" id="name" placeholder="Name" required />
+                        <input class="contact-us-form-email" type="email" name="email" id="email" placeholder="Email" required />
+                        <textarea class="contact-us-form-message" name="message" id="message" rows="5" placeholder="Write your message" required></textarea>
+                        <div class="form-row text-center">
+                            <div class="col">
+                                <button type="submit" class="btn btn-light">Send your message</button>
+                            </div>
+                        </div>
+                    </form>
+                    <!-- End of copy from Rosie Odenkirk resumé project -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+    <!-- Container elements from Bootstrap, Social media icons from Font-Awesome -->
+        <div class="container-fluid footer-section">
+            <div class="row justify-content-center">
+                <div class="col-sm-9">
+                    <div class="slogan">
+                        <h3>The Nicest tours you'll find in Nice!</h3>
+                    </div>
+                    <div class="social-media-icons">
+                            <ul class="list-inline icons">
+                                <li class="list-inline-item">
+                                    <a href="https://fr-fr.facebook.com" target="_blank"><i class="fa fa-facebook-f" aria-hidden="true"></i></a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="https://twitter.com" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="https://www.instagram.com" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="https://www.tripadvisor.com" target="_blank"><i class="fa fa-tripadvisor" aria-hidden="true"></i></a>
+                                </li>
+                                <!-- Open in WhatsApp link source code from https://www.bybrand.io/docs/en/article/add-whatsapp-call/ -->
+                                <li class="list-inline-item">
+                                    <a href="https://api.whatsapp.com/send?phone=+33493555555" target="_blank"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
+                                </li>
+                            </ul>
+                    </div>
+                    <div class="row footer-sections">
+                        <div class="col-sm-6 company-location">
+                            <h4>Contact Us:</h4>
+                            <!-- I wanted class="address" but found Emmet prompted me for <address>. 
+                            Credit for w3schools (https://www.w3schools.com/tags/tag_address.asp) for proper use. -->
+                            <address>
+                                Nicer Tours<br>
+                                Rue de Nice<br>
+                                06000<br>
+                                NICE <br>
+                                FRANCE<br>
+                                <a href="mailto:nicertours@nicertours.com">nicertours@nicertours.com</a><br>
+                                <a href="tel:+33493555555">(+33) 4 93 55 55 55</a>
+                            </address>
+                        </div>
+                        <div class="col-sm-6 tours-offered">
+                            <h4>Our Tours:</h4>
+                                <ul class="footer-navigation">
+                                    <li class="footer-nav-item">
+                                        <a id="nice-footer" class="footer-nav-link" href="tour-of-nice.html">Nice</a>
+                                    </li>
+                                    <li class="footer-nav-item">
+                                        <a id="monaco-footer" class="footer-nav-link" href="tour-of-monaco.html">Monaco</a>
+                                    </li>
+                                    <li class="footer-nav-item">
+                                        <a id="st-p-footer" class="footer-nav-link" href="tour-of-st-paul-de-vence.html">St. Paul de Vence</a>
+                                    </li>
+                                </ul>
+                            <hr>
+                            <p>We also offer "made to measure" private tours. Contact us for more details.</p>
+                        </div>
+                    </div>
+                    <div class="copyright">Copyright 2020 Justin Sawyer</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="scripts/old-nice.js"></script>
+
+    <!-- Google Maps Cluster Script -->
+    <script src="https://unpkg.com/@googlemaps/markerclustererplus/dist/index.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
