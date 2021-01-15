@@ -329,35 +329,55 @@ function initMap() {
 
 
 //---------------------------------------------------------------------------------------------------- jQuery
-//-------------------------------------------------- Section Zooms
+//-------------------------------------------------- Hide map on page load
+    $(function() {
+        $("#map-container").hide();
+    })
+
+//-------------------------------------------------- Show map on description buttons
+    $(".btn-global-description").on("click", function() {
+        $("#map-container").show();
+    })
+
+//-------------------------------------------------- Section (Buttons) Zooms
 //Cimiez zoom
     $(".btn-cimiez").on("click", function() {
         map.setZoom(17);
-        map.setCenter({lat: 43.720333, lng: 7.277311})
+        map.setCenter({lat: 43.720333, lng: 7.277311});
+        $(".global-info").css("display", "none");
+        $("#cimiez").css("display", "block");
     })
 
 //Old Town Zoom
     $(".btn-old-town").on("click", function() {
         map.setZoom(16);
-        map.setCenter({lat: 43.695709, lng: 7.268124})
+        map.setCenter({lat: 43.695709, lng: 7.268124});
+        $(".global-info").css("display", "none");
+        $("#old-town").css("display", "block");
     })
 
 //Castle Hill Zoom
     $(".btn-castle-hill").on("click", function() {
         map.setZoom(17);
-        map.setCenter({lat: 43.694306, lng: 7.281073})
+        map.setCenter({lat: 43.694306, lng: 7.281073});
+        $(".global-info").css("display", "none");
+        $("#castle-hill").css("display", "block");
     })
 
 //Port Lympia Zoom
     $(".btn-the-port").on("click", function() {
         map.setZoom(16);
-        map.setCenter({lat: 43.693313, lng: 7.290793})
+        map.setCenter({lat: 43.693313, lng: 7.290793});
+        $(".global-info").css("display", "none");
+        $("#the-port").css("display", "block");
     })
 
 //Russian Church Zoom
     $(".btn-russian-cathedral").on("click", function() {
         map.setZoom(16);
-        map.setCenter({lat: 43.704697, lng: 7.259707})
+        map.setCenter({lat: 43.704697, lng: 7.259707});
+        $(".global-info").css("display", "none");
+        $("#russian-cathedral").css("display", "block");
     })
 
 //-------------------------------------------------- Buttons
@@ -377,4 +397,47 @@ function initMap() {
         $("#map-container").get(0).scrollIntoView();
     })
 
+    var x = 0;
+$(document).ready(function(){
+  $(window).resize(function(){
+    //$("span").text(x += 1);
+    console.log(x += 1)
+  });
+});
+
 }
+
+if (window.innerWidth < 960) {
+    console.log("small");
+} else {
+    console.log("big")
+}
+
+function sizes() {
+  let contentWidth = [...document.body.children].reduce( 
+    (a, el) => Math.max(a, el.getBoundingClientRect().right), 0) 
+    - document.body.getBoundingClientRect().x;
+
+  return {
+    windowWidth:  document.documentElement.clientWidth,
+    windowHeight: document.documentElement.clientHeight,
+    pageWidth:    Math.min(document.body.scrollWidth, contentWidth),
+    pageHeight:   document.body.scrollHeight,
+    screenWidth:  window.screen.width,
+    screenHeight: window.screen.height,
+    pageX:        document.body.getBoundingClientRect().x,
+    pageY:        document.body.getBoundingClientRect().y,
+    screenX:     -window.screenX,
+    screenY:     -window.screenY - (window.outerHeight-window.innerHeight),
+  }
+}
+
+
+
+// TEST
+
+function show() {
+  console.log(sizes());
+}
+show()
+
