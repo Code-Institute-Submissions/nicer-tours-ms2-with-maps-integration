@@ -1,25 +1,14 @@
 let markers = [];
 let locations = [];
 let openMarkers = [];
-let infowindow = [];
+let infowindow = null;
 
-function initMap() {
-    
-    const map = new google.maps.Map(document.getElementById("map-canvas"), {
-        zoom: 13,
-        center: { lat: 43.70313, lng: 7.26608 },
-        mapTypeControl: false,
-        streetViewControl: false
-    });
-
-    infowindow = new google.maps.InfoWindow();
-    
 //---------------------------------------------------------------------------------------------------- Markers
 //Promenade des Anglais marker
     let markerProm = {
         lat: 43.694806, 
         lng: 7.260058,
-        map: map,
+        //map: map
         title: `Promenade des Anglais`,
         link: `<a type="button" href="../tour-of-nice.html#prom">Find Out More</a>`,
         text: `The Promenade was`
@@ -36,7 +25,7 @@ function initMap() {
     let markerPlaceMassena = {
         lat: 43.697400, 
         lng: 7.270230,
-        map: map,
+        //map: map
         title: "Place Masséna",
         link: `<a type="button" href="../tour-of-nice.html#placeMassena">Find Out More</a>`,
         text: `The Promenade was`
@@ -53,7 +42,7 @@ function initMap() {
     let markerApollo = {
         lat: 43.696662, 
         lng: 7.270633,
-        map: map,
+        //map: map
         title: "Fountain of the Sun with Statue of Apollo",
         link: `<a type="button" href="../tour-of-nice.html#apollo">Find Out More</a>`,
         text: `The Promenade was`
@@ -70,7 +59,7 @@ function initMap() {
     let markerOperaHouse = {
         lat: 43.69547, 
         lng: 7.27253,
-        map: map,
+        //map: map
         title: "L'Opéra de Nice Opera House",
         link: `<a type="button" href="../tour-of-nice.html#operaHouse">Find Out More</a>`,
         text: `The Promenade was`
@@ -87,7 +76,7 @@ function initMap() {
     let markerFlowerMarket = {
         lat: 43.69572, 
         lng: 7.27528,
-        map: map,
+        //map: map
         title: "The Flower Market of the Old Town",
         link: `<a type="button" href="../tour-of-nice.html#flowerMarket">Find Out More</a>`,
         text: `The Promenade was`
@@ -104,7 +93,7 @@ function initMap() {
     let markerStReparateChurch = {
         lat: 43.697294, 
         lng: 7.275965,
-        map: map,
+        //map: map
         title: "St. Réparate Church",
         link: `<a type="button" href="../tour-of-nice.html#stReparateChurch">Find Out More</a>`,
         text: `The Promenade was`
@@ -121,7 +110,7 @@ function initMap() {
     let markerCastleHillViewPoint = {
         lat: 43.694891, 
         lng: 7.279880,
-        map: map,
+        //map: map
         title: "Castle Hill View Point",
         link: `<a type="button" href="../tour-of-nice.html#castleHillViewPoint">Find Out More</a>`,
         text: `The Promenade was`
@@ -138,7 +127,7 @@ function initMap() {
     let markerCastleHill = {
         lat: 43.695096, 
         lng: 7.280560,
-        map: map,
+        //map: map
         title: "Castle Hill",
         link: `<a type="button" href="../tour-of-nice.html#castleHill">Find Out More</a>`,
         text: `The Promenade was`
@@ -155,7 +144,7 @@ function initMap() {
     let markerRaubaCapeu = {
         lat:43.693849, 
         lng: 7.281250,
-        map: map,
+        //map: map
         title: "WWI Memorial 'Rauba-Capeù'",
         link: `<a type="button" href="../tour-of-nice.html#raubaCapeu">Find Out More</a>`,
         text: `The Promenade was`
@@ -172,7 +161,7 @@ function initMap() {
     let markerPortLympia = {
         lat:43.697118, 
         lng: 7.283910,
-        map: map,
+        //map: map
         title: "Port de Nice Lympia",
         link: `<a type="button" href="../tour-of-nice.html#portLympia">Find Out More</a>`,
         text: `The Promenade was`
@@ -189,7 +178,7 @@ function initMap() {
     let markerLazaret = {
         lat:43.690772, 
         lng: 7.294768,
-        map: map,
+        //map: map
         title: "Lazaret Prehistoric Cave",
         link: `<a type="button" href="../tour-of-nice.html#lazaret">Find Out More</a>`,
         text: `The Promenade was`
@@ -206,7 +195,7 @@ function initMap() {
     let markerBayOfAngelsView = {
         lat:43.689128, 
         lng: 7.296206,
-        map: map,
+        //map: map
         title: "View over Nice and the Bay of Angels",
         link: `<a type="button" href="../tour-of-nice.html#bayOfAngelsView">Find Out More</a>`,
         text: `The Promenade was`
@@ -223,7 +212,7 @@ function initMap() {
     let markerArenesDeCimiez = {
         lat:43.720492, 
         lng: 7.276909,
-        map: map,
+        //map: map
         title: "Arènes de Cimiez Garden",
         link: `<a type="button" href="../tour-of-nice.html#arenesDeCimiez">Find Out More</a>`,
         text: `The Promenade was`
@@ -240,7 +229,7 @@ function initMap() {
     let markerMatisseMuseum = {
         lat:43.71938, 
         lng: 7.27624,
-        map: map,
+        //map: map
         title: "Matisse Museum",
         link: `<a type="button" class="move" onclick="openElement()" href="../tour-of-nice.html#matisse">Find Out More</a>`,
         openElement: function() {
@@ -260,7 +249,7 @@ function initMap() {
     let markerArchaeologyMuseum = {
         lat:43.71928, 
         lng: 7.27511,
-        map: map,
+        //map: map
         title: "Archaeology Museum",
         link: `<a type="button" href="../tour-of-nice.html#archaeology">Find Out More</a>`,
         text: `The Promenade was`
@@ -277,7 +266,7 @@ function initMap() {
     let markerCimiezMonastery = {
         lat:43.71998, 
         lng: 7.27881,
-        map: map,
+        //map: map
         title: "The Monastery of Cimiez",
         link: `<a type="button" href="../tour-of-nice.html#cimiezMonastery">Find Out More</a>`,
         text: `The Promenade was`
@@ -294,7 +283,7 @@ function initMap() {
     let markerNotreDame = {
         lat:43.703672, 
         lng: 7.265758,
-        map: map,
+        //map: map
         title: "Notre-Dame de l’Assomption Basilica",
         link: `<a type="button" href="../tour-of-nice.html#notreDame">Find Out More</a>`,
         text: `The Promenade was`
@@ -311,7 +300,7 @@ function initMap() {
     let markerRussianCathedral = {
         lat:43.703810, 
         lng: 7.253920,
-        map: map,
+        //map: map
         title: "St. Nicholas Russian Orthodox Cathedral",
         link: `<a type="button" href="../tour-of-nice.html#russianCathedral">Find Out More</a>`,
         text: `The Promenade was`
@@ -324,7 +313,46 @@ function initMap() {
         $("#russianCathedral").get(0).scrollIntoView();
     })*/
 
-//---------------------------------------------------------------------------------------------------- Marker Clustering
+    /*locations = 
+        [
+            markerProm,
+            markerPlaceMassena,
+            markerApollo,
+            markerOperaHouse, 
+            markerFlowerMarket,
+            markerStReparateChurch,
+            markerCastleHillViewPoint,
+            markerCastleHill,
+            markerRaubaCapeu,
+            markerPortLympia,
+            markerLazaret,
+            markerBayOfAngelsView,
+            markerArenesDeCimiez,
+            markerMatisseMuseum, 
+            markerArchaeologyMuseum,
+            markerCimiezMonastery,
+            markerNotreDame,
+            markerRussianCathedral
+        ];*/
+
+    let oldTownMarkers = locations.slice(0, 6);
+    let castleHillMarkers = locations.slice(6, 9);
+    let portMarkers = locations.slice(9, 12);
+    let cimiezMarkers = locations.slice(12, 16);
+
+//---------------------------------------------------------------------------------------------------- Initialize Map
+function initMap() {
+    
+    const map = new google.maps.Map(document.getElementById("map-canvas"), {
+        zoom: 13,
+        center: { lat: 43.70313, lng: 7.26608 },
+        mapTypeControl: false,
+        streetViewControl: false
+    });
+
+    infowindow = new google.maps.InfoWindow();
+
+//---------------------------------------------------------------------------------------------------- Markers
     locations = 
         [
             markerProm,
@@ -347,40 +375,44 @@ function initMap() {
             markerRussianCathedral
         ];
 
-    markers = locations.map(function(location, i) {
-        let marker = new google.maps.Marker({
-            position: location,
-        });
-        
-        /*google.maps.event.addListener(marker, "click", function(evt) {
-            infowindow.setContent(`${location.title}<br><br>${location.link}`);
-            infowindow.open(map, marker);
-        })*/
-        google.maps.event.addListenerOnce(map, 'tilesloaded', function(event) {
-            infowindow.setContent(`${location.title}<br><br>${location.link}`);
-            infowindow.open(map, marker);
-            for (var i = 0; i < markers.length; i++) {
+    //for (var i = 0; i < locations.length; i++) {
+        markers = locations.map(function(location, i) {
+            let marker = new google.maps.Marker({
+                position: location
+            });
+            
+            //opens one infowindow at a time on click of that marker
+            google.maps.event.addListener(marker, "click", function(evt) {
                 markers.forEach(function(infoWindow) {
+                //for (var i = 0; i < markers.length; i++) {
                     infowindow.setContent(`${location.title}<br><br>${location.link}`);
                     infowindow.open(map, marker);
+                //}
                 })
-            }
-            infowindow.open(map, marker);
-        });
-        return marker;     
-    })
-    
+            })
+            //return marker;
+            //markers.forEach(function(infoWindow) {
+            infowindow.setContent(`${location.title}<br><br>${location.link}`);
+            infowindow.open(map,marker);
+            //})
+            return marker;    
+        })
+        //return markers;
+    //}
 
+    /*google.maps.event.addListenerOnce(map, 'tilesloaded', function(markers) {
+        //infowindow.setContent(`${location.title}<br><br>${location.link}`);
+        //infowindow.open(map, marker);
+        for (var i = 0; i < locations.length; i++) {
+            //markers.forEach(function(infoWindow) {
+                infowindow.setContent(`${location.title}<br><br>${location.link}`);
+                infowindow.open(map, markers);
+            //})
+        }
+        infowindow.open(map, markers);
+    });*/
 
-    let oldTownMarkers = locations.slice(0, 6);
-    //console.log(oldTownMarkers)
-    let castleHillMarkers = locations.slice(6, 9);
-    //console.log(castleHillMarkers)
-    let portMarkers = locations.slice(9, 12);
-    //console.log(portMarkers)
-    let cimiezMarkers = locations.slice(12, 16);
-    //console.log(cimiezMarkers)
-
+//---------------------------------------------------------------------------------------------------- Marker Clustering
     let markerCluster = new MarkerClusterer(map, markers, {
         imagePath:
         "https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m",
@@ -508,5 +540,9 @@ function initMap() {
             google.maps.event.trigger(oldTownMarkers[i], "click");
         }
     }
+}
+
+function openElement() {
+    document.getElementById(".output").append("#matisse")
 }
 
