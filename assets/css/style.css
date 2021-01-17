@@ -475,7 +475,7 @@ border-color: rgba(0,47,167,0.75)!important;
     padding-bottom: 32px;
     padding-left: 16px;
     padding-right: 16px;
-    display: none;
+    /*display: none;*/
 }
 
 .poi-title {
