@@ -1,98 +1,94 @@
-
-// 3rd thing: Look at adding new maps for each section instead of having overlapping infowindows
-// Then you can look at the div element
 let markers = [];
 let locations = [];
+let service = [];
 let openMarkers = [];
 let infowindow = null;
 let map;
 
-
-let oldTownMarkers = locations.slice(0, 6);
-let castleHillMarkers = locations.slice(6, 9);
-let portMarkers = locations.slice(9, 12);
-let cimiezMarkers = locations.slice(12, 16);
-
 //---------------------------------------------------------------------------------------------------- Initialize Map
 function initMap() {
-
+    
     map = new google.maps.Map(document.getElementById("map-canvas"), {
-        //zoom: 13,
         center: { lat: 43.70313, lng: 7.26608 },
         mapTypeControl: false,
         streetViewControl: false
     });
-
-    //---------------------------------------------------------------------------------------------------- Markers
+//---------------------------------------------------------------------------------------------------- Markers for each section of map
+    let oldTownMarkers = locations.slice(0, 6);
+    let castleHillMarkers = locations.slice(6, 9);
+    let portMarkers = locations.slice(9, 12);
+    let cimiezMarkers = locations.slice(12, 16);
+//---------------------------------------------------------------------------------------------------- Markers
     //Promenade des Anglais marker
     let markerProm = {
         lat: 43.695316, 
         lng: 7.267793,
         title: `Promenade des Anglais`,
-        link: `<a type="button" href="../tour-of-nice.html#prom">Find Out More</a>`,
+        link: `Promenade des Anglais<br><br><a onclick="move('prom')" href="../tour-of-nice.html#prom">Find Out More</a>`,
         text: `The Promenade was`
     }
-
+    
     //Place Masséna marker
     let markerPlaceMassena = {
-        lat: 43.697400,
+        lat: 43.697400, 
         lng: 7.270230,
-        title: "Place Masséna",
-        link: `<a type="button" href="../tour-of-nice.html#placeMassena">Find Out More</a>`,
+        title: `Place Masséna`,
+        link: `Place Masséna<br><br><a onclick="move('placeMassena')"href="../tour-of-nice.html#placeMassena">Find Out More</a>`,
         text: `The Promenade was`
     }
-
+    
     //Opera House marker
     let markerOperaHouse = {
-        lat: 43.69547,
+        lat: 43.69547, 
         lng: 7.27253,
-        title: "L'Opéra de Nice Opera House",
-        link: `<a type="button" href="../tour-of-nice.html#operaHouse">Find Out More</a>`,
+        title: `L'Opéra de Nice Opera House`,
+        link: `L'Opéra de Nice Opera House<br><br><a onclick="move('operaHouse')"href="../tour-of-nice.html#operaHouse">Find Out More</a>`,
         text: `The Promenade was`
     }
 
     //Flower Market marker
     let markerFlowerMarket = {
-        lat: 43.69572,
+        lat: 43.69572, 
         lng: 7.27528,
-        title: "The Flower Market of the Old Town",
-        link: `<a type="button" href="../tour-of-nice.html#flowerMarket">Find Out More</a>`,
+        title: `The Flower Market of the Old Town`,
+        link: `The Flower Market of the Old Town<br><br><a onclick="move('flowerMarket')" href="../tour-of-nice.html#flowerMarket">Find Out More</a>`,
         text: `The Promenade was`
     }
 
     //St Reparate Church marker
     let markerStReparateChurch = {
-        lat: 43.697294,
+        lat: 43.697294, 
         lng: 7.275965,
-        title: "St. Réparate Church",
-        link: `<a type="button" href="../tour-of-nice.html#stReparateChurch">Find Out More</a>`,
+        title: `St. Réparate Church`,
+        link: `St. Réparate Church<br><br><a onclick="move('stReparateChurch')" href="../tour-of-nice.html#stReparateChurch">Find Out More</a>`,
         text: `The Promenade was`
     }
 
     //Castle Hill View Point marker
     let markerCastleHillViewPoint = {
-        lat: 43.694891,
+        lat: 43.694891, 
         lng: 7.279880,
-        title: "Castle Hill View Point",
-        link: `<a type="button" href="../tour-of-nice.html#castleHillViewPoint">Find Out More</a>`,
+        title: `Castle Hill View Point`,
+        link: `Castle Hill View Point<br><br><a onclick="move('castleHillViewPoint')" href="../tour-of-nice.html#castleHillViewPoint">Find Out More</a>`,
         text: `The Promenade was`
     }
 
     //Castle Hill marker
     let markerCastleHill = {
-        lat: 43.695096,
-        lng: 7.280560,
-        title: "Castle Hill",
-        link: `<a type="button" href="../tour-of-nice.html#castleHill">Find Out More</a>`,
+        lat: 43.694835, 
+        lng: 7.281103,
+        placeId: "ChIJ87pSBQHQzRIR7gulsDlUpa8",
+        title: `Castle Hill`,
+        link: `Castle Hill<br><br><a onclick="move('castleHill')" href="../tour-of-nice.html#castleHill">Find Out More</a>`,
         text: `The Promenade was`
     }
 
     //Rauba-Capeù Memorial marker
     let markerRaubaCapeu = {
-        lat: 43.693849,
+        lat:43.693849, 
         lng: 7.281250,
-        title: "WWI Memorial 'Rauba-Capeù'",
-        link: `<a type="button" href="../tour-of-nice.html#raubaCapeu">Find Out More</a>`,
+        title: `WWI Memorial "Rauba-Capeù"`,
+        link: `WWI Memorial "Rauba-Capeù"<br><br><a onclick="move('raubaCapeu')" href="../tour-of-nice.html#raubaCapeu">Find Out More</a>`,
         text: `The Promenade was`
     }
 
@@ -100,80 +96,80 @@ function initMap() {
     let markerPortLympia = {
         lat: 43.695379, 
         lng: 7.284777,
-        title: "Port de Nice Lympia",
-        link: `<a type="button" href="../tour-of-nice.html#portLympia">Find Out More</a>`,
+        title: `Port de Nice Lympia`,
+        link: `Port de Nice Lympia<br><br><a onclick="move('portLympia')" href="../tour-of-nice.html#portLympia">Find Out More</a>`,
         text: `The Promenade was`
     }
 
-   //Nice View Point marker
+    //Nice View Point marker
     let markerBayOfAngelsView = {
-        lat: 43.690772,
-        lng: 7.294768,
-        title: "View over Nice and the Bay of Angels",
-        link: `<a type="button" href="../tour-of-nice.html#bayOfAngelsView">Find Out More</a>`,
+        lat:43.689128, 
+        lng: 7.296206,
+        title: `View over Nice and the Bay of Angels`,
+        link: `View over Nice and the Bay of Angels<br><br><a onclick="move('bayOfAngelsView')" href="../tour-of-nice.html#bayOfAngelsView">Find Out More</a>`,
         text: `The Promenade was`
     }
 
     //Arènes de Cimiez marker
     let markerArenesDeCimiez = {
-        lat: 43.720492,
+        lat:43.720492, 
         lng: 7.276909,
-        title: "Arènes de Cimiez Garden",
-        link: `<a type="button" href="../tour-of-nice.html#arenesDeCimiez">Find Out More</a>`,
+        title: `Arènes de Cimiez Garden`,
+        link: `Arènes de Cimiez Garden<br><br><a onclick="move('arenesDeCimiez')" href="../tour-of-nice.html#arenesDeCimiez">Find Out More</a>`,
         text: `The Promenade was`
     }
 
     //Matisse Museum marker
     let markerMatisseMuseum = {
-        lat: 43.71938,
+        lat:43.71938, 
         lng: 7.27624,
-        title: "Matisse Museum",
-        link: `<a type="button" class="move" onclick="openElement()" href="../tour-of-nice.html#matisse">Find Out More</a>`,
+        title: `Matisse Museum`,
+        link: `Matisse Museum<br><br><a onclick="move('matisse')" href="../tour-of-nice.html#matisse">Find Out More</a>`,
         text: `The Promenade was`
     }
 
     //Archaeology Museum marker
     let markerArchaeologyMuseum = {
-        lat: 43.71928,
+        lat:43.71928, 
         lng: 7.27511,
-        title: "Archaeology Museum",
-        link: `<a type="button" href="../tour-of-nice.html#archaeology">Find Out More</a>`,
+        title: `Archaeology Museum`,
+        link: `Archaeology Museum<br><br><a onclick="move('archaeology')" href="../tour-of-nice.html#archaeology">Find Out More</a>`,
         text: `The Promenade was`
     }
-
+    
     //Cimiez Monastery marker
     let markerCimiezMonastery = {
-        lat: 43.71998,
+        lat:43.71998, 
         lng: 7.27881,
-        title: "The Monastery of Cimiez",
-        link: `<a type="button" href="../tour-of-nice.html#cimiezMonastery">Find Out More</a>`,
+        title: `The Monastery of Cimiez`,
+        link: `The Monastery of Cimiez<br><br><a onclick="move('cimiezMonastery')" href="../tour-of-nice.html#cimiezMonastery">Find Out More</a>`,
         text: `The Promenade was`
     }
 
     //Notre Dame marker
     let markerNotreDame = {
-        lat: 43.703672,
+        lat:43.703672, 
         lng: 7.265758,
-        title: "Notre-Dame de l’Assomption Basilica",
-        link: `<a type="button" href="../tour-of-nice.html#notreDame">Find Out More</a>`,
+        title: `Notre-Dame de l’Assomption Basilica`,
+        link: `Notre-Dame de l’Assomption Basilica<br><br><a onclick="move('notreDame')" href="../tour-of-nice.html#notreDame">Find Out More</a>`,
         text: `The Promenade was`
     }
 
     //Russian Cathedral marker
     let markerRussianCathedral = {
-        lat: 43.703810,
+        lat:43.703810, 
         lng: 7.253920,
-        title: "St. Nicholas Russian Orthodox Cathedral",
-        link: `St. Nicholas Russian Orthodox Cathedral<br><br><a type="button" onclick="openElement()" href="../tour-of-nice.html#russianCathedral">Find Out More</a>`,
+        title: `St. Nicholas Russian Orthodox Cathedral`,
+        link: `St. Nicholas Russian Orthodox Cathedral<br><br><a onclick="move('russianCathedral')" href="../tour-of-nice.html#russianCathedral">Find Out More</a>`,
         text: `The Promenade was`
     }
 
     //---------------------------------------------------------------------------------------------------- Markers
-    locations =
+    locations = 
         [
             markerProm,
             markerPlaceMassena,
-            markerOperaHouse,
+            markerOperaHouse, 
             markerFlowerMarket,
             markerStReparateChurch,
             markerCastleHillViewPoint,
@@ -182,12 +178,14 @@ function initMap() {
             markerPortLympia,
             markerBayOfAngelsView,
             markerArenesDeCimiez,
-            markerMatisseMuseum,
+            markerMatisseMuseum, 
             markerArchaeologyMuseum,
             markerCimiezMonastery,
             markerNotreDame,
             markerRussianCathedral
         ];
+
+//---------------------------------------------------------------------------------------------------- Markers
 
     for (let i = 0; i < locations.length; i++) {
         let marker = new google.maps.Marker({
@@ -201,49 +199,44 @@ function initMap() {
         infowindow.open(map, marker);
     }
 
-
-    // infowindow = new google.maps.InfoWindow();
-
-    markers = locations.map(function (location, i) {
-        return new google.maps.Marker({
+    markers = locations.map(function(location, i) {
+        let marker = new google.maps.Marker({
             position: location
         });
     });
 
-    // markers = locations.map(function (location, i) {
-    //     let marker = new google.maps.Marker({
-    //         position: location
-    //     });
-
-    //     //opens one infowindow at a time on click of that marker
-    //     google.maps.event.addListener(marker, "click", function (evt) {
-    //         markers.forEach(function (infoWindow) {
-    //             infowindow.setContent(`${location.title}<br><br>${location.link}`);
-    //             infowindow.open(map, marker);
-    //         })
-    //     })
-    //     infowindow.setContent(`${location.title}<br><br>${location.link}`);
-    //     infowindow.open(map, marker);
-    //     return marker;
-    // });
 
 
-    //---------------------------------------------------------------------------------------------------- Marker Clustering
+    service = new google.maps.places.PlacesService(map);
+
+    service.getDetails({
+        placeId: 'ChIJ87pSBQHQzRIR7gulsDlUpa8'
+        }, function(place, status) {
+            if (status === google.maps.places.PlacesServiceStatus.OK) {
+            console.log(place.name);
+            console.log(place.reviews);
+            console.log(place.rating);
+            console.log(place.website)
+        }
+    });
+
+//---------------------------------------------------------------------------------------------------- Marker Clustering
     /*let markerCluster = new MarkerClusterer(map, markers, {
         imagePath:
-            "https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m",
+        "https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m",
     });*/
-
 }
 
 //---------------------------------------------------------------------------------------------------- jQuery
 //-------------------------------------------------- Hide map on page load
-$("#map-container").hide();
+    $(function() {
+        $("#map-container").hide();
+    })
 
 //-------------------------------------------------- Show map on description buttons
-$(".btn-global-description").on("click", function () {
-    $("#map-container").show();
-})
+    $(".btn-global-description").on("click", function() {
+        $("#map-container").show();
+    })
 
 //-------------------------------------------------- Section (Buttons) Zooms
 //Old Town Zoom
@@ -255,8 +248,8 @@ $(".btn-old-town").on("click", function () {
         map.setCenter({ lat: 43.695961, lng: 7.271446 });
     };
     if ((document.documentElement.clientWidth >= 1024) && (document.documentElement.clientWidth < 1440)) {
-        map.setZoom(16);
-        map.setCenter({ lat: 43.695961, lng: 7.271446 });
+        map.setZoom(17);
+        map.setCenter({ lat: 43.696547, lng: 7.271700 });
     };
     if ((document.documentElement.clientWidth >= 768) && (document.documentElement.clientWidth < 1024)) {
         map.setZoom(16);
@@ -270,6 +263,7 @@ $(".btn-old-town").on("click", function () {
         map.setZoom(15);
         map.setCenter({ lat: 43.696391, lng: 7.271155 });
     }
+    $(".btn-global-description").get(0).scrollIntoView();
 })
 
 //Castle Hill Zoom
@@ -281,7 +275,7 @@ $(".btn-castle-hill").on("click", function () {
         map.setCenter({ lat: 43.694306, lng: 7.281073 });
     };
     if ((document.documentElement.clientWidth >= 1024) && (document.documentElement.clientWidth < 1440)) {
-        map.setZoom(17);
+        map.setZoom(18);
         map.setCenter({ lat: 43.694306, lng: 7.281073 });
     };
     if ((document.documentElement.clientWidth >= 768) && (document.documentElement.clientWidth < 1024)) {
@@ -296,6 +290,7 @@ $(".btn-castle-hill").on("click", function () {
         map.setZoom(16);
         map.setCenter({ lat: 43.694321, lng: 7.281030 })
     }
+    $(".btn-global-description").get(0).scrollIntoView();
 })
 
 //Port Lympia Zoom
@@ -308,7 +303,7 @@ $(".btn-the-port").on("click", function () {
     };
     if ((document.documentElement.clientWidth >= 1024) && (document.documentElement.clientWidth < 1440)) {
         map.setZoom(16);
-        map.setCenter({ lat: 43.694063, lng: 7.290414 });
+        map.setCenter({ lat: 43.69359347880046, lng: 7.290618067475157 });
     };
     if ((document.documentElement.clientWidth >= 768) && (document.documentElement.clientWidth < 1024)) {
         map.setZoom(15);
@@ -322,6 +317,7 @@ $(".btn-the-port").on("click", function () {
         map.setZoom(15);
         map.setCenter({ lat: 43.694901, lng: 7.290403 });
     }
+    $(".btn-global-description").get(0).scrollIntoView();
 })
 
 //Cimiez zoom
@@ -333,7 +329,7 @@ $(".btn-cimiez").on("click", function () {
         map.setCenter({ lat: 43.719948, lng: 7.276502 });
     };
     if ((document.documentElement.clientWidth >= 1024) && (document.documentElement.clientWidth < 1440)) {
-        map.setZoom(17);
+        map.setZoom(18);
         map.setCenter({ lat: 43.720333, lng: 7.277311 });
     };
     if ((document.documentElement.clientWidth >= 768) && (document.documentElement.clientWidth < 1024)) {
@@ -348,6 +344,7 @@ $(".btn-cimiez").on("click", function () {
         map.setZoom(16);
         map.setCenter({ lat: 43.720371, lng: 7.276448 });
     }
+    $(".btn-global-description").get(0).scrollIntoView();
 })
 
 //Russian Church Zoom
@@ -377,34 +374,42 @@ $(".btn-russian-cathedral").on("click", function () {
     }
 })
 
-
 //-------------------------------------------------- Buttons
 // Close Info Box
-$(".poi-close").on("click", function () {
-    $(this).parents(".attraction").hide();
-})
+    $(".poi-close").on("click", function() {
+        $(this).parents(".attraction").hide();
+    })
 
 // Close all Info boxes and reset map zoom
-$(".poi-close-all").on("click", function () {
-    $(".attraction").hide();
-    $(".global-info").css("display", "none")
-    map.setZoom(13);
-    map.setCenter({ lat: 43.70313, lng: 7.26608 }),
+    $(".poi-close-all").on("click", function() {
+        $(".attraction").hide();
+        $(".global-info").css("display", "none")
+        map.setZoom(13);
+        map.setCenter({ lat: 43.70313, lng: 7.26608 }),
         $("#map-container").get(0).scrollIntoView();
-})
+    })
 // Back To Map
-$(".back-to-map").on("click", function () {
-    $("#map-container").get(0).scrollIntoView();
-})
+    $(".back-to-map").on("click", function() {
+        $("#map-container").get(0).scrollIntoView();
+    })
 
-function showOldTownInfoWindows() {
-    for (var i = 0; i < oldTownMarkers.length; i++) {
-        google.maps.event.trigger(oldTownMarkers[i], "click");
+    function showOldTownInfoWindows() {
+        for (var i = 0; i < oldTownMarkers.length; i++) {
+            google.maps.event.trigger(oldTownMarkers[i], "click");
+        }
     }
+
+//---------------------------------------------------------------------------------------------------- open Map Elements
+// from https://stackoverflow.com/a/42416400/14773450
+let attractions = $(".map-information").children('div')
+function move(v) {
+    attractions.filter(function() {
+        $(this).show();
+        if (!$(this).hasClass(v) && (v)) {
+            $(this).hide();
+        }
+    })
 }
 
 
-function openElement() {
-    document.getElementById(".output").append("#matisse")
-}
 
