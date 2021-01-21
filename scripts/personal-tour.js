@@ -136,11 +136,23 @@ function addToItin() {
     localStorage.getItem('place');
     let placeAddedToItinerary = JSON.parse(localStorage.getItem('place'));
     console.log(placeAddedToItinerary)
-    alert(`You have added ${placeAddedToItinerary.key} to your itinerary`)
-    document.getElementById("message").innerText = `Please send me an estimate for a tour containing the following places to visit:`;
-    document.getElementById("message").innerText += `
-
-    ${placeAddedToItinerary.key}`
+    alert(`You have added 
+${placeAddedToItinerary.key} 
+to your itinerary`)
+    //document.getElementById("message").innerText = `Please send me an estimate for a tour containing the following places to visit:`;
+    document.getElementById("message").innerHTML += placeAddedToItinerary.key
 }
+
+//appends an "active" class to .popup and .popup-content when the "Open" button is clicked
+$(".open").on("click", function() {
+    $(".popup-container").css("display", "block");
+    $(".popup-overlay, .popup-content").addClass("active");
+});
+
+//removes the "active" class to .popup and .popup-content when the "Close" button is clicked 
+$(".close, .popup-overlay").on("click", function() {
+    $(".popup-container").css("display", "none");
+    $(".popup-overlay, .popup-content").removeClass("active");
+});
 
     

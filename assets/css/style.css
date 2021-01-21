@@ -484,7 +484,7 @@ border-color: rgba(0,47,167,0.75)!important;
 
 .poi-title {
     text-align: center;
-    color: red;
+    color: rgba(0,47,167,0.75);
 }
 
 .attraction {
@@ -566,10 +566,6 @@ border-color: rgba(0,47,167,0.75)!important;
     }
 
 }
-/* ----------------------------------------- Personalised Tour Modal */
-/*.personalised-tour {
-    display: block
-}*/
 
 /* ----------------------------------------- Footer */
 
