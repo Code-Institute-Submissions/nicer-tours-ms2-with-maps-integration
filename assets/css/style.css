@@ -470,6 +470,9 @@ border-color: rgba(0,47,167,0.75)!important;
     margin: 0 auto;
 }
 
+.clear-button-div {
+    bottom: 6px;
+}
 .info-container {
     overflow: hidden;
     padding-bottom: 32px;
@@ -564,7 +567,15 @@ border-color: rgba(0,47,167,0.75)!important;
     .img {
         width: 100%;
     }
+}
 
+#general-title {
+    text-align: center;
+    color: rgba(0,47,167,0.75)
+}
+/* ----------------------------------------- Personalised tour */
+.btn-cta-presonalised-tour {
+    display: none;
 }
 
 /* ----------------------------------------- Footer */

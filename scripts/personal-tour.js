@@ -1,4 +1,5 @@
 let map;
+let markers;
 
 function createMap() {
     let options = {
@@ -75,7 +76,9 @@ function createMap() {
             let placeReviews = p.reviews;
             placeReviews.forEach(function(item) {
                 //console.log(item);
-                document.getElementById("attraction-image").innerHTML += `<p style="margin-bottom:0">${item.text}</p><p style="text-align:right"><strong>${item.author_name}: </strong> <span style="color:red; font-size:x-large">${item.rating}</span>/5</p><hr>`;
+                document.getElementById("attraction-image").innerHTML += `<p style="margin-bottom:0">${item.text}</p>
+                <p style="text-align:right"><strong>${item.author_name}: </strong> 
+                <span style="color:red; font-size:x-large">${item.rating}</span>/5</p><hr>`;
             });
 
             let placeWebsite = p.website;
@@ -101,7 +104,11 @@ function createMap() {
             else 
                 bounds.extend(p.geometry.location);
 
-            
+            $(".back-to-map").on("click", function() {
+                markers.forEach(function(m) {m.setMap(null);});
+            markers = [];
+            });
+
             $("#attraction").get(0).scrollIntoView();
         });
         map.fitBounds(bounds)
@@ -110,49 +117,40 @@ function createMap() {
 }
 
 //------------------------------------------------------------------------------------------------------- Close all Info boxes and reset map zoom
-    $(".poi-close-all").on("click", function() {
-        $("#attraction").toggle();
-        map.setZoom(12);
-    })
-
+    //Go back to top of map on click
     function backToMap() {
+        document.getElementById("search").value = "";
+        map.setZoom(12);
         $(".input-div").get(0).scrollIntoView();
     }
 
-    function search(ele) {
-    if(event.key === 'Enter') {
-        alert("Please select from the dropdown menu");        
+    // Makes sure to choose from dropdown menu
+    function search(searchbox) {
+        if(event.key === 'Enter') {
+            alert("Please select from the dropdown menu");        
+        }
     }
 
-}
-function addToItin() {
-    var getValue = $('#search').val();
+    //SessionStorage to add item to Tour Itinerary
+    // Thanks to mentor Aaron for guidance
+    function addToItin() {
+        var getValue = $('#search').val();
 
-    let valueSaved = {
-        key: getValue
-    }
+        if (localStorage.getItem("place") === null) {
+            sessionStorage.setItem("place", "");
+        }
+        
+        sessionStorage.setItem("place", sessionStorage.getItem("place") + "\n" + getValue)
 
-    localStorage.setItem('place', JSON.stringify(valueSaved));
-    localStorage.getItem('place');
-    let placeAddedToItinerary = JSON.parse(localStorage.getItem('place'));
-    console.log(placeAddedToItinerary)
-    alert(`You have added 
-${placeAddedToItinerary.key} 
+        sessionStorage.getItem('place');
+        let placeAddedToItinerary = sessionStorage.getItem('place');
+        console.log(placeAddedToItinerary)
+        alert(`You have added 
+    ${placeAddedToItinerary} 
 to your itinerary`)
-    //document.getElementById("message").innerText = `Please send me an estimate for a tour containing the following places to visit:`;
-    document.getElementById("message").innerHTML += placeAddedToItinerary.key
-}
+        document.getElementById("message").innerHTML += placeAddedToItinerary;
+        $(".btn-cta-presonalised-tour").css("display", "block");
+    }
 
-//appends an "active" class to .popup and .popup-content when the "Open" button is clicked
-$(".open").on("click", function() {
-    $(".popup-container").css("display", "block");
-    $(".popup-overlay, .popup-content").addClass("active");
-});
-
-//removes the "active" class to .popup and .popup-content when the "Close" button is clicked 
-$(".close, .popup-overlay").on("click", function() {
-    $(".popup-container").css("display", "none");
-    $(".popup-overlay, .popup-content").removeClass("active");
-});
 
     

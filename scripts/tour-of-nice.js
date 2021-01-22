@@ -1,6 +1,10 @@
 let markers = [];
 let locations = [];
 let request = [];
+let infowindowContent;
+let infowindowTitle;
+let service;
+let placeName;
 let infowindow = null;
 let map;
 
@@ -12,6 +16,8 @@ function initMap() {
         mapTypeControl: false,
         streetViewControl: false
     });
+
+    service = new google.maps.places.PlacesService(map);
 //---------------------------------------------------------------------------------------------------- Markers for each section of map
     /*let oldTownMarkers = locations.slice(0, 6);
     let castleHillMarkers = locations.slice(6, 9);
@@ -48,7 +54,7 @@ function initMap() {
     let markerOperaHouse = {
         lat: 43.69547, 
         lng: 7.27253,
-        //placeId: "ChIJOdYiS6LazRIRBQmeCxgnWs4",
+        placeId: "ChIJOdYiS6LazRIRBQmeCxgnWs4",
         title: `L'Opéra de Nice Opera House`,
         link: `L'Opéra de Nice Opera House<br><br><a onclick="move('operaHouse')"href="../tour-of-nice.html#operaHouse">Find Out More</a>`,
         request: {
@@ -158,10 +164,10 @@ function initMap() {
         lng: 7.27624,
         //placeId: "ChIJnz74K1DFzRIRiRaLt2c5MhA",
         title: `Matisse Museum`,
-        link: `Matisse Museum<br><br><a onclick="move('matisse')" href="../tour-of-nice.html#matisse">Find Out More</a>`,
+        link: `Matisse Museum<br><br><a id="infowindowLink" onclick="move('matisse')" href="../tour-of-nice.html#matisse">Find Out More</a>`,
         request: {
             placeId: "ChIJnz74K1DFzRIRiRaLt2c5MhA",
-            fields: ["name", "rating", "reviews"]
+            fields: ["name", "rating", "reviews", "photos"]
         }
     }
 
@@ -238,15 +244,11 @@ function initMap() {
         ];
 
 //---------------------------------------------------------------------------------------------------- Markers
-    
-// If you want to access a single value from an array - it MUST be in the loop.  This
-
     for (let i = 0; i < locations.length; i++) {
         let request = {
             placeId: locations.placeId,
-            fields: ["name", "reviews", "rating"],
+            fields: ["name", "reviews", "rating", "photos"],
         };
-        //console.log(request)
         let marker = new google.maps.Marker({
             position: new google.maps.LatLng(locations[i].lat, locations[i].lng),
             map: map
@@ -254,51 +256,79 @@ function initMap() {
         
         let infowindow = new google.maps.InfoWindow({
             content: locations[i].link,
+            title: locations[i].title,
             maxWidth: 160
         });
-        infowindow.open(map, marker);
+        if (window.innerWidth > 768) {
+            infowindow.open(map, marker);
+        }
+        //infowindow.open(map, marker);
+
+        //infowindowContent = infowindow.content;
+        ///console.log(infowindowContent)
+        /*let infowindowHTMLContentLink = document.getElementById("infowindowLink");
+        infowindowHTMLContentLink.addEventListener("click", function() {
+            for (let a = 0; a < infowindowContent.length; a++) {
+                document.getElementById("general-title").append(infowindowTitle);
+            };
+        })*/
+        
+        infowindowTitle = infowindow.title;
+        console.log(infowindowTitle)
+        /*infowindow.content.addListener("click", function() {
+            for (let a = 0; a < infowindowContent.length; a++) {
+                document.getElementById("general-title").append(infowindowTitle);
+            };
+        })*/
 
         
+        /* Many thanks due to Kevin Loughrey (Kevin_ci) for helping getting this to work! */
+        google.maps.event.addListener(marker, "click", function () {
+            service.getDetails(locations[i].request, (place, status) => {
+                if (status === google.maps.places.PlacesServiceStatus.OK) {
 
-        /*const service = new google.maps.places.PlacesService(map);
-        service.getDetails(request, (place, status) => {
-            if (status === google.maps.places.PlacesServiceStatus.OK) {
-            const marker = new google.maps.Marker({
-                map,
-                position: place.geometry.location,
+                    /*console.log(place)
+                    placeName = place.name;
+                    console.log(placeName)
+                    document.getElementById("general-title").append(placeName)*/
+
+                    let reviews = "";
+                    let reviewer = "";
+                    let reviewerRating = place.rating;
+                    console.log(reviewerRating);
+
+                    let photos;
+                
+                    for (let j = 0; j < place.reviews.length; j++) {
+                        reviews += place.reviews[j].text + "<br>";
+                        reviewer = place.reviews[j].author_name + "<br>";
+                    }
+                    /*for (let k = 0; k < place.photos.length; k++) {
+                        photos += place.photos[k].getUrl + "<br>"
+                    }*/
+                    
+                    infowindow.setContent("<div><strong>" +
+                            place.name +
+                            "</strong><br>" +
+                            "Total Rating: " +
+                            place.rating +
+                            "<br>" +
+                            reviews +
+                            "<br>" +
+                            reviewer + 
+                            "</div>"
+                        )
+                    };
+                    infowindow.open(map, this);
+                });
             });
-            /*google.maps.event.addListener(marker, "click", function () {
-                infowindow.setContent(
-                "<div><strong>" +
-                    place.name +
-                    "</strong><br>" +
-                    "Place ID: " +
-                    place.place_id +
-                    "<br>" +
-                    place.formatted_address +
-                    "</div>"
-                );
-                infowindow.open(map, this);
-            });
-            }
-        });*/
-    }
-    //console.log(service)
+        };
 
     markers = locations.map(function(location, i) {
         let marker = new google.maps.Marker({
             position: location
         });
     });
-
-    /*console.log(markerProm, markerPlaceMassena, markerOperaHouse, markerFlowerMarket, 
-        markerStReparateChurch, markerCastleHill, markerRaubaCapeu, markerPortLympia, 
-        markerBayOfAngelsView, markerMatisseMuseum, markerArchaeologyMuseum, 
-        markerCimiezMonastery, markerArenesDeCimiez, markerNotreDame, markerRussianCathedral)
-        //console.log(markerProm.keys)*/
-    console.log(markerOperaHouse);
-
-    //console.log(markerOperaHouse["request"]["fields"[0]])
     
 
 //---------------------------------------------------------------------------------------------------- Marker Clustering
@@ -477,6 +507,7 @@ $(".btn-russian-cathedral").on("click", function () {
 //---------------------------------------------------------------------------------------------------- open Map Elements
 // from https://stackoverflow.com/a/42416400/14773450
 let attractions = $(".map-information").children('div')
+console.log(attractions)
 function move(v) {
     attractions.filter(function() {
         $(this).appendTo(output).show();
