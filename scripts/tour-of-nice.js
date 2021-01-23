@@ -4,6 +4,7 @@ let request = [];
 let infowindowContent;
 let infowindowTitle;
 let service;
+let img;
 let placeName;
 let infowindow = null;
 let map;
@@ -18,22 +19,25 @@ function initMap() {
     });
 
     service = new google.maps.places.PlacesService(map);
-//---------------------------------------------------------------------------------------------------- Markers for each section of map
-    /*let oldTownMarkers = locations.slice(0, 6);
-    let castleHillMarkers = locations.slice(6, 9);
-    let portMarkers = locations.slice(9, 12);
-    let cimiezMarkers = locations.slice(12, 16);*/
 //---------------------------------------------------------------------------------------------------- Markers
     //Promenade des Anglais marker
     let markerProm = {
         lat: 43.695316, 
         lng: 7.267793,
-        //placeId: "Eh9Qcm9tLiBkZXMgQW5nbGFpcywgTmljZSwgRnJhbmNlIi4qLAoUChIJ0VoczFnQzRIR737WTal1fsoSFAoSCTEthWoQ0M0SEXCal_2lGQgE",
         title: `Promenade des Anglais`,
-        link: `Promenade des Anglais<br><br><a onclick="move('prom')" href="../tour-of-nice.html#prom">Find Out More</a>`,
+        description: `<h3 class="poi-sub-heading">The <i>Musée Matisse</i> is one of the must-see museums for any visitor to Nice.</h3>
+                    <!-- Text from http://www.nicetrotter.fr/art-musee-matisse-de-nice-cimiez-125.html and http://www.musee-matisse-nice.org/ -->
+                    <p class="poi-text">Inaugurated in 1963 on the second floor of the Villa des Arènes, situated within the 
+                    archeological site in Cimiez, the Musée Matisse holds the artist's and his heirs' gifts to the 
+                    City of Nice.</p>
+                    <p class="poi-text">The museum's permanent collection includes nearly 70 paintings and cut-out <i>gouaches</i>, more than 200 
+                    drawings, engravings, almost all of the artist's sculptures, illustrated books, around a hundred 
+                    photographs and objects that belonged to the painter.</p>
+                    <p class="poi-text">The Musée Matisse is part of a vast patrimonial complex of the Cimiez site that includes the Roman 
+                    arenas and ruins, a garden with hundred-year old olive trees, as well as the Cimiez monastery.</p>`,
         request: {
-            placeId: "Eh9Qcm9tLiBkZXMgQW5nbGFpcywgTmljZSwgRnJhbmNlIi4qLAoUChIJ0VoczFnQzRIR737WTal1fsoSFAoSCTEthWoQ0M0SEXCal_2lGQgE",
-            fields: ["name", "rating", "reviews"]
+            placeId: "ChIJyRztG1fRzRIRBeFRpvLFAW4",
+            fields: ["name", "reviews", "rating", "photos", "website", "place_id", "formatted_address"]
         }
     }
     
@@ -41,12 +45,20 @@ function initMap() {
     let markerPlaceMassena = {
         lat: 43.697400, 
         lng: 7.270230,
-        //placeId: "ChIJCWEKXaHazRIRv0jrGA8b3O8",
         title: `Place Masséna`,
-        link: `Place Masséna<br><br><a onclick="move('placeMassena')"href="../tour-of-nice.html#placeMassena">Find Out More</a>`,
+        description: `<h3 class="poi-sub-heading">The <i>Musée Matisse</i> is one of the must-see museums for any visitor to Nice.</h3>
+                    <!-- Text from http://www.nicetrotter.fr/art-musee-matisse-de-nice-cimiez-125.html and http://www.musee-matisse-nice.org/ -->
+                    <p class="poi-text">Inaugurated in 1963 on the second floor of the Villa des Arènes, situated within the 
+                    archeological site in Cimiez, the Musée Matisse holds the artist's and his heirs' gifts to the 
+                    City of Nice.</p>
+                    <p class="poi-text">The museum's permanent collection includes nearly 70 paintings and cut-out <i>gouaches</i>, more than 200 
+                    drawings, engravings, almost all of the artist's sculptures, illustrated books, around a hundred 
+                    photographs and objects that belonged to the painter.</p>
+                    <p class="poi-text">The Musée Matisse is part of a vast patrimonial complex of the Cimiez site that includes the Roman 
+                    arenas and ruins, a garden with hundred-year old olive trees, as well as the Cimiez monastery.</p>`,
         request: {
             placeId: "ChIJCWEKXaHazRIRv0jrGA8b3O8",
-            fields: ["name", "rating", "reviews"]
+            fields: ["name", "reviews", "rating", "photos", "website", "place_id", "formatted_address"]
         }
     }
     
@@ -54,12 +66,20 @@ function initMap() {
     let markerOperaHouse = {
         lat: 43.69547, 
         lng: 7.27253,
-        placeId: "ChIJOdYiS6LazRIRBQmeCxgnWs4",
         title: `L'Opéra de Nice Opera House`,
-        link: `L'Opéra de Nice Opera House<br><br><a onclick="move('operaHouse')"href="../tour-of-nice.html#operaHouse">Find Out More</a>`,
+        description: `<h3 class="poi-sub-heading">From a little wooden theatre to a grand dame of the <i>Italianate</i> style</h3>
+                    <!-- Text by self and https://www.opera-nice.org/en/the-theater/historic -->
+                    <p class="poi-text">The Marchioness Alli-Maccarani acquired permission to turn her former residence into a theatre from Amadeus III, 
+                    King of Sardinia, under who's jurisdiction the County of Nice fell. Thus the little <i>Théâtre Maccarani</i>, named after its owners, 
+                    was built at the site of the present-day opera house in the 18th century.</p>
+                    <p class="poi-text">Built entirely from wood in 1776, the northern façade looked out over the city while its southern façade gave out onto the ramparts 
+                    of the <i>Quai du Midi</i>, today's <i>Quai des États-Unis</i>.</p>
+                    <p class="poi-text">Razed to the ground by a fire in 1881, the new opera house, <i>l'Opéra de Nice</i> rose from its ashes in 1883</p>
+                    <p class="poi-text">Today, the <i>Opéra de Nice</i> is the principal opera venue in Nice, France, and houses the <i>Ballet Nice Méditerrannée</i> 
+                    and the Nice Philharmonic Orchestra. It offers three types of performances: operas, ballets and classical music concerts.</p>`,
         request: {
             placeId: "ChIJOdYiS6LazRIRBQmeCxgnWs4",
-            fields: ["name", "rating", "reviews"]
+            fields: ["name", "reviews", "rating", "photos", "website", "place_id", "formatted_address"]
         }
     }
 
@@ -67,12 +87,21 @@ function initMap() {
     let markerFlowerMarket = {
         lat: 43.69572, 
         lng: 7.27528,
-        //placeId: "ChIJveRPXAXbzRIRcTlAN0CoOBE",
         title: `The Flower Market of the Old Town`,
-        link: `The Flower Market of the Old Town<br><br><a onclick="move('flowerMarket')" href="../tour-of-nice.html#flowerMarket">Find Out More</a>`,
+        description: `<h3 class="poi-sub-heading">Discover the heart of <i>Vieux Nice</i></h3>
+                    <!-- Text by self -->
+                    <p class="poi-text">The old town of Nice with its world-famous flower market - once the trading point for 35 
+                    tonnes of flowers per day! These flowers fed the perfume and candy industry of the region.</p>
+                    <p class="poi-text">Try the local specialities in the <i>Provençal</i> market: <strong><i>socca</i></strong>, the traditional 
+                    dish of the needy, made from chick peas, olive oil and water; <strong><i>niçois olives</i></strong>, the small, 
+                    stoned olives which are the real pizza olives...</p>
+                    <p class="poi-text">Discover the house where the painter Matisse stayed when he came to Nice to try to capture the light of the 
+                    city in his paintings.</p>
+                    <br>
+                    <p class="image-credit"><strong>Image:</strong> Cours Saleya: Dalbera, via Wikimedia Commons</p>`,
         request: {
-            placeId: "ChIJveRPXAXbzRIRcTlAN0CoOBE",
-            fields: ["name", "rating", "reviews"]
+            placeId: "EiBDb3VycyBTYWxleWEsIDA2MzAwIE5pY2UsIEZyYW5jZSIuKiwKFAoSCTtmtyCj2s0SEb6A4T90An3BEhQKEgkxLYVqENDNEhFwmpf9pRkIBA",
+            fields: ["name", "reviews", "rating", "photos", "website", "place_id", "formatted_address"]
         }
     }
 
@@ -80,12 +109,20 @@ function initMap() {
     let markerStReparateChurch = {
         lat: 43.697294, 
         lng: 7.275965,
-        //placeId: "ChIJR3WTsbzazRIR0c2V-rSfWDo",
         title: `St. Réparate Church`,
-        link: `St. Réparate Church<br><br><a onclick="move('stReparateChurch')" href="../tour-of-nice.html#stReparateChurch">Find Out More</a>`,
+        description: `<h3 class="poi-sub-heading">The <i>Musée Matisse</i> is one of the must-see museums for any visitor to Nice.</h3>
+                    <!-- Text from http://www.nicetrotter.fr/art-musee-matisse-de-nice-cimiez-125.html and http://www.musee-matisse-nice.org/ -->
+                    <p class="poi-text">Inaugurated in 1963 on the second floor of the Villa des Arènes, situated within the 
+                    archeological site in Cimiez, the Musée Matisse holds the artist's and his heirs' gifts to the 
+                    City of Nice.</p>
+                    <p class="poi-text">The museum's permanent collection includes nearly 70 paintings and cut-out <i>gouaches</i>, more than 200 
+                    drawings, engravings, almost all of the artist's sculptures, illustrated books, around a hundred 
+                    photographs and objects that belonged to the painter.</p>
+                    <p class="poi-text">The Musée Matisse is part of a vast patrimonial complex of the Cimiez site that includes the Roman 
+                    arenas and ruins, a garden with hundred-year old olive trees, as well as the Cimiez monastery.</p>`,
         request: {
             placeId: "ChIJR3WTsbzazRIR0c2V-rSfWDo",
-            fields: ["name", "rating", "reviews"]
+            fields: ["name", "reviews", "rating", "photos", "website", "place_id", "formatted_address"]
         }
     }
 
@@ -94,12 +131,20 @@ function initMap() {
     let markerCastleHill = {
         lat: 43.694835, 
         lng: 7.281103,
-        //placeId: "ChIJ87pSBQHQzRIR7gulsDlUpa8",
         title: `Castle Hill`,
-        link: `Castle Hill<br><br><a onclick="move('castleHill')" href="../tour-of-nice.html#castleHill">Find Out More</a>`,
+        description: `<h3 class="poi-sub-heading">The <i>Musée Matisse</i> is one of the must-see museums for any visitor to Nice.</h3>
+                    <!-- Text from http://www.nicetrotter.fr/art-musee-matisse-de-nice-cimiez-125.html and http://www.musee-matisse-nice.org/ -->
+                    <p class="poi-text">Inaugurated in 1963 on the second floor of the Villa des Arènes, situated within the 
+                    archeological site in Cimiez, the Musée Matisse holds the artist's and his heirs' gifts to the 
+                    City of Nice.</p>
+                    <p class="poi-text">The museum's permanent collection includes nearly 70 paintings and cut-out <i>gouaches</i>, more than 200 
+                    drawings, engravings, almost all of the artist's sculptures, illustrated books, around a hundred 
+                    photographs and objects that belonged to the painter.</p>
+                    <p class="poi-text">The Musée Matisse is part of a vast patrimonial complex of the Cimiez site that includes the Roman 
+                    arenas and ruins, a garden with hundred-year old olive trees, as well as the Cimiez monastery.</p>`,
         request: {
             placeId: "ChIJ87pSBQHQzRIR7gulsDlUpa8",
-            fields: ["name", "rating", "reviews"]
+            fields: ["name", "reviews", "rating", "photos", "website", "place_id", "formatted_address"]
         }
     }
 
@@ -107,12 +152,20 @@ function initMap() {
     let markerRaubaCapeu = {
         lat:43.693849, 
         lng: 7.281250,
-        //placeId: "ChIJo5Bv7r3azRIRN6AR5Wkv66s",
         title: `WWI Memorial "Rauba-Capeù"`,
-        link: `WWI Memorial "Rauba-Capeù"<br><br><a onclick="move('raubaCapeu')" href="../tour-of-nice.html#raubaCapeu">Find Out More</a>`,
+        description: `<h3 class="poi-sub-heading">The <i>Musée Matisse</i> is one of the must-see museums for any visitor to Nice.</h3>
+                    <!-- Text from http://www.nicetrotter.fr/art-musee-matisse-de-nice-cimiez-125.html and http://www.musee-matisse-nice.org/ -->
+                    <p class="poi-text">Inaugurated in 1963 on the second floor of the Villa des Arènes, situated within the 
+                    archeological site in Cimiez, the Musée Matisse holds the artist's and his heirs' gifts to the 
+                    City of Nice.</p>
+                    <p class="poi-text">The museum's permanent collection includes nearly 70 paintings and cut-out <i>gouaches</i>, more than 200 
+                    drawings, engravings, almost all of the artist's sculptures, illustrated books, around a hundred 
+                    photographs and objects that belonged to the painter.</p>
+                    <p class="poi-text">The Musée Matisse is part of a vast patrimonial complex of the Cimiez site that includes the Roman 
+                    arenas and ruins, a garden with hundred-year old olive trees, as well as the Cimiez monastery.</p>`,
         request: {
             placeId: "ChIJo5Bv7r3azRIRN6AR5Wkv66s",
-            fields: ["name", "rating", "reviews"]
+            fields: ["name", "reviews", "rating", "photos", "website", "place_id", "formatted_address"]
         }
     }
 
@@ -120,12 +173,20 @@ function initMap() {
     let markerPortLympia = {
         lat: 43.695379, 
         lng: 7.284777,
-        //placeId: "ChIJ33og2r7azRIRKnGqChlyI5g",
         title: `Port de Nice Lympia`,
-        link: `Port de Nice Lympia<br><br><a onclick="move('portLympia')" href="../tour-of-nice.html#portLympia">Find Out More</a>`,
+        description: `<h3 class="poi-sub-heading">The <i>Musée Matisse</i> is one of the must-see museums for any visitor to Nice.</h3>
+                    <!-- Text from http://www.nicetrotter.fr/art-musee-matisse-de-nice-cimiez-125.html and http://www.musee-matisse-nice.org/ -->
+                    <p class="poi-text">Inaugurated in 1963 on the second floor of the Villa des Arènes, situated within the 
+                    archeological site in Cimiez, the Musée Matisse holds the artist's and his heirs' gifts to the 
+                    City of Nice.</p>
+                    <p class="poi-text">The museum's permanent collection includes nearly 70 paintings and cut-out <i>gouaches</i>, more than 200 
+                    drawings, engravings, almost all of the artist's sculptures, illustrated books, around a hundred 
+                    photographs and objects that belonged to the painter.</p>
+                    <p class="poi-text">The Musée Matisse is part of a vast patrimonial complex of the Cimiez site that includes the Roman 
+                    arenas and ruins, a garden with hundred-year old olive trees, as well as the Cimiez monastery.</p>`,
         request: {
             placeId: "ChIJ33og2r7azRIRKnGqChlyI5g",
-            fields: ["name", "rating", "reviews"]
+            fields: ["name", "reviews", "rating", "photos", "website", "place_id", "formatted_address"]
         }
     }
 
@@ -133,15 +194,20 @@ function initMap() {
     let markerBayOfAngelsView = {
         lat:43.689128, 
         lng: 7.296206,
-        //placeId: "ChIJ8cQZ7ejazRIRnFrpzz1mn7c",
         title: `View over Nice and the Bay of Angels`,
-        link: `View over Nice and the Bay of Angels
-        <br>
-        <br>
-        <a onclick="move('bayOfAngelsView')" href="../tour-of-nice.html#bayOfAngelsView">Find Out More</a>`,
+        description: `<h3 class="poi-sub-heading">The <i>Musée Matisse</i> is one of the must-see museums for any visitor to Nice.</h3>
+                    <!-- Text from http://www.nicetrotter.fr/art-musee-matisse-de-nice-cimiez-125.html and http://www.musee-matisse-nice.org/ -->
+                    <p class="poi-text">Inaugurated in 1963 on the second floor of the Villa des Arènes, situated within the 
+                    archeological site in Cimiez, the Musée Matisse holds the artist's and his heirs' gifts to the 
+                    City of Nice.</p>
+                    <p class="poi-text">The museum's permanent collection includes nearly 70 paintings and cut-out <i>gouaches</i>, more than 200 
+                    drawings, engravings, almost all of the artist's sculptures, illustrated books, around a hundred 
+                    photographs and objects that belonged to the painter.</p>
+                    <p class="poi-text">The Musée Matisse is part of a vast patrimonial complex of the Cimiez site that includes the Roman 
+                    arenas and ruins, a garden with hundred-year old olive trees, as well as the Cimiez monastery.</p>`,
         request: {
-            placeId: "ChIJ8cQZ7ejazRIRnFrpzz1mn7c",
-            fields: ["name", "rating", "reviews"]
+            placeId: "ChIJ-4PtWujazRIRacv7jz-WmUA",
+            fields: ["name", "reviews", "rating", "photos", "website", "place_id", "formatted_address"]
         }
     }
 
@@ -149,12 +215,17 @@ function initMap() {
     let markerArenesDeCimiez = {
         lat:43.720492, 
         lng: 7.276909,
-        //placeId: "ChIJX76sxU_FzRIR-L2d7gXKUGQ",
         title: `Arènes de Cimiez Garden`,
-        link: `Arènes de Cimiez Garden<br><br><a onclick="move('arenesDeCimiez')" href="../tour-of-nice.html#arenesDeCimiez">Find Out More</a>`,
+        description: `<h3 class="poi-sub-heading">Hear the echoes of the great Jazz Stars as you stroll through the gardens.</h3>
+                    <!-- Text from https://en.nicetourisme.com/nice/94-jardin-des-arenes-de-cimiez -->
+                    <p class="poi-text">Across from the Monastery of Cimiez, this garden is a vast olive grove, with thousands of 
+                    centuries-old trees; the lawns are easily accessible to everyone, which makes this a favourite haunt for family 
+                    outings.</p>
+                    <p class="poi-text">Site of festivals such as the May Day festival, and previously home to the Nice Jazz Festival, take time to stroll 
+                    in the olive lined boulevards named after the Jazz Greats who have played here.</p`,
         request: {
             placeId: "ChIJX76sxU_FzRIR-L2d7gXKUGQ",
-            fields: ["name", "rating", "reviews"]
+            fields: ["name", "reviews", "rating", "photos", "website", "place_id", "formatted_address"]
         }
     }
 
@@ -162,12 +233,20 @@ function initMap() {
     let markerMatisseMuseum = {
         lat:43.71938, 
         lng: 7.27624,
-        //placeId: "ChIJnz74K1DFzRIRiRaLt2c5MhA",
         title: `Matisse Museum`,
-        link: `Matisse Museum<br><br><a id="infowindowLink" onclick="move('matisse')" href="../tour-of-nice.html#matisse">Find Out More</a>`,
+        description: `<h3 class="poi-sub-heading">The <i>Musée Matisse</i> is one of the must-see museums for any visitor to Nice.</h3>
+                    <!-- Text from http://www.nicetrotter.fr/art-musee-matisse-de-nice-cimiez-125.html and http://www.musee-matisse-nice.org/ -->
+                    <p class="poi-text">Inaugurated in 1963 on the second floor of the Villa des Arènes, situated within the 
+                    archeological site in Cimiez, the Musée Matisse holds the artist's and his heirs' gifts to the 
+                    City of Nice.</p>
+                    <p class="poi-text">The museum's permanent collection includes nearly 70 paintings and cut-out <i>gouaches</i>, more than 200 
+                    drawings, engravings, almost all of the artist's sculptures, illustrated books, around a hundred 
+                    photographs and objects that belonged to the painter.</p>
+                    <p class="poi-text">The Musée Matisse is part of a vast patrimonial complex of the Cimiez site that includes the Roman 
+                    arenas and ruins, a garden with hundred-year old olive trees, as well as the Cimiez monastery.</p>`,
         request: {
             placeId: "ChIJnz74K1DFzRIRiRaLt2c5MhA",
-            fields: ["name", "rating", "reviews", "photos"]
+            fields: ["name", "reviews", "rating", "photos", "website", "place_id", "formatted_address"]
         }
     }
 
@@ -175,12 +254,20 @@ function initMap() {
     let markerArchaeologyMuseum = {
         lat:43.71928, 
         lng: 7.27511,
-        //placeId: "ChIJs1YSxFHFzRIRv7otGUG4rso",
         title: `Archaeology Museum`,
-        link: `Archaeology Museum<br><br><a onclick="move('archaeology')" href="../tour-of-nice.html#archaeology">Find Out More</a>`,
+        description: `<h3 class="poi-sub-heading">A treasure trove of artefacts dating from the Bronze to the Middle Ages.</h3>
+                    <!-- Text from https://frenchriviera.travel/archaeological-museum-nice/ -->
+                    <p class="poi-text">The most valuable items found over the years in Cimiez and near Nice have been collected 
+                    together in the archaeological museum in Cimiez. Some of these were excavated during archaeological research, 
+                    while others were found in the wrecks of ancient ships sunk near the Côte d’Azur. From 1960, the museum 
+                    has allowed you to see this historic heritage, and even touch and try some of the exhibits, such as a fragment 
+                    of Roman armor.</p>
+                    <p class="poi-text">It is worth noting that the museum stands on the location of the ancient Roman city of Cemenelum. In addition 
+                    to the exhibition in the building, you can also admire the ruins of the ancient bath-house from the third century. 
+                    The most impressive remains are of the frigidarium, a room that contained a pool of cold water.</p>`,
         request: {
             placeId: "ChIJs1YSxFHFzRIRv7otGUG4rso",
-            fields: ["name", "rating", "reviews"]
+            fields: ["name", "reviews", "rating", "photos", "website", "place_id", "formatted_address"]
         }
     }
     
@@ -188,12 +275,19 @@ function initMap() {
     let markerCimiezMonastery = {
         lat:43.71998, 
         lng: 7.27881,
-        //placeId: "ChIJ1ef2pk_FzRIRhOkC-ZlEROI",
         title: `The Monastery of Cimiez`,
-        link: `The Monastery of Cimiez<br><br><a onclick="move('cimiezMonastery')" href="../tour-of-nice.html#cimiezMonastery">Find Out More</a>`,
+        description: `<h3 class="poi-sub-heading">Brother Marc and the history of San Francisco.</h3>
+                    <!-- Text from https://fr.wikipedia.org/wiki/Monast%C3%A8re_de_Cimiez-->
+                    <p class="poi-text">The monastery of Cimiez was founded in the VIII<sup>th</sup> century by the Benedictine Order, 
+                    and was rebuilt by the monks of the Abbey of Saint-Pons. It brings together the Church of Our Lady of the Assumption 
+                    (XV<sup>th</sup> century) and the Franciscan museum that traces the Franciscan way of life in Nice from the XIII<sup>th</sup> century.</p>
+                    <p class="poi-text">The most famous of the Franciscans of Nice is Brother Marc who became <strong><i>fray Marcos de Niza</i></strong> 
+                    and gave, it is said, the name of the founder of his order to the site of the future city of San Francisco (California).</p>
+                    <p class="poi-text">Since 1546 , it has been occupied by the Franciscans.</p>
+                    <p class="poi-text">While here, be sure also to pay your respects to Henri Matisse, who is buried in the cemetary.</p>`,
         request: {
             placeId: "ChIJ1ef2pk_FzRIRhOkC-ZlEROI",
-            fields: ["name", "rating", "reviews"]
+            fields: ["name", "reviews", "rating", "photos", "website", "place_id", "formatted_address"]
         }
     }
 
@@ -201,12 +295,20 @@ function initMap() {
     let markerNotreDame = {
         lat:43.703672, 
         lng: 7.265758,
-        //placeId: "ChIJxXBGAAjQzRIRooxQYPogkFs",
         title: `Notre-Dame de l’Assomption Basilica`,
-        link: `Notre-Dame de l’Assomption Basilica<br><br><a onclick="move('notreDame')" href="../tour-of-nice.html#notreDame">Find Out More</a>`,
+        description: `<h3 class="poi-sub-heading">The <i>Musée Matisse</i> is one of the must-see museums for any visitor to Nice.</h3>
+                    <!-- Text from http://www.nicetrotter.fr/art-musee-matisse-de-nice-cimiez-125.html and http://www.musee-matisse-nice.org/ -->
+                    <p class="poi-text">Inaugurated in 1963 on the second floor of the Villa des Arènes, situated within the 
+                    archeological site in Cimiez, the Musée Matisse holds the artist's and his heirs' gifts to the 
+                    City of Nice.</p>
+                    <p class="poi-text">The museum's permanent collection includes nearly 70 paintings and cut-out <i>gouaches</i>, more than 200 
+                    drawings, engravings, almost all of the artist's sculptures, illustrated books, around a hundred 
+                    photographs and objects that belonged to the painter.</p>
+                    <p class="poi-text">The Musée Matisse is part of a vast patrimonial complex of the Cimiez site that includes the Roman 
+                    arenas and ruins, a garden with hundred-year old olive trees, as well as the Cimiez monastery.</p>`,
         request: {
             placeId: "ChIJxXBGAAjQzRIRooxQYPogkFs",
-            fields: ["name", "rating", "reviews"]
+            fields: ["name", "reviews", "rating", "photos", "website", "place_id", "formatted_address"]
         }
     }
 
@@ -214,12 +316,20 @@ function initMap() {
     let markerRussianCathedral = {
         lat:43.703810, 
         lng: 7.253920,
-        //placeId: "ChIJnwGbfqDazRIR4rkavLt2r3U",
         title: `St. Nicholas Russian Orthodox Cathedral`,
-        link: `St. Nicholas Russian Orthodox Cathedral<br><br><a onclick="move('russianCathedral')" href="../tour-of-nice.html#russianCathedral">Find Out More</a>`,
+        description: `<h3 class="poi-sub-heading">The <i>Musée Matisse</i> is one of the must-see museums for any visitor to Nice.</h3>
+                    <!-- Text from http://www.nicetrotter.fr/art-musee-matisse-de-nice-cimiez-125.html and http://www.musee-matisse-nice.org/ -->
+                    <p class="poi-text">Inaugurated in 1963 on the second floor of the Villa des Arènes, situated within the 
+                    archeological site in Cimiez, the Musée Matisse holds the artist's and his heirs' gifts to the 
+                    City of Nice.</p>
+                    <p class="poi-text">The museum's permanent collection includes nearly 70 paintings and cut-out <i>gouaches</i>, more than 200 
+                    drawings, engravings, almost all of the artist's sculptures, illustrated books, around a hundred 
+                    photographs and objects that belonged to the painter.</p>
+                    <p class="poi-text">The Musée Matisse is part of a vast patrimonial complex of the Cimiez site that includes the Roman 
+                    arenas and ruins, a garden with hundred-year old olive trees, as well as the Cimiez monastery.</p>`,
         request: {
             placeId: "ChIJnwGbfqDazRIR4rkavLt2r3U",
-            fields: ["name", "rating", "reviews"]
+            fields: ["name", "reviews", "rating", "photos", "website", "place_id", "formatted_address"]
         }
     }
 
@@ -245,9 +355,10 @@ function initMap() {
 
 //---------------------------------------------------------------------------------------------------- Markers
     for (let i = 0; i < locations.length; i++) {
+        
         let request = {
             placeId: locations.placeId,
-            fields: ["name", "reviews", "rating", "photos"],
+            fields: ["name", "reviews", "rating", "photos", "website", "place_id", "formatted_address"],
         };
         let marker = new google.maps.Marker({
             position: new google.maps.LatLng(locations[i].lat, locations[i].lng),
@@ -255,98 +366,108 @@ function initMap() {
         });
         
         let infowindow = new google.maps.InfoWindow({
-            content: locations[i].link,
-            title: locations[i].title,
+            content: locations[i].title,
             maxWidth: 160
         });
         if (window.innerWidth > 768) {
             infowindow.open(map, marker);
         }
-        //infowindow.open(map, marker);
 
-        //infowindowContent = infowindow.content;
-        ///console.log(infowindowContent)
-        /*let infowindowHTMLContentLink = document.getElementById("infowindowLink");
-        infowindowHTMLContentLink.addEventListener("click", function() {
-            for (let a = 0; a < infowindowContent.length; a++) {
-                document.getElementById("general-title").append(infowindowTitle);
-            };
-        })*/
-        
-        infowindowTitle = infowindow.title;
-        console.log(infowindowTitle)
-        /*infowindow.content.addListener("click", function() {
-            for (let a = 0; a < infowindowContent.length; a++) {
-                document.getElementById("general-title").append(infowindowTitle);
-            };
-        })*/
-
-        
         /* Many thanks due to Kevin Loughrey (Kevin_ci) for helping getting this to work! */
         google.maps.event.addListener(marker, "click", function () {
+            $("#reviews").hide().html("");
             service.getDetails(locations[i].request, (place, status) => {
                 if (status === google.maps.places.PlacesServiceStatus.OK) {
+                    $("#attraction").get(0).scrollIntoView();
+                    document.getElementById("attraction").innerHTML = `<div class="row">
+                        <div class="col-12 order-1 poi-title">
+                            <h2 id="poi-title-name"></h2>
+                        </div>
+                        <div class="col-12 order-2" id="attraction-image"></div>
+                        <div class="col-12 order-12 buttons-and-links">
+                            <div class="row">
+                                <div class="col-lg-4 col-sm-6 order-xl-1 order-1 reviews" style="text-align:left">
+                                    <button class="btn btn-light btn-block reviews" onclick="seeReviews()">See Reviews</button>
+                                </div>
+                                <div class="col-lg-4 col-sm-6 order-xl-2 order-2 more-info">
+                                </div>
+                                <div class="col-lg-4 col-sm-12 order-xl-3 order-3 back-to-map" style="text-align:right">
+                                    <button class="btn btn-light btn-block back-to-map" onclick="backToMap()">Back To Map</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>`;
 
-                    /*console.log(place)
-                    placeName = place.name;
-                    console.log(placeName)
-                    document.getElementById("general-title").append(placeName)*/
-
-                    let reviews = "";
-                    let reviewer = "";
-                    let reviewerRating = place.rating;
-                    console.log(reviewerRating);
-
-                    let photos;
-                
-                    for (let j = 0; j < place.reviews.length; j++) {
-                        reviews += place.reviews[j].text + "<br>";
-                        reviewer = place.reviews[j].author_name + "<br>";
-                    }
-                    /*for (let k = 0; k < place.photos.length; k++) {
-                        photos += place.photos[k].getUrl + "<br>"
-                    }*/
                     
-                    infowindow.setContent("<div><strong>" +
-                            place.name +
-                            "</strong><br>" +
-                            "Total Rating: " +
-                            place.rating +
-                            "<br>" +
-                            reviews +
-                            "<br>" +
-                            reviewer + 
-                            "</div>"
-                        )
+                    let placeId = place.placeId
+                    let placeAddress = place.formatted_address
+                    let placeName = place.name;
+                    console.log(placeName);
+                    document.getElementById("poi-title-name").append(placeName)
+
+                    if (place.hasOwnProperty("photos") === false){
+                        console.log("No photos");
+                        img = document.createElement("img");
+                        img.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/4/47/Cours_Saleya_-_Chapelle_de_la_Mis%C3%A9ricorde_-_Nice.jpeg");
+                        img.setAttribute("class", "img")
+                        document.getElementById("attraction-image").appendChild(img);
+                    } else {
+                        let photoUrl = place.photos[0].getUrl();
+                        img = document.createElement("img");
+                        img.setAttribute("src", photoUrl);
+                        img.setAttribute("class", "img")
+                        document.getElementById("attraction-image").appendChild(img);
                     };
-                    infowindow.open(map, this);
-                });
+
+                    if (place.hasOwnProperty("reviews") === false){
+                        console.log("No photos");
+                        document.getElementById("reviews").innerHTML += `<p style="margin-bottom:0">Sorry, there are no Google reviews available for this location.`;
+                    } else {
+                        let placeReviews = place.reviews;
+                        placeReviews.forEach(function(item) {
+                            document.getElementById("reviews").innerHTML += `<p style="margin-bottom:0">${item.text}</p>
+                            <p style="text-align:right"><strong>${item.author_name}: </strong> 
+                            <span style="color:red; font-size:x-large">${item.rating}</span>/5</p><hr>`;
+                        });
+                    }
+
+                    let placeDescription = locations[i].description;
+                    document.getElementById("attraction-image").innerHTML += `<div style="margin-bottom:0">${placeDescription}</div>`;
+
+                    let placeWebsite = place.website;
+                    console.log(placeWebsite);
+                    if (place.hasOwnProperty("website") == true) {
+                        console.log(placeWebsite);
+                        $(".more-info").append(`<a class="btn btn-light btn-block more-info" role="button" href="${placeWebsite}" target="_blank">Find Out More</a>`)
+
+                    } else if (place.hasOwnProperty("website") == false){
+                        $(".more-info").append(`<a class="btn btn-light btn-block more-info" role="button" href="https://www.google.com/" target="_blank">Find Out More</a>`)
+                    }
+                };
             });
-        };
-
-    markers = locations.map(function(location, i) {
-        let marker = new google.maps.Marker({
-            position: location
         });
-    });
-    
 
-//---------------------------------------------------------------------------------------------------- Marker Clustering
-    /*let markerCluster = new MarkerClusterer(map, markers, {
-        imagePath:
-        "https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m",
-    });*/
+        markers = locations.map(function(location, i) {
+            let marker = new google.maps.Marker({
+                position: location
+            });
+        });
+    }
 }
 
 //---------------------------------------------------------------------------------------------------- jQuery
 //-------------------------------------------------- Hide map on page load
     $(function() {
+        $("#instructions-for-map").hide()
         $("#map-container").hide();
+        $("#reviews").hide();
     })
 
 //-------------------------------------------------- Show map on description buttons
     $(".btn-global-description").on("click", function() {
+        $("#instructions-for-map").show()
         $("#map-container").show();
+        $("#reviews").hide();
     })
 
 //-------------------------------------------------- Section (Buttons) Zooms
@@ -485,37 +606,18 @@ $(".btn-russian-cathedral").on("click", function () {
     }
 })
 
-//-------------------------------------------------- Buttons
-// Close Info Box
-    $(".poi-close").on("click", function() {
-        $(this).parents(".attraction").hide();
-    })
+//---------------------------------------------------------------------------------------------------- Buttons
+//Go back to top of map on click
+    function backToMap() {
+        $("#reviews").hide();
+        $(".btn-global-description").get(0).scrollIntoView();
+    }
 
-// Close all Info boxes and reset map zoom
-    $(".poi-close-all").on("click", function() {
-        $(".attraction").hide();
-        $(".global-info").css("display", "none")
-        map.setZoom(13);
-        map.setCenter({ lat: 43.70313, lng: 7.26608 }),
-        $("#map-container").get(0).scrollIntoView();
-    })
-// Back To Map
-    $(".back-to-map").on("click", function() {
-        $("#map-container").get(0).scrollIntoView();
-    })
+// See reviews
+    function seeReviews() {
+        $("#reviews").show();
+    }
 
-//---------------------------------------------------------------------------------------------------- open Map Elements
-// from https://stackoverflow.com/a/42416400/14773450
-let attractions = $(".map-information").children('div')
-console.log(attractions)
-function move(v) {
-    attractions.filter(function() {
-        $(this).appendTo(output).show();
-        if (!$(this).hasClass(v) && (v)) {
-            $(this).hide();
-        }
-    })
-}
 
 
 

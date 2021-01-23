@@ -473,12 +473,9 @@ border-color: rgba(0,47,167,0.75)!important;
 .clear-button-div {
     bottom: 6px;
 }
-.info-container {
-    overflow: hidden;
-    padding-bottom: 32px;
-    padding-left: 16px;
-    padding-right: 16px;
-    /*display: none;*/
+
+.card-body {
+    padding-bottom: 0;
 }
 
 .map-information>div {
@@ -491,13 +488,11 @@ border-color: rgba(0,47,167,0.75)!important;
 }
 
 .attraction {
-    /*height: 500px;*/
     position: relative;
     margin-bottom: 16px;
 }
 
 .attraction-text {
-    /*height: 500px;*/
     overflow: auto;
 }
 
@@ -549,15 +544,6 @@ border-color: rgba(0,47,167,0.75)!important;
 }
 
 .img {
-      /* CSS Hack will make it width 100% and height 100% */
-      /*position: absolute;*/
-      /*top: 0px;
-      right: 0px;
-      bottom: 0px;
-      left: 0px;*/
-      /* Maintain aspect ratio */
-      /*max-height: 100%;
-      max-width: 100%;*/
     float: left;
     width:50%;
     margin-right:16px;
@@ -569,10 +555,10 @@ border-color: rgba(0,47,167,0.75)!important;
     }
 }
 
-#general-title {
+/*#general-title {
     text-align: center;
     color: rgba(0,47,167,0.75)
-}
+}*/
 /* ----------------------------------------- Personalised tour */
 .btn-cta-presonalised-tour {
     display: none;
