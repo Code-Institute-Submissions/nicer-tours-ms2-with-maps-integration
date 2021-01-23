@@ -375,7 +375,7 @@ function initMap() {
             $("#reviews").hide().html("");
             service.getDetails(locations[i].request, (place, status) => {
                 if (status === google.maps.places.PlacesServiceStatus.OK) {
-                    $("#attraction").get(0).scrollIntoView();
+                    $(".global-info").get(0).scrollIntoView();
                     document.getElementById("attraction").innerHTML = `<div class="row">
                         <div class="col-12 order-1 poi-title">
                             <h2 id="poi-title-name"></h2>
