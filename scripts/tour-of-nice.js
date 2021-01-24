@@ -77,7 +77,7 @@ function initMap() {
                     was built at the site of the present-day opera house in the 18th century.</p>
                     <p class="poi-text">Built entirely from wood in 1776, the northern façade looked out over the city while its southern façade gave out onto the ramparts 
                     of the <i>Quai du Midi</i>, today's <i>Quai des États-Unis</i>.</p>
-                    <p class="poi-text">Razed to the ground by a fire in 1881, the new opera house, <i>l'Opéra de Nice</i> rose from its ashes in 1883</p>
+                    <p class="poi-text">Razed to the ground by a fire in 1881, the new opera house, <i>l'Opéra de Nice</i> rose from its ashes in 1883.</p>
                     <p class="poi-text">Today, the <i>Opéra de Nice</i> is the principal opera venue in Nice, France, and houses the <i>Ballet Nice Méditerrannée</i> 
                     and the Nice Philharmonic Orchestra. It offers three types of performances: operas, ballets and classical music concerts.</p>`,
         request: {
@@ -373,9 +373,9 @@ function initMap() {
         /* Many thanks due to Kevin Loughrey (Kevin_ci) for helping getting this to work! */
         google.maps.event.addListener(marker, "click", function () {
             $("#reviews").hide().html("");
+            $("#attraction").get(0).scrollIntoView();
             service.getDetails(locations[i].request, (place, status) => {
                 if (status === google.maps.places.PlacesServiceStatus.OK) {
-                    $(".global-info").get(0).scrollIntoView();
                     document.getElementById("attraction").innerHTML = `<div class="row">
                         <div class="col-12 order-1 poi-title">
                             <h2 id="poi-title-name"></h2>

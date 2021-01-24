@@ -24,20 +24,20 @@ function initMap() {
         lat: 43.728071, 
         lng: 7.361423,
         title: `Eze Village`,
-        description: `<h3 class="poi-sub-heading"><i>La Prom</i>: France's most iconic seaside boulevard.</h3>
-                    <!-- Text from https://en.wikipedia.org/wiki/Promenade_des_Anglais -->
-                    <p class="poi-text">Starting in the second half of the 18th century, the English aristocracy took to spending the winter in Nice, 
-                    enjoying the panorama along the coast. In 1820, when a particularly harsh winter further north brought an influx of beggars to Nice, 
-                    some of the English proposed that they could work on the construction of a walkway (chemin de promenade) along the sea. It was funded 
-                    by the Reverend Lewis Way and members of Holy Trinity Anglican Church.</p>
-                    <p class="poi-text">The city of Nice, intrigued by the prospect of a pleasant promenade, greatly increased the scope of the work. 
-                    The Promenade was first called the Camin deis Anglés (the English Way) by the Niçois in their native dialect. After the annexation of Nice 
-                    by France in 1860 it was rechristened <i>La Promenade des Anglais</i>.</p>
-                    <p class="poi-text">If <i>La Prom</i> (as the locals call it) is not France's most famous street, it is certainly second only to the <i>Champs Elysée</i> 
-                    in Paris.</p>`,
+        description: `<h3 class="poi-sub-heading">From Nietzsche to Disney....</h3>
+                    <!-- Text from https://en.wikipedia.org/wiki/%C3%88ze -->
+                    <p class="poi-text">This small mediaeval village is famous for its beauty and charm. Its many shops, art galleries, hotels and restaurants attract a 
+                    large number of tourists and honeymooners. As a result, Èze has become dubbed by some a <i>village-musée</i>, a "museum village", as few residents of 
+                    local origin live here. From Èze there are gorgeous views of the Mediterranean Sea. </p>
+                    <p class="poi-text">Eze is famous worldwide for the view of the sea from its hill top. Its <i>Jardin botanique d'Èze</i> (botanic garden) is known for its 
+                    collection of cacti and succulents, as well as its panoramic views. Walt Disney spent a significant amount of time in Èze, as did the philosopher, 
+                    Friedrich Nietzsche.</p>
+                    <p class="poi-text">Although the village dates back 2000 years, the oldest building standing today in the village is the <i>Chapelle de la Sainte Croix</i> which 
+                    dates back to 1306. Members of the lay order of the White Penitents of Èze, in charge of giving assistance to plague victims, would hold their meetings there. 
+                    The shape of the bell-turret is an indication that the village once belonged to the Republic of Genoa.</p>`,
         request: {
             placeId: "ChIJ041rEmbDzRIRDv-yg_yyS6g",
-            fields: ["name", "reviews", "rating", "photos", "website", "place_id", "formatted_address"]
+            fields: ["reviews", "rating", "photos", "website", "place_id", "formatted_address"]
         }
     }
     
@@ -46,21 +46,24 @@ function initMap() {
         lat: 43.729799, 
         lng: 7.363225,
         title: `Parfumerie Fragonard`,
-        description: `<h3 class="poi-sub-heading">Nice's primary city square.</h3>
-                    <!-- Text from https://en.wikipedia.org/wiki/Place_Mass%C3%A9na -->
-                    <p class="poi-text">Named for André Masséna. Its layout was designed by Joseph Vernier in 1843-1844.</p>
-                    <p class="poi-text">The Place Masséna is the main square of the city. Before the Paillon River was covered over, 
-                    the <i>Pont-Neuf</i> was the only practicable way between the old town and the modern one. The square was thus divided 
-                    into two parts (North and South) in 1824. With the demolition of the Masséna Casino in 1979, <i>Place Masséna</i> became 
-                    more spacious and less dense and is now bordered by red ochre buildings of Italian architecture.</p>
-                    <p class="poi-text">The recent rebuilding of the tramline gave the square back to the pedestrians, restoring its status as a real 
-                    Mediterranean square. It is lined with palm trees and stone pines, instead of being the rectangular roundabout of sorts it had 
-                    become over the years. Since its construction, <i>Place Masséna</i> has always been the spot for great public events. 
-                    It is used for concerts, and particularly during the summer festivals, the <i>Corso carnavalesque</i> (carnival parade) in February, 
-                    the military procession of 14 July (Bastille Day) or other traditional celebrations and banquets.</p>`,
+        description: `<h3 class="poi-sub-heading">A passionate dedication...</h3>
+                    <!-- Text from https://www.fragonard.com/en/about-fragonard -->
+                    <p class="poi-text">It was shortly before the First World War that Eugène Fuchs, an entrepreneur at heart who had already 
+                    been seduced by the magic of perfume, decided to set up his own perfumery based on the novel concept of selling perfumery 
+                    products directly to the tourists who were beginning to discover the French Rivera’s charms. Parfumerie Fragonard was opened 
+                    in 1926. Eugène Fuchs chose to name it after the famous Grasse-born painter, Jean-Honoré Fragonard (1732-1806), as a tribute 
+                    to both the town of Grasse and to the refinement of 18th-century arts. Similarly, the choice of name expressed his desire to 
+                    run his business in accordance with traditions.</p>
+                    <p class="poi-text">This spirit has been loyally perpetuated by the three succeeding generations who have run and are still 
+                    running the company. At their instigation new production plants and sales outlets have opened in Grasse, Eze and also Paris.</p>
+                    <p class="poi-text">It was under the tenure of Jean-Francois Costa that the Parfumerie Fragonard went through a rapid expansion 
+                    and modernization. As an avid art collector, during the 1970’s he amassed a large and unique collection of antique perfume related 
+                    items that has both enriched the Fragonard and given the town of Grasse a new cultural dimension.</p>
+                    <p class="poi-text">Today, Jean-François Costa's daughters, Agnès and Françoise preside over the perfumery's destiny, and are as 
+                    concerned as the preceding generations with continuing to build the company while adapting it to current market needs and desires.</p>`,
         request: {
             placeId: "ChIJyRrwPGbDzRIRX0TKPUar-e8",
-            fields: ["name", "reviews", "rating", "photos", "website", "place_id", "formatted_address"]
+            fields: ["reviews", "rating", "photos", "website", "place_id", "formatted_address"]
         }
     }
     
@@ -69,16 +72,18 @@ function initMap() {
         lat: 43.731520, 
         lng: 7.402095,
         title: `The Dog's Head Moutain`,
-        description: `<h3 class="poi-sub-heading">From a little wooden theatre to a grand dame of the <i>Italianate</i> style</h3>
-                    <!-- Text by self and https://www.opera-nice.org/en/the-theater/historic -->
-                    <p class="poi-text">The Marchioness Alli-Maccarani acquired permission to turn her former residence into a theatre from Amadeus III, 
-                    King of Sardinia, under who's jurisdiction the County of Nice fell. Thus the little <i>Théâtre Maccarani</i>, named after its owners, 
-                    was built at the site of the present-day opera house in the 18th century.</p>
-                    <p class="poi-text">Built entirely from wood in 1776, the northern façade looked out over the city while its southern façade gave out onto the ramparts 
-                    of the <i>Quai du Midi</i>, today's <i>Quai des États-Unis</i>.</p>
-                    <p class="poi-text">Razed to the ground by a fire in 1881, the new opera house, <i>l'Opéra de Nice</i> rose from its ashes in 1883</p>
-                    <p class="poi-text">Today, the <i>Opéra de Nice</i> is the principal opera venue in Nice, France, and houses the <i>Ballet Nice Méditerrannée</i> 
-                    and the Nice Philharmonic Orchestra. It offers three types of performances: operas, ballets and classical music concerts.</p>`,
+        description: `<h3 class="poi-sub-heading">To see is to believe... </h3>
+                    <!-- Text by self and https://en.wikipedia.org/wiki/T%C3%AAte_de_Chien -->
+                    <p class="poi-text">The <i>Tête de Chien</i> (Dog's Head) is a 550 m (1,804 ft) high rock promontory near the village of La Turbie in the Alpes-Maritimes 
+                    department of France. It overlooks the Principality of Monaco, and is the highest point on the Grande Corniche road.</p>
+                    <p class="poi-text">The American diplomat Samuel S. Cox, in his 1870 travel book Search for Winter Sunbeams in the Riviera, Corsica, Algiers and Spain 
+                    wrote that the <i>Tête de Chien</i> more resembled a tortoise than a dog's head, and believed that its name was a corruption of '<i><strong>Tête de Camp</strong></i>', 
+                    as it was where Caesar stationed his troops after the conquest of Gaul. Vere Herbert, the heroine of Ouida's 1880 novel Moths is described as living under the 
+                    <i>Tête de Chien</i>, "...within a few miles of the brilliant Hell [that is Monaco].</p>
+                    <p class="poi-text">In 1944, Leopold Bohm, a German defence company commander, was stationed on the <i>Tête de Chien</i> and saw a low flying airplane crash into 
+                    the sea, which had been pursued by two other planes.Bohm's observation was on the day of the disappearance of the aviator Antoine de Saint-Exupéry (author of The 
+                    Little Prince), and it has been speculated that Bohm saw the final flight of Saint-Exupéry.</p>
+                    <p class="poi-text">Here is the only place in the world where you can see an entire country (Monaco) while standing on Earth!</p>`,
         request: {
             placeId: "ChIJNZdV_uTCzRIROTHOifsip3I",
             fields: ["name", "reviews", "rating", "photos", "website", "place_id", "formatted_address"]
@@ -90,17 +95,19 @@ function initMap() {
         lat: 43.731458, 
         lng: 7.425484,
         title: `Oceaographic Museum, Monaco`,
-        description: `<h3 class="poi-sub-heading">Discover the heart of <i>Vieux Nice</i></h3>
-                    <!-- Text by self -->
-                    <p class="poi-text">The old town of Nice with its world-famous flower market - once the trading point for 35 
-                    tonnes of flowers per day! These flowers fed the perfume and candy industry of the region.</p>
-                    <p class="poi-text">Try the local specialities in the <i>Provençal</i> market: <strong><i>socca</i></strong>, the traditional 
-                    dish of the needy, made from chick peas, olive oil and water; <strong><i>niçois olives</i></strong>, the small, 
-                    stoned olives which are the real pizza olives...</p>
-                    <p class="poi-text">Discover the house where the painter Matisse stayed when he came to Nice to try to capture the light of the 
-                    city in his paintings.</p>
-                    <br>
-                    <p class="image-credit"><strong>Image:</strong> Cours Saleya: Dalbera, via Wikimedia Commons</p>`,
+        description: `<h3 class="poi-sub-heading">Towering 85m out of the sea... Home of the Yellow Submarine</h3>
+                    <!-- Text by self and https://en.wikipedia.org/wiki/Oceanographic_Museum_of_Monaco -->
+                    <p class="poi-text">The Oceanographic Museum was inaugurated in 1910 by Monaco's modernist reformer, Prince Albert I. Jacques-Yves 
+                    Cousteau was director from 1957 to 1988, whose submarine which inspired The Beatles is on display at the entrance to the museum.</p>
+                    <p class="poi-text">The museum is home to exhibitions and collections of various species of sea fauna (starfish, seahorses, turtles, 
+                    jellyfish, crabs, lobsters, rays, sharks, sea urchins, sea cucumbers, eels, cuttlefish etc.). The museum's holdings also include a great 
+                    variety of sea related objects, including model ships, sea animal skeletons, tools, weapons etc., as well as a collection of material culture 
+                    and ritual objects made from, or integrating materials such as pearls, molluscs and nacre</p>
+                    <p class="poi-text">At the first floor, A Sailor’s Career showcases the work of Prince Albert I. It includes the laboratory from <i>l’Hirondelle</i>, 
+                    the first of Prince Albert's research yachts. Observations made there led to an understanding of the phenomenon of anaphylaxis, for which 
+                    Dr Charles Richet received the Nobel Prize in Physiology or Medicine in 1913.</p>
+                    <p class="poi-text">An aquarium in the basement of the museum presents a wide array of flora and fauna. Four thousand species of fish and over 
+                    200 families of invertebrates can be seen. The aquarium also features a presentation of Mediterranean and tropical marine ecosystems</p>`,
         request: {
             placeId: "ChIJU2WkJZDCzRIRbGhKwmhB-cI",
             fields: ["name", "reviews", "rating", "photos", "website", "place_id", "formatted_address"]
@@ -112,17 +119,19 @@ function initMap() {
         lat: 43.731272, 
         lng:7.422480,
         title: `Saint Nicholas Cathedral, Monaco`,
-        description: `<h3 class="poi-sub-heading">Seat of the Diocese of Nice and named for Saint Reparata.</h3>
-                    <!-- Text from https://en.wikipedia.org/wiki/Nice_Cathedral -->
-                    <p class="poi-text">The original cathedral on the site, called St Mary of the Castle, was consecrated in 1049.In 1060, relics 
-                    belonging to Saint Reparata arrived in Nice. By 1075, a chapel dedicated to St Reparata was constructed at the foot of the now dstroyed 
-                    castle of Nice (see Castle Hill).</p>
-                    <p class="poi-text">During the latter half of the 12th century, the chapel became a priory of the Abbey of Saint-Pons. 
-                    1246 marked the official establishment of the priory as a parish church. The first church on the site was built in the early 13th century 
-                    on land belonging to the Abbey of St Pons and became a parish church in 1246.</p>
-                    <p class="poi-text">Originally rectangular and oriented to the North, the cathedral was rebuilt on the model of Santa Susanna in Rome, 
-                    i.e. on a Latin cross ground plan oriented to the east, with a cupola, clad in coloured tiles varnished in the Genoese style, over the crossing. 
-                    The building is in the Baroque architectural tradition.</p>`,
+        description: `<h3 class="poi-sub-heading">Pay your respects to Grace Kelly, Princess of Monaco.</h3>
+                    <!-- Text from https://en.wikipedia.org/wiki/Cathedral_of_Our_Lady_Immaculate -->
+                    <p class="poi-text">The <i>Cathédrale de Notre-Dame-Immaculée</i> (Cathedral of Our Lady Immaculate) or Saint Nicholas Cathedral 
+                    is the cathedral of the Roman Catholic Archdiocese of Monaco, where many of the Grimaldis were buried, including Grace Kelly and — more 
+                    recently — Prince Rainier III.</p>
+                    <p class="poi-text">The cathedral was built in 1875–1903 and consecrated in 1911, and is on the site of the first parish church in 
+                    Monaco built in 1252 and dedicated to Saint Nicholas. Of note are the retable (circa 1500) to the right of the transept, the Great 
+                    Altar and the Episcopal throne in white Carrara marble.</p>
+                    <p class="poi-text">Pontifical services take place on the major religious festivals, such as the Feast of Sainte Dévote (27 January) 
+                    and the national holiday (19 November). On feast days and during religious music concerts, one can hear the magnificent four-keyboard 
+                    organ, inaugurated in 1976. From September until June, “<i>Les Petits Chanteurs de Monaco</i>” and the singers of the Cathedral Choir 
+                    School sing during Mass every Sunday at 10:00am. Mass is also celebrated here each year on 6 December, when primary children gather 
+                    for a joyful remembrance of St. Nicholas' life.</p>`,
         request: {
             placeId: "ChIJXxH-HpLCzRIRIZabyjTbjNQ",
             fields: ["name", "reviews", "rating", "photos", "website", "place_id", "formatted_address"]
@@ -135,15 +144,26 @@ function initMap() {
         lat: 43.731694, 
         lng: 7.419830,
         title: `Palais Princier, Monaco`,
-        description: `<h3 class="poi-sub-heading">Castle Hill with its spectacular views over <i>Vieux Nice</i> (the old town) and <i>La Prom</i>.</h3>
-                    <!-- Text from https://en.wikipedia.org/wiki/Castle_of_Nice -->
-                    <p class="poi-text">The Castle of Nice was a citadel used for military purposes. Built at the top of a hill, it stood overlooking the bay of 
-                    Nice from the 11th century to the 18th century. It was besieged several times, especially in 1543 and in 1691, before it was taken by French 
-                    troops in 1705 and finally destroyed in 1706 by command of Louis XIV.</p>
-                    <p class="poi-text">Nowadays, Castle Hill is used as a park. It's the most famous public garden in Nice, and a "must see" place for the 
-                    numerous tourists who visit the city. It offers many amazing panoramas, and provides a beautiful view all day long from sunrise to sundown, 
-                    highlighting various landscapes depending on where one looks: the Harbor at sunrise, the <i>Promenade des Anglais</i> at sundown. That's why Castle Hill 
-                    is called "the cradle of the sun".</p>`,
+        description: `<h3 class="poi-sub-heading">700 years of rule.</h3>
+                    <!-- Text from https://en.wikipedia.org/wiki/Prince%27s_Palace_of_Monaco -->
+                    <p class="poi-text">The  <i>Palais princier de Monaco</i> (Prince's Palace of Monaco) is the official residence of the Sovereign Prince 
+                    of Monaco. Built in 1191 as a Genoese fortress, during its long and often dramatic history it has been bombarded and besieged by many 
+                    foreign powers. Since the end of the 13th century, it has been the stronghold and home of the Grimaldi family who first captured it in 
+                    1297. The Grimaldi ruled the area first as feudal lords, and from the 17th century as sovereign princes, but their power was often 
+                    derived from fragile agreements with their larger and stronger neighbours.</p>
+                    <p class="poi-text">While other European sovereigns were building luxurious, modern Renaissance and Baroque palaces, politics and common 
+                    sense demanded that the palace of the Monegasque rulers be fortified. This unique requirement, at such a late stage in history, has made 
+                    the palace at Monaco one of the most unusual in Europe. Indeed, when its fortifications were finally relaxed during the late 18th century, 
+                    it was seized by the French and stripped of its treasures, and fell into decline, while the Grimaldi were exiled for over 20 years.</p>
+                    <p>The Grimaldis' occupation of their palace is also unusual because, unlike other European ruling families, the absence of alternative 
+                    palaces and land shortages have resulted in their use of the same residence for more than seven centuries. Thus, their fortunes and politics 
+                    are directly reflected in the evolution of the palace. Whereas the Romanovs, Bourbons, and Habsburgs could, and frequently did, build completely 
+                    new palaces, the most the Grimaldi could achieve when enjoying good fortune, or desirous of change, was to build a new tower or wing, or, as 
+                    they did more frequently, rebuild an existing part of the palace. Thus, the Prince's Palace reflects the history not only of Monaco, but of the 
+                    family which in 1997 celebrated 700 years of rule from the same palace.</p>
+                    <p>During the 19th and early 20th centuries, the palace and its owners became symbols of the slightly risqué glamour and decadence that were 
+                    associated with Monte Carlo and the French Riviera. Glamour and theatricality became reality when the American film star Grace Kelly became 
+                    a chatelaine of the palace in 1956. In the 21st century, the palace remains the residence of the current Prince of Monaco.</p>`,
         request: {
             placeId: "ChIJK8yrdpLCzRIRIcD7wv9f-U8",
             fields: ["name", "reviews", "rating", "photos", "website", "place_id", "formatted_address"]
@@ -155,14 +175,26 @@ function initMap() {
         lat: 43.738916, 
         lng: 7.428046,
         title: `Casino de Monte-Carlo`,
-        description: `<h3 class="poi-sub-heading">The <strong>"Hat Thief"</strong> memorial to Nice's fallen soldiers.</h3>
-                    <!-- Text from https://en.nicetourisme.com/nice/74-quai-rauba-capeu and myself -->
-                    <p class="poi-text">At the foot of Castle Hill, the Promenade becomes the <i>Quai des États-Unis</i> along the old town, then 
-                    <i>Rauba Capeu</i>, which offers one of the finest vistas on the Mediterranean Sea and the beautiful blue and ochre nuances along the Prom.</p>
-                    <p class="poi-text">The memorial is named in the <i>niçois</i> dialect. It's translation is "the hat thief" as is so named as it is built upon the windiest 
-                    spot in Nice. At the time of its construction, it was very much the <i>Belle Epoque</i> era, with the ladies wearing bonnets and the gentlemen hats.</p>
-                    <p class="poi-text">Often, as they walked the corner from the port to the Prom, the wind would whip up and steal their hats... thus the name of the memorial.</p>
-                    <p class="poi-text">Only in France would you find such a romantic name for such a serious monument!</p>`,
+        description: `<h3 class="poi-sub-heading">From ruin to riches...</h3>
+                    <!-- Text from https://en.wikipedia.org/wiki/Monte_Carlo_Casino -->
+                    <p class="poi-text">The idea of opening a gambling casino in Monaco belongs to Princess Caroline, a shrewd, business-minded spouse of Prince Florestan. 
+                    Revenues from the proposed venture were supposed to save the House of Grimaldi from bankruptcy. The ruling family's persistent financial problems became 
+                    especially acute after the loss of tax revenue from two breakaway towns, Menton and Roquebrune, which declared independence from Monaco in 1848 and refused 
+                    to pay taxes on olive oil and fruit imposed by the Grimaldis.</p>
+                    <p class="poi-text">However, he lack of roads needed to connect Monaco to Nice and the rest of Europe, and the absence of comfortable accommodations for 
+                    visitors, as well as the concessionaires' failure to publicize the new resort, resulted in far fewer customers than was originally anticipated. </p>
+                    <p class="poi-text">In 1878–79, the casino building was transformed and expanded to designs of Jules Dutrou and Charles Garnier, the architect who had 
+                    designed the Paris opera house now known as the Palais Garnier. The alterations to the Casino de Monte Carlo included the addition of a concert hall 
+                    (designed by Garnier and later named the Salle Garnier), located on the side of the casino facing the sea, and the redesign and expansion of the gaming 
+                    rooms and public spaces, mostly carried out by Dutrou on the side of the casino facing the <i>Place du Casino</i>, where the <i>Hôtel de Paris Monte-Carlo</i> 
+                    and the were also located.</p>
+                    <p class="poi-text">Until recently, the Casino de Monte-Carlo has been the primary source of income for the House of Grimaldi and the Monaco economy.</p>
+                    <p class="poi-text">In 1873, Joseph Jagger gained the casino great publicity by "breaking the bank at Monte Carlo" by discovering and capitalizing on a 
+                    bias in one of the casino's roulette wheels. The 1892 song "<strong>The Man Who Broke the Bank at Monte Carlo</strong>", made famous by Charles Coborn, was probably inspired 
+                    by the exploits of Charles Wells, who "broke the bank" on many occasions on the first two of his three trips.</p>
+                    <p class="poi-text">Monaco and its casino were the locations for a number of James Bond movies, including <strong>Never Say Never Again</strong> and 
+                    <strong>GoldenEye</strong>, as well as for the "<strong>Casino Royale</strong>" episode of the CBS's Climax! television show. The casino also served as a 
+                    filming location for the 2004 film <strong>Ocean's Twelve</strong>.</p>`,
         request: {
             placeId: "ChIJZQJu5IfCzRIR4_SMWQznbqY",
             fields: ["name", "reviews", "rating", "photos", "website", "place_id", "formatted_address"]
@@ -174,13 +206,17 @@ function initMap() {
         lat: 43.738823, 
         lng: 7.426947,
         title: `Hotel de Paris Monte-Carlo`,
-        description: `<h3 class="poi-sub-heading">That <strong><i>most</i></strong> Mediterranean of ports</h3>
-                    <!-- Text from https://en.nicetourisme.com/by-boat and self -->
-                    <p class="poi-text">The Port of Nice, surrounded by 18th-century buildings in the Genoese style, is actually named Port Lympia. 
-                    The architectural complex seems inspired by the Italian Renaissance and influenced by the baroque urban planning of Turin.</p>
-                    <p class="poi-text">With over 530 berths, 24 of which are reserved for yachts over 25m long (one of which for many years was the home 
-                    berth of <i>Octopus</i>, a 126m yacht owned by the late Paul Allen, one of the founders of Microsoft).<p>
-                    <p class="poi-text">Once the estuary of the Lympia spring, the river was diverted when construction of the port commenced in 1700.</p>`,
+        description: `<h3 class="poi-sub-heading">The "James Bond Hotel"</h3>
+                    <!-- Text from https://fr.wikipedia.org/wiki/H%C3%B4tel_de_Paris_Monte-Carlo, https://en.wikipedia.org/wiki/H%C3%B4tel_de_Paris_Monte-Carlo and self -->
+                    <p class="poi-text">This prestigious palace was founded on the <i>Place du Casino</i> in Monte-Carlo by Prince Charles III of Monaco and François Blanc, 
+                    from plans by the French architect Godinot de la Bretonnerie. It was inaugurated in 1864, next to the future <i>Place du Casino</i> (inaugurated: 1868), 
+                    <i>Casino de Monte-Carlo</i> and <i>Opéra de Monte-Carlo</i> (1879), and <i>Hôtel Hermitage Monte-Carlo</i> (1896).</p>
+                    <p class="poi-text">The facades by architect Édouard-Jean Niermans date from 1909-1910, with frescoes by painter Paul Gervais 2. Elevations of the 
+                    building were completed in 1920 by the architects Émile Molinié, Charles Nicod and Albert Pouthier, then in 1959-1960 under the aegis of André Bruyère<p>
+                    <p class="poi-text">The hotel has been featured in numerous films, including <strong>Confessions of a Cheat</strong> (1936), <strong>The Red Shoes</strong> (1948), 
+                    <strong>Iron Man 2</strong> (2010), <strong>Monte Carlo</strong> (2011), and - of course! - two James Bond films; <strong>Never Say Never Again</strong> (1983) and 
+                    <strong>GoldenEye</strong> (1995). It was also portrayed in the 2012 animated film <strong>Madagascar 3: Europe's Most Wanted</strong>. It was also a 
+                    popular shooting location for photographer Helmut Newton.</p>`,
         request: {
             placeId: "ChIJFY1s1ofCzRIRtwOFQihi098",
             fields: ["name", "reviews", "rating", "photos", "website", "place_id", "formatted_address"]
@@ -192,15 +228,53 @@ function initMap() {
         lat: 43.739749, 
         lng: 7.428005,
         title: `Casino Café de Paris`,
-        description: `<h3 class="poi-sub-heading">Simply breathtaking!</h3>
+        description: `<h3 class="poi-sub-heading">Watching the cars go by!</h3>
                     <!-- Text from self -->
-                    <p class="poi-text">Offering unrivalled views over the Bay of Angels, the viewpoint of the <i>Belvedére du Mont Boron</i> is a view 
-                    that should be on everyone's bucket list!</p>
-                    <p class="poi-text">The colours, the light, the bay, the city... all combine to take your breath away.</p>
-                    <p class="poi-text">Words cannot describe this view. It has to be seen to be believed!</p>`,
+                    <p class="poi-text">Founded in 1868, at the same time as Monte Carlo, with its <i>Casino de Monte-Carlo</i> and the <i>Hôtel de Paris</i> by François Blanc 
+                    and Prince Charles III of Monaco, it was originally baptized <i>Café Divan</i>. It was transformed several times until the 1930s, then completely renovated 
+                    in 1988 in the <i>Belle Époque</i> style of the 1900s like the old Parisian bistros.</p>
+
+                    <p class="poi-text">It has large modular terraces with an orchestra and views of the <i>Casino de Monte-Carlo</i> and the <i>Hôtel de Paris</i> and its daily show of prestigious 
+                    cars, with the Bellevue lounge of 340 m2 (3,700 sq ft) on the first floor.</p>
+
+                    <p class="poi-text">The Casino has gaming rooms of over 13,000 m2 (140,000 sq ft) in a setting inspired by the Historic Grand Prix of Monaco.</p>`,
         request: {
             placeId: "ChIJq78T54fCzRIRIC-tVNSO32g",
             fields: ["name", "reviews", "rating", "photos", "website", "place_id", "formatted_address"]
+        }
+    }
+
+    //Grand Prix de Monaco Monte-Carlo
+    let markerMCF1Route = {
+        lat: 43.735732, 
+        lng: 7.421280,
+        title: `Grand Prix de Monaco Monte-Carlo Racetrack`,
+        description: `<h3 class="poi-sub-heading">Vroom! Vroom!</h3>
+                    <!-- Text from self -->
+                    <p class="poi-text"><i>Le Circuit de Monaco</i> is a street circuit laid out on the city streets of Monte Carlo and La Condamine around the harbour 
+                    of the principality of Monaco. It is commonly referred to as "Monte Carlo" because it is largely inside the Monte Carlo neighbourhood of Monaco.</p>
+
+                    <p class="poi-text">The circuit is annually used on two weekends in May for Formula One Monaco Grand Prix and Formula E Monaco ePrix (odd years) or 
+                    Historic Grand Prix of Monaco (even years). Formula One's respective feeder series over the years – Formula 3000, GP2 Series and today the Formula 2 
+                    championship  – also visit the circuit concurrently with Formula One. The Monaco Grand Prix is one of the three events where victory counts towards 
+                    the Triple Crown of Motorsport.</p>
+
+                    <p class="poi-text">The idea for a Grand Prix race around the streets of Monaco came from Antony Noghès, the president of the Monegasque motor club, 
+                    Automobile Club de Monaco, and close friend of the ruling Grimaldi family. The inaugural race was held in 1929 and was won by William Grover-Williams 
+                    in a Bugatti.</p>
+                    
+                    <p class="poi-text">To date, only three local drivers have won a race at the Circuit. Louis Chiron did it at the non-championship 1931 Monaco Grand Prix; 
+                    82 years later, Stefano Coletti crossed the line in first position at the sprint race of the 2013 Monaco GP2 Series round. The third driver to do so was 
+                    Stéphane Richelmi at the sprint race of the 2014 Monaco GP2 Series round.</p>
+                    
+                    <p class="poi-text">Ayrton Senna famously burst onto the F1 scene with a storming performance in the rain-soaked 1984 race and holds the record for most 
+                    wins at Monaco with six, including five consecutive victories between 1989-1993.</p>
+                    
+                    <img class="poi-text" src="/assets/images/ferrari-racing-in-monaco.jpg" alt="Ferrari racing in the streets of Monaco" width="100%">
+                    <p class="image-credit"><strong>Image:</strong> <a href="https://wallpaperaccess.com/f1-monaco" target="_blank">Wallpaperaccess.com</a></p>`,
+        request: {
+            placeId: "ChIJFemQ34zCzRIRy8P1MXirK_w",
+            fields: ["name", "reviews", "rating", "website", "place_id", "formatted_address"]
         }
     }
 
@@ -216,6 +290,7 @@ function initMap() {
             markerCasino,
             markerHotelDeParis,
             markerCafeDeParis,
+            markerMCF1Route
         ];
 
 //---------------------------------------------------------------------------------------------------- Markers
@@ -241,9 +316,9 @@ function initMap() {
         /* Many thanks due to Kevin Loughrey (Kevin_ci) for helping getting this to work! */
         google.maps.event.addListener(marker, "click", function () {
             $("#reviews").hide().html("");
+            $("#attraction").get(0).scrollIntoView();
             service.getDetails(locations[i].request, (place, status) => {
                 if (status === google.maps.places.PlacesServiceStatus.OK) {
-                    $(".global-info").get(0).scrollIntoView();
                     document.getElementById("attraction").innerHTML = `<div class="row">
                         <div class="col-12 order-1 poi-title">
                             <h2 id="poi-title-name"></h2>
@@ -268,12 +343,17 @@ function initMap() {
                     let placeAddress = place.formatted_address
                     let placeName = place.name;
                     console.log(placeName);
-                    document.getElementById("poi-title-name").append(placeName)
+                    
+                    if (placeName === undefined) {
+                        document.getElementById("poi-title-name").append(locations[i].title)
+                    } else {
+                        document.getElementById("poi-title-name").append(placeName)
+                    }
 
                     if (place.hasOwnProperty("photos") === false){
                         console.log("No photos");
                         img = document.createElement("img");
-                        img.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/4/47/Cours_Saleya_-_Chapelle_de_la_Mis%C3%A9ricorde_-_Nice.jpeg");
+                        img.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/e/e4/Circuit_de_Monaco_1986.png");
                         img.setAttribute("class", "img")
                         document.getElementById("attraction-image").appendChild(img);
                     } else {
@@ -285,7 +365,7 @@ function initMap() {
                     };
 
                     if (place.hasOwnProperty("reviews") === false){
-                        console.log("No photos");
+                        console.log("No reviews");
                         document.getElementById("reviews").innerHTML += `<p style="margin-bottom:0">Sorry, there are no Google reviews available for this location.`;
                     } else {
                         let placeReviews = place.reviews;
@@ -360,8 +440,6 @@ function initMap() {
         $("#instructions-for-map").hide()
         $("#map-container").hide();
         $("#reviews").hide();
-        $("#racetrack-course").hide();
-        $("#racetrack").hide();
     })
 
 //-------------------------------------------------- Show map on description buttons
@@ -369,18 +447,6 @@ function initMap() {
         $("#instructions-for-map").show()
         $("#map-container").show();
         $("#reviews").hide();
-        $("#racetrack-course").hide();
-        $("#racetrack").hide();
-    })
-
-//-------------------------------------------------- Show MC F1 on button click
-    $(".btn-racetrack").on("click", function() {
-        $("#racetrack-course").show();
-        $("#racetrack").show();
-        $("#instructions-for-map").hide()
-        $("#map-container").hide();
-        $("#reviews").hide();
-        $(".global-info").hide()
     })
 
 //-------------------------------------------------- Section (Buttons) Zooms
@@ -466,10 +532,9 @@ $(".btn-the-rock").on("click", function () {
 })
 
 //Racetrack zoom
-$("#racetrack-route").on("click", function () {
-
-    $(".racetrack-course").css("display", "block");
-    /*$("#racetrack").css("display", "block");
+$(".racetrack").on("click", function () {
+    $(".global-info").css("display", "none");
+    $("#racetrack").css("display", "block");
     if (document.documentElement.clientWidth >= 1440) {
         map.setZoom(16);
         map.setCenter({ lat: 43.736605, lng: 7.427937 });
@@ -489,7 +554,7 @@ $("#racetrack-route").on("click", function () {
     if (document.documentElement.clientWidth <= 425) {
         map.setZoom(14);
         map.setCenter({ lat: 43.736605, lng: 7.427937 });
-    }*/
+    }
     $(".btn-global-description").get(0).scrollIntoView();
 })
 
@@ -497,7 +562,6 @@ $("#racetrack-route").on("click", function () {
 $(".btn-casino").on("click", function () {
     $(".global-info").css("display", "none");
     $("#casino").css("display", "block");
-    $(".poi-close-all").css("display", "block");
     if (document.documentElement.clientWidth >= 1440) {
         map.setZoom(18);
         map.setCenter({ lat: 43.739263, lng: 7.428055 });
