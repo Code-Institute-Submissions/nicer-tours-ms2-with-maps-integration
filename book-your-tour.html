@@ -78,10 +78,11 @@
                                         Code from Stack Overflow
                                         https://stackoverflow.com/questions/22237658/html5-validation-error-with-select-required-attribute -->
                                         <option value="">&nbsp;</option>
-                                        <option value="nice">Nice</option>
-                                        <option value="monaco">Monaco</option>
-                                        <option value="st-paul">St.-Paul-de-Vence</option>
+                                        <option value="Nice">Nice</option>
+                                        <option value="Monaco">Monaco</option>
+                                        <option value="St-Paul">St.-Paul-de-Vence</option>
                                     </select>
+                                    <p>If you are requiring a Personalised Tour, please select what you want to visit on <a href="/personal-tour.html">this page</a>, and send us the details from there. Thank you.</p>
                                     <br>
                                     <label for="date">Tour date:</label>
                                     <input class="book-now-form-date" type="date" name="date" id="date" required />
@@ -101,14 +102,15 @@
                                     <input type="radio" id="flexibility" name="option" value="flexibility">
                                     <br>
                                     <label for="t-and-c"> I accept Nicer Tours <a href="terms-and-conditions.html" data-toggle="modal" data-target="#t-and-cModal">Terms & Conditions</a></label>
-                                    <input type="checkbox" id="t-and-c" name="t-and-c" value="onfirm-t-and-c" required>
+                                    <input type="checkbox" id="t-and-c" name="t-and-c" value="confirm-t-and-c" required>
                                     <br> 
                                 </div>
                                 <!-- End of from w3schools.com -->
 
                                 <div class="form-row text-center">
                                     <div class="col">
-                                        <button type="submit" class="btn btn-light btn-go-to-payment">Proceed To Payment</button>
+                                        <button type="submit" class="btn btn-light btn-go-to-payment" onclick="recordDetailsForPayment()">Confirm Details</button>
+                                        <a href="/payment.html" type="submit" class="btn btn-light btn-go-to-payment">Proceed To Payment</a>
                                     </div>
                                 </div>
                             </form>
@@ -118,6 +120,8 @@
             </div>
         </div>
     </section>
+
+    
 
     <section class="t-and-c-modal">
         <!-- Modal code from Bootstrap) -->
@@ -222,6 +226,7 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 
+    <script type="text/javascript" src="scripts/payment.js"></script>
 </body>
 
 </html>

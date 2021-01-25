@@ -438,7 +438,7 @@ function initMap() {
                         $(".more-info").append(`<a class="btn btn-light btn-block more-info" role="button" href="${placeWebsite}" target="_blank">Find Out More</a>`)
 
                     } else if (place.hasOwnProperty("website") == false){
-                        $(".more-info").append(`<a class="btn btn-light btn-block more-info" role="button" href="https://www.google.com/" target="_blank">Find Out More</a>`)
+                        $(".more-info").append(`<p class="btn btn-light btn-description btn-block more-info-button">No website available</a>`);
                     }
                 };
             });

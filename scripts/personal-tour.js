@@ -64,11 +64,9 @@ function createMap() {
             </div>`;
 
             let placeName = p.name;
-            console.log(placeName);
             document.getElementById("poi-title-name").append(placeName)
 
             if (p.photos === undefined) {
-                console.log("no listing")
                 document.getElementById("attraction-image").innerHTML = `<p>Although the place you searched for almost certainly exists, unfortunately it seems that 
                 Google Places does not have a listing for it.</p>
                 <p>If there is another entry for the place you searched for, please select that entry. Otherwise, try searching for something else.</p>`
@@ -82,7 +80,6 @@ function createMap() {
 
             let placeReviews = p.reviews;
             if (placeReviews === undefined) {
-                console.log("No Reviews")
             } else {
                 placeReviews.forEach(function(item) {
                     document.getElementById("attraction-image").innerHTML += `<p style="margin-bottom:0">${item.text}</p>
@@ -92,15 +89,12 @@ function createMap() {
             }
 
             let placeWebsite = p.website;
-            //console.log(placeWebsite);
             if (p.hasOwnProperty("website") == true) {
-                console.log(placeWebsite);
                 $(".more-info").append(`<a class="btn btn-light btn-block more-info" role="button" href="${placeWebsite}" target="_blank">Find Out More</a>
                         `)
 
             } else if (p.hasOwnProperty("website") == false){
-                console.log("No website");
-                $(".more-info").append(`<p class="btn btn-description btn-block more-info-button">Sorry, no website available for this place.</p>`)
+                $(".more-info").append(`<p class="btn btn-light btn-description btn-block more-info-button">No website available</a>`);
             }
 
             markers.push(new google.maps.Marker({
@@ -154,13 +148,19 @@ function createMap() {
 
         sessionStorage.getItem('place');
         let placeAddedToItinerary = sessionStorage.getItem('place');
-        console.log(typeof(placeAddedToItinerary))
         alert(`You have added 
     ${placeAddedToItinerary} 
 to your itinerary`)
         document.getElementById("message").innerHTML += placeAddedToItinerary;
-        $(".btn-cta-personalised-tour").css("display", "block");
-    }
+        $(".btn-cta-send-itinerary").css("display", "block");
+        $(".btn-cta-remove-itinerary").css("display", "block");
+        $(".btn-cta-remove-itinerary").on("click", function() {
+            sessionStorage.clear();
+            alert("Your itinerary has been emptied");
+            $(".btn-cta-send-itinerary").css("display", "none");
+            $(".btn-cta-remove-itinerary").css("display", "none");
+            })
+        }
 
 
     

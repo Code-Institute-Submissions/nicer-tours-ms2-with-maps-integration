@@ -342,10 +342,7 @@ function initMap() {
 
                     
                     let placeId = place.placeId
-                    let placeAddress = place.formatted_address
                     let placeName = place.name;
-                    console.log(placeName);
-                    
                     if (placeName === undefined) {
                         document.getElementById("poi-title-name").append(locations[i].title)
                     } else {
@@ -353,7 +350,6 @@ function initMap() {
                     }
 
                     if (place.hasOwnProperty("photos") === false){
-                        console.log("No photos");
                         img = document.createElement("img");
                         img.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/e/e4/Circuit_de_Monaco_1986.png");
                         img.setAttribute("class", "img")
@@ -367,7 +363,6 @@ function initMap() {
                     };
 
                     if (place.hasOwnProperty("reviews") === false){
-                        console.log("No reviews");
                         document.getElementById("reviews").innerHTML += `<p style="margin-bottom:0">Sorry, there are no Google reviews available for this location.`;
                     } else {
                         let placeReviews = place.reviews;
@@ -382,13 +377,11 @@ function initMap() {
                     document.getElementById("attraction-image").innerHTML += `<div style="margin-bottom:0">${placeDescription}</div>`;
 
                     let placeWebsite = place.website;
-                    console.log(placeWebsite);
                     if (place.hasOwnProperty("website") == true) {
-                        console.log(placeWebsite);
                         $(".more-info").append(`<a class="btn btn-light btn-block more-info" role="button" href="${placeWebsite}" target="_blank">Find Out More</a>`)
 
                     } else if (place.hasOwnProperty("website") == false){
-                        $(".more-info").append(`<a class="btn btn-light btn-block more-info" role="button" href="https://www.google.com/" target="_blank">Find Out More</a>`)
+                        $(".more-info").append(`<p class="btn btn-light btn-description btn-block more-info-button">No website available</a>`);
                     }
                 };
             });

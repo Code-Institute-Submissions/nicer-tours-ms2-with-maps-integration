@@ -6,19 +6,16 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="assets/css/style.css" type="text/css">
-
-    <!-- Google Maps & Places + local API key script -->
-    <script defer src="https://maps.googleapis.com/maps/api/js?callback=createMap&key=AIzaSyAzsHDlJxaOPO3VA7I1JZqP9aqkCikuzmM&libraries=places"></script>
     
-    <title>Nicer Tours | Create Your Tour</title>
+    <title>Nicer Tours | Payment</title>
 </head>
 
 <body>
     <header class="hero-and-navigation">
-    <!-- Container from Bootstrap -->
+        <!-- Container from Bootstrap -->
         <div class="container-fluid header-section">
             <div class="row">
-                <div class="col-sm-12 banner-image home-and-nice-banner">
+                <div class="col-sm-12 banner-image-monaco-banner">
                     <!-- Navbar from Bootstrap, heavily modified, including: 
                     Color chages for active links: Bootstrap Studio https://bootstrapstudio.io/forums/topic/change-color-of-the-active-state-of-nav-link/; 
                     Hamburger toggle icon color from Bootstrap icons (https://icons.getbootstrap.com/icons/list/) 
@@ -31,133 +28,116 @@
                                 <a class="nav-link" href="tour-of-nice.html"><h2>Nice</h2></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="tour-of-monaco.html"><h2>Monaco</h2></a>
+                                <a class="nav-link" href="tour-of-monaco.html"><h2>Monaco <span class="sr-only">(current)</span></h2></a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="tour-of-st-paul-de-vence.html"><h2>St. Paul de Vence</h2></a>
                             </li>
-                            <li class="nav-item active">
-                                <a class="nav-link" href="personal-tour.html"><h2>Create Your Tour <span class="sr-only">(current)</span></h2></a>
+                            <li class="nav-item">
+                                <a class="nav-link" href="personal-tour.html"><h2>Create Your Tour</h2></a>
                             </li>
                             </ul>
-                        </div>                        
+                        </div>                       
                         <button class="navbar-toggler custom-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarTogglerNicerTours" aria-controls="navbarTogglerNicerTours" aria-expanded="false" aria-label="Toggle navigation">
                             <svg width="1em" height="1em" viewbox="0 0 16 16" class="bi bi-list" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="color:white;">
                             <path fill-rule="evenodd" d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
                             </svg>
-                        </button>                            
+                        </button>                           
                     </nav>
                 </div>
             </div>
         </div>
     </header>
 
-    <section class="main-tour">
+    <section class="payment">
         <!-- Grid sizing responsive containers, dropdown, accordion, carousel and buttons from Bootstrap -->
-        <div class="container-fluid tour-main-content tour-of-nice-main-content">
+        <div class="container-fluid tour-main-content tour-of-monaco-main-content">
             <div class="row justify-content-center">
                 <div class="col-sm-9">
-
                     <div class="main-tour-text">
-                        <h2>Create Your Own Tour:</h2>
-                        <div class="tour-slideshow">
-                            <!-- Text placement within carousel from Stack Overflow (https://stackoverflow.com/questions/25095260/bootstrap-caption-outside-carousel) -->
-                            <div class="carousel slide carousel-fade carousel-nice" data-interval="6000" data-ride="carousel">
-                                <div class="carousel-inner">
-                                    <div class="carousel-item active">
-                                    <img class="d-block w-100" src="assets/images/panorama-of-nice-resized.jpg" alt="Panorama of Nice">
-                                        <div class="carousel-caption d-none d-md-block">
-                                            <p class="carousel-text-description">The Bay of Angels</p>
-                                        </div>
-                                    </div>
-                                    <div class="carousel-item">
-                                    <img class="d-block w-100" src="assets/images/i-love-nice.jpg" alt="#IloveNice">
-                                        <div class="carousel-caption d-none d-md-block">
-                                            <p class="carousel-text-description">#IloveNice</p>
-                                        </div>
-                                    </div>
-                                    <div class="carousel-item">
-                                    <img class="d-block w-100" src="assets/images/promenade-du-paillon-nice.jpg" alt="Promenade du Paillon, Nice">
-                                        <div class="carousel-caption d-none d-md-block">
-                                            <p class="carousel-text-description">Promenade du Paillon</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <article id="nice-full-description">
+                        <h2>Your Cart and Payment:</h2>
+                        
+                        <article id="payment">
                             <div class="row">
-                                <div class="col">
-                                    <div class="tour-description">
-                                        <h3>Looking for something more personalised? You've come to the right place!</h3>
-                                        <p>Nice and the surrounding region has so much to offer for the discerning traveller. From mediaeval villages to 
-                                        the glamorous hotspots of the jetset, from art foundations and museums to beaches... No matter what your passion is, 
-                                        you're sure to discover plenty of things to pique your interest!</p>
-                                        <p>Here is where you can search the map and add the things that interest you to your own personal itinerary. Once you have chosen, 
-                                        send us an email and we will be glad to send you an estimate for the cost and duration of your tour.</p>
-                                        <p>Our map below handily has search results biased to the confines of the map itself.</p>
-                                        <p>As you select your desired items from the map below, you'll be presented with options to add them to your itinerary and a handy, prefilled box 
-                                        that you can send us. So go ahead, and make your selection!</p>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-9 input-div">
-                                            <input class="form-control" id="search" type="text" placeholder="Search" onkeydown="search(this)"/>
-                                        </div>
-                                        <div class="col-3 clear-button-div">
-                                            <button type="button" class="btn btn-light" id="clearSearchButton">Clear</button>
-                                        </div>
-                                    </div>
-                                    <div id="map-container">
-                                        <div id="map-canvas"></div>
-                                    </div>
 
-                                    <div id="output">
-                                        <div id="attraction">
-                                        </div>
-                                    </div>
-
-                                    <button type="button" class="btn btn-light btn-block btn-cta btn-cta-contact btn-cta-send-itinerary" data-toggle="modal" data-target="#contact-us-nice">Send Us Your Personalised Tour Itinerary</button>
-                                    <button type="button" class="btn btn-light btn-description btn-block btn-cta btn-cta-contact btn-cta-remove-itinerary">Remove All Items From Itinerary</button>
+                                <div class="order-3 col-sm-4 order-sm-2 order-md-3 cart">
+                                    <h4>Cart <span class="price" style="color:black"><i class="fa fa-shopping-cart"></i> <b>4</b></span></h4>
+                                    <p><a href="#">Product 1</a> <span class="price">$15</span></p>
+                                    <p><a href="#">Product 2</a> <span class="price">$5</span></p>
+                                    <p><a href="#">Product 3</a> <span class="price">$8</span></p>
+                                    <p><a href="#">Product 4</a> <span class="price">$2</span></p>
+                                    <hr>
+                                    <p>Total <span class="price" style="color:black"><b>$30</b></span></p> 
                                 </div>
+
+                                <div class="order-1 col-sm-8 col-md-4 order-sm-1 billing-address">
+                                    <h3>Billing Address</h3>
+                                    <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+                                    <br>
+                                    <input class="full-width" type="text" id="fname" name="firstname" placeholder="John M. Doe">
+                                    <br>
+                                    <label for="email"><i class="fa fa-envelope"></i> Email</label>
+                                    <br>
+                                    <input class="full-width" type="text" id="email" name="email" placeholder="john@example.com">
+                                    <br>
+                                    <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+                                    <br>
+                                    <input class="full-width" type="text" id="adr" name="address" placeholder="542 W. 15th Street">
+                                    <br>
+                                    <label for="city"><i class="fa fa-institution"></i> City</label>
+                                    <br>
+                                    <input class="full-width" type="text" id="city" name="city" placeholder="New York">
+                                    <br>
+                                    <label for="country"><i class="fa fa-flag"></i> Country</label>
+                                    <br>
+                                    <input class="full-width" type="text" id="country" name="country" placeholder="USA">
+                                    <br>
+                                    <label>
+                                        <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
+                                    </label>
+                                </div>
+
+                                <div class="order-2 col-sm-8 col-md-4 payment-details">
+                                    <h3>Payment</h3>
+                                        <label for="fname">Accepted Cards</label>
+                                        <div class="icon-container">
+                                        <i class="fa fa-cc-visa" style="color:navy;"></i>
+                                        <i class="fa fa-cc-amex" style="color:blue;"></i>
+                                        <i class="fa fa-cc-mastercard" style="color:red;"></i>
+                                        <i class="fa fa-cc-discover" style="color:orange;"></i>
+                                        </div>
+                                        <label for="cname">Name on Card</label>
+                                        <br>
+                                        <input class="full-width" type="text" id="cname" name="cardname" placeholder="John More Doe">
+                                        <br>
+                                        <label for="ccnum">Credit card number</label>
+                                        <br>
+                                        <input class="full-width" type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+                                        <br>
+                                        <label for="expmonth">Exp Month</label>
+                                        <br>
+                                        <input class="full-width" type="text" id="expmonth" name="expmonth" placeholder="September">
+                                        <br>
+                                        <div class="row">
+                                        <div class="col-6">
+                                            <label for="expyear">Exp Year</label>
+                                            <input class="full-width" type="text" id="expyear" name="expyear" placeholder="2018">
+                                        </div>
+                                        <div class="col-6">
+                                            <label for="cvv">CVV</label>
+                                            <input class="full-width" type="text" id="cvv" name="cvv" placeholder="352">
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
                         </article>
+                        <input class="btn btn-light payment-recd" type="submit" value="Continue to checkout">
                     </div>
-                </div>            
+                </div>
             </div>
         </div>
     </section>
-    
-
-    <!-- Contact Us Modal from Bootstrap-->
-    <div class="modal fade" id="contact-us-nice" tabindex="-1" role="dialog" aria-labelledby="contact-us-nice" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header personalised-tour">
-                    <h4 class="modal-title" id="contact-us-niceLabel">Fill in the form and verify that all the items you chose are correct</h4>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <p>We'll get back to you shortly with a full tour programme and costing estimate.</p>
-                    <!-- This <form> code is taken from the Rosie Odenkirk resumé project.-->
-                    <form class="contact-us-tour-of-nice-form" method="post" action="review-received.html" target="_blank">
-                        <input class="contact-us-form-name" type="text" name="name" id="name" placeholder="Name" required />
-                        <input class="contact-us-form-email" type="email" name="email" id="email" placeholder="Email" required />
-                        <p>Your personalised tour estimate will contain the following points of interest:</p>
-                        <textarea class="contact-us-form-message" name="message" id="message" rows="5" placeholder="Write your message" required></textarea>
-                        <div class="form-row text-center">
-                            <div class="col">
-                                <button type="submit" class="btn btn-light">Send your message</button>
-                            </div>
-                        </div>
-                    </form>
-                    <!-- End of copy from Rosie Odenkirk resumé project -->
-                </div>
-            </div>
-        </div>
-    </div>
 
     <footer>
     <!-- Container elements from Bootstrap, Social media icons from Font-Awesome -->
@@ -226,14 +206,19 @@
         </div>
     </footer>
 
-    <!-- Google Maps Cluster Script -->
-    <script src="https://unpkg.com/@googlemaps/markerclustererplus/dist/index.min.js"></script>
-
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 
-    <script type="text/javascript" src="scripts/personal-tour.js"></script>
+    <!-- Makes popover work. Froms w3schools.com https://www.w3schools.com/bootstrap/bootstrap_popover.asp#:~:text=To%20create%20a%20popover,%20add,popover%22%20attribute%20to%20an%20element.&text=Note:%20Popovers%20must%20be%20initialized,call%20the%20popover()%20method -->
+    <script>
+        $(document).ready(function(){
+            $('[data-toggle="popover"]').popover();   
+        });
+    </script>
+
+    <script type="text/javascript" src="scripts/payment.js"></script>
+
 </body>
 
 </html>
