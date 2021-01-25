@@ -57,7 +57,7 @@ function createMap() {
                             <button class="btn btn-light btn-block add-to-itin-button" onclick="addToItin()">Add To Itinerary</button>
                         </div>
                         <div class="col-xl-4 col-sm-6 order-xl-3 order-2 back-to-map" style="text-align:right">
-                            <button class="btn btn-light btn-block back-to-mapbutton" onclick="backToMap()">Back To Map</button>
+                            <button class="btn btn-light btn-block back-to-map-button" onclick="backToMap()">Back To Map</button>
                         </div>
                     </div>
                 </div>
@@ -67,19 +67,29 @@ function createMap() {
             console.log(placeName);
             document.getElementById("poi-title-name").append(placeName)
 
+            if (p.photos === undefined) {
+                console.log("no listing")
+                document.getElementById("attraction-image").innerHTML = `<p>Although the place you searched for almost certainly exists, unfortunately it seems that 
+                Google Places does not have a listing for it.</p>
+                <p>If there is another entry for the place you searched for, please select that entry. Otherwise, try searching for something else.</p>`
+            } else {
             let photoUrl = p.photos[0].getUrl();
             let img = document.createElement("img");
             img.setAttribute("src", photoUrl);
             img.setAttribute("class", "img")
             document.getElementById("attraction-image").appendChild(img);
+            }
 
             let placeReviews = p.reviews;
-            placeReviews.forEach(function(item) {
-                //console.log(item);
-                document.getElementById("attraction-image").innerHTML += `<p style="margin-bottom:0">${item.text}</p>
-                <p style="text-align:right"><strong>${item.author_name}: </strong> 
-                <span style="color:red; font-size:x-large">${item.rating}</span>/5</p><hr>`;
-            });
+            if (placeReviews === undefined) {
+                console.log("No Reviews")
+            } else {
+                placeReviews.forEach(function(item) {
+                    document.getElementById("attraction-image").innerHTML += `<p style="margin-bottom:0">${item.text}</p>
+                    <p style="text-align:right"><strong>${item.author_name}: </strong> 
+                    <span style="color:red; font-size:x-large">${item.rating}</span>/5</p><hr>`;
+                });
+            }
 
             let placeWebsite = p.website;
             //console.log(placeWebsite);
@@ -90,7 +100,7 @@ function createMap() {
 
             } else if (p.hasOwnProperty("website") == false){
                 console.log("No website");
-                $(".more-info").append(`<p>Sorry, no website available for this place.</p>`)
+                $(".more-info").append(`<p class="btn btn-description btn-block more-info-button">Sorry, no website available for this place.</p>`)
             }
 
             markers.push(new google.maps.Marker({
@@ -136,7 +146,7 @@ function createMap() {
     function addToItin() {
         var getValue = $('#search').val();
 
-        if (localStorage.getItem("place") === null) {
+        if (sessionStorage.getItem("place") === null) {
             sessionStorage.setItem("place", "");
         }
         
@@ -144,12 +154,12 @@ function createMap() {
 
         sessionStorage.getItem('place');
         let placeAddedToItinerary = sessionStorage.getItem('place');
-        console.log(placeAddedToItinerary)
+        console.log(typeof(placeAddedToItinerary))
         alert(`You have added 
     ${placeAddedToItinerary} 
 to your itinerary`)
         document.getElementById("message").innerHTML += placeAddedToItinerary;
-        $(".btn-cta-presonalised-tour").css("display", "block");
+        $(".btn-cta-personalised-tour").css("display", "block");
     }
 
 

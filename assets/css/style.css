@@ -557,14 +557,14 @@ border-color: rgba(0,47,167,0.75)!important;
         width: 100%;
     }
 }
-
-/*#general-title {
-    text-align: center;
-    color: rgba(0,47,167,0.75)
-}*/
 /* ----------------------------------------- Personalised tour */
-.btn-cta-presonalised-tour {
+.btn-cta-personalised-tour {
     display: none;
+}
+
+.more-info-button {
+    border: 0;
+    margin-top: 6px;
 }
 
 /* ----------------------------------------- Footer */
