@@ -6,6 +6,10 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="assets/css/style.css" type="text/css">
+
+    <!-- Google Maps API -->
+    <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAzsHDlJxaOPO3VA7I1JZqP9aqkCikuzmM&libraries=places&map_ids=a9bd3e34aaa2ce67&callback=initMap"></script>
+    
     <title>Nicer Tours | St. Paul de Vence</title>
 </head>
 
@@ -84,7 +88,8 @@
 
                         <article id="st-paul-full-description">
                             <div class="row">
-                                <div class="order-sm-12 col-sm-8">
+
+                                <div class="order-2 order-sm-9 col-sm-8 tour-description">
                                     <div class="d-none d-sm-block tour-description">
                                         <h3>Red carpets and a rural village.</h3>
                                         <p>The second most visited village in France for a reason: 
@@ -107,64 +112,55 @@
                                     </div>
 
                                     <div class="description-buttons">                      
-                                        <button class="btn btn-light btn-description btn-red-carpet" type="button" data-toggle="collapse" data-target="#red-carpet" aria-expanded="false" aria-controls="red-carpet">
+                                        <button class="btn btn-light btn-description btn-global-description btn-red-carpet red-carpet" type="button">
                                         The Red Carpet</button>
-                                        <button class="btn btn-light btn-description btn-coastal-drive" type="button" data-toggle="collapse" data-target="#coastal-drive" aria-expanded="false" aria-controls="coastal-drive">
+                                        <button class="btn btn-light btn-description btn-global-description btn-coastal-drive coastal-drive" type="button">
                                         Coastal Drive</button>
-                                        <button class="btn btn-light btn-description btn-st-paul-de-vence" type="button" data-toggle="collapse" data-target="#st-paul-de-vence" aria-expanded="false" aria-controls="st-paul-de-vence">
+                                        <button class="btn btn-light btn-description btn-global-description btn-st-paul-de-vence st-paul-de-vence" type="button">
                                         St. Paul de Vence</button>
-                                        <button class="btn btn-light btn-description btn-ramparts" type="button" data-toggle="collapse" data-target="#ramparts" aria-expanded="false" aria-controls="ramparts">
-                                        The Ramparts</button>
-                                        <button class="btn btn-light btn-description btn-folon" type="button" data-toggle="collapse" data-target="#folon" aria-expanded="false" aria-controls="folon">
-                                        Folon Chapel*</button>
-
-                                        <div class="collapse" id="red-carpet">
-                                            <div class="card card-body d-md-block red-carpetexpanded">
-                                                <p>Although we cannot guarantee the red carpet will be laid for your arrival - 
-                                                at times the red carpet is replaced with a blue, pink or yellow carpet, 
-                                                depending on the event being held at the <em>Palais des Festivals</em>, we can nonetheless guarantee you’ll feel 
-                                                like stars as your grab that all-important selfie on the stairs of the palace!</p>
-                                            </div>
-                                        </div>
-                                    
-                                        <div class="collapse" id="coastal-drive">
-                                            <div class="card card-body d-md-block coastal-drive-expanded">
-                                                <p>From the luxury boutiques of the <em>Boulevard de la Croisette</em> in Cannes to the rugged coastline and its elegant villas, 
-                                                you’ll enjoy stunning views from the comfort of your vehicle. Following the coast past Antibes, with its vast pleasure port, 
-                                                you’ll turn inland just before Nice as you head towards St.-Paul-de-Vence itself.</p>
-                                            </div>
-                                        </div>
-                                    
-                                        <div class="collapse" id="st-paul-de-vence">
-                                            <div class="card card-body d-md-block st-paul-de-vence-expanded">
-                                                <p>Described by Vauban, military commander under Louis XIV, as being “unique in the world”, 
-                                                St.-Paul-de-Vence is reputed to enjoy a light more luminous than in any other part of Louis’ empire. 
-                                                As you stroll through the cobbled streets of the <em>cité</em>, be sure to take in this light. 
-                                                As you do, you’ll understand why so many artists have chosen to make the village their home. 
-                                                From Chagall to Renoir, Matisse to Picasso, Folon to Lévy, all have chosen either to visit or reside within its walls.</p>
-                                            </div>
-                                        </div>
-                                    
-                                        <div class="collapse" id="ramparts">
-                                            <div class="card card-body d-md-block ramparts-expanded">
-                                                <p>Be sure to take time to walk the length if the city walls - they’ll lead you to the cemetery in which Chagall is buried. 
-                                                Marvel how lucky you are to walk the walls, which were once sold off by the mayor of the <em>cité</em> without the knowledge of the residents! 
-                                                They still stand today as the locals were able to club together and buy them back before they were demolished...</p>
-                                            </div>
-                                        </div>
-                                    
-                                        <div class="collapse" id="folon">
-                                            <div class="card card-body d-md-block folon-expanded">
-                                                <p>Otherwise known as the White Penitents Chapel, today it is most famous for its decorations by Jean-Michel Folon. 
-                                                The chapel decorations are as a testimony to the light of the village. 
-                                                The chapel is just behind the central church, which is also holds the remnants of one of the first popes, Pope Urbain.</p>
-                                                <p class="small-text">*Admission to the chapel not included in the price of this tour.</p>
-                                            </div>
-                                        </div>
                                     </div>
                                 </div>
 
-                                <div class="order-12 order-sm-1 col-sm-4 tour-times" id="tour-of-st-paul-times-and-price-full">
+                                <div class="order-9 order-sm-11 col-12 google-map">
+                                    <div class="global-info red-carpet" id="red-carpet">
+                                        <div class="card card-body d-md-block red-carpetexpanded">
+                                            <p>Although we cannot guarantee the red carpet will be laid for your arrival - 
+                                            at times the red carpet is replaced with a blue, pink or yellow carpet, 
+                                            depending on the event being held at the <em>Palais des Festivals</em>, we can nonetheless guarantee you’ll feel 
+                                            like stars as your grab that all-important selfie on the stairs of the palace!</p>
+                                        </div>
+                                    </div>
+                                
+                                    <div class="global-info coastal-drive" id="coastal-drive">
+                                        <div class="card card-body d-md-block coastal-drive-expanded">
+                                            <p>From the luxury boutiques of the <em>Boulevard de la Croisette</em> in Cannes to the rugged coastline and its elegant villas, 
+                                            you’ll enjoy stunning views from the comfort of your vehicle. Following the coast past Antibes, with its vast pleasure port, 
+                                            you’ll turn inland just before Nice as you head towards St.-Paul-de-Vence itself.</p>
+                                        </div>
+                                    </div>
+                                
+                                    <div class="global-info st-paul-de-vence" id="st-paul-de-vence">
+                                        <div class="card card-body d-md-block st-paul-de-vence-expanded">
+                                            <p>Described by Vauban, military commander under Louis XIV, as being “unique in the world”, 
+                                            St.-Paul-de-Vence is reputed to enjoy a light more luminous than in any other part of Louis’ empire. 
+                                            As you stroll through the cobbled streets of the <em>cité</em>, be sure to take in this light. 
+                                            As you do, you’ll understand why so many artists have chosen to make the village their home. 
+                                            From Chagall to Renoir, Matisse to Picasso, Folon to Lévy, all have chosen either to visit or reside within its walls.</p>
+                                        </div>
+                                    </div>
+
+                                    <p id="instructions-for-map">Click each marker to find out more.</p>
+                                    <div id="map-container">
+                                        <div id="map-canvas">
+                                        </div>
+                                    </div>
+                                </div>
+                                    
+                                <div class="order-11 order-sm-12 col-12" id="attraction"></div>
+
+                                <div class="order-12 order-sm-12 col-12" id="reviews"></div>
+                            
+                                <div class="order-1 order-sm-1 col-sm-4 tour-times" id="tour-of-st-paul-times-and-price-full">
                                     <h3 class="times">Times and availablitiy:</h3>
                                     <div class="row">
                                         <div class="col-xs-6 col-sm-12 times-and-availability">
@@ -295,6 +291,7 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 
+    <script type="text/javascript" src="scripts/tour-of-st-paul.js"></script>
 </body>
 
 </html>

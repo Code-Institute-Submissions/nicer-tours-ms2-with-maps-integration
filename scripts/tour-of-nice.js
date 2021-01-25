@@ -101,7 +101,7 @@ function initMap() {
                     <p class="poi-text">Discover the house where the painter Matisse stayed when he came to Nice to try to capture the light of the 
                     city in his paintings.</p>
                     <br>
-                    <p class="image-credit"><strong>Image:</strong> Cours Saleya: Dalbera, via Wikimedia Commons</p>`,
+                    <p class="image-credit"><strong>Image:</strong> dalbera, License: <a href="https://creativecommons.org/licenses/by/2.0" target="_blank">CC BY 2.0</a>, via Wikimedia Commons</p>`,
         request: {
             placeId: "EiBDb3VycyBTYWxleWEsIDA2MzAwIE5pY2UsIEZyYW5jZSIuKiwKFAoSCTtmtyCj2s0SEb6A4T90An3BEhQKEgkxLYVqENDNEhFwmpf9pRkIBA",
             fields: ["name", "reviews", "rating", "photos", "website", "place_id", "formatted_address"]
@@ -470,21 +470,23 @@ function initMap() {
 //-------------------------------------------------- Section (Buttons) Zooms
 //Old Town Zoom
 $(".btn-old-town").on("click", function () {
+    $("#map-container").css("height", "500px");
+    $("#map-canvas").css("height", "500px");
     $(".global-info").css("display", "none");
     $("#old-town").css("display", "block");
-    if (document.documentElement.clientWidth >= 1440) {
-        map.setZoom(17);
+    if (document.documentElement.clientWidth > 1440) {
+        map.setZoom(18);
         map.setCenter({ lat: 43.695961, lng: 7.271446 });
     };
-    if ((document.documentElement.clientWidth >= 1024) && (document.documentElement.clientWidth < 1440)) {
+    if ((document.documentElement.clientWidth > 1024) && (document.documentElement.clientWidth <= 1440)) {
         map.setZoom(17);
         map.setCenter({ lat: 43.696547, lng: 7.271700 });
     };
-    if ((document.documentElement.clientWidth >= 768) && (document.documentElement.clientWidth < 1024)) {
+    if ((document.documentElement.clientWidth > 768) && (document.documentElement.clientWidth <= 1024)) {
         map.setZoom(16);
         map.setCenter({ lat: 43.695961, lng: 7.271446 });
     };
-    if ((document.documentElement.clientWidth > 425) && (document.documentElement.clientWidth < 768)) {
+    if ((document.documentElement.clientWidth > 425) && (document.documentElement.clientWidth <= 768)) {
         map.setZoom(16);
         map.setCenter({ lat: 43.696391, lng: 7.271155 });
     }
@@ -497,21 +499,23 @@ $(".btn-old-town").on("click", function () {
 
 //Castle Hill Zoom
 $(".btn-castle-hill").on("click", function () {
+    $("#map-container").css("height", "500px");
+    $("#map-canvas").css("height", "500px");
     $(".global-info").css("display", "none");
     $("#castle-hill").css("display", "block");
-    if (document.documentElement.clientWidth >= 1440) {
+    if (document.documentElement.clientWidth > 1440) {
         map.setZoom(18);
         map.setCenter({ lat: 43.694306, lng: 7.281073 });
     };
-    if ((document.documentElement.clientWidth >= 1024) && (document.documentElement.clientWidth < 1440)) {
+    if ((document.documentElement.clientWidth > 1024) && (document.documentElement.clientWidth <= 1440)) {
         map.setZoom(18);
         map.setCenter({ lat: 43.694306, lng: 7.281073 });
     };
-    if ((document.documentElement.clientWidth >= 768) && (document.documentElement.clientWidth < 1024)) {
+    if ((document.documentElement.clientWidth > 768) && (document.documentElement.clientWidth <= 1024)) {
         map.setZoom(17);
         map.setCenter({ lat: 43.694321, lng: 7.281030 });
     };
-    if ((document.documentElement.clientWidth > 425) && (document.documentElement.clientWidth < 768)) {
+    if ((document.documentElement.clientWidth > 425) && (document.documentElement.clientWidth <= 768)) {
         map.setZoom(17);
         map.setCenter({ lat: 43.694321, lng: 7.281030 })
     }
@@ -524,26 +528,28 @@ $(".btn-castle-hill").on("click", function () {
 
 //Port Lympia Zoom
 $(".btn-the-port").on("click", function () {
+    $("#map-container").css("height", "600px");
+    $("#map-canvas").css("height", "600px");
     $(".global-info").css("display", "none");
     $("#the-port").css("display", "block");
-    if (document.documentElement.clientWidth >= 1440) {
+    if (document.documentElement.clientWidth > 1440) {
+        map.setZoom(17);
+        map.setCenter({ lat: 43.692594, lng: 7.290852 });
+    };
+    if ((document.documentElement.clientWidth > 1024) && (document.documentElement.clientWidth <= 1440)) {
         map.setZoom(16);
         map.setCenter({ lat: 43.692594, lng: 7.290852 });
     };
-    if ((document.documentElement.clientWidth >= 1024) && (document.documentElement.clientWidth < 1440)) {
+    if ((document.documentElement.clientWidth > 768) && (document.documentElement.clientWidth <= 1024)) {
         map.setZoom(16);
-        map.setCenter({ lat: 43.692594, lng: 7.290852 });
-    };
-    if ((document.documentElement.clientWidth >= 768) && (document.documentElement.clientWidth < 1024)) {
-        map.setZoom(15);
         map.setCenter({ lat: 43.692008, lng: 7.290724 });
     };
-    if ((document.documentElement.clientWidth > 425) && (document.documentElement.clientWidth < 768)) {
+    if ((document.documentElement.clientWidth > 425) && (document.documentElement.clientWidth <= 768)) {
         map.setZoom(15);
         map.setCenter({ lat: 43.693256, lng: 7.290468 });
     }
     if (document.documentElement.clientWidth <= 425) {
-        map.setZoom(14);
+        map.setZoom(15);
         map.setCenter({ lat: 43.692460, lng: 7.289742 });
     }
     $(".btn-global-description").get(0).scrollIntoView();
@@ -551,21 +557,23 @@ $(".btn-the-port").on("click", function () {
 
 //Cimiez zoom
 $(".btn-cimiez").on("click", function () {
+    $("#map-container").css("height", "500px");
+    $("#map-canvas").css("height", "500px");
     $(".global-info").css("display", "none");
     $("#cimiez").css("display", "block");
-    if (document.documentElement.clientWidth >= 1440) {
+    if (document.documentElement.clientWidth > 1440) {
+        map.setZoom(19);
+        map.setCenter({ lat: 43.720127, lng: 7.276652 });
+    };
+    if ((document.documentElement.clientWidth > 1024) && (document.documentElement.clientWidth <= 1440)) {
         map.setZoom(18);
         map.setCenter({ lat: 43.720127, lng: 7.276652 });
     };
-    if ((document.documentElement.clientWidth >= 1024) && (document.documentElement.clientWidth < 1440)) {
-        map.setZoom(18);
-        map.setCenter({ lat: 43.720127, lng: 7.276652 });
-    };
-    if ((document.documentElement.clientWidth >= 768) && (document.documentElement.clientWidth < 1024)) {
+    if ((document.documentElement.clientWidth > 768) && (document.documentElement.clientWidth <= 1024)) {
         map.setZoom(17);
         map.setCenter({ lat: 43.720230, lng: 7.276968 });
     };
-    if ((document.documentElement.clientWidth > 425) && (document.documentElement.clientWidth < 768)) {
+    if ((document.documentElement.clientWidth > 425) && (document.documentElement.clientWidth <= 768)) {
         map.setZoom(17);
         map.setCenter({ lat: 43.720093, lng: 7.276860 });
     }
@@ -578,22 +586,24 @@ $(".btn-cimiez").on("click", function () {
 
 //Russian Church Zoom
 $(".btn-russian-cathedral").on("click", function () {
+    $("#map-container").css("height", "500px");
+    $("#map-canvas").css("height", "500px");
     $(".global-info").css("display", "none");
     $("#russian-cathedral").css("display", "block");
     $(".poi-close-all").css("display", "block");
-    if (document.documentElement.clientWidth >= 1440) {
+    if (document.documentElement.clientWidth > 1440) {
+        map.setZoom(17);
+        map.setCenter({ lat: 43.704697, lng: 7.259707 });
+    };
+    if ((document.documentElement.clientWidth > 1024) && (document.documentElement.clientWidth <= 1440)) {
         map.setZoom(16);
         map.setCenter({ lat: 43.704697, lng: 7.259707 });
     };
-    if ((document.documentElement.clientWidth >= 1024) && (document.documentElement.clientWidth < 1440)) {
+    if ((document.documentElement.clientWidth > 768) && (document.documentElement.clientWidth <= 1024)) {
         map.setZoom(16);
         map.setCenter({ lat: 43.704697, lng: 7.259707 });
     };
-    if ((document.documentElement.clientWidth >= 768) && (document.documentElement.clientWidth < 1024)) {
-        map.setZoom(15);
-        map.setCenter({ lat: 43.704697, lng: 7.259707 });
-    };
-    if ((document.documentElement.clientWidth > 425) && (document.documentElement.clientWidth < 768)) {
+    if ((document.documentElement.clientWidth > 425) && (document.documentElement.clientWidth <= 768)) {
         map.setZoom(15);
         map.setCenter({ lat: 43.704697, lng: 7.259707 });
     }

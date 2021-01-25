@@ -270,8 +270,10 @@ function initMap() {
                     <p class="poi-text">Ayrton Senna famously burst onto the F1 scene with a storming performance in the rain-soaked 1984 race and holds the record for most 
                     wins at Monaco with six, including five consecutive victories between 1989-1993.</p>
                     
-                    <img class="poi-text" src="/assets/images/ferrari-racing-in-monaco.jpg" alt="Ferrari racing in the streets of Monaco" width="100%">
-                    <p class="image-credit"><strong>Image:</strong> <a href="https://wallpaperaccess.com/f1-monaco" target="_blank">Wallpaperaccess.com</a></p>`,
+                    
+                    <p class="image-credit"><strong>Image:</strong> 
+                    <a href="https://commons.wikimedia.org/wiki/File:Circuit_de_Monaco_1950.png" target="_blank">Mario30095 via wikimedia</a>
+                    License: <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank">Creative Commons BY SA3.0</a></p>`,
         request: {
             placeId: "ChIJFemQ34zCzRIRy8P1MXirK_w",
             fields: ["name", "reviews", "rating", "website", "place_id", "formatted_address"]
@@ -452,21 +454,23 @@ function initMap() {
 //-------------------------------------------------- Section (Buttons) Zooms
 //Eze Zoom
 $(".btn-eze").on("click", function () {
+    $("#map-container").css("height", "600px");
+    $("#map-canvas").css("height", "600px");
     $(".global-info").css("display", "none");
     $("#eze").css("display", "block");
-    if (document.documentElement.clientWidth >= 1440) {
+    if (document.documentElement.clientWidth > 1440) {
         map.setZoom(17);
         map.setCenter({ lat: 43.728489, lng: 7.361219 });
     };
-    if ((document.documentElement.clientWidth >= 1024) && (document.documentElement.clientWidth < 1440)) {
+    if ((document.documentElement.clientWidth > 1024) && (document.documentElement.clientWidth <= 1440)) {
         map.setZoom(17);
         map.setCenter({ lat: 43.728489, lng: 7.361219 });
     };
-    if ((document.documentElement.clientWidth >= 768) && (document.documentElement.clientWidth < 1024)) {
+    if ((document.documentElement.clientWidth > 768) && (document.documentElement.clientWidth <= 1024)) {
         map.setZoom(16);
         map.setCenter({ lat: 43.728489, lng: 7.361219 });
     };
-    if ((document.documentElement.clientWidth > 425) && (document.documentElement.clientWidth < 768)) {
+    if ((document.documentElement.clientWidth > 425) && (document.documentElement.clientWidth <= 768)) {
         map.setZoom(16);
         map.setCenter({ lat: 43.728422, lng: 7.361454 });
     }
@@ -479,109 +483,117 @@ $(".btn-eze").on("click", function () {
 
 //Panorama Monaco Zoom
 $(".btn-panorama-monaco").on("click", function () {
+    $("#map-container").css("height", "800px");
+    $("#map-canvas").css("height", "800px");
     $(".global-info").css("display", "none");
     $("#panorama-monaco").css("display", "block");
     if (document.documentElement.clientWidth >= 1440) {
-        map.setZoom(14);
-        map.setCenter({ lat: 43.730561, lng: 7.402835 });
+        map.setZoom(15);
+        map.setCenter({ lat: 43.739817, lng: 7.41631 });
     };
-    if ((document.documentElement.clientWidth >= 1024) && (document.documentElement.clientWidth < 1440)) {
-        map.setZoom(14);
-        map.setCenter({ lat: 43.730561, lng: 7.402835 });
+    if ((document.documentElement.clientWidth > 1024) && (document.documentElement.clientWidth <= 1440)) {
+        map.setZoom(15);
+        map.setCenter({ lat: 43.739817, lng: 7.41631 });
     };
-    if ((document.documentElement.clientWidth >= 768) && (document.documentElement.clientWidth < 1024)) {
-        map.setZoom(14);
-        map.setCenter({ lat: 43.730561, lng: 7.402835 });
+    if ((document.documentElement.clientWidth > 768) && (document.documentElement.clientWidth <= 1024)) {
+        map.setZoom(15);
+        map.setCenter({ lat: 43.739817, lng: 7.41631 });
     };
-    if ((document.documentElement.clientWidth > 425) && (document.documentElement.clientWidth < 768)) {
-        map.setZoom(13);
-        map.setCenter({ lat: 43.730561, lng: 7.402835 })
+    if ((document.documentElement.clientWidth > 425) && (document.documentElement.clientWidth <= 768)) {
+        map.setZoom(14);
+        map.setCenter({ lat: 43.739817, lng: 7.41631 })
     }
     if (document.documentElement.clientWidth <= 425) {
-        map.setZoom(13);
-        map.setCenter({ lat: 43.730561, lng: 7.402835 })
+        map.setZoom(14);
+        map.setCenter({ lat: 43.739817, lng: 7.41631 })
     }
     $(".btn-global-description").get(0).scrollIntoView();
 })
 
 //Monaco Rock Zoom
 $(".btn-the-rock").on("click", function () {
+    $("#map-container").css("height", "500px");
+    $("#map-canvas").css("height", "500px");
     $(".global-info").css("display", "none");
     $("#the-rock").css("display", "block");
-    if (document.documentElement.clientWidth >= 1440) {
+    if (document.documentElement.clientWidth > 1440) {
+        map.setZoom(17);
+        map.setCenter({ lat: 43.731446, lng: 7.423935 });
+    };
+    if ((document.documentElement.clientWidth > 1024) && (document.documentElement.clientWidth <= 1440)) {
+        map.setZoom(17);
+        map.setCenter({ lat: 43.731446, lng: 7.423935 });
+    };
+    if ((document.documentElement.clientWidth > 768) && (document.documentElement.clientWidth <= 1024)) {
         map.setZoom(16);
         map.setCenter({ lat: 43.731446, lng: 7.423935 });
     };
-    if ((document.documentElement.clientWidth >= 1024) && (document.documentElement.clientWidth < 1440)) {
+    if ((document.documentElement.clientWidth > 425) && (document.documentElement.clientWidth <= 768)) {
         map.setZoom(16);
-        map.setCenter({ lat: 43.731446, lng: 7.423935 });
-    };
-    if ((document.documentElement.clientWidth >= 768) && (document.documentElement.clientWidth < 1024)) {
-        map.setZoom(16);
-        map.setCenter({ lat: 43.731446, lng: 7.423935 });
-    };
-    if ((document.documentElement.clientWidth > 425) && (document.documentElement.clientWidth < 768)) {
-        map.setZoom(15);
         map.setCenter({ lat: 43.731446, lng: 7.423935 });
     }
     if (document.documentElement.clientWidth <= 425) {
-        map.setZoom(15);
-        map.setCenter({ lat: 43.731446, lng: 7.423935 });
-    }
-    $(".btn-global-description").get(0).scrollIntoView();
-})
-
-//Racetrack zoom
-$(".racetrack").on("click", function () {
-    $(".global-info").css("display", "none");
-    $("#racetrack").css("display", "block");
-    if (document.documentElement.clientWidth >= 1440) {
         map.setZoom(16);
-        map.setCenter({ lat: 43.736605, lng: 7.427937 });
-    };
-    if ((document.documentElement.clientWidth >= 1024) && (document.documentElement.clientWidth < 1440)) {
-        map.setZoom(15);
-        map.setCenter({ lat: 43.736605, lng: 7.427937 });
-    };
-    if ((document.documentElement.clientWidth >= 768) && (document.documentElement.clientWidth < 1024)) {
-        map.setZoom(15);
-        map.setCenter({ lat: 43.736605, lng: 7.427937 });
-    };
-    if ((document.documentElement.clientWidth > 425) && (document.documentElement.clientWidth < 768)) {
-        map.setZoom(14);
-        map.setCenter({ lat: 43.736605, lng: 7.427937 });
-    }
-    if (document.documentElement.clientWidth <= 425) {
-        map.setZoom(14);
-        map.setCenter({ lat: 43.736605, lng: 7.427937 });
+        map.setCenter({ lat: 43.730566, lng: 7.422510 });
     }
     $(".btn-global-description").get(0).scrollIntoView();
 })
 
 //Casino Zoom
 $(".btn-casino").on("click", function () {
+    $("#map-container").css("height", "500px");
+    $("#map-canvas").css("height", "500px");
     $(".global-info").css("display", "none");
     $("#casino").css("display", "block");
-    if (document.documentElement.clientWidth >= 1440) {
+    if (document.documentElement.clientWidth > 1440) {
         map.setZoom(18);
         map.setCenter({ lat: 43.739263, lng: 7.428055 });
     };
-    if ((document.documentElement.clientWidth >= 1024) && (document.documentElement.clientWidth < 1440)) {
+    if ((document.documentElement.clientWidth > 1024) && (document.documentElement.clientWidth <= 1440)) {
         map.setZoom(18);
         map.setCenter({ lat: 43.739263, lng: 7.428055 });
     };
-    if ((document.documentElement.clientWidth >= 768) && (document.documentElement.clientWidth < 1024)) {
+    if ((document.documentElement.clientWidth > 768) && (document.documentElement.clientWidth <= 1024)) {
         map.setZoom(17);
         map.setCenter({ lat: 43.739263, lng: 7.428055 });
     };
-    if ((document.documentElement.clientWidth > 425) && (document.documentElement.clientWidth < 768)) {
-        map.setZoom(17);
+    if ((document.documentElement.clientWidth > 425) && (document.documentElement.clientWidth <= 768)) {
+        map.setZoom(18);
         map.setCenter({ lat: 43.739263, lng: 7.428055 });
     }
     if (document.documentElement.clientWidth <= 425) {
         map.setZoom(17);
         map.setCenter({ lat: 43.739263, lng: 7.428055 });
     }
+})
+
+//Racetrack zoom
+$(".racetrack").on("click", function () {
+    $("#map-container").css("height", "800px");
+    $("#map-canvas").css("height", "800px");
+    $(".global-info").css("display", "none");
+    $("#racetrack").css("display", "block");
+    if (document.documentElement.clientWidth > 1440) {
+        map.setZoom(16);
+        map.setCenter({ lat: 43.736245, lng: 7.425745 });
+    };
+    if ((document.documentElement.clientWidth > 1024) && (document.documentElement.clientWidth <= 1440)) {
+        map.setZoom(16);
+        map.setCenter({ lat: 43.736245, lng: 7.425745 });
+    };
+    if ((document.documentElement.clientWidth > 768) && (document.documentElement.clientWidth <= 1024)) {
+        map.setZoom(16);
+        map.setCenter({ lat: 43.736245, lng: 7.425745 });
+    };
+    if ((document.documentElement.clientWidth > 425) && (document.documentElement.clientWidth <= 768)) {
+        map.setZoom(16);
+        map.setCenter({ lat: 43.736245, lng: 7.425745 });
+    }
+    if (document.documentElement.clientWidth <= 425) {
+        map.setZoom(15);
+        map.setCenter({ lat: 43.736245, lng: 7.425745 });
+    }
+    $(".btn-global-description").get(0).scrollIntoView();
 })
 
 //---------------------------------------------------------------------------------------------------- Buttons
