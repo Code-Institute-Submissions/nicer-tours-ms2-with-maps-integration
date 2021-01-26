@@ -1,12 +1,6 @@
-let markers = [];
 let locations = [];
-let request = [];
-let infowindowContent;
-let infowindowTitle;
 let service;
 let img;
-let placeName;
-let infowindow = null;
 let map;
 
 //---------------------------------------------------------------------------------------------------- Initialize Map
@@ -41,7 +35,7 @@ function initMap() {
             placeId: "ChIJuzM38JGBzhIRecDMS2ZUua8",
             fields: ["reviews", "rating", "photos", "website", "place_id", "formatted_address"]
         }
-    }
+    };
     
     //Juan les Pins Jazz marker
     let markerJazzAtJuan = {
@@ -64,7 +58,7 @@ function initMap() {
             placeId: "ChIJu8ReKIt_zhIR1lcaVZ9u7Bw",
             fields: ["photos", "website", "place_id", "formatted_address"]
         }
-    }
+    };
     
     //Eden Roc marker
     let markerEdenRoc = {
@@ -91,7 +85,7 @@ function initMap() {
             placeId: "ChIJgUQSbb1_zhIRaXQjX38vUD8",
             fields: ["name", "reviews", "rating", "photos", "website", "place_id", "formatted_address"]
         }
-    }
+    };
 
     //Marché d'Antibes marker
     let markerMarketAntibes = {
@@ -114,7 +108,7 @@ function initMap() {
             placeId: "ChIJ2ehIqHHVzRIRHAKd30wbdAU",
             fields: ["reviews", "rating", "photos", "website", "place_id", "formatted_address"]
         }
-    }
+    };
 
     //Port Vauban marker
     let markerBillionairesQuay = {
@@ -140,7 +134,7 @@ function initMap() {
             placeId: "ChIJGVCg6XLVzRIRi7g-OZ9HNj0",
             fields: ["name", "reviews", "rating", "photos", "website", "place_id", "formatted_address"]
         }
-    }
+    };
 
 
     //Colombe d'Or marker
@@ -174,7 +168,7 @@ function initMap() {
             placeId: "ChIJte-o8r3TzRIRctSqoeqmU38",
             fields: ["name", "reviews", "rating", "photos", "website", "place_id", "formatted_address"]
         }
-    }
+    };
 
     //Folon Chapel marker
     let markerFolonChapel = {
@@ -197,7 +191,7 @@ function initMap() {
             placeId: "ChIJtX_8iu7SzRIR5cSlLriQfF0",
             fields: ["name", "reviews", "rating", "photos", "website", "place_id", "formatted_address"]
         }
-    }
+    };
 
     //Hotel de Paris marker
     let markerFontaine = {
@@ -219,7 +213,7 @@ function initMap() {
             fields: ["name", "reviews", "rating", "website", "place_id", "formatted_address"]
         }, 
         img: new URL("https://upload.wikimedia.org/wikipedia/commons/d/db/Saint_Paul_de_Vence_sa_fontaine_-_Jean-Charles_GUILLO.jpg")
-    }
+    };
 
     //Café de Paris marker
     let markerRamparts = {
@@ -246,7 +240,7 @@ function initMap() {
             placeId: "ChIJQekRjCnTzRIRp6L7Xma0DD8",
             fields: ["name", "reviews", "rating", "photos", "website", "place_id", "formatted_address"]
         }
-    }
+    };
 
     //Grand Prix de Monaco Monte-Carlo
     let markerChagall = {
@@ -281,7 +275,7 @@ function initMap() {
             placeId: "ChIJWY1go-_SzRIRDkb7U7XLmLw",
             fields: ["reviews", "rating", "photos", "website", "place_id", "formatted_address"]
         }
-    }
+    };
 
     //---------------------------------------------------------------------------------------------------- Markers
     locations = 
@@ -301,10 +295,6 @@ function initMap() {
 //---------------------------------------------------------------------------------------------------- Markers
     for (let i = 0; i < locations.length; i++) {
         
-        let request = {
-            placeId: locations.placeId,
-            fields: ["name", "reviews", "rating", "photos", "website", "place_id", "formatted_address"],
-        };
         let marker = new google.maps.Marker({
             position: new google.maps.LatLng(locations[i].lat, locations[i].lng),
             map: map
@@ -344,31 +334,29 @@ function initMap() {
                     </div>`;
 
                     
-                    let placeId = place.placeId
-                    let placeAddress = place.formatted_address
                     let placeName = place.name;
                     console.log(placeName);
                     
                     if (placeName === undefined) {
-                        document.getElementById("poi-title-name").append(locations[i].title)
+                        document.getElementById("poi-title-name").append(locations[i].title);
                     } else {
-                        document.getElementById("poi-title-name").append(placeName)
+                        document.getElementById("poi-title-name").append(placeName);
                     }
 
                     if (place.hasOwnProperty("photos") === false){
                         console.log("No photos");
                         let photoURL = locations[i].img;
-                        imgURL = document.createElement("img");
+                        let imgURL = document.createElement("img");
                         imgURL.setAttribute("src", photoURL);
-                        imgURL.setAttribute("class", "img")
+                        imgURL.setAttribute("class", "img");
                         document.getElementById("attraction-image").appendChild(imgURL);
                     } else {
                         let photoUrl = place.photos[0].getUrl();
                         img = document.createElement("img");
                         img.setAttribute("src", photoUrl);
-                        img.setAttribute("class", "img")
+                        img.setAttribute("class", "img");
                         document.getElementById("attraction-image").appendChild(img);
-                    };
+                    }
 
                     if (place.hasOwnProperty("reviews") === false){
                         console.log("No reviews");
@@ -388,13 +376,12 @@ function initMap() {
                     let placeWebsite = place.website;
                     console.log(placeWebsite);
                     if (place.hasOwnProperty("website") == true) {
-                        console.log(placeWebsite);
-                        $(".more-info").append(`<a class="btn btn-light btn-block more-info" role="button" href="${placeWebsite}" target="_blank">Find Out More</a>`)
+                        $(".more-info").append(`<a class="btn btn-light btn-block more-info" role="button" href="${placeWebsite}" target="_blank">Find Out More</a>`);
 
                     } else if (place.hasOwnProperty("website") == false){
                         $(".more-info").append(`<p class="btn btn-light btn-description btn-block more-info-button">No website available</a>`);
                     }
-                };
+                }
             });
         });
     }
@@ -443,17 +430,17 @@ function initMap() {
 //---------------------------------------------------------------------------------------------------- jQuery
 //-------------------------------------------------- Hide map on page load
     $(function() {
-        $("#instructions-for-map").hide()
+        $("#instructions-for-map").hide();
         $("#map-container").hide();
         $("#reviews").hide();
-    })
+    });
 
 //-------------------------------------------------- Show map on description buttons
     $(".btn-global-description").on("click", function() {
-        $("#instructions-for-map").show()
+        $("#instructions-for-map").show();
         $("#map-container").show();
         $("#reviews").hide();
-    })
+    });
 
 //-------------------------------------------------- Section (Buttons) Zooms
 //Cannes Zoom
@@ -465,15 +452,15 @@ $(".btn-red-carpet").on("click", function () {
     if (document.documentElement.clientWidth >= 1440) {
         map.setZoom(15);
         map.setCenter({ lat: 43.550983, lng: 7.017951 });
-    };
+    }
     if ((document.documentElement.clientWidth >= 1024) && (document.documentElement.clientWidth < 1440)) {
         map.setZoom(15);
         map.setCenter({ lat: 43.550983, lng: 7.017951 });
-    };
+    }
     if ((document.documentElement.clientWidth >= 768) && (document.documentElement.clientWidth < 1024)) {
         map.setZoom(15);
         map.setCenter({ lat: 43.550983, lng: 7.017951 });
-    };
+    }
     if ((document.documentElement.clientWidth > 425) && (document.documentElement.clientWidth < 768)) {
         map.setZoom(16);
         map.setCenter({ lat: 43.550983, lng: 7.017951 });
@@ -483,7 +470,7 @@ $(".btn-red-carpet").on("click", function () {
         map.setCenter({ lat: 43.550983, lng: 7.017951 });
     }
     $(".btn-global-description").get(0).scrollIntoView();
-})
+});
 
 //Coastal Drive Zoom
 $(".btn-coastal-drive").on("click", function () {
@@ -494,25 +481,25 @@ $(".btn-coastal-drive").on("click", function () {
     if (document.documentElement.clientWidth >= 1440) {
         map.setZoom(14);
         map.setCenter({ lat: 43.572476, lng: 7.119458 });
-    };
+    }
     if ((document.documentElement.clientWidth >= 1024) && (document.documentElement.clientWidth < 1440)) {
         map.setZoom(14);
         map.setCenter({ lat: 43.572476, lng: 7.119458 });
-    };
+    }
     if ((document.documentElement.clientWidth >= 768) && (document.documentElement.clientWidth < 1024)) {
         map.setZoom(14);
         map.setCenter({ lat: 43.572476, lng: 7.119458 });
-    };
+    }
     if ((document.documentElement.clientWidth > 425) && (document.documentElement.clientWidth < 768)) {
         map.setZoom(14);
-        map.setCenter({ lat: 43.572476, lng: 7.119458 })
+        map.setCenter({ lat: 43.572476, lng: 7.119458 });
     }
     if (document.documentElement.clientWidth <= 425) {
         map.setZoom(14);
-        map.setCenter({ lat: 43.572476, lng: 7.119458 })
+        map.setCenter({ lat: 43.572476, lng: 7.119458 });
     }
     $(".btn-global-description").get(0).scrollIntoView();
-})
+});
 
 //St Paul Zoom
 $(".btn-st-paul-de-vence").on("click", function () {
@@ -523,15 +510,15 @@ $(".btn-st-paul-de-vence").on("click", function () {
     if (document.documentElement.clientWidth >= 1440) {
         map.setZoom(17);
         map.setCenter({ lat: 43.696978, lng: 7.122033 });
-    };
+    }
     if ((document.documentElement.clientWidth >= 1024) && (document.documentElement.clientWidth < 1440)) {
         map.setZoom(17);
         map.setCenter({ lat: 43.696978, lng: 7.122033 });
-    };
+    }
     if ((document.documentElement.clientWidth >= 768) && (document.documentElement.clientWidth < 1024)) {
         map.setZoom(17);
         map.setCenter({ lat: 43.696978, lng: 7.122033 });
-    };
+    }
     if ((document.documentElement.clientWidth > 425) && (document.documentElement.clientWidth < 768)) {
         map.setZoom(17);
         map.setCenter({ lat: 43.696978, lng: 7.122033 });
@@ -541,7 +528,7 @@ $(".btn-st-paul-de-vence").on("click", function () {
         map.setCenter({ lat: 43.696978, lng: 7.122033 });
     }
     $(".btn-global-description").get(0).scrollIntoView();
-})
+});
 
 //---------------------------------------------------------------------------------------------------- Buttons
 //Go back to top of map on click

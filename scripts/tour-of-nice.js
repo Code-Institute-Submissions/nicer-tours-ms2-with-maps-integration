@@ -1,12 +1,6 @@
 let markers = [];
 let locations = [];
-let request = [];
-let infowindowContent;
-let infowindowTitle;
-let service;
 let img;
-let placeName;
-let infowindow = null;
 let map;
 
 //---------------------------------------------------------------------------------------------------- Initialize Map
@@ -18,7 +12,7 @@ function initMap() {
         streetViewControl: false
     });
 
-    service = new google.maps.places.PlacesService(map);
+    let service = new google.maps.places.PlacesService(map);
 //---------------------------------------------------------------------------------------------------- Markers
     //Promenade des Anglais marker
     let markerProm = {
@@ -40,7 +34,7 @@ function initMap() {
             placeId: "ChIJyRztG1fRzRIRBeFRpvLFAW4",
             fields: ["name", "reviews", "rating", "photos", "website", "place_id", "formatted_address"]
         }
-    }
+    };
     
     //Place Masséna marker
     let markerPlaceMassena = {
@@ -63,7 +57,7 @@ function initMap() {
             placeId: "ChIJCWEKXaHazRIRv0jrGA8b3O8",
             fields: ["name", "reviews", "rating", "photos", "website", "place_id", "formatted_address"]
         }
-    }
+    };
     
     //Opera House marker
     let markerOperaHouse = {
@@ -84,7 +78,7 @@ function initMap() {
             placeId: "ChIJOdYiS6LazRIRBQmeCxgnWs4",
             fields: ["name", "reviews", "rating", "photos", "website", "place_id", "formatted_address"]
         }
-    }
+    };
 
     //Flower Market marker
     let markerFlowerMarket = {
@@ -106,7 +100,7 @@ function initMap() {
             placeId: "EiBDb3VycyBTYWxleWEsIDA2MzAwIE5pY2UsIEZyYW5jZSIuKiwKFAoSCTtmtyCj2s0SEb6A4T90An3BEhQKEgkxLYVqENDNEhFwmpf9pRkIBA",
             fields: ["name", "reviews", "rating", "photos", "website", "place_id", "formatted_address"]
         }
-    }
+    };
 
     //St Reparate Church marker
     let markerStReparateChurch = {
@@ -128,7 +122,7 @@ function initMap() {
             placeId: "ChIJR3WTsbzazRIR0c2V-rSfWDo",
             fields: ["name", "reviews", "rating", "photos", "website", "place_id", "formatted_address"]
         }
-    }
+    };
 
 
     //Castle Hill marker
@@ -149,7 +143,7 @@ function initMap() {
             placeId: "ChIJ87pSBQHQzRIR7gulsDlUpa8",
             fields: ["name", "reviews", "rating", "photos", "website", "place_id", "formatted_address"]
         }
-    }
+    };
 
     //Rauba-Capeù Memorial marker
     let markerRaubaCapeu = {
@@ -168,7 +162,7 @@ function initMap() {
             placeId: "ChIJo5Bv7r3azRIRN6AR5Wkv66s",
             fields: ["name", "reviews", "rating", "photos", "website", "place_id", "formatted_address"]
         }
-    }
+    };
 
     //Nice Port marker
     let markerPortLympia = {
@@ -186,7 +180,7 @@ function initMap() {
             placeId: "ChIJ33og2r7azRIRKnGqChlyI5g",
             fields: ["name", "reviews", "rating", "photos", "website", "place_id", "formatted_address"]
         }
-    }
+    };
 
     //Nice View Point marker
     let markerBayOfAngelsView = {
@@ -203,7 +197,7 @@ function initMap() {
             placeId: "ChIJ-4PtWujazRIRacv7jz-WmUA",
             fields: ["name", "reviews", "rating", "photos", "website", "place_id", "formatted_address"]
         }
-    }
+    };
 
     //Arènes de Cimiez marker
     let markerArenesDeCimiez = {
@@ -221,7 +215,7 @@ function initMap() {
             placeId: "ChIJX76sxU_FzRIR-L2d7gXKUGQ",
             fields: ["name", "reviews", "rating", "photos", "website", "place_id", "formatted_address"]
         }
-    }
+    };
 
     //Matisse Museum marker
     let markerMatisseMuseum = {
@@ -242,7 +236,7 @@ function initMap() {
             placeId: "ChIJnz74K1DFzRIRiRaLt2c5MhA",
             fields: ["name", "reviews", "rating", "photos", "website", "place_id", "formatted_address"]
         }
-    }
+    };
 
     //Archaeology Museum marker
     let markerArchaeologyMuseum = {
@@ -263,7 +257,7 @@ function initMap() {
             placeId: "ChIJs1YSxFHFzRIRv7otGUG4rso",
             fields: ["name", "reviews", "rating", "photos", "website", "place_id", "formatted_address"]
         }
-    }
+    };
     
     //Cimiez Monastery marker
     let markerCimiezMonastery = {
@@ -283,7 +277,7 @@ function initMap() {
             placeId: "ChIJ1ef2pk_FzRIRhOkC-ZlEROI",
             fields: ["name", "reviews", "rating", "photos", "website", "place_id", "formatted_address"]
         }
-    }
+    };
 
     //Notre Dame marker
     let markerNotreDame = {
@@ -304,7 +298,7 @@ function initMap() {
             placeId: "ChIJxXBGAAjQzRIRooxQYPogkFs",
             fields: ["name", "reviews", "rating", "photos", "website", "place_id", "formatted_address"]
         }
-    }
+    };
 
     //Russian Cathedral marker
     let markerRussianCathedral = {
@@ -328,7 +322,7 @@ function initMap() {
             placeId: "ChIJnwGbfqDazRIR4rkavLt2r3U",
             fields: ["name", "reviews", "rating", "photos", "website", "place_id", "formatted_address"]
         }
-    }
+    };
 
     //---------------------------------------------------------------------------------------------------- Markers
     locations = 
@@ -353,10 +347,6 @@ function initMap() {
 //---------------------------------------------------------------------------------------------------- Markers
     for (let i = 0; i < locations.length; i++) {
         
-        let request = {
-            placeId: locations.placeId,
-            fields: ["name", "reviews", "rating", "photos", "website", "place_id", "formatted_address"],
-        };
         let marker = new google.maps.Marker({
             position: new google.maps.LatLng(locations[i].lat, locations[i].lng),
             map: map
@@ -396,25 +386,23 @@ function initMap() {
                     </div>`;
 
                     
-                    let placeId = place.placeId
-                    let placeAddress = place.formatted_address
                     let placeName = place.name;
                     console.log(placeName);
-                    document.getElementById("poi-title-name").append(placeName)
+                    document.getElementById("poi-title-name").append(placeName);
 
                     if (place.hasOwnProperty("photos") === false){
                         console.log("No photos");
                         img = document.createElement("img");
                         img.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/4/47/Cours_Saleya_-_Chapelle_de_la_Mis%C3%A9ricorde_-_Nice.jpeg");
-                        img.setAttribute("class", "img")
+                        img.setAttribute("class", "img");
                         document.getElementById("attraction-image").appendChild(img);
                     } else {
                         let photoUrl = place.photos[0].getUrl();
                         img = document.createElement("img");
                         img.setAttribute("src", photoUrl);
-                        img.setAttribute("class", "img")
+                        img.setAttribute("class", "img");
                         document.getElementById("attraction-image").appendChild(img);
-                    };
+                    }
 
                     if (place.hasOwnProperty("reviews") === false){
                         console.log("No photos");
@@ -435,17 +423,17 @@ function initMap() {
                     console.log(placeWebsite);
                     if (place.hasOwnProperty("website") == true) {
                         console.log(placeWebsite);
-                        $(".more-info").append(`<a class="btn btn-light btn-block more-info" role="button" href="${placeWebsite}" target="_blank">Find Out More</a>`)
+                        $(".more-info").append(`<a class="btn btn-light btn-block more-info" role="button" href="${placeWebsite}" target="_blank">Find Out More</a>`);
 
                     } else if (place.hasOwnProperty("website") == false){
                         $(".more-info").append(`<p class="btn btn-light btn-description btn-block more-info-button">No website available</a>`);
                     }
-                };
+                }
             });
         });
 
         markers = locations.map(function(location, i) {
-            let marker = new google.maps.Marker({
+            marker = new google.maps.Marker({
                 position: location
             });
         });
@@ -455,17 +443,17 @@ function initMap() {
 //---------------------------------------------------------------------------------------------------- jQuery
 //-------------------------------------------------- Hide map on page load
     $(function() {
-        $("#instructions-for-map").hide()
+        $("#instructions-for-map").hide();
         $("#map-container").hide();
         $("#reviews").hide();
-    })
+    });
 
 //-------------------------------------------------- Show map on description buttons
     $(".btn-global-description").on("click", function() {
-        $("#instructions-for-map").show()
+        $("#instructions-for-map").show();
         $("#map-container").show();
         $("#reviews").hide();
-    })
+    });
 
 //-------------------------------------------------- Section (Buttons) Zooms
 //Old Town Zoom
@@ -477,15 +465,15 @@ $(".btn-old-town").on("click", function () {
     if (document.documentElement.clientWidth > 1440) {
         map.setZoom(18);
         map.setCenter({ lat: 43.695961, lng: 7.271446 });
-    };
+    }
     if ((document.documentElement.clientWidth > 1024) && (document.documentElement.clientWidth <= 1440)) {
         map.setZoom(17);
         map.setCenter({ lat: 43.696547, lng: 7.271700 });
-    };
+    }
     if ((document.documentElement.clientWidth > 768) && (document.documentElement.clientWidth <= 1024)) {
         map.setZoom(16);
         map.setCenter({ lat: 43.695961, lng: 7.271446 });
-    };
+    }
     if ((document.documentElement.clientWidth > 425) && (document.documentElement.clientWidth <= 768)) {
         map.setZoom(16);
         map.setCenter({ lat: 43.696391, lng: 7.271155 });
@@ -495,7 +483,7 @@ $(".btn-old-town").on("click", function () {
         map.setCenter({ lat: 43.696391, lng: 7.271155 });
     }
     $(".btn-global-description").get(0).scrollIntoView();
-})
+});
 
 //Castle Hill Zoom
 $(".btn-castle-hill").on("click", function () {
@@ -506,25 +494,25 @@ $(".btn-castle-hill").on("click", function () {
     if (document.documentElement.clientWidth > 1440) {
         map.setZoom(18);
         map.setCenter({ lat: 43.694306, lng: 7.281073 });
-    };
+    }
     if ((document.documentElement.clientWidth > 1024) && (document.documentElement.clientWidth <= 1440)) {
         map.setZoom(18);
         map.setCenter({ lat: 43.694306, lng: 7.281073 });
-    };
+    }
     if ((document.documentElement.clientWidth > 768) && (document.documentElement.clientWidth <= 1024)) {
         map.setZoom(17);
         map.setCenter({ lat: 43.694321, lng: 7.281030 });
-    };
+    }
     if ((document.documentElement.clientWidth > 425) && (document.documentElement.clientWidth <= 768)) {
         map.setZoom(17);
-        map.setCenter({ lat: 43.694321, lng: 7.281030 })
+        map.setCenter({ lat: 43.694321, lng: 7.281030 });
     }
     if (document.documentElement.clientWidth <= 425) {
         map.setZoom(16);
-        map.setCenter({ lat: 43.694321, lng: 7.281030 })
+        map.setCenter({ lat: 43.694321, lng: 7.281030 });
     }
     $(".btn-global-description").get(0).scrollIntoView();
-})
+});
 
 //Port Lympia Zoom
 $(".btn-the-port").on("click", function () {
@@ -535,15 +523,15 @@ $(".btn-the-port").on("click", function () {
     if (document.documentElement.clientWidth > 1440) {
         map.setZoom(17);
         map.setCenter({ lat: 43.692594, lng: 7.290852 });
-    };
+    }
     if ((document.documentElement.clientWidth > 1024) && (document.documentElement.clientWidth <= 1440)) {
         map.setZoom(16);
         map.setCenter({ lat: 43.692594, lng: 7.290852 });
-    };
+    }
     if ((document.documentElement.clientWidth > 768) && (document.documentElement.clientWidth <= 1024)) {
         map.setZoom(16);
         map.setCenter({ lat: 43.692008, lng: 7.290724 });
-    };
+    }
     if ((document.documentElement.clientWidth > 425) && (document.documentElement.clientWidth <= 768)) {
         map.setZoom(15);
         map.setCenter({ lat: 43.693256, lng: 7.290468 });
@@ -553,7 +541,7 @@ $(".btn-the-port").on("click", function () {
         map.setCenter({ lat: 43.692460, lng: 7.289742 });
     }
     $(".btn-global-description").get(0).scrollIntoView();
-})
+});
 
 //Cimiez zoom
 $(".btn-cimiez").on("click", function () {
@@ -564,15 +552,15 @@ $(".btn-cimiez").on("click", function () {
     if (document.documentElement.clientWidth > 1440) {
         map.setZoom(19);
         map.setCenter({ lat: 43.720127, lng: 7.276652 });
-    };
+    }
     if ((document.documentElement.clientWidth > 1024) && (document.documentElement.clientWidth <= 1440)) {
         map.setZoom(18);
         map.setCenter({ lat: 43.720127, lng: 7.276652 });
-    };
+    }
     if ((document.documentElement.clientWidth > 768) && (document.documentElement.clientWidth <= 1024)) {
         map.setZoom(17);
         map.setCenter({ lat: 43.720230, lng: 7.276968 });
-    };
+    }
     if ((document.documentElement.clientWidth > 425) && (document.documentElement.clientWidth <= 768)) {
         map.setZoom(17);
         map.setCenter({ lat: 43.720093, lng: 7.276860 });
@@ -582,7 +570,7 @@ $(".btn-cimiez").on("click", function () {
         map.setCenter({ lat: 43.720371, lng: 7.276448 });
     }
     $(".btn-global-description").get(0).scrollIntoView();
-})
+});
 
 //Russian Church Zoom
 $(".btn-russian-cathedral").on("click", function () {
@@ -594,15 +582,15 @@ $(".btn-russian-cathedral").on("click", function () {
     if (document.documentElement.clientWidth > 1440) {
         map.setZoom(17);
         map.setCenter({ lat: 43.704697, lng: 7.259707 });
-    };
+    }
     if ((document.documentElement.clientWidth > 1024) && (document.documentElement.clientWidth <= 1440)) {
         map.setZoom(16);
         map.setCenter({ lat: 43.704697, lng: 7.259707 });
-    };
+    }
     if ((document.documentElement.clientWidth > 768) && (document.documentElement.clientWidth <= 1024)) {
         map.setZoom(16);
         map.setCenter({ lat: 43.704697, lng: 7.259707 });
-    };
+    }
     if ((document.documentElement.clientWidth > 425) && (document.documentElement.clientWidth <= 768)) {
         map.setZoom(15);
         map.setCenter({ lat: 43.704697, lng: 7.259707 });
@@ -611,7 +599,7 @@ $(".btn-russian-cathedral").on("click", function () {
         map.setZoom(15);
         map.setCenter({ lat: 43.704697, lng: 7.259707 });
     }
-})
+});
 
 //---------------------------------------------------------------------------------------------------- Buttons
 //Go back to top of map on click

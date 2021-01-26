@@ -1,48 +1,49 @@
 
-let name;
+let personName;
 $(".book-now-form-name").on("change", function() {
-    name = this.value;
-})
+    personName = this.value;
+});
 
-let email
+let email;
 $(".book-now-form-email").on("change", function() {
     email = this.value;
-})
+});
 
-let tel
+let tel;
 $(".book-now-form-tel").on("change", function() {
     tel = this.value;
-})
+});
 
-let tour
+let tour;
 $("#tour").on("change", function() {
     tour = this.value;
-})
+});
 
-let date
+let date;
 $(".book-now-form-date").on("change", function() {
     date = this.value;
-})
+});
 
-let quantity
+let quantity;
 $("#quantity").on("change", function() {
     quantity = this.value;
-})
+});
 
-let code
+let code;
 $("#discount-code").on("change", function() {
     code = this.value;
-})
+});
 
-let tourOption
+let tourOption;
 $("#tour-type-option").on("change", function() {
     tourOption = this.value;
-})
+});
 
-let tc
+let tc;
 $("#t-and-c").on("change", function() {
     tc = this.value;
-})
+});
+
 
 $(".btn-go-to-payment").on("click", function() {
     function ask(question, yes, no){
@@ -54,10 +55,9 @@ $(".btn-go-to-payment").on("click", function() {
     }
 
     function yes() {
-        let formDetails = sessionStorage;
     
-    if (sessionStorage.getItem("name") === null) {
-        sessionStorage.setItem("name", "");
+    if (sessionStorage.getItem("personName") === null) {
+        sessionStorage.setItem("personName", "");
     }
 
     if (sessionStorage.getItem("email") === null) {
@@ -92,9 +92,9 @@ $(".btn-go-to-payment").on("click", function() {
         sessionStorage.setItem("tc", "");
     }
 
-    var getName = name;
-    sessionStorage.setItem("name", sessionStorage.getItem("name") + "\n" + getName);
-    sessionStorage.getItem('name');
+    var getName = personName;
+    sessionStorage.setItem("personName", sessionStorage.getItem("personName") + "\n" + getName);
+    sessionStorage.getItem('personName');
     
     var getEmail = email;
     sessionStorage.setItem("email", sessionStorage.getItem("email") + "\n" + getEmail);
@@ -108,34 +108,34 @@ $(".btn-go-to-payment").on("click", function() {
     sessionStorage.setItem("tour", sessionStorage.getItem("tour") + "\n" + getTour);
     sessionStorage.getItem('tour');
 
-    var getDate = date
+    var getDate = date;
     sessionStorage.setItem("date", sessionStorage.getItem("date") + "\n" + getDate);
     sessionStorage.getItem('date');
 
-    var getQuantity = quantity
+    var getQuantity = quantity;
     sessionStorage.setItem("quantity", sessionStorage.getItem("quantity") + "\n" + getQuantity);
     sessionStorage.getItem('quantity');
 
-    var getCode = code
+    var getCode = code;
     sessionStorage.setItem("code", sessionStorage.getItem("code") + "\n" + getCode);
     sessionStorage.getItem('code');
 
-    var getTourOption = tourOption
+    var getTourOption = tourOption;
     sessionStorage.setItem("tourOption", sessionStorage.getItem("tourOption") + "\n" + getTourOption);
     sessionStorage.getItem('tourOption');
 
-    var getTC = tc
+    var getTC = tc;
     sessionStorage.setItem("tc", sessionStorage.getItem("tc") + "\n" + getTC);
     sessionStorage.getItem('tc');
-        window.open("payment.html", "_self")
+        window.open("payment.html", "_self");
         //alert("yes")
     }
     function no() {
-        sessionStorage.clear()
+        sessionStorage.clear();
     }
     ask(`Clicking "ok" will send you to the payment page. Before clicking, please check these details carefully.
 
-Name: ${name}
+Name: ${personName}
 email: ${email}
 Telephone: ${tel}
 Tour: ${tour}
@@ -145,19 +145,8 @@ Discount Code: ${code}
 Tour Type: ${tourOption}
 
 IMPORTANT:
-You also confirm you have read our Terms and Conditions`, yes, no)
-})
+You also confirm you have read our Terms and Conditions`, yes, no);
+});
 
-/*window.onunload = function() {
-    sessionStorage.removeItem("name");
-    sessionStorage.removeItem("email");
-    sessionStorage.removeItem("tel");
-    sessionStorage.removeItem("tour");
-    sessionStorage.removeItem("date");
-    sessionStorage.removeItem("quantity");
-    sessionStorage.removeItem("code");
-    sessionStorage.removeItem("tourOption");
-    sessionStorage.removeItem("tc");
-}*/
 
     

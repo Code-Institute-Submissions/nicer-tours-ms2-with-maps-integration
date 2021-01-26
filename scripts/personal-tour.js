@@ -1,5 +1,4 @@
 let map;
-let markers;
 
 function createMap() {
     let options = {
@@ -18,7 +17,7 @@ function createMap() {
     let clearSearchBox = document.getElementById("clearSearchButton");
     clearSearchBox.addEventListener("click", function() {
         document.getElementById("search").value = "";
-    })
+    });
 
     //sets search to boundary of map
     map.addListener("bounds_changed", function() {
@@ -64,17 +63,17 @@ function createMap() {
             </div>`;
 
             let placeName = p.name;
-            document.getElementById("poi-title-name").append(placeName)
+            document.getElementById("poi-title-name").append(placeName);
 
             if (p.photos === undefined) {
                 document.getElementById("attraction-image").innerHTML = `<p>Although the place you searched for almost certainly exists, unfortunately it seems that 
                 Google Places does not have a listing for it.</p>
-                <p>If there is another entry for the place you searched for, please select that entry. Otherwise, try searching for something else.</p>`
+                <p>If there is another entry for the place you searched for, please select that entry. Otherwise, try searching for something else.</p>`;
             } else {
             let photoUrl = p.photos[0].getUrl();
             let img = document.createElement("img");
             img.setAttribute("src", photoUrl);
-            img.setAttribute("class", "img")
+            img.setAttribute("class", "img");
             document.getElementById("attraction-image").appendChild(img);
             }
 
@@ -91,7 +90,7 @@ function createMap() {
             let placeWebsite = p.website;
             if (p.hasOwnProperty("website") == true) {
                 $(".more-info").append(`<a class="btn btn-light btn-block more-info" role="button" href="${placeWebsite}" target="_blank">Find Out More</a>
-                        `)
+                        `);
 
             } else if (p.hasOwnProperty("website") == false){
                 $(".more-info").append(`<p class="btn btn-light btn-description btn-block more-info-button">No website available</a>`);
@@ -115,7 +114,7 @@ function createMap() {
 
             $("#attraction").get(0).scrollIntoView();
         });
-        map.fitBounds(bounds)
+        map.fitBounds(bounds);
     });
 
 }
@@ -144,13 +143,13 @@ function createMap() {
             sessionStorage.setItem("place", "");
         }
         
-        sessionStorage.setItem("place", sessionStorage.getItem("place") + "\n" + getValue)
+        sessionStorage.setItem("place", sessionStorage.getItem("place") + "\n" + getValue);
 
         sessionStorage.getItem('place');
         let placeAddedToItinerary = sessionStorage.getItem('place');
         alert(`You have added 
     ${placeAddedToItinerary} 
-to your itinerary`)
+to your itinerary`);
         document.getElementById("message").innerHTML += placeAddedToItinerary;
         $(".btn-cta-send-itinerary").css("display", "block");
         $(".btn-cta-remove-itinerary").css("display", "block");
@@ -160,7 +159,7 @@ to your itinerary`)
             alert("Your itinerary has been emptied");
             $(".btn-cta-send-itinerary").css("display", "none");
             $(".btn-cta-remove-itinerary").css("display", "none");
-            })
+            });
         }
 
 

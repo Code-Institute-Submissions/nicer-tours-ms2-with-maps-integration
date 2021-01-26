@@ -1,4 +1,3 @@
-console.log("hi")
 function sendMail(contactForm) {
     emailjs.send("service_u36nneq", "template_liu9ion", {
         "from_name": contactForm.name.value,
@@ -9,6 +8,6 @@ function sendMail(contactForm) {
         function(response) {
             console.log("SUCCESS", response);
         }, function(error) {
-            console.log("FAILED", error)
+            console.log("FAILED", error);
         });
 }

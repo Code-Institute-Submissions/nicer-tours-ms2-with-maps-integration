@@ -1,12 +1,6 @@
-let markers = [];
 let locations = [];
-let request = [];
-let infowindowContent;
-let infowindowTitle;
 let service;
 let img;
-let placeName;
-let infowindow = null;
 let map;
 
 //---------------------------------------------------------------------------------------------------- Initialize Map
@@ -39,7 +33,7 @@ function initMap() {
             placeId: "ChIJ041rEmbDzRIRDv-yg_yyS6g",
             fields: ["reviews", "rating", "photos", "website", "place_id", "formatted_address"]
         }
-    }
+    };
     
     //Parfumerie Fragonard marker
     let markerFragonard = {
@@ -65,7 +59,7 @@ function initMap() {
             placeId: "ChIJyRrwPGbDzRIRX0TKPUar-e8",
             fields: ["reviews", "rating", "photos", "website", "place_id", "formatted_address"]
         }
-    }
+    };
     
     //Monaco Panorama marker
     let markerPanoramaMonaco = {
@@ -88,7 +82,7 @@ function initMap() {
             placeId: "ChIJNZdV_uTCzRIROTHOifsip3I",
             fields: ["name", "reviews", "rating", "photos", "website", "place_id", "formatted_address"]
         }
-    }
+    };
 
     //Oceanographic Museum marker
     let markerOceanographicMuseum = {
@@ -112,7 +106,7 @@ function initMap() {
             placeId: "ChIJU2WkJZDCzRIRbGhKwmhB-cI",
             fields: ["name", "reviews", "rating", "photos", "website", "place_id", "formatted_address"]
         }
-    }
+    };
 
     //Monaco Cathedral marker
     let markerMonacoCathedral = {
@@ -136,7 +130,7 @@ function initMap() {
             placeId: "ChIJXxH-HpLCzRIRIZabyjTbjNQ",
             fields: ["name", "reviews", "rating", "photos", "website", "place_id", "formatted_address"]
         }
-    }
+    };
 
 
     //Monaco Palace marker
@@ -168,7 +162,7 @@ function initMap() {
             placeId: "ChIJK8yrdpLCzRIRIcD7wv9f-U8",
             fields: ["name", "reviews", "rating", "photos", "website", "place_id", "formatted_address"]
         }
-    }
+    };
 
     //Casino marker
     let markerCasino = {
@@ -199,7 +193,7 @@ function initMap() {
             placeId: "ChIJZQJu5IfCzRIR4_SMWQznbqY",
             fields: ["name", "reviews", "rating", "photos", "website", "place_id", "formatted_address"]
         }
-    }
+    };
 
     //Hotel de Paris marker
     let markerHotelDeParis = {
@@ -221,7 +215,7 @@ function initMap() {
             placeId: "ChIJFY1s1ofCzRIRtwOFQihi098",
             fields: ["name", "reviews", "rating", "photos", "website", "place_id", "formatted_address"]
         }
-    }
+    };
 
     //Café de Paris marker
     let markerCafeDeParis = {
@@ -242,7 +236,7 @@ function initMap() {
             placeId: "ChIJq78T54fCzRIRIC-tVNSO32g",
             fields: ["name", "reviews", "rating", "photos", "website", "place_id", "formatted_address"]
         }
-    }
+    };
 
     //Grand Prix de Monaco Monte-Carlo
     let markerMCF1Route = {
@@ -278,7 +272,7 @@ function initMap() {
             placeId: "ChIJFemQ34zCzRIRy8P1MXirK_w",
             fields: ["name", "reviews", "rating", "website", "place_id", "formatted_address"]
         }
-    }
+    };
 
     //---------------------------------------------------------------------------------------------------- Markers
     locations = 
@@ -298,10 +292,6 @@ function initMap() {
 //---------------------------------------------------------------------------------------------------- Markers
     for (let i = 0; i < locations.length; i++) {
         
-        let request = {
-            placeId: locations.placeId,
-            fields: ["name", "reviews", "rating", "photos", "website", "place_id", "formatted_address"],
-        };
         let marker = new google.maps.Marker({
             position: new google.maps.LatLng(locations[i].lat, locations[i].lng),
             map: map
@@ -341,26 +331,25 @@ function initMap() {
                     </div>`;
 
                     
-                    let placeId = place.placeId
                     let placeName = place.name;
                     if (placeName === undefined) {
-                        document.getElementById("poi-title-name").append(locations[i].title)
+                        document.getElementById("poi-title-name").append(locations[i].title);
                     } else {
-                        document.getElementById("poi-title-name").append(placeName)
+                        document.getElementById("poi-title-name").append(placeName);
                     }
 
                     if (place.hasOwnProperty("photos") === false){
                         img = document.createElement("img");
                         img.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/e/e4/Circuit_de_Monaco_1986.png");
-                        img.setAttribute("class", "img")
+                        img.setAttribute("class", "img");
                         document.getElementById("attraction-image").appendChild(img);
                     } else {
                         let photoUrl = place.photos[0].getUrl();
                         img = document.createElement("img");
                         img.setAttribute("src", photoUrl);
-                        img.setAttribute("class", "img")
+                        img.setAttribute("class", "img");
                         document.getElementById("attraction-image").appendChild(img);
-                    };
+                    }
 
                     if (place.hasOwnProperty("reviews") === false){
                         document.getElementById("reviews").innerHTML += `<p style="margin-bottom:0">Sorry, there are no Google reviews available for this location.`;
@@ -378,71 +367,32 @@ function initMap() {
 
                     let placeWebsite = place.website;
                     if (place.hasOwnProperty("website") == true) {
-                        $(".more-info").append(`<a class="btn btn-light btn-block more-info" role="button" href="${placeWebsite}" target="_blank">Find Out More</a>`)
+                        $(".more-info").append(`<a class="btn btn-light btn-block more-info" role="button" href="${placeWebsite}" target="_blank">Find Out More</a>`);
 
                     } else if (place.hasOwnProperty("website") == false){
                         $(".more-info").append(`<p class="btn btn-light btn-description btn-block more-info-button">No website available</a>`);
                     }
-                };
+                }
             });
         });
     }
-
-    //Racetrack Route
-    /*const directionsService = new google.maps.DirectionsService();
-    const directionsRenderer = new google.maps.DirectionsRenderer();
-    directionsRenderer.setMap(map);
-        document.getElementById("racetrack-route").addEventListener("click", () => {
-            calculateAndDisplayRoute(directionsService, directionsRenderer);
-        });    
-    }
-
-    function calculateAndDisplayRoute(directionsService, directionsRenderer) {
-    const waypts = [];
-    const checkboxArray = document.getElementById("waypoints");
-
-    for (let i = 0; i < checkboxArray.length; i++) {
-        if (checkboxArray.options[i].selected) {
-            waypts.push({
-                location: checkboxArray[i].value,
-                stopover: true,
-            });
-        }
-    }
-    directionsService.route(
-        {
-        origin: document.getElementById("start").value,
-        destination: document.getElementById("end").value,
-        waypoints: waypts,
-        optimizeWaypoints: true,
-        travelMode: google.maps.TravelMode.DRIVING,
-        },
-        (response, status) => {
-        if (status === "OK") {
-            directionsRenderer.setDirections(response);
-            const route = response.routes[0];
-            } else {
-                window.alert("Directions request failed due to " + status);
-            }
-        }
-    );*/
 }
 
 
 //---------------------------------------------------------------------------------------------------- jQuery
 //-------------------------------------------------- Hide map on page load
     $(function() {
-        $("#instructions-for-map").hide()
+        $("#instructions-for-map").hide();
         $("#map-container").hide();
         $("#reviews").hide();
-    })
+    });
 
 //-------------------------------------------------- Show map on description buttons
     $(".btn-global-description").on("click", function() {
-        $("#instructions-for-map").show()
+        $("#instructions-for-map").show();
         $("#map-container").show();
         $("#reviews").hide();
-    })
+    });
 
 //-------------------------------------------------- Section (Buttons) Zooms
 //Eze Zoom
@@ -454,15 +404,15 @@ $(".btn-eze").on("click", function () {
     if (document.documentElement.clientWidth > 1440) {
         map.setZoom(17);
         map.setCenter({ lat: 43.728489, lng: 7.361219 });
-    };
+    }
     if ((document.documentElement.clientWidth > 1024) && (document.documentElement.clientWidth <= 1440)) {
         map.setZoom(17);
         map.setCenter({ lat: 43.728489, lng: 7.361219 });
-    };
+    }
     if ((document.documentElement.clientWidth > 768) && (document.documentElement.clientWidth <= 1024)) {
         map.setZoom(16);
         map.setCenter({ lat: 43.728489, lng: 7.361219 });
-    };
+    }
     if ((document.documentElement.clientWidth > 425) && (document.documentElement.clientWidth <= 768)) {
         map.setZoom(16);
         map.setCenter({ lat: 43.728422, lng: 7.361454 });
@@ -472,7 +422,7 @@ $(".btn-eze").on("click", function () {
         map.setCenter({ lat: 43.728489, lng: 7.361219 });
     }
     $(".btn-global-description").get(0).scrollIntoView();
-})
+});
 
 //Panorama Monaco Zoom
 $(".btn-panorama-monaco").on("click", function () {
@@ -483,25 +433,25 @@ $(".btn-panorama-monaco").on("click", function () {
     if (document.documentElement.clientWidth >= 1440) {
         map.setZoom(15);
         map.setCenter({ lat: 43.739817, lng: 7.41631 });
-    };
+    }
     if ((document.documentElement.clientWidth > 1024) && (document.documentElement.clientWidth <= 1440)) {
         map.setZoom(15);
         map.setCenter({ lat: 43.739817, lng: 7.41631 });
-    };
+    }
     if ((document.documentElement.clientWidth > 768) && (document.documentElement.clientWidth <= 1024)) {
         map.setZoom(15);
         map.setCenter({ lat: 43.739817, lng: 7.41631 });
-    };
+    }
     if ((document.documentElement.clientWidth > 425) && (document.documentElement.clientWidth <= 768)) {
         map.setZoom(14);
-        map.setCenter({ lat: 43.739817, lng: 7.41631 })
+        map.setCenter({ lat: 43.739817, lng: 7.41631 });
     }
     if (document.documentElement.clientWidth <= 425) {
         map.setZoom(14);
-        map.setCenter({ lat: 43.739817, lng: 7.41631 })
+        map.setCenter({ lat: 43.739817, lng: 7.41631 });
     }
     $(".btn-global-description").get(0).scrollIntoView();
-})
+});
 
 //Monaco Rock Zoom
 $(".btn-the-rock").on("click", function () {
@@ -512,15 +462,15 @@ $(".btn-the-rock").on("click", function () {
     if (document.documentElement.clientWidth > 1440) {
         map.setZoom(17);
         map.setCenter({ lat: 43.731446, lng: 7.423935 });
-    };
+    }
     if ((document.documentElement.clientWidth > 1024) && (document.documentElement.clientWidth <= 1440)) {
         map.setZoom(17);
         map.setCenter({ lat: 43.731446, lng: 7.423935 });
-    };
+    }
     if ((document.documentElement.clientWidth > 768) && (document.documentElement.clientWidth <= 1024)) {
         map.setZoom(16);
         map.setCenter({ lat: 43.731446, lng: 7.423935 });
-    };
+    }
     if ((document.documentElement.clientWidth > 425) && (document.documentElement.clientWidth <= 768)) {
         map.setZoom(16);
         map.setCenter({ lat: 43.731446, lng: 7.423935 });
@@ -530,7 +480,7 @@ $(".btn-the-rock").on("click", function () {
         map.setCenter({ lat: 43.730566, lng: 7.422510 });
     }
     $(".btn-global-description").get(0).scrollIntoView();
-})
+});
 
 //Casino Zoom
 $(".btn-casino").on("click", function () {
@@ -541,15 +491,15 @@ $(".btn-casino").on("click", function () {
     if (document.documentElement.clientWidth > 1440) {
         map.setZoom(18);
         map.setCenter({ lat: 43.739263, lng: 7.428055 });
-    };
+    }
     if ((document.documentElement.clientWidth > 1024) && (document.documentElement.clientWidth <= 1440)) {
         map.setZoom(18);
         map.setCenter({ lat: 43.739263, lng: 7.428055 });
-    };
+    }
     if ((document.documentElement.clientWidth > 768) && (document.documentElement.clientWidth <= 1024)) {
         map.setZoom(17);
         map.setCenter({ lat: 43.739263, lng: 7.428055 });
-    };
+    }
     if ((document.documentElement.clientWidth > 425) && (document.documentElement.clientWidth <= 768)) {
         map.setZoom(18);
         map.setCenter({ lat: 43.739263, lng: 7.428055 });
@@ -558,7 +508,7 @@ $(".btn-casino").on("click", function () {
         map.setZoom(17);
         map.setCenter({ lat: 43.739263, lng: 7.428055 });
     }
-})
+});
 
 //Racetrack zoom
 $(".racetrack").on("click", function () {
@@ -569,15 +519,15 @@ $(".racetrack").on("click", function () {
     if (document.documentElement.clientWidth > 1440) {
         map.setZoom(16);
         map.setCenter({ lat: 43.736245, lng: 7.425745 });
-    };
+    }
     if ((document.documentElement.clientWidth > 1024) && (document.documentElement.clientWidth <= 1440)) {
         map.setZoom(16);
         map.setCenter({ lat: 43.736245, lng: 7.425745 });
-    };
+    }
     if ((document.documentElement.clientWidth > 768) && (document.documentElement.clientWidth <= 1024)) {
         map.setZoom(16);
         map.setCenter({ lat: 43.736245, lng: 7.425745 });
-    };
+    }
     if ((document.documentElement.clientWidth > 425) && (document.documentElement.clientWidth <= 768)) {
         map.setZoom(16);
         map.setCenter({ lat: 43.736245, lng: 7.425745 });
@@ -587,19 +537,19 @@ $(".racetrack").on("click", function () {
         map.setCenter({ lat: 43.736245, lng: 7.425745 });
     }
     $(".btn-global-description").get(0).scrollIntoView();
-})
+});
 
 //---------------------------------------------------------------------------------------------------- Buttons
 //Go back to top of map on click
-    function backToMap() {
-        $("#reviews").hide();
-        $(".btn-global-description").get(0).scrollIntoView();
-    }
+function backToMap() {
+	$("#reviews").hide();
+  $(".btn-global-description").get(0).scrollIntoView();
+}
 
 // See reviews
-    function seeReviews() {
-        $("#reviews").show();
-    }
+function seeReviews() {
+	$("#reviews").show();
+}
 
 
 
