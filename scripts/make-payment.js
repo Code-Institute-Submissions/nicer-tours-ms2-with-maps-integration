@@ -14,14 +14,12 @@ $(document).ready(function() {
 
     let price = sessionStorage.tour.split(" ");
     let priceWithoutEuro = price[1];
-    console.log(priceWithoutEuro);
     let priceAlone = priceWithoutEuro.slice(0, -1);
     let priceOfTour = parseInt(priceAlone);
 
     let pax = parseInt(sessionStorage.quantity);
 
     const totalCost = priceOfTour * pax;
-    console.log(totalCost);
     document.getElementById("total-cost").innerText = totalCost;
 
     window.onunload = function() {

@@ -1,3 +1,4 @@
+/* Code adapted from video "Google Maps API v3.36 Tutorial - February 2019" by Bryce St. Pierre: https://www.youtube.com/watch?v=oVr6unKZbg4 */
 let map;
 
 function createMap() {

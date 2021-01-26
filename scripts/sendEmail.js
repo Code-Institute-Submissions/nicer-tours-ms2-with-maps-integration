@@ -1,3 +1,4 @@
+/* From video series in CodeAcedemy course - Rosie Odenkirk CV */
 function sendMail(contactForm) {
     emailjs.send("service_u36nneq", "template_liu9ion", {
         "from_name": contactForm.name.value,

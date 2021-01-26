@@ -412,11 +412,9 @@ function initMap() {
 
                     
                     let placeName = place.name;
-                    console.log(placeName);
                     document.getElementById("poi-title-name").append(placeName);
 
                     if (place.hasOwnProperty("photos") === false){
-                        console.log("No photos");
                         img = document.createElement("img");
                         img.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/4/47/Cours_Saleya_-_Chapelle_de_la_Mis%C3%A9ricorde_-_Nice.jpeg");
                         img.setAttribute("class", "img");
@@ -430,7 +428,6 @@ function initMap() {
                     }
 
                     if (place.hasOwnProperty("reviews") === false){
-                        console.log("No photos");
                         document.getElementById("reviews").innerHTML += `<p style="margin-bottom:0">Sorry, there are no Google reviews available for this location.`;
                     } else {
                         let placeReviews = place.reviews;
@@ -445,9 +442,7 @@ function initMap() {
                     document.getElementById("attraction-image").innerHTML += `<div style="margin-bottom:0">${placeDescription}</div>`;
 
                     let placeWebsite = place.website;
-                    console.log(placeWebsite);
                     if (place.hasOwnProperty("website") == true) {
-                        console.log(placeWebsite);
                         $(".more-info").append(`<a class="btn btn-light btn-block more-info" role="button" href="${placeWebsite}" target="_blank">Find Out More</a>`);
 
                     } else if (place.hasOwnProperty("website") == false){

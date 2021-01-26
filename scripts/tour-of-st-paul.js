@@ -335,7 +335,6 @@ function initMap() {
 
                     
                     let placeName = place.name;
-                    console.log(placeName);
                     
                     if (placeName === undefined) {
                         document.getElementById("poi-title-name").append(locations[i].title);
@@ -344,7 +343,6 @@ function initMap() {
                     }
 
                     if (place.hasOwnProperty("photos") === false){
-                        console.log("No photos");
                         let photoURL = locations[i].img;
                         let imgURL = document.createElement("img");
                         imgURL.setAttribute("src", photoURL);
@@ -359,7 +357,6 @@ function initMap() {
                     }
 
                     if (place.hasOwnProperty("reviews") === false){
-                        console.log("No reviews");
                         document.getElementById("reviews").innerHTML += `<p style="margin-bottom:0">Sorry, there are no Google reviews available for this location.`;
                     } else {
                         let placeReviews = place.reviews;
@@ -374,7 +371,6 @@ function initMap() {
                     document.getElementById("attraction-image").innerHTML += `<div style="margin-bottom:0">${placeDescription}</div>`;
 
                     let placeWebsite = place.website;
-                    console.log(placeWebsite);
                     if (place.hasOwnProperty("website") == true) {
                         $(".more-info").append(`<a class="btn btn-light btn-block more-info" role="button" href="${placeWebsite}" target="_blank">Find Out More</a>`);
 
@@ -385,45 +381,6 @@ function initMap() {
             });
         });
     }
-
-    //Racetrack Route
-    /*const directionsService = new google.maps.DirectionsService();
-    const directionsRenderer = new google.maps.DirectionsRenderer();
-    directionsRenderer.setMap(map);
-        document.getElementById("racetrack-route").addEventListener("click", () => {
-            calculateAndDisplayRoute(directionsService, directionsRenderer);
-        });    
-    }
-
-    function calculateAndDisplayRoute(directionsService, directionsRenderer) {
-    const waypts = [];
-    const checkboxArray = document.getElementById("waypoints");
-
-    for (let i = 0; i < checkboxArray.length; i++) {
-        if (checkboxArray.options[i].selected) {
-            waypts.push({
-                location: checkboxArray[i].value,
-                stopover: true,
-            });
-        }
-    }
-    directionsService.route(
-        {
-        origin: document.getElementById("start").value,
-        destination: document.getElementById("end").value,
-        waypoints: waypts,
-        optimizeWaypoints: true,
-        travelMode: google.maps.TravelMode.DRIVING,
-        },
-        (response, status) => {
-        if (status === "OK") {
-            directionsRenderer.setDirections(response);
-            const route = response.routes[0];
-            } else {
-                window.alert("Directions request failed due to " + status);
-            }
-        }
-    );*/
 }
 
 

@@ -393,6 +393,45 @@ function initMap() {
             });
         });
     }
+
+    //Racetrack Route
+    /*const directionsService = new google.maps.DirectionsService();
+    const directionsRenderer = new google.maps.DirectionsRenderer();
+    directionsRenderer.setMap(map);
+        document.getElementById("racetrack-route").addEventListener("click", () => {
+            calculateAndDisplayRoute(directionsService, directionsRenderer);
+        });    
+    }
+
+    function calculateAndDisplayRoute(directionsService, directionsRenderer) {
+    const waypts = [];
+    const checkboxArray = document.getElementById("waypoints");
+
+    for (let i = 0; i < checkboxArray.length; i++) {
+        if (checkboxArray.options[i].selected) {
+            waypts.push({
+                location: checkboxArray[i].value,
+                stopover: true,
+            });
+        }
+    }
+    directionsService.route(
+        {
+        origin: document.getElementById("start").value,
+        destination: document.getElementById("end").value,
+        waypoints: waypts,
+        optimizeWaypoints: true,
+        travelMode: google.maps.TravelMode.DRIVING,
+        },
+        (response, status) => {
+        if (status === "OK") {
+            directionsRenderer.setDirections(response);
+            const route = response.routes[0];
+            } else {
+                window.alert("Directions request failed due to " + status);
+            }
+        }
+    );*/
 }
 
 
