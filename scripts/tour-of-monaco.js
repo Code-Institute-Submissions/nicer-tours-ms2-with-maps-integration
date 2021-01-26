@@ -23,9 +23,11 @@ function initMap() {
                     <p class="poi-text">This small mediaeval village is famous for its beauty and charm. Its many shops, art galleries, hotels and restaurants attract a 
                     large number of tourists and honeymooners. As a result, Èze has become dubbed by some a <i>village-musée</i>, a "museum village", as few residents of 
                     local origin live here. From Èze there are gorgeous views of the Mediterranean Sea. </p>
+
                     <p class="poi-text">Eze is famous worldwide for the view of the sea from its hill top. Its <i>Jardin botanique d'Èze</i> (botanic garden) is known for its 
                     collection of cacti and succulents, as well as its panoramic views. Walt Disney spent a significant amount of time in Èze, as did the philosopher, 
                     Friedrich Nietzsche.</p>
+
                     <p class="poi-text">Although the village dates back 2000 years, the oldest building standing today in the village is the <i>Chapelle de la Sainte Croix</i> which 
                     dates back to 1306. Members of the lay order of the White Penitents of Èze, in charge of giving assistance to plague victims, would hold their meetings there. 
                     The shape of the bell-turret is an indication that the village once belonged to the Republic of Genoa.</p>`,
@@ -48,11 +50,13 @@ function initMap() {
                     in 1926. Eugène Fuchs chose to name it after the famous Grasse-born painter, Jean-Honoré Fragonard (1732-1806), as a tribute 
                     to both the town of Grasse and to the refinement of 18th-century arts. Similarly, the choice of name expressed his desire to 
                     run his business in accordance with traditions.</p>
+
                     <p class="poi-text">This spirit has been loyally perpetuated by the three succeeding generations who have run and are still 
                     running the company. At their instigation new production plants and sales outlets have opened in Grasse, Eze and also Paris.</p>
                     <p class="poi-text">It was under the tenure of Jean-Francois Costa that the Parfumerie Fragonard went through a rapid expansion 
                     and modernization. As an avid art collector, during the 1970’s he amassed a large and unique collection of antique perfume related 
                     items that has both enriched the Fragonard and given the town of Grasse a new cultural dimension.</p>
+
                     <p class="poi-text">Today, Jean-François Costa's daughters, Agnès and Françoise preside over the perfumery's destiny, and are as 
                     concerned as the preceding generations with continuing to build the company while adapting it to current market needs and desires.</p>`,
         request: {
@@ -74,9 +78,11 @@ function initMap() {
                     wrote that the <i>Tête de Chien</i> more resembled a tortoise than a dog's head, and believed that its name was a corruption of '<i><strong>Tête de Camp</strong></i>', 
                     as it was where Caesar stationed his troops after the conquest of Gaul. Vere Herbert, the heroine of Ouida's 1880 novel Moths is described as living under the 
                     <i>Tête de Chien</i>, "...within a few miles of the brilliant Hell [that is Monaco].</p>
+
                     <p class="poi-text">In 1944, Leopold Bohm, a German defence company commander, was stationed on the <i>Tête de Chien</i> and saw a low flying airplane crash into 
                     the sea, which had been pursued by two other planes.Bohm's observation was on the day of the disappearance of the aviator Antoine de Saint-Exupéry (author of The 
                     Little Prince), and it has been speculated that Bohm saw the final flight of Saint-Exupéry.</p>
+
                     <p class="poi-text">Here is the only place in the world where you can see an entire country (Monaco) while standing on Earth!</p>`,
         request: {
             placeId: "ChIJNZdV_uTCzRIROTHOifsip3I",
@@ -97,9 +103,11 @@ function initMap() {
                     jellyfish, crabs, lobsters, rays, sharks, sea urchins, sea cucumbers, eels, cuttlefish etc.). The museum's holdings also include a great 
                     variety of sea related objects, including model ships, sea animal skeletons, tools, weapons etc., as well as a collection of material culture 
                     and ritual objects made from, or integrating materials such as pearls, molluscs and nacre</p>
+
                     <p class="poi-text">At the first floor, A Sailor’s Career showcases the work of Prince Albert I. It includes the laboratory from <i>l’Hirondelle</i>, 
                     the first of Prince Albert's research yachts. Observations made there led to an understanding of the phenomenon of anaphylaxis, for which 
                     Dr Charles Richet received the Nobel Prize in Physiology or Medicine in 1913.</p>
+
                     <p class="poi-text">An aquarium in the basement of the museum presents a wide array of flora and fauna. Four thousand species of fish and over 
                     200 families of invertebrates can be seen. The aquarium also features a presentation of Mediterranean and tropical marine ecosystems</p>`,
         request: {
@@ -118,9 +126,11 @@ function initMap() {
                     <p class="poi-text">The <i>Cathédrale de Notre-Dame-Immaculée</i> (Cathedral of Our Lady Immaculate) or Saint Nicholas Cathedral 
                     is the cathedral of the Roman Catholic Archdiocese of Monaco, where many of the Grimaldis were buried, including Grace Kelly and — more 
                     recently — Prince Rainier III.</p>
+
                     <p class="poi-text">The cathedral was built in 1875–1903 and consecrated in 1911, and is on the site of the first parish church in 
                     Monaco built in 1252 and dedicated to Saint Nicholas. Of note are the retable (circa 1500) to the right of the transept, the Great 
                     Altar and the Episcopal throne in white Carrara marble.</p>
+
                     <p class="poi-text">Pontifical services take place on the major religious festivals, such as the Feast of Sainte Dévote (27 January) 
                     and the national holiday (19 November). On feast days and during religious music concerts, one can hear the magnificent four-keyboard 
                     organ, inaugurated in 1976. From September until June, “<i>Les Petits Chanteurs de Monaco</i>” and the singers of the Cathedral Choir 
@@ -145,6 +155,7 @@ function initMap() {
                     foreign powers. Since the end of the 13th century, it has been the stronghold and home of the Grimaldi family who first captured it in 
                     1297. The Grimaldi ruled the area first as feudal lords, and from the 17th century as sovereign princes, but their power was often 
                     derived from fragile agreements with their larger and stronger neighbours.</p>
+
                     <p class="poi-text">While other European sovereigns were building luxurious, modern Renaissance and Baroque palaces, politics and common 
                     sense demanded that the palace of the Monegasque rulers be fortified. This unique requirement, at such a late stage in history, has made 
                     the palace at Monaco one of the most unusual in Europe. Indeed, when its fortifications were finally relaxed during the late 18th century, 
@@ -155,6 +166,7 @@ function initMap() {
                     new palaces, the most the Grimaldi could achieve when enjoying good fortune, or desirous of change, was to build a new tower or wing, or, as 
                     they did more frequently, rebuild an existing part of the palace. Thus, the Prince's Palace reflects the history not only of Monaco, but of the 
                     family which in 1997 celebrated 700 years of rule from the same palace.</p>
+
                     <p>During the 19th and early 20th centuries, the palace and its owners became symbols of the slightly risqué glamour and decadence that were 
                     associated with Monte Carlo and the French Riviera. Glamour and theatricality became reality when the American film star Grace Kelly became 
                     a chatelaine of the palace in 1956. In the 21st century, the palace remains the residence of the current Prince of Monaco.</p>`,
@@ -175,6 +187,7 @@ function initMap() {
                     Revenues from the proposed venture were supposed to save the House of Grimaldi from bankruptcy. The ruling family's persistent financial problems became 
                     especially acute after the loss of tax revenue from two breakaway towns, Menton and Roquebrune, which declared independence from Monaco in 1848 and refused 
                     to pay taxes on olive oil and fruit imposed by the Grimaldis.</p>
+
                     <p class="poi-text">However, he lack of roads needed to connect Monaco to Nice and the rest of Europe, and the absence of comfortable accommodations for 
                     visitors, as well as the concessionaires' failure to publicize the new resort, resulted in far fewer customers than was originally anticipated. </p>
                     <p class="poi-text">In 1878–79, the casino building was transformed and expanded to designs of Jules Dutrou and Charles Garnier, the architect who had 
@@ -182,10 +195,12 @@ function initMap() {
                     (designed by Garnier and later named the Salle Garnier), located on the side of the casino facing the sea, and the redesign and expansion of the gaming 
                     rooms and public spaces, mostly carried out by Dutrou on the side of the casino facing the <i>Place du Casino</i>, where the <i>Hôtel de Paris Monte-Carlo</i> 
                     and the were also located.</p>
+
                     <p class="poi-text">Until recently, the Casino de Monte-Carlo has been the primary source of income for the House of Grimaldi and the Monaco economy.</p>
                     <p class="poi-text">In 1873, Joseph Jagger gained the casino great publicity by "breaking the bank at Monte Carlo" by discovering and capitalizing on a 
                     bias in one of the casino's roulette wheels. The 1892 song "<strong>The Man Who Broke the Bank at Monte Carlo</strong>", made famous by Charles Coborn, was probably inspired 
                     by the exploits of Charles Wells, who "broke the bank" on many occasions on the first two of his three trips.</p>
+
                     <p class="poi-text">Monaco and its casino were the locations for a number of James Bond movies, including <strong>Never Say Never Again</strong> and 
                     <strong>GoldenEye</strong>, as well as for the "<strong>Casino Royale</strong>" episode of the CBS's Climax! television show. The casino also served as a 
                     filming location for the 2004 film <strong>Ocean's Twelve</strong>.</p>`,
@@ -205,8 +220,10 @@ function initMap() {
                     <p class="poi-text">This prestigious palace was founded on the <i>Place du Casino</i> in Monte-Carlo by Prince Charles III of Monaco and François Blanc, 
                     from plans by the French architect Godinot de la Bretonnerie. It was inaugurated in 1864, next to the future <i>Place du Casino</i> (inaugurated: 1868), 
                     <i>Casino de Monte-Carlo</i> and <i>Opéra de Monte-Carlo</i> (1879), and <i>Hôtel Hermitage Monte-Carlo</i> (1896).</p>
+
                     <p class="poi-text">The facades by architect Édouard-Jean Niermans date from 1909-1910, with frescoes by painter Paul Gervais 2. Elevations of the 
                     building were completed in 1920 by the architects Émile Molinié, Charles Nicod and Albert Pouthier, then in 1959-1960 under the aegis of André Bruyère<p>
+                    
                     <p class="poi-text">The hotel has been featured in numerous films, including <strong>Confessions of a Cheat</strong> (1936), <strong>The Red Shoes</strong> (1948), 
                     <strong>Iron Man 2</strong> (2010), <strong>Monte Carlo</strong> (2011), and - of course! - two James Bond films; <strong>Never Say Never Again</strong> (1983) and 
                     <strong>GoldenEye</strong> (1995). It was also portrayed in the 2012 animated film <strong>Madagascar 3: Europe's Most Wanted</strong>. It was also a 
