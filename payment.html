@@ -57,82 +57,88 @@
                     <div class="main-tour-text">
                         <h2>Your Cart and Payment:</h2>
                         
-                        <article id="payment">
-                            <div class="row">
-
-                                <div class="order-3 col-sm-4 order-sm-2 order-md-3 cart">
-                                    <h4>Cart <span class="price" style="color:black"><i class="fa fa-shopping-cart"></i> <b>4</b></span></h4>
-                                    <p><a href="#">Product 1</a> <span class="price">$15</span></p>
-                                    <p><a href="#">Product 2</a> <span class="price">$5</span></p>
-                                    <p><a href="#">Product 3</a> <span class="price">$8</span></p>
-                                    <p><a href="#">Product 4</a> <span class="price">$2</span></p>
-                                    <hr>
-                                    <p>Total <span class="price" style="color:black"><b>$30</b></span></p> 
-                                </div>
-
-                                <div class="order-1 col-sm-8 col-md-4 order-sm-1 billing-address">
-                                    <h3>Billing Address</h3>
-                                    <label for="fname"><i class="fa fa-user"></i> Full Name</label>
-                                    <br>
-                                    <input class="full-width" type="text" id="fname" name="firstname" placeholder="John M. Doe">
-                                    <br>
-                                    <label for="email"><i class="fa fa-envelope"></i> Email</label>
-                                    <br>
-                                    <input class="full-width" type="text" id="email" name="email" placeholder="john@example.com">
-                                    <br>
-                                    <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
-                                    <br>
-                                    <input class="full-width" type="text" id="adr" name="address" placeholder="542 W. 15th Street">
-                                    <br>
-                                    <label for="city"><i class="fa fa-institution"></i> City</label>
-                                    <br>
-                                    <input class="full-width" type="text" id="city" name="city" placeholder="New York">
-                                    <br>
-                                    <label for="country"><i class="fa fa-flag"></i> Country</label>
-                                    <br>
-                                    <input class="full-width" type="text" id="country" name="country" placeholder="USA">
-                                    <br>
-                                    <label>
-                                        <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
-                                    </label>
-                                </div>
-
-                                <div class="order-2 col-sm-8 col-md-4 payment-details">
-                                    <h3>Payment</h3>
-                                        <label for="fname">Accepted Cards</label>
-                                        <div class="icon-container">
-                                        <i class="fa fa-cc-visa" style="color:navy;"></i>
-                                        <i class="fa fa-cc-amex" style="color:blue;"></i>
-                                        <i class="fa fa-cc-mastercard" style="color:red;"></i>
-                                        <i class="fa fa-cc-discover" style="color:orange;"></i>
-                                        </div>
-                                        <label for="cname">Name on Card</label>
+                        <!-- Payment forms from w3schools.com https://www.w3schools.com/howto/howto_css_checkout_form.asp -->
+                        <form>
+                            <article id="payment">
+                                <div class="row">
+                                    
+                                    <div class="order-3 col-sm-4 order-sm-2 order-md-3 cart">
+                                        <h4>Cart <span class="price" style="color:black"><i class="fa fa-shopping-cart"></i> <b>4</b></span></h4>
+                                        <p>Tour: <span class="price" id="tour-chosen"></span></p>
                                         <br>
-                                        <input class="full-width" type="text" id="cname" name="cardname" placeholder="John More Doe">
+                                        <p>Passengers: <span class="price" id="no-of-pax"></span></p>
                                         <br>
-                                        <label for="ccnum">Credit card number</label>
+                                        <p>Date: <span class="price" id="date-chosen"></span></p>
                                         <br>
-                                        <input class="full-width" type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+                                        <p>Option: <span class="price" id="option-chosen"></span></p>
                                         <br>
-                                        <label for="expmonth">Exp Month</label>
-                                        <br>
-                                        <input class="full-width" type="text" id="expmonth" name="expmonth" placeholder="September">
-                                        <br>
-                                        <div class="row">
-                                        <div class="col-6">
-                                            <label for="expyear">Exp Year</label>
-                                            <input class="full-width" type="text" id="expyear" name="expyear" placeholder="2018">
-                                        </div>
-                                        <div class="col-6">
-                                            <label for="cvv">CVV</label>
-                                            <input class="full-width" type="text" id="cvv" name="cvv" placeholder="352">
-                                        </div>
+                                        <hr>
+                                        <p>Total: <span class="price" style="color:black"><b>$30</b></span></p> 
                                     </div>
-                                </div>
 
-                            </div>
-                        </article>
-                        <input class="btn btn-light payment-recd" type="submit" value="Continue to checkout">
+                                    <div class="order-1 col-sm-8 col-md-4 order-sm-1 billing-address">
+                                        <h3>Billing Address</h3>
+                                        <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+                                        <br>
+                                        <input class="full-width" type="text" id="fname" name="firstname" placeholder="John M. Doe" required>
+                                        <br>
+                                        <label for="email"><i class="fa fa-envelope"></i> Email</label>
+                                        <br>
+                                        <input class="full-width" type="text" id="email" name="email" placeholder="john@example.com" required>
+                                        <br>
+                                        <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+                                        <br>
+                                        <input class="full-width" type="text" id="adr" name="address" placeholder="542 W. 15th Street" required>
+                                        <br>
+                                        <label for="city"><i class="fa fa-institution"></i> City</label>
+                                        <br>
+                                        <input class="full-width" type="text" id="city" name="city" placeholder="New York" required>
+                                        <br>
+                                        <label for="country"><i class="fa fa-flag"></i> Country</label>
+                                        <br>
+                                        <input class="full-width" type="text" id="country" name="country" placeholder="USA" required>
+                                        <br>
+                                        <label>
+                                            <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
+                                        </label>
+                                    </div>
+
+                                    <div class="order-2 col-sm-8 col-md-4 payment-details">
+                                        <h3>Payment</h3>
+                                            <label for="fname">Accepted Cards</label>
+                                            <div class="icon-container">
+                                            <i class="fa fa-cc-visa" style="color:navy;"></i>
+                                            <i class="fa fa-cc-amex" style="color:blue;"></i>
+                                            <i class="fa fa-cc-mastercard" style="color:red;"></i>
+                                            <i class="fa fa-cc-discover" style="color:orange;"></i>
+                                            </div>
+                                            <label for="cname">Name on Card</label>
+                                            <br>
+                                            <input class="full-width" type="text" id="cname" name="cardname" placeholder="John More Doe" required>
+                                            <br>
+                                            <label for="ccnum">Credit card number</label>
+                                            <br>
+                                            <input class="full-width" type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444" required>
+                                            <br>
+                                            <label for="expmonth">Exp Month</label>
+                                            <br>
+                                            <input class="full-width" type="text" id="expmonth" name="expmonth" placeholder="September" required>
+                                            <br>
+                                            <div class="row">
+                                            <div class="col-6">
+                                                <label for="expyear">Exp Year</label>
+                                                <input class="full-width" type="text" id="expyear" name="expyear" placeholder="2025" required>
+                                            </div>
+                                            <div class="col-6">
+                                                <label for="cvv">CVV</label>
+                                                <input class="full-width" type="text" id="cvv" name="cvv" placeholder="123" required>
+                                            </div>
+                                        </div>
+                                    </div>                              
+                                </div>
+                            </article>
+                            <input class="btn btn-light payment-recd" type="submit" value="Submit"/>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -217,7 +223,7 @@
         });
     </script>
 
-    <script type="text/javascript" src="scripts/payment.js"></script>
+    <script type="text/javascript" src="scripts/make-payment.js"></script>
 
 </body>
 
