@@ -21,13 +21,15 @@ function initMap() {
         title: `Promenade des Anglais`,
         description: `<h3 class="poi-sub-heading"><i>La Prom</i>: France's most iconic seaside boulevard.</h3>
                     <!-- Text from https://en.wikipedia.org/wiki/Promenade_des_Anglais -->
-                    <p class="poi-text">Starting in the second half of the 18th century, the English aristocracy took to spending the winter in Nice, 
+                    <p class="poi-text">In the second half of the 18th century, the English aristocracy took to spending the winter in Nice, 
                     enjoying the panorama along the coast. In 1820, when a particularly harsh winter further north brought an influx of beggars to Nice, 
-                    some of the English proposed that they could work on the construction of a walkway (chemin de promenade) along the sea. It was funded 
+                    the English put forward a proposal for a walkway along the sea, and the beggars were employed to construct it. It was funded 
                     by the Reverend Lewis Way and members of Holy Trinity Anglican Church.</p>
+
                     <p class="poi-text">The city of Nice, intrigued by the prospect of a pleasant promenade, greatly increased the scope of the work. 
                     The Promenade was first called the Camin deis Anglés (the English Way) by the Niçois in their native dialect. After the annexation of Nice 
                     by France in 1860 it was rechristened <i>La Promenade des Anglais</i>.</p>
+
                     <p class="poi-text">If <i>La Prom</i> (as the locals call it) is not France's most famous street, it is certainly second only to the <i>Champs Elysée</i> 
                     in Paris.</p>`,
         request: {
@@ -43,11 +45,12 @@ function initMap() {
         title: `Place Masséna`,
         description: `<h3 class="poi-sub-heading">Nice's primary city square.</h3>
                     <!-- Text from https://en.wikipedia.org/wiki/Place_Mass%C3%A9na -->
-                    <p class="poi-text">Named for André Masséna. Its layout was designed by Joseph Vernier in 1843-1844.</p>
+                    <p class="poi-text">Named after André Masséna. Its layout was designed by Joseph Vernier in 1843-1844.</p>
                     <p class="poi-text">The Place Masséna is the main square of the city. Before the Paillon River was covered over, 
                     the <i>Pont-Neuf</i> was the only practicable way between the old town and the modern one. The square was thus divided 
                     into two parts (North and South) in 1824. With the demolition of the Masséna Casino in 1979, <i>Place Masséna</i> became 
                     more spacious and less dense and is now bordered by red ochre buildings of Italian architecture.</p>
+
                     <p class="poi-text">The recent rebuilding of the tramline gave the square back to the pedestrians, restoring its status as a real 
                     Mediterranean square. It is lined with palm trees and stone pines, instead of being the rectangular roundabout of sorts it had 
                     become over the years. Since its construction, <i>Place Masséna</i> has always been the spot for great public events. 
@@ -69,10 +72,13 @@ function initMap() {
                     <p class="poi-text">The Marchioness Alli-Maccarani acquired permission to turn her former residence into a theatre from Amadeus III, 
                     King of Sardinia, under who's jurisdiction the County of Nice fell. Thus the little <i>Théâtre Maccarani</i>, named after its owners, 
                     was built at the site of the present-day opera house in the 18th century.</p>
+
                     <p class="poi-text">Built entirely from wood in 1776, the northern façade looked out over the city while its southern façade gave out onto the ramparts 
                     of the <i>Quai du Midi</i>, today's <i>Quai des États-Unis</i>.</p>
+
                     <p class="poi-text">Razed to the ground by a fire in 1881, the new opera house, <i>l'Opéra de Nice</i> rose from its ashes in 1883.</p>
-                    <p class="poi-text">Today, the <i>Opéra de Nice</i> is the principal opera venue in Nice, France, and houses the <i>Ballet Nice Méditerrannée</i> 
+
+                    <p class="poi-text">Today, the <i>Opéra de Nice</i> is the principal opera venue in Nice, and houses the <i>Ballet Nice Méditerrannée</i> 
                     and the Nice Philharmonic Orchestra. It offers three types of performances: operas, ballets and classical music concerts.</p>`,
         request: {
             placeId: "ChIJOdYiS6LazRIRBQmeCxgnWs4",
@@ -107,16 +113,17 @@ function initMap() {
         lat: 43.697294, 
         lng: 7.275965,
         title: `St. Réparate Church`,
-        description: `<h3 class="poi-sub-heading">Seat of the Diocese of Nice and named for Saint Reparata.</h3>
+        description: `<h3 class="poi-sub-heading">Seat of the Diocese of Nice and named after Saint Reparata.</h3>
                     <!-- Text from https://en.wikipedia.org/wiki/Nice_Cathedral -->
-                    <p class="poi-text">The original cathedral on the site, called St Mary of the Castle, was consecrated in 1049.In 1060, relics 
-                    belonging to Saint Reparata arrived in Nice. By 1075, a chapel dedicated to St Reparata was constructed at the foot of the now dstroyed 
+                    <p class="poi-text">The original cathedral on the site, called St Mary of the Castle, was consecrated in 1049. In 1060, relics 
+                    belonging to Saint Reparata arrived in Nice. By 1075, a chapel dedicated to St Reparata was constructed at the foot of the now destroyed 
                     castle of Nice (see Castle Hill).</p>
+
                     <p class="poi-text">During the latter half of the 12th century, the chapel became a priory of the Abbey of Saint-Pons. 
                     1246 marked the official establishment of the priory as a parish church. The first church on the site was built in the early 13th century 
                     on land belonging to the Abbey of St Pons and became a parish church in 1246.</p>
-                    <p class="poi-text">Originally rectangular and oriented to the North, the cathedral was rebuilt on the model of Santa Susanna in Rome, 
-                    i.e. on a Latin cross ground plan oriented to the east, with a cupola, clad in coloured tiles varnished in the Genoese style, over the crossing. 
+
+                    <p class="poi-text">Originally rectangular and oriented to the North, the cathedral was rebuilt on the model of Santa Susanna in Rome. 
                     The building is in the Baroque architectural tradition.</p>`,
         request: {
             placeId: "ChIJR3WTsbzazRIR0c2V-rSfWDo",
@@ -133,9 +140,10 @@ function initMap() {
         description: `<h3 class="poi-sub-heading">Castle Hill with its spectacular views over <i>Vieux Nice</i> (the old town) and <i>La Prom</i>.</h3>
                     <!-- Text from https://en.wikipedia.org/wiki/Castle_of_Nice -->
                     <p class="poi-text">The Castle of Nice was a citadel used for military purposes. Built at the top of a hill, it stood overlooking the bay of 
-                    Nice from the 11th century to the 18th century. It was besieged several times, especially in 1543 and in 1691, before it was taken by French 
+                    Nice from the 11th century to the 18th century. It was besieged several times, particularly in 1543 and in 1691, before it was taken by French 
                     troops in 1705 and finally destroyed in 1706 by command of Louis XIV.</p>
-                    <p class="poi-text">Nowadays, Castle Hill is used as a park. It's the most famous public garden in Nice, and a "must see" place for the 
+
+                    <p class="poi-text">Nowadays, Castle Hill a park. It's the most famous public garden in Nice, and a "must see" place for the 
                     numerous tourists who visit the city. It offers many amazing panoramas, and provides a beautiful view all day long from sunrise to sundown, 
                     highlighting various landscapes depending on where one looks: the Harbor at sunrise, the <i>Promenade des Anglais</i> at sundown. That's why Castle Hill 
                     is called "the cradle of the sun".</p>`,
@@ -152,10 +160,12 @@ function initMap() {
         title: `WWI Memorial "Rauba-Capeù"`,
         description: `<h3 class="poi-sub-heading">The <strong>"Hat Thief"</strong> memorial to Nice's fallen soldiers.</h3>
                     <!-- Text from https://en.nicetourisme.com/nice/74-quai-rauba-capeu and myself -->
-                    <p class="poi-text">At the foot of Castle Hill, the Promenade becomes the <i>Quai des États-Unis</i> along the old town, then 
-                    <i>Rauba Capeu</i>, which offers one of the finest vistas on the Mediterranean Sea and the beautiful blue and ochre nuances along the Prom.</p>
+                    <p class="poi-text">At the foot of Castle Hill, the Promenade becomes the <i>Quai des États-Unis</i> in front of the old town. Then, as you round the headland, 
+                    it becomes <i>Rauba Capeu</i>, which offers one of the finest vistas on the Mediterranean Sea and the beautiful blue and ochre nuances along the Prom.</p>
+
                     <p class="poi-text">The memorial is named in the <i>niçois</i> dialect. It's translation is "the hat thief" as is so named as it is built upon the windiest 
                     spot in Nice. At the time of its construction, it was very much the <i>Belle Epoque</i> era, with the ladies wearing bonnets and the gentlemen hats.</p>
+                    
                     <p class="poi-text">Often, as they walked the corner from the port to the Prom, the wind would whip up and steal their hats... thus the name of the memorial.</p>
                     <p class="poi-text">Only in France would you find such a romantic name for such a serious monument!</p>`,
         request: {
@@ -171,11 +181,12 @@ function initMap() {
         title: `Port de Nice Lympia`,
         description: `<h3 class="poi-sub-heading">That <strong><i>most</i></strong> Mediterranean of ports</h3>
                     <!-- Text from https://en.nicetourisme.com/by-boat and self -->
-                    <p class="poi-text">The Port of Nice, surrounded by 18th-century buildings in the Genoese style, is actually named Port Lympia. 
-                    The architectural complex seems inspired by the Italian Renaissance and influenced by the baroque urban planning of Turin.</p>
-                    <p class="poi-text">With over 530 berths, 24 of which are reserved for yachts over 25m long (one of which for many years was the home 
-                    berth of <i>Octopus</i>, a 126m yacht owned by the late Paul Allen, one of the founders of Microsoft).<p>
-                    <p class="poi-text">Once the estuary of the Lympia spring, the river was diverted when construction of the port commenced in 1700.</p>`,
+                    <p class="poi-text">The Port of Nice is actually named Port Lympia, as it was once the estuary of the Lympia spring, which was diverted when the 
+                    construction of the port commenced in 1700.  It is surrounded by 18th-century buildings of Genoese style, and its architecture was inspired by the 
+                    Italian Renaissance and influenced by the baroque urban planning of Turin.</p>
+
+                    <p class="poi-text">The port has over 530 berths, 24 of which are reserved for yachts over 25m long (one of which for many years was the home 
+                    berth of <i>Octopus</i>, a 126m yacht owned by the late Paul Allen, one of the founders of Microsoft).<p>`,
         request: {
             placeId: "ChIJ33og2r7azRIRKnGqChlyI5g",
             fields: ["name", "reviews", "rating", "photos", "website", "place_id", "formatted_address"]
@@ -191,7 +202,9 @@ function initMap() {
                     <!-- Text from self -->
                     <p class="poi-text">Offering unrivalled views over the Bay of Angels, the viewpoint of the <i>Belvedére du Mont Boron</i> is a view 
                     that should be on everyone's bucket list!</p>
-                    <p class="poi-text">The colours, the light, the bay, the city... all combine to take your breath away.</p>
+
+                    <p class="poi-text">The combination of colours and light, and the views of the bay and the city take your breath away.</p>
+
                     <p class="poi-text">Words cannot describe this view. It has to be seen to be believed!</p>`,
         request: {
             placeId: "ChIJ-4PtWujazRIRacv7jz-WmUA",
@@ -209,8 +222,9 @@ function initMap() {
                     <p class="poi-text">Across from the Monastery of Cimiez, this garden is a vast olive grove, with thousands of 
                     centuries-old trees; the lawns are easily accessible to everyone, which makes this a favourite haunt for family 
                     outings.</p>
-                    <p class="poi-text">Site of festivals such as the May Day festival, and previously home to the Nice Jazz Festival, take time to stroll 
-                    in the olive lined boulevards named after the Jazz Greats who have played here.</p`,
+
+                    <p class="poi-text">The site of festivals such as the May Day festival, and previously home to the Nice Jazz Festival, take time to stroll 
+                    in the olive lined boulevards which are named after the Jazz Greats who have played here.</p`,
         request: {
             placeId: "ChIJX76sxU_FzRIR-L2d7gXKUGQ",
             fields: ["name", "reviews", "rating", "photos", "website", "place_id", "formatted_address"]
@@ -227,9 +241,11 @@ function initMap() {
                     <p class="poi-text">Inaugurated in 1963 on the second floor of the Villa des Arènes, situated within the 
                     archeological site in Cimiez, the Musée Matisse holds the artist's and his heirs' gifts to the 
                     City of Nice.</p>
+
                     <p class="poi-text">The museum's permanent collection includes nearly 70 paintings and cut-out <i>gouaches</i>, more than 200 
                     drawings, engravings, almost all of the artist's sculptures, illustrated books, around a hundred 
                     photographs and objects that belonged to the painter.</p>
+
                     <p class="poi-text">The Musée Matisse is part of a vast patrimonial complex of the Cimiez site that includes the Roman 
                     arenas and ruins, a garden with hundred-year old olive trees, as well as the Cimiez monastery.</p>`,
         request: {
@@ -243,15 +259,16 @@ function initMap() {
         lat:43.71928, 
         lng: 7.27511,
         title: `Archaeology Museum`,
-        description: `<h3 class="poi-sub-heading">A treasure trove of artefacts dating from the Bronze to the Middle Ages.</h3>
+        description: `<h3 class="poi-sub-heading">A treasure trove of artefacts dating from the Bronze Age to the Middle Ages.</h3>
                     <!-- Text from https://frenchriviera.travel/archaeological-museum-nice/ -->
-                    <p class="poi-text">The most valuable items found over the years in Cimiez and near Nice have been collected 
-                    together in the archaeological museum in Cimiez. Some of these were excavated during archaeological research, 
+                    <p class="poi-text">The most valuable items found over the years in Cimiez and near Nice have been housed 
+                    together in the archaeological museum in Cimiez. Some of them were excavated during archaeological research, 
                     while others were found in the wrecks of ancient ships sunk near the Côte d’Azur. From 1960, the museum 
                     has allowed you to see this historic heritage, and even touch and try some of the exhibits, such as a fragment 
                     of Roman armor.</p>
-                    <p class="poi-text">It is worth noting that the museum stands on the location of the ancient Roman city of Cemenelum. In addition 
-                    to the exhibition in the building, you can also admire the ruins of the ancient bath-house from the third century. 
+
+                    <p class="poi-text">It is worth noting that the museum stands on the location of the ancient Roman city of Cemenelum. 
+                    In addition to the exhibition in the museum you can also admire the ruins of the 3rd century ancient bath house. 
                     The most impressive remains are of the frigidarium, a room that contained a pool of cold water.</p>`,
         request: {
             placeId: "ChIJs1YSxFHFzRIRv7otGUG4rso",
@@ -268,10 +285,13 @@ function initMap() {
                     <!-- Text from https://fr.wikipedia.org/wiki/Monast%C3%A8re_de_Cimiez-->
                     <p class="poi-text">The monastery of Cimiez was founded in the VIII<sup>th</sup> century by the Benedictine Order, 
                     and was rebuilt by the monks of the Abbey of Saint-Pons. It brings together the Church of Our Lady of the Assumption 
-                    (XV<sup>th</sup> century) and the Franciscan museum that traces the Franciscan way of life in Nice from the XIII<sup>th</sup> century.</p>
+                    (XV<sup>th</sup> century) and the Franciscan museum that traces the Franciscan way of life in Nice from the 8<sup>th</sup> century.</p>
+
                     <p class="poi-text">The most famous of the Franciscans of Nice is Brother Marc who became <strong><i>fray Marcos de Niza</i></strong> 
                     and gave, it is said, the name of the founder of his order to the site of the future city of San Francisco (California).</p>
-                    <p class="poi-text">Since 1546 , it has been occupied by the Franciscans.</p>
+
+                    <p class="poi-text">Since 1546, it has been occupied by the Franciscans.</p>
+
                     <p class="poi-text">While here, be sure also to pay your respects to Henri Matisse, who is buried in the cemetary.</p>`,
         request: {
             placeId: "ChIJ1ef2pk_FzRIRhOkC-ZlEROI",
@@ -289,10 +309,12 @@ function initMap() {
                     <p class="poi-text">The similarity between this building and the Cathedral of Notre- Dame in Paris is more than obvious, 
                     but that doesn't stop it from standing as a real symbol of Nice. In fact, this basilica is the largest in the city, and it's even 
                     bigger than the city's cathedral.</p>
-                    <p class="poi-text">Built in a neo-Gothic style, it was erected during 1868, according to the design by Louis Lenormand. 
+
+                    <p class="poi-text">It was designed by Louis Lenormand in a neo-gothic style and was erected in 1868.
                     The two square towers that support the facade measure 31 metres tall, and between these is a beautiful rose window that shows scenes of the 
-                    Assumption of Mary (of whom it's named after).</p>
-                    <p class="poi-text">The absence of a large number of sculptures at the main entrance is curious, but the lack of funds during its construction 
+                    Assumption of Mary (whom it's named after).</p>
+
+                    <p class="poi-text">The absence of a large number of sculptures at the main entrance is notable, but a lack of funding during its construction 
                     forced it to be decorated in a much more modest fashion. However, its lack of spires is a deliberate architectural choice!</p>`,
         request: {
             placeId: "ChIJxXBGAAjQzRIRooxQYPogkFs",
@@ -307,15 +329,18 @@ function initMap() {
         title: `St. Nicholas Russian Orthodox Cathedral`,
         description: `<h3 class="poi-sub-heading">The largest Eastern Orthodox cathedral in Western Europe.</h3>
                     <!-- Text from https://en.wikipedia.org/wiki/Russian_Orthodox_Cathedral,_Nice and self -->
-                    <p class="poi-text">Beginning in the mid-19th century, Russian nobility visited Nice and the French Riviera, following the 
-                    fashion established decades earlier by the English upper class and nobility. In 1864, immediately after the railway reached Nice, 
+                    <p class="poi-text">In the mid-19th century, Russian nobility visited Nice and the French Riviera, following the 
+                    trend established decades earlier by the English upper class and nobility. In 1864, immediately after the railway reached Nice, 
                     Tsar Alexander II visited by train and was attracted by the pleasant climate. Thus began an association between Russians and the 
                     French Riviera that continues to this day.</p>
+
                     <p class="poi-text">The cathedral, consecrated in December 1912 in memory of Nicholas Alexandrovich, Tsarevich of Russia, who died in 
                     Nice, was meant to serve the large Russian community that had settled in Nice by the end of the 19th century, as well as devout visitors 
                     from the Imperial Court. Tsar Nicholas II funded the construction work.</p>
+
                     <p class="poi-text">After 1917, Communist persecution of religion in Russia led some Russian Orthodox dioceses abroad to form jurisdictions 
                     not affiliated with Moscow. One of these, the Paris-based exarchate, later assumed control of the Nice Cathedral.</p>
+
                     <p class="poi-text">Since 2013, the cathedral has been the property of the Russian Federation. Effectively, as you visit the cathedral and its park, 
                     you are in Russia!</p>`,
         request: {
