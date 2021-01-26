@@ -148,7 +148,7 @@ IMPORTANT:
 You also confirm you have read our Terms and Conditions`, yes, no)
 })
 
-window.onunload = function() {
+/*window.onunload = function() {
     sessionStorage.removeItem("name");
     sessionStorage.removeItem("email");
     sessionStorage.removeItem("tel");
@@ -158,6 +158,6 @@ window.onunload = function() {
     sessionStorage.removeItem("code");
     sessionStorage.removeItem("tourOption");
     sessionStorage.removeItem("tc");
-}
+}*/
 
     
