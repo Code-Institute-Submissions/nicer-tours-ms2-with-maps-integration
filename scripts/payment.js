@@ -44,8 +44,17 @@ $("#t-and-c").on("change", function() {
     tc = this.value;
 })
 
-function recordDetailsForPayment() {
-    let formDetails = sessionStorage;
+$(".btn-go-to-payment").on("click", function() {
+    function ask(question, yes, no){
+        if (confirm(question)) {
+            yes();
+        } else {
+            no();
+        }
+    }
+
+    function yes() {
+        let formDetails = sessionStorage;
     
     if (sessionStorage.getItem("name") === null) {
         sessionStorage.setItem("name", "");
@@ -118,12 +127,13 @@ function recordDetailsForPayment() {
     var getTC = tc
     sessionStorage.setItem("tc", sessionStorage.getItem("tc") + "\n" + getTC);
     sessionStorage.getItem('tc');
-
-    for (key in formDetails){
-        console.log( key + ": " + formDetails[key]);
+        window.open("payment.html", "_self")
+        //alert("yes")
     }
-
-    alert(`Please check these details carefully. If they are all OK, click "ok" and then click the "Proceed To Payment" button:
+    function no() {
+        sessionStorage.clear()
+    }
+    ask(`Clicking "ok" will send you to the payment page. Before clicking, please check these details carefully.
 
 Name: ${name}
 email: ${email}
@@ -135,8 +145,19 @@ Discount Code: ${code}
 Tour Type: ${tourOption}
 
 IMPORTANT:
-You also confirm you have read our Terms and Conditions`);
-}
+You also confirm you have read our Terms and Conditions`, yes, no)
+})
 
+window.onunload = function() {
+    sessionStorage.removeItem("name");
+    sessionStorage.removeItem("email");
+    sessionStorage.removeItem("tel");
+    sessionStorage.removeItem("tour");
+    sessionStorage.removeItem("date");
+    sessionStorage.removeItem("quantity");
+    sessionStorage.removeItem("code");
+    sessionStorage.removeItem("tourOption");
+    sessionStorage.removeItem("tc");
+}
 
     

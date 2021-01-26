@@ -156,11 +156,13 @@ to your itinerary`)
         $(".btn-cta-remove-itinerary").css("display", "block");
         $(".btn-cta-remove-itinerary").on("click", function() {
             sessionStorage.clear();
+            $("#message").text("");
             alert("Your itinerary has been emptied");
             $(".btn-cta-send-itinerary").css("display", "none");
             $(".btn-cta-remove-itinerary").css("display", "none");
             })
         }
+
 
 
     
