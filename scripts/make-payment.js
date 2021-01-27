@@ -1,3 +1,7 @@
+function refresh() {
+        alert(`Please note that refreshing this page empties your booking settings`)
+    }
+
 $(document).ready(function() {
     document.getElementById("tour-chosen").innerText = sessionStorage.tour;
     document.getElementById("no-of-pax").innerText = sessionStorage.quantity;
@@ -23,7 +27,7 @@ $(document).ready(function() {
     document.getElementById("total-cost").innerText = totalCost;
 
     window.onunload = function() {
-        sessionStorage.removeItem("name");
+        sessionStorage.removeItem("personName");
         sessionStorage.removeItem("email");
         sessionStorage.removeItem("tel");
         sessionStorage.removeItem("tour");

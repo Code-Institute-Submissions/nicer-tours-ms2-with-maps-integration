@@ -163,6 +163,16 @@ to your itinerary`);
             });
         }
 
+        function memoryClear() {
+            return `Leaving this page clears your search history and empties your itinerary. 
+            Please make sure you have sent us your itinerary before leaving this page.
+            Thank you. `
+        }
+
+        window.onunload = function() {
+            sessionStorage.removeItem("place");
+        };
+
 
 
     
