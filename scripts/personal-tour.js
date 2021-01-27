@@ -144,14 +144,30 @@ function createMap() {
             sessionStorage.setItem("place", "");
         }
         
-        sessionStorage.setItem("place", sessionStorage.getItem("place") + "\n" + getValue);
-
+        sessionStorage.setItem("place", sessionStorage.getItem("place") + "\n" + getValue + ",");
         sessionStorage.getItem('place');
+        
         let placeAddedToItinerary = sessionStorage.getItem('place');
+
+        //Remove duplicated entries from returned result
+        // From https://stackoverflow.com/a/16844054/14773450
+        let removeRepeatedEntries = placeAddedToItinerary.split(',').filter(function(item,i,allItems){
+            return i==allItems.indexOf(item);
+        }).join(',');
+        /*console.log(placeAddedToItinerary)
+        sessionStorage.removeItem("place");
+        if (sessionStorage.getItem("place") === null) {
+            sessionStorage.setItem("place", "");
+        }
+        sessionStorage.setItem("place", sessionStorage.getItem("place") + "\n" + getValue);
+        sessionStorage.getItem('place');*/
+
+
+        
         alert(`You have added 
-    ${placeAddedToItinerary} 
+    ${removeRepeatedEntries} 
 to your itinerary`);
-        document.getElementById("message").innerHTML += placeAddedToItinerary;
+        document.getElementById("message").innerHTML = removeRepeatedEntries;
         $(".btn-cta-send-itinerary").css("display", "block");
         $(".btn-cta-remove-itinerary").css("display", "block");
         $(".btn-cta-remove-itinerary").on("click", function() {

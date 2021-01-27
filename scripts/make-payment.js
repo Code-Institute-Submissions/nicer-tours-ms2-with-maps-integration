@@ -22,9 +22,25 @@ $(document).ready(function() {
     let priceOfTour = parseInt(priceAlone);
 
     let pax = parseInt(sessionStorage.quantity);
-
-    const totalCost = priceOfTour * pax;
-    document.getElementById("total-cost").innerText = totalCost;
+    //console.log(sessionStorage.code);
+    //console.log(sessionStorage.tourOption);
+    var totalCost = "";
+    var discountApplied = "";
+    let discountCode = sessionStorage.getItem("code");
+    console.log(discountCode);
+    let tourOptionCode = sessionStorage.getItem("tourOption");
+    //console.log(tourOptionCode);
+        
+        if (typeof(discountCode) == undefined) {
+            totalCost = priceOfTour * pax;
+            //console.log(totalCost);
+            document.getElementById("total-cost").innerText = totalCost;
+        } /*else if ((code === "NICER10MONACO") && (tourOptionCode === "Flexibility")) {
+            discountApplied = priceOfTour + pax;
+            document.getElementById("total-cost").innerText = discountApplied;
+        }*/
+        //console.log(totalCost);
+    //document.getElementById("total-cost").innerText = totalCost;
 
     window.onunload = function() {
         sessionStorage.removeItem("personName");
