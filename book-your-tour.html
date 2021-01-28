@@ -67,54 +67,56 @@
                             <h2>Book Your Tour:</h2>
                             <!-- General <form> code from what I've learned so far from the modules. Further elements from as credited below -->
                             <form class="booking-form" id="booking-form">
-                                <input class="required book-now-form-name" type="text" name="book-now-name" id="book-now-name" placeholder="Name" required />
-                                <input class="required book-now-form-email required" type="email" name="book-now-email" id="book-now-email" placeholder="Email" required />
-                                <!-- From w3schools.com https://www.w3schools.com/tags/att_select_required.asp -->
-                                <input class="book-now-form-tel required" type="tel" name="tel" id="tel" placeholder="Phone incl. Country Code / WhatsApp" required />
-                                
-                                <div class="tour-tour-date-and-number-of-pax">
-                                    <label for="tour">Choose your tour:</label>
-                                    <select class="required" name="tour" id="tour" required>
-                                        <!-- Added empty value to dropdown menu as code validator threw up a warning.
-                                        Code from Stack Overflow
-                                        https://stackoverflow.com/questions/22237658/html5-validation-error-with-select-required-attribute -->
-                                        <option value="">&nbsp;</option>
-                                        <option id="nice" value="Nice: 69€ pp">Nice: 69€ per person</option>
-                                        <option id="mchd" value="Monaco-Half-Day: 79€ pp">Monaco Half-Day: 79€ per person</option>
-                                        <option id="mcfd" value="Monaco-Full-Day: 119€ pp">Monaco Full Day: 119€ per person</option>
-                                        <option id="stp" value="St-Paul-de-Vence: 79€ pp">St.-Paul-de-Vence: 79€ per person</option>
-                                    </select>
-                                    <p>If you are requiring a Personalised Tour, please select what you want to visit on <a href="/personal-tour.html">this page</a>, and send us the details from there. Thank you.</p>
-                                    <br>
-                                    <label for="date">Tour date:</label>
-                                    <input class="required book-now-form-date" type="date" name="date" id="date" required />
-                                    <br>
-                                    <label for="quantity">No. of passengers:</label>
-                                    <input class="required" type="number" id="quantity" name="quantity" min="1" max="8" required>
-                                    <br>
-                                    <label for="discount-code">Discount Code:</label>
-                                    <input class="discount-code" type="text" name="discount-code" id="discount-code" placeholder="Enter code" />
-                                </div>
-
-                                <div class="tour-option">
-                                    <p>Tour Option:</p>
-                                    <select class="required" name="tour-type-option" id="tour-type-option" required>
-                                        <option value="">&nbsp;</option>
-                                        <option value="Guaranteed Departure">Guaranteed Departure</option>
-                                        <option value="Flexibility">Flexibility</option>
-                                    </select>
-                                    <br>
-                                    <label for="t-and-c"> I accept Nicer Tours <a href="terms-and-conditions.html" data-toggle="modal" data-target="#t-and-cModal">Terms & Conditions</a></label>
-                                    <input class="required" type="checkbox" id="t-and-c" name="t-and-c" value="confirm-t-and-c" required>
-                                    <br> 
-                                </div>
-                                <!-- End of from w3schools.com -->
-
-                                <div class="form-row text-center">
-                                    <div class="col">
-                                        <a class="btn btn-light btn-go-to-payment">Proceed To Payment</a>
+                                <label for="Booking Your Tour Form">
+                                    <input class="required book-now-form-name" type="text" name="book-now-name" id="book-now-name" placeholder="Name" required />
+                                    <input class="required book-now-form-email required" type="email" name="book-now-email" id="book-now-email" placeholder="Email" required />
+                                    <!-- From w3schools.com https://www.w3schools.com/tags/att_select_required.asp -->
+                                    <input class="book-now-form-tel required" type="tel" name="tel" id="tel" placeholder="Phone incl. Country Code / WhatsApp" required />
+                                    
+                                    <div class="tour-tour-date-and-number-of-pax">
+                                        <label for="tour">Choose your tour:</label>
+                                        <select class="required" name="tour" id="tour" required>
+                                            <!-- Added empty value to dropdown menu as code validator threw up a warning.
+                                            Code from Stack Overflow
+                                            https://stackoverflow.com/questions/22237658/html5-validation-error-with-select-required-attribute -->
+                                            <option value="">&nbsp;</option>
+                                            <option id="nice" value="Nice: 69€ pp">Nice: 69€ per person</option>
+                                            <option id="mchd" value="Monaco-Half-Day: 79€ pp">Monaco Half-Day: 79€ per person</option>
+                                            <option id="mcfd" value="Monaco-Full-Day: 119€ pp">Monaco Full Day: 119€ per person</option>
+                                            <option id="stp" value="St-Paul-de-Vence: 79€ pp">St.-Paul-de-Vence: 79€ per person</option>
+                                        </select>
+                                        <p>If you are requiring a Personalised Tour, please select what you want to visit on <a href="/personal-tour.html">this page</a>, and send us the details from there. Thank you.</p>
+                                        <br>
+                                        <label for="date">Tour date:</label>
+                                        <input class="required book-now-form-date" type="date" name="date" id="date" required />
+                                        <br>
+                                        <label for="quantity">No. of passengers:</label>
+                                        <input class="required" type="number" id="quantity" name="quantity" min="1" max="8" required>
+                                        <br>
+                                        <label for="discount-code">Discount Code:</label>
+                                        <input class="discount-code" type="text" name="discount-code" id="discount-code" placeholder="Enter code" />
                                     </div>
-                                </div>
+
+                                    <div class="tour-option">
+                                        <p>Tour Option:</p>
+                                        <select class="required" name="tour-type-option" id="tour-type-option" required>
+                                            <option value="">&nbsp;</option>
+                                            <option value="Guaranteed Departure">Guaranteed Departure</option>
+                                            <option value="Flexibility">Flexibility</option>
+                                        </select>
+                                        <br>
+                                        <label for="t-and-c"> I accept Nicer Tours <a href="terms-and-conditions.html" data-toggle="modal" data-target="#t-and-cModal">Terms & Conditions</a></label>
+                                        <input class="required" type="checkbox" id="t-and-c" name="t-and-c" value="confirm-t-and-c" required>
+                                        <br> 
+                                    </div>
+                                    <!-- End of from w3schools.com -->
+
+                                    <div class="form-row text-center">
+                                        <div class="col">
+                                            <a class="btn btn-light btn-go-to-payment">Proceed To Payment</a>
+                                        </div>
+                                    </div>
+                                </label>
                             </form>
                         </div>
                     </div>
