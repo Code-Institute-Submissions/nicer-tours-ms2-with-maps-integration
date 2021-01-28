@@ -1,6 +1,3 @@
-let locations = [];
-let service;
-let img;
 let map;
 
 //---------------------------------------------------------------------------------------------------- Initialize Map
@@ -11,7 +8,7 @@ function initMap() {
         streetViewControl: false
     });
 
-    service = new google.maps.places.PlacesService(map);
+    let service = new google.maps.places.PlacesService(map);
 //---------------------------------------------------------------------------------------------------- Markers
     //Red Carpet marker
     let markerRedCarpet = {
@@ -278,7 +275,7 @@ function initMap() {
     };
 
     //---------------------------------------------------------------------------------------------------- Markers
-    locations = 
+    let locations = 
         [
             markerRedCarpet,
             markerJazzAtJuan,
@@ -308,7 +305,7 @@ function initMap() {
             infowindow.open(map, marker);
         }
 
-        /* Many thanks due to Kevin Loughrey (Kevin_ci) for helping getting this to work! */
+        // Many thanks due to Kevin Loughrey (Kevin_ci) for helping getting this to work
         google.maps.event.addListener(marker, "click", function () {
             $("#reviews").hide().html("");
             $("#attraction").get(0).scrollIntoView();
@@ -342,6 +339,7 @@ function initMap() {
                         document.getElementById("poi-title-name").append(placeName);
                     }
 
+                    let img;
                     if (place.hasOwnProperty("photos") === false){
                         let photoURL = locations[i].img;
                         let imgURL = document.createElement("img");

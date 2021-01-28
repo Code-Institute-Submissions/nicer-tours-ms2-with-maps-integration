@@ -11,6 +11,8 @@ $(document).ready(function() {
         event.preventDefault();
     });
     
+    //if (sessionStorage.code ===)
+
     let price = sessionStorage.tour.split(" ");
     let priceWithoutEuro = price[1];
     let priceAlone = priceWithoutEuro.slice(0, -1);
@@ -19,14 +21,20 @@ $(document).ready(function() {
     let tourChosen = sessionStorage.tour;
 
     let pax = parseInt(sessionStorage.quantity);
-    
+    //console.log(sessionStorage.code);
+    //console.log(sessionStorage.tourOption);
     let totalCost = "";
     let discountApplied = "";
     let discountCode = sessionStorage.getItem("code");
-    
+    //console.log(discountCode);
     let tourOptionCode = sessionStorage.getItem("tourOption");
-    
-    if ((discountCode === "NICER10MONACO") && (tourOptionCode === "Flexibility") && 
+    //console.log(tourOptionCode);
+        
+        /*if (discountCode === "No Discount Code") {
+            totalCost = priceOfTour * pax;
+            //console.log(totalCost);
+            document.getElementById("total-cost").innerText = totalCost;*/
+        if ((discountCode === "NICER10MONACO") && (tourOptionCode === "Flexibility") && 
         ((tourChosen === "Monaco-Half-Day: 79€ pp") || (tourChosen === "Monaco-Full-Day: 119€ pp"))) {
             discountApplied = (priceOfTour * pax) * 0.9;
             document.getElementById("total-cost").innerText = discountApplied.toFixed(2);
@@ -34,8 +42,10 @@ $(document).ready(function() {
             totalCost = priceOfTour * pax;
             document.getElementById("total-cost").innerText = totalCost;
         }
-    
-        window.onunload = function() {
+        //console.log(totalCost);
+    //document.getElementById("total-cost").innerText = totalCost;
+
+    window.onunload = function() {
         sessionStorage.removeItem("personName");
         sessionStorage.removeItem("email");
         sessionStorage.removeItem("tel");

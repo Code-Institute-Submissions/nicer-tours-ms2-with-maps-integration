@@ -1,6 +1,3 @@
-let markers = [];
-let locations = [];
-let img;
 let map;
 
 //---------------------------------------------------------------------------------------------------- Initialize Map
@@ -350,7 +347,7 @@ function initMap() {
     };
 
     //---------------------------------------------------------------------------------------------------- Markers
-    locations = 
+    let locations = 
         [
             markerProm,
             markerPlaceMassena,
@@ -385,7 +382,7 @@ function initMap() {
             infowindow.open(map, marker);
         }
 
-        /* Many thanks due to Kevin Loughrey (Kevin_ci) for helping getting this to work! */
+        // Many thanks due to Kevin Loughrey (Kevin_ci) for helping getting this to work
         google.maps.event.addListener(marker, "click", function () {
             $("#reviews").hide().html("");
             $("#attraction").get(0).scrollIntoView();
@@ -414,6 +411,7 @@ function initMap() {
                     let placeName = place.name;
                     document.getElementById("poi-title-name").append(placeName);
 
+                    let img;
                     if (place.hasOwnProperty("photos") === false){
                         img = document.createElement("img");
                         img.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/4/47/Cours_Saleya_-_Chapelle_de_la_Mis%C3%A9ricorde_-_Nice.jpeg");
@@ -449,12 +447,6 @@ function initMap() {
                         $(".more-info").append(`<p class="btn btn-light btn-description btn-block more-info-button">No website available</a>`);
                     }
                 }
-            });
-        });
-
-        markers = locations.map(function(location, i) {
-            marker = new google.maps.Marker({
-                position: location
             });
         });
     }
