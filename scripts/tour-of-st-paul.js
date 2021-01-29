@@ -190,7 +190,7 @@ function initMap() {
         }
     };
 
-    //Hotel de Paris marker
+    //Fountain marker
     let markerFontaine = {
         lat: 43.696588, 
         lng: 7.122063,
@@ -204,15 +204,16 @@ function initMap() {
                     also hosted the weekly market in the 17th century.<p>
 
                     <p class="image-credit"><strong>Image:</strong> 
-                    <a href="https://upload.wikimedia.org/wikipedia/commons/d/db/Saint_Paul_de_Vence_sa_fontaine_-_Jean-Charles_GUILLO.jpg" target="_blank">Jean-Charles GUILLO, Public domain, via Wikimedia Commons</p>`,
+                    <a href="https://upload.wikimedia.org/wikipedia/commons/d/db/Saint_Paul_de_Vence_sa_fontaine_-_Jean-Charles_GUILLO.jpg" target="_blank">
+                    Jean-Charles GUILLO, Public domain, via Wikimedia Commons</p>`,
         request: {
             placeId: "ChIJAbdAzcXTzRIRkxjuaaECH1U",
-            fields: ["name", "reviews", "rating", "website", "place_id", "formatted_address"]
+            fields: ["name", "reviews", "rating", "place_id", "formatted_address"]
         }, 
         img: new URL("https://upload.wikimedia.org/wikipedia/commons/d/db/Saint_Paul_de_Vence_sa_fontaine_-_Jean-Charles_GUILLO.jpg")
     };
 
-    //Café de Paris marker
+    //Ramparts marker
     let markerRamparts = {
         lat: 43.696088, 
         lng: 7.122934,
@@ -235,11 +236,11 @@ function initMap() {
                     They were declared a Listed Historical Monument in 1945. Today, they are the jewel in the village's historical crown.</p>`,
         request: {
             placeId: "ChIJQekRjCnTzRIRp6L7Xma0DD8",
-            fields: ["name", "reviews", "rating", "photos", "website", "place_id", "formatted_address"]
+            fields: ["name", "reviews", "rating", "photos", "place_id", "formatted_address"]
         }
     };
 
-    //Grand Prix de Monaco Monte-Carlo
+    //Chagall Grave marker
     let markerChagall = {
         lat: 43.694862, 
         lng: 7.123162,
@@ -371,9 +372,8 @@ function initMap() {
                     let placeWebsite = place.website;
                     if (place.hasOwnProperty("website") == true) {
                         $(".more-info").append(`<a class="btn btn-light btn-block more-info" role="button" href="${placeWebsite}" target="_blank">Find Out More</a>`);
-
                     } else if (place.hasOwnProperty("website") == false){
-                        $(".more-info").append(`<p class="btn btn-light btn-description btn-block more-info-button">No website available</a>`);
+                        $(".more-info").append(`<p class="btn btn-light btn-description btn-block more-info-button">No website available</p>`);
                     }
                 }
             });
