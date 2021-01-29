@@ -294,6 +294,11 @@ However, if the developer created ten keys, what would happen if one day a furur
 
 After changing the alert and message popup to contain the variable `removeRepeatedEntries` rather than `placeAddedToItinerary`, the developer tested this code both in console and on the published page. This elegant piece of code solved the duplicate entries appearing issue.
 
+Thus, the final code for this part of the "Create Your Tour" page is as follows:
+<img src="documentation/testing-ms2/add-to-itinerary-final-code.png">
+
+
+
 ## Lighthouse Results
 Many of the results seen in the Lighthouse files are due to elements outside of this website:
 
