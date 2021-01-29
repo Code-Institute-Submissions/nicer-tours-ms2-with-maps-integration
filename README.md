@@ -129,7 +129,7 @@ This website was tested using the following tools:
 2. [W3C CSS](https://jigsaw.w3.org/css-validator/) was used to ensure there were no CSS code errors in this project:
 	* [CSS](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration//documentation/code-verification-ms2/css-verified/jigsaw.w3.org_css-validator-Nicer-Tours-CSS.png)
 
-3. [JSHint](https://jshint.com/) was used for the verifaction of the JavaScript:
+3. [JSHint](https://jshint.com/) was used for the verifcation of the JavaScript:
 	* [tour-of-nice.js](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration//documentation/code-verification-ms2/javascript-verified/jshint.com-tour-of-nice-js.png)
 	* [tour-of-monaco.js](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration//documentation/code-verification-ms2/javascript-verified/jshint.com-tour-of-monaco-js.png)
 	* [tour-of-st-paul.js](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration//documentation/code-verification-ms2/javascript-verified/jshint.com-tour-of-st-paul-js.png)
@@ -190,7 +190,7 @@ The original idea for these pages was to have Infowindows with a link attached t
 
 <img src="documentation/testing-ms2/link-in-infowindow.png">
 
-However, it was found that the behaviour of the infowindow was inconsistent. If the link directs to an outside source (using the target"_blank" method in the HTML, the behaviour was always as expected. However, directing a link to an element id within the same page HTML, did not always work as expected. At times, the window being brought into view would not be brought to the top of the scroll position. Also, with the markers themselves acting as onclick events, it was decided that having links in the infowindows was overkill, and also contributed to the general "clutter" of the map being viewed. Thus, this idea was dropped.
+However, it was found that the behaviour of the infowindow was inconsistent. If the link directs to an outside source (using the target"_blank" method in the HTML), the behaviour was always as expected. However, directing a link to an element id within the same page HTML, did not always work as expected. At times, the window being brought into view would not be brought to the top of the scroll position. Also, with the markers themselves acting as onclick events, it was decided that having links in the infowindows was overkill, and also contributed to the general "clutter" of the map being viewed. Thus, this idea was dropped.
 
 #### On Click Events with Markers:
 
@@ -212,11 +212,11 @@ Each marker, as they are custom markers, has had key/value attributes added to t
 
 As can be seen above, the markers have lat/lng keys for their map position, as well as a title, description, and a request key to obtain information from the Google Places API.
 
-##### Places lacking desciptions:
+#### Places lacking desciptions:
 Since the vast majority of places in the Places API were lacking descriptions, the developer was faced with a choice: either get this information from a different API or write their own description, with information being taken from different sources. The developer looked at many different APIs - TripAdvisor, Booking, Yelp to name just a few of them. However, the descriptions offered were more review descriptions along the lines of "Nice place, I'd visit it again" rather than descriptions detailing the place itself. Thus the developer looked to the [wikipedia.com API](https://www.mediawiki.org/wiki/API:Main_page) for a solution. However, the developer found that he could almost always get a good description of the Place of Interest in question, but that the description was not always in English. For example, while the main cathedral in Nice has an entry in the French wikipedia, it does not have one in the English version. For viewers lacking an auto-translate on their device, this would not be ideal. Thus, the decision was taken to write a description, often taken from several sources and adapted, with each of those sources being credited in the code, as can be seen on line 96 of the above image.
 
 
-##### Places lacking images: 
+#### Places lacking images: 
 Within the main Google Maps JavaScript is the follosing code to retrieve image from their JSON listings:
 
 <img src="documentation/testing-ms2/image-code.png">
@@ -231,24 +231,68 @@ While if a "general tour" page had more than one place lacking an image in the P
 
 Where this second solution was used, the extra key/value can be seen below:
 
-<img src="documentation/testing-ms2/place-without-image-key-code.png">
+<img src="documentation/testing-ms2/places-without-image-key-code.png">
 
 Where either of these solutions has been used, the source of the image is credited within the code and is viewable on the user's device in small print within the description.
 
-##### Places lacking websites:
+#### Places lacking websites:
 Again, as above, it is almost always the case that a street, a square, or a village does not have a listing in the Google Places API. Thus gain the developer was left with a choice: either write code that sent the viewer to a search engine and allow the viewers to research the place themselves, or to state on the page that the place listed does not have a website.
 
 It was decided that the latter of these options was the best idea, as feedback indicated that going having a "Find Out More" button for that listing implied that there is a website. It was felt by the developer also that the point of the website is to keep viewers on this website rather than possibly have the viewer lose interest when being directed elsewhere. Thus, where the Place of Interest does not have a website, the JSON request in the marker's key/values should not include a search for a website, and that the button in the HTML code (within the JavaScript code) should be replaced with a different element. 
 
 An example of the JSON request for a location without website:
 
-<img src="documentation/testing-ms2/place-without-website-key-code.png">
+<img src="documentation/testing-ms2/places-without-website-key-code.png">
 
 The code within the Google Maps funcion:
 
-<img src="documentation/testing-ms2/place-without-website-key-code.png">
+<img src="documentation/testing-ms2/places-without-website-key-code.png">
 
 Since there is a distinct possibility that certain places contained in Nicer Tours currently without websites may indeed have a website in the near future - the city of Nice has applied for a UNESCO World Heritage Listing for the Promenade des Anglais, for example - it was decided to simply change the button element to a paragraph element without altering the classes within the element, for ease of to develpment when these places do eventually get their websites. However, the key/value within the JSON request was removed to guard against any spurious listing that might appear in the Google Places API.
+
+#### Places lacking reviews:
+Similarly to the above situations, not all Google Places contain reviews. To over come this, either the key/value for the JSON request for the Place in question was amended (as is the case for the Promenade des Anglais, which contained a Rating value but no review and did not look good on the publiched page), or the key/value was left intact (in the event people do leave a review in the future) and the Google Maps function was amended.
+The image below shows the original code for getting the Google Place review:
+
+<img src="documentation/testing-ms2/reviews.png">
+
+While this image shows the code added to ensure that if a Place has no review, this is mentioned in the rendered version. The original code is within the else statement:
+
+<img src="documentation/testing-ms2/reviews-missing.png">
+
+Each of the above, and the jQuery code to ensure the buttons work as expectd has been extensively tested by both the developer and the public. Eliminating the elements when they are missing from a Google Place has cleared all errors logged to the console.
+
+### Google Maps JavaScript code, Create Your Tour:
+The points above apply also for the "Create Your Tour" page, however there are also some distinct code elements that are worth mentioning here.
+
+#### Searching from the searchbar:
+As stated above, Google Places sometimes contains duplicate entries. While developing this website, the developer was occasionally finding console errors being thrown while searching for a place and not selecting a place from the dropdown menu. To eliminate these errors, which seem to be coming from the Google Places API itself, the developer has both mentioned within the HTML that the reader should choose from the dropdown menu, and within the JavaScript code for that page.
+
+The images below show the inserted code:
+<img src="documentation/testing-ms2/choose-from-dropdown-html.png">
+<img src="documentation/testing-ms2/choose-from-dropdown-js-alert.png">
+
+#### Add To Itinerary element:
+While this page was being tested by the public, the developer received messages saying that the popup detailing the items added to the itinerary were being duplicated.
+
+The original JavaScript code for this part of the published page is beneath:
+<img src="documentation/testing-ms2/place-added-to-itinerary-original-code.png">
+
+The developer looked into this and realised that since sessionStorage saves values as strings, while the "Added To Itinerary" alert only displays each added once, when it came to retrieve these entries to be displayed in the "Send Your Message" popup, places were being duplcated. The images below show the effect.
+
+Place added alert displays as it should:
+<img src="documentation/testing-ms2/place-added-alert.png">
+
+Send Itinerary popup duplicates entries:
+<img src="documentation/testing-ms2/send-itinerary-popup.png">
+
+The developer toyed with the idea of creating empty keys for the key/values within sessionStorage, as shown below:
+<img src="documentation/testing-ms2/new-key-sessionStorage.png">
+
+However, if the developer created ten keys, what would happen if one day a furure client wants an itinerary with eleven places? The devloper realised that the message popup would then duplicate again. So, another iddea was needed. After many hours of research, the devloper found a piece of code on StackOverflow ([link here](https://stackoverflow.com/a/16844054/14773450)) that filters out duplicated strings within the sessionStorage Object:
+<img src="documentation/testing-ms2/filter-duplicates-from-sessionStorage.png">
+
+After changing the alert and message popup to contain the variable `removeRepeatedEntries` rather than `placeAddedToItinerary`, the developer tested this code both in console and on the published page. This elegant piece of code solved the duplicate entries appearing issue.
 
 ## Lighthouse Results
 Many of the results seen in the Lighthouse files are due to elements outside of this website:
@@ -266,6 +310,10 @@ Links in question are Font Awesome icons
 
 5. Browser error logged to Console:
 This browser error is due to sessionStorage being empty until it is filled from entries in the input elements on the [Book Now](https://8000-dabd8e84-22f4-49e8-973f-a1efde410b00.ws-eu03.gitpod.io/book-your-tour.html) page.
+
+
+
+
 
 
 ## Deployment

@@ -31,7 +31,7 @@ function initMap() {
                     in Paris.</p>`,
         request: {
             placeId: "ChIJyRztG1fRzRIRBeFRpvLFAW4",
-            fields: ["name", "reviews", "rating", "photos", "website", "place_id", "formatted_address"]
+            fields: ["name", "photos", "website", "place_id", "formatted_address"]
         }
     };
     
