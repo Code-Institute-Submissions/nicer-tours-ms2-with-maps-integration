@@ -231,7 +231,7 @@ While if a "general tour" page had more than one place lacking an image in the P
 
 Where this second solution was used, the extra key/value can be seen below:
 
-<img src="documentation/testing-ms2/places-without-image-key-code.png">
+<img src="documentation/testing-ms2/place-without-image-key-code.png">
 
 Where either of these solutions has been used, the source of the image is credited within the code and is viewable on the user's device in small print within the description.
 
@@ -242,11 +242,11 @@ It was decided that the latter of these options was the best idea, as feedback i
 
 An example of the JSON request for a location without website:
 
-<img src="documentation/testing-ms2/places-without-website-key-code.png">
+<img src="documentation/testing-ms2/place-without-website-key-code.png">
 
 The code within the Google Maps funcion:
 
-<img src="documentation/testing-ms2/places-without-website-key-code.png">
+<img src="documentation/testing-ms2/place-without-website-api-code.png">
 
 Since there is a distinct possibility that certain places contained in Nicer Tours currently without websites may indeed have a website in the near future - the city of Nice has applied for a UNESCO World Heritage Listing for the Promenade des Anglais, for example - it was decided to simply change the button element to a paragraph element without altering the classes within the element, for ease of to develpment when these places do eventually get their websites. However, the key/value within the JSON request was removed to guard against any spurious listing that might appear in the Google Places API.
 
