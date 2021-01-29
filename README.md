@@ -231,7 +231,7 @@ While if a "general tour" page had more than one place lacking an image in the P
 
 Where this second solution was used, the extra key/value can be seen below:
 
-<img src="documentation/testing-ms2/places-without-image-key-code.png">
+<img src="documentation/testing-ms2/place-without-image-key-code.png">
 
 Where either of these solutions has been used, the source of the image is credited within the code and is viewable on the user's device in small print within the description.
 
