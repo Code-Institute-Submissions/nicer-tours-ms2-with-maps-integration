@@ -201,19 +201,28 @@ would like to visit.
             Beneath is a map with markers, and upon each click of the marker, the user can find out about that particular Place of Interest and see a photo of it. 
             Should the user wish, from here, he or she may click on the "Reviews" or "Find Out More" buttons, where they are available. Not all Places in the Google Places API 
             have reviews or websites, thus the user is only presented with these buttons where the element exists in Google's database. 
-			- On smaller devices, that is from tablet portrait orientation and smaller, the user sees only the markers, to keep the map itself uncluttered.
+            [Upon clicking a place button: public tour pages](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/user-stories-screen-shots/public-tour-button-clicked.png)
+            [All details available in Google Places API: public tour pages](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/marker-clicked-all-options-available.png)
+            [No website available in Google Places API: public tour pages](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/marker-clicked-no-website.png)
+            [No reviews available in Google Places API: public tour pages](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/marker-clicked-no-reviews.png)
+			- On tablet portrait orientation screen size and smaller, the user sees only the markers, to keep the map itself uncluttered.
+            [Only markers on smaller devices](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/marker-no-labels-for small-devices.png)
 			- On larger devices - tablet landscape orientation and higher - the user sees both the marker and the name of that specific Point of Interest. 
             The extra space of a larger screen allows for this and offers an enhanced user experience.
 			- Upon opening the "Create Your Own Tour" page, the user has a brief explanation of how to use the map below: the user can see clearly how to operate the map search 
             bar and how to select an item from the dropdown menu.
 			- The more attentive reader may notice - even though it is also stated in the text above the map - that the results being displayed within the dropdown are biased 
             towards the geographical confines of the map itself.
+            [Location bias for map](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/location-bias.png)
 			- Once a specific Point of Interest has been chosen from the dropdown menu, the user is then presented with photos and reviews of the Place. Again, due to the occasional 
             limitations of the Google Places API, ir specific details are not available - no reviews, for example - the user is told so.
+            [Details missing for Google Place](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/place-search-no-place.png)
 			- The user can now choose, should they so wish, to add that specific Place to their itinerary. Upon doing so, the user is alerted to the fact that it has indeed been added.
+            [Place added to itinerary](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/added-to-itinerary.png)
 			- If the user changes their mind about their choices, they also have the option of clearing their entries via the "Clear Itinerary" button.
 			- Once the user is satisfied with their choices, the user can then send -  without having to leave the page to compose an email - a message to Nicer Tours. Within the 
             message text of the popup that appears, the user can clearly see the choices they have made, and are able to edit this message should they so wish.
+            [Send itinerary popup](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/send-itinerary.png)
 			- Upon sending the message, the user is directed to a page which clearly states that the message has been received.
 
     	4) As a first time visitor to the website and perhaps to the geographical area covered in the site, and being on vacation, I do not want to feel pressured to buy. 
