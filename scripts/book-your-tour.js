@@ -45,6 +45,7 @@ $("#t-and-c").on("change", function() {
 
 $(".btn-go-to-payment").on("click", function() {
     $(".required").each(function() {
+        // Thanks to Aaron Sinnott of Code Institute for the next line of code
         if ($('#booking-form').is(':invalid') != 0) {
             doThis();
             return false;
