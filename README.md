@@ -1,4 +1,4 @@
-<h1 align="center"><a href="https://justin-sawyer.github.io/nicer-tours/index.html">Nicer Tours</a></h1>
+<h1 align="center"><a href="https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/index.html">Nicer Tours</a></h1>
 
 <img src="documentation/image-aid/screenshot.png">
 
@@ -63,43 +63,43 @@ amongst the most fashionable of destinations.
         The website is designed to entice the user to either take a tour, to dream of their upcoming vacation or to tempt first time users to choose Nice and the *Côte d'Azur* for their next vacation destination. It is for this reason that wide panoramic photos have been used for the banners to each page, while scrolling images (carousels) have been used as a further navigational aid on the home page.
 
 - ### Wireframes:
-    [Home page for Desktop](https://justin-sawyer.github.io/nicer-tours/documentation/wireframe/desktop-home.png)
+    [Home page for Desktop](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/wireframe/desktop-home.png)
 
-    [Public Tours for Desktop - first site version](https://justin-sawyer.github.io/nicer-tours/documentation/wireframe/desktop-tours.png)
+    [Public Tours for Desktop - first site version](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/wireframe/desktop-tours.png)
 
-	[Public Tours for Desktop - addition of Google Maps  - second site version](https://justin-sawyer.github.io/nicer-tours/documentation/wireframe/desktop-tour-pages-after-button-press-to-reveal-google-map.png)
+	[Public Tours for Desktop - addition of Google Maps  - second site version](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/wireframe/desktop-tour-pages-after-button-press-to-reveal-google-map.png)
 
-	[Public Tours for Desktop - addition of description section - second site version](https://justin-sawyer.github.io/nicer-tours/documentation/wireframe/desktop-tour-pages-upon-marker-click-desktop.png)
+	[Public Tours for Desktop - addition of description section - second site version](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/wireframe/desktop-tour-pages-upon-marker-click-desktop.png)
 
-	[Public Tours for Desktop - addition of reviews section - second site version](https://justin-sawyer.github.io/nicer-tours/documentation/wireframe/desktop-tour-pages-reviews-button-clicked.png)
+	[Public Tours for Desktop - addition of reviews section - second site version](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/wireframe/desktop-tour-pages-reviews-button-clicked.png)
 
-	[Create Your Own Tours for Desktop - new page](https://justin-sawyer.github.io/nicer-tours/documentation/wireframe/desktop-personal-tours-create-your-own-tour-opening-view.png)
+	[Create Your Own Tours for Desktop - new page](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/wireframe/desktop-personal-tours-create-your-own-tour-opening-view.png)
 
-	[Create Your Own Tours for Desktop - after entering search value in Google Maps](https://justin-sawyer.github.io/nicer-tours/documentation/wireframe/desktop-personal-tours-value-added-to-search.png)
+	[Create Your Own Tours for Desktop - after entering search value in Google Maps](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/wireframe/desktop-personal-tours-value-added-to-search.png)
 
-	[Create Your Own Tours for Desktop - after adding to itinerary](https://justin-sawyer.github.io/nicer-tours/documentation/wireframe/desktop-personal-tours-popup.png)
+	[Create Your Own Tours for Desktop - after adding to itinerary](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/wireframe/desktop-personal-tours-popup.png)
 
-	[Create Your Own Tours for Desktop - after clicking "Send Us Your Itinerary" button](https://justin-sawyer.github.io/nicer-tours/documentation/wireframe/desktop-personal-tours-modal.png)
+	[Create Your Own Tours for Desktop - after clicking "Send Us Your Itinerary" button](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/wireframe/desktop-personal-tours-modal.png)
 
-    [Book Now for Desktop](https://justin-sawyer.github.io/nicer-tours/documentation/wireframe/desktop-book-now.png)
+    [Book Now for Desktop](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/wireframe/desktop-book-now.png)
 
-    [Home page for Mobile](https://justin-sawyer.github.io/nicer-tours/documentation/wireframe/mobile-home.png)
+    [Home page for Mobile](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/wireframe/mobile-home.png)
 
-    [Public Tours for Mobile - first site version](https://justin-sawyer.github.io/nicer-tours/documentation/wireframe/mobile-tours.png)
+    [Public Tours for Mobile - first site version](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/wireframe/mobile-tours.png)
 
-	[Public Tours for Mobile - addition of description section - second site version](https://justin-sawyer.github.io/nicer-tours/documentation/wireframe/mobile-after-marker-click.png)
+	[Public Tours for Mobile - addition of description section - second site version](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/wireframe/mobile-after-marker-click.png)
 
-	[Public Tours for Mobile - addition of reviews section - second site version](https://justin-sawyer.github.io/nicer-tours/documentation/wireframe/mobile-after-review-click.png)
+	[Public Tours for Mobile - addition of reviews section - second site version](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/wireframe/mobile-after-review-click.png)
 
-	[Create Your Own Tours for Mobile - new page](https://justin-sawyer.github.io/nicer-tours/documentation/wireframe/mobile-create-your-own-tour-opening-view.png)
+	[Create Your Own Tours for Mobile - new page](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/wireframe/mobile-create-your-own-tour-opening-view.png)
 
-	[Create Your Own Tours for Mobile - after entering search value in Google Maps](https://justin-sawyer.github.io/nicer-tours/documentation/wireframe/mobile-value-enetered-in-map.png)
+	[Create Your Own Tours for Mobile - after entering search value in Google Maps](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/wireframe/mobile-value-enetered-in-map.png)
 
-	[Create Your Own Tours for Mobile - after adding to itinerary](https://justin-sawyer.github.io/nicer-tours/documentation/wireframe/mobile-popup.png)
+	[Create Your Own Tours for Mobile - after adding to itinerary](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/wireframe/mobile-popup.png)
 
-	[Create Your Own Tours for Mobile - after clicking "Send Us Your Itinerary" button](https://justin-sawyer.github.io/nicer-tours/documentation/wireframe/mobile-popup.png)
+	[Create Your Own Tours for Mobile - after clicking "Send Us Your Itinerary" button](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/wireframe/mobile-popup.png)
 
-    [Book Now for Mobile](https://justin-sawyer.github.io/nicer-tours/documentation/wireframe/mobile-book-now.png)
+    [Book Now for Mobile](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/wireframe/mobile-book-now.png)
 
 ## Features:
 -	This website is fully responsive.
@@ -426,7 +426,7 @@ This browser error is due to sessionStorage being empty until it is filled from 
 
 	<img src="documentation/deployment-screen-shots/github-pages.png">
 
-	4) The page will refresh. Scroll down again to GitHub Pages and select the now live [link](https://justin-sawyer.github.io/nicer-tours/index.html):
+	4) The page will refresh. Scroll down again to GitHub Pages and select the now live [link](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/index.html):
 
 	<img src="documentation/deployment-screen-shots/link.png">
 
