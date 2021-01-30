@@ -150,279 +150,388 @@ amongst the most fashionable of destinations.
 	[Google Maps](https://developers.google.com/maps/documentation/javascript/overview) and [Places](https://developers.google.com/places/web-service/overview) was used extensively throughout this project because of its familiarity with end-users.
 
 ## Testing
+- ### Testing User Stories from User Experience (UX) Section
+	- #### First Time Visitor Goals
+		1) 1) As a first time visitor, I am either planning or am on my vacation in Nice, France and I want to visit a website that informs me about 
+        the most interesting sights and places I can visit while on this vacation.
+        	-	Upon opening this website, the user is presented with a stunning banner image of the Bay of Angels. 
+        	-	Within the navigation menu on desktop, the user can clearly discern three "must-see" places, and is led to them via this menu. 
+            [Desktop Navigation](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/user-stories-screen-shots/nav-menu-desktop.png)
+        	-	Upon opening this website on mobile, although the navigation menu is hidden by the "burger” icon, the user can still clearly see the most interesting 
+            places to visit, since the 3 carousels are directly beneath the main banner image. A tag-line for each place is followed by a link that allows the user to discover 
+            more about their choice of destination. (It is precisely for this reason that the Call-to-Action is positioned beneath the carousels on smaller devices.) 
+            [Tablet Navigation]((https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/user-stories-screen-shots/tour-page-info-expand-and-book-buttons-desktop.png)
+
+    	2) I want to have my interest piqued while I view the website, and thus choose to make a booking for a tour.
+        	-	The user's interest is piqued, but not overwhelmed. This is achieved tin different ways, depending on the screen size the user uses:
+            -	On larger devices (desktops and tablets), the user is presented with a carousel of images of the destination, with a brief summary of 
+            the place itself. Should the user wish to discover more within the site page, each white background description button expands to reveal more information. 
+            To the left, the user can see two blue buttons, one of which is called "Book Now!" and leads the user to the booking page: 
+            [Desktop Book Now button, tour pages ]((https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/user-stories-screen-shots/tour-page-info-expand-and-book-buttons-desktop.png)
+            -   On smaller mobile devices (telephones rather than tablets), the user is presented with the same carousel, a simple tag line and the description buttons expand to 
+            reveal more information. Similarly, beneath the tour departure times information, the user can be taken to the booking page via the blue "Book Now!" button: 
+            [Smartphone Book Now button, tour pages](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/user-stories-screen-shots/tour-page-info-expand-and-book-buttons-mobile.png)
+
+		3) I have perhaps been directed here by reviews seen online on agency sites such as TripAdvisor or Viator. While these sites are very good at providing reviews of services offered, they are not designed to offer in-depth details of what exactly a tour may consist of. Before I decide to book a tour, I would like to find out more about some of the places I will see on each tour. Alternatively, if nothing suits my tastes, I would like the possibility of creating my own personal tour.
+
+			- Upon opening each of the "Public Tour" pages, the user is presented with the same layout as seen in v1.0 of this website: the general description of the city tout that they may decide to reserve. However, upon clicking each of the white "in-depth" buttons the user is presented with details of that *area* of the city. Beneath is a map with markers, and upon each click of the marker, the user can find out about that particular Place of Interest and see a photo of it. Should the user wish, from here, he or she may click on the "Reviews" or "Find Out More" buttons, where they are available. Not all Places in the Google Places API have reviews or websites, thus the user is only presented with these buttons where the element exists in Google's database. 
+			- On smaller devices, that is from tablet portrait orientation and smaller, the user sees only the markers, to keep the map itself uncluttered.
+			- On larger devices - tablet landscape orientation and higher - the user sees both the marker and the name of that specific Point of Interest. The extra space of a larger screen allows for this and offers an enhanced user experience.
+			- Upon opening the "Create Your Own Tour" page, the user has a brief explanation of how to use the map below: the user can see clearly how to operate the map search bar and how to select an item from the dropdown menu.
+			- The more attentive reader may notice - even though it is also stated in the text above the map - that the results being displayed within the dropdown are biased towards the geographical confines of the map itself.
+			- Once a specific Point of Interest has been chosen from the dropdown menu, the user is then presented with photos and reviews of the Place. Again, due to the occasional limitations of the Google Places API, ir specific details are not available - no reviews, for example - the user is told so.
+			- The user can now choose, should they so wish, to add that specific Place to their itinerary. Upon doing so, the user is alerted to the fact that it has indeed been added.
+			- If the user changes their mind about their choices, they also have the option of clearing their entries via the "Clear Itinerary" button.
+			- Once the user is satisfied with their choices, the user can then send -  without having to leave the page to compose an email - a message to Nicer Tours. Within the message text of the popup that appears, the user can clearly see the choices they have made, and are able to edit this message should they so wish.
+			- Upon sending the message, the user is directed to a page which clearly states that the message has been received.
+
+    	4) As a first time visitor to the website and perhaps to the geographical area covered in the site, and being on vacation, I do not want to feel pressured to buy. 
+        However a little special offer may help me choose this company rather than another.
+        	-	Since the first time visitor is most likely to be accessing the site on a smaller device, the visitor has access first and foremost to the destinations. 
+            From each destination page, should the user choose, they can make a booking. 
+        	-	The Call-to-Action on smaller devices is situated beneath the carousels precisely to hint, rather than lead. There IS the possibility of a little offer, 
+            should the user choose to accept it. [Smaller device "Call-to-Action" prominence, home page](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/user-stories-screen-shots/call-to-action-prominence-home-home-page-portable-devices.png)
+			- The Call-to-Action is also repeated, but this time more prominently, on the page where the offer applies. 
+            It is not a repetitive pop up screaming from each page, but rather, a simple reminder. 
+            [All devices "Call-to-Action" prominence, tour pages](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/user-stories-screen-shots/call-to-action-prominence-home-tour-page-all-devices.png)
+			- Equally, it is for this reason that the booking page is not featured in the top level navigation links.
+
+    	5) I want to be able to navigate through the website easily, and be prompted where necessary to either contact the site creators (and service vendor) or make a booking 
+        easily if I choose to.
+        	-	From experience with people of an elder generation, the carousel beneath the banner image is very important for ease of navigation. 
+            The developer has had feedback from numerous people of an elder generation that they still are not used to navigating through the burger icon. 
+            The carousels also allow for growth within the business - as new tours are developed and marketed, each carousel can be replaced with what is currently 
+            the biggest seller, or most appealing tour. Accordingly, this allows for the navigation menu (whether as an icon, or as a text menu) to grow, into possible 
+            subsections or destinations (for example, half day tours, full day tours, private tours, shore excursions for cruise ship passengers…)
+        	-	The buttons in the Call-to-Action on the home page allows the customer to note the offer code by pressing the Discount Code button, find out more 
+            (directs to the tour page in question, and thus this button is absent in the tour page Call-to-Action) and make a booking from the same place: 
+            [Call-to-Action buttons, tour pages](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/user-stories-screen-shots/call-to-action-buttons-home-page.png)
+        	-	From each tour page, should the user wish, the possibility to either contact the site creator or make a booking is clearly presented with bold blue buttons. 
+            [Desktop Contact Us button, tour pages](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/user-stories-screen-shots/tour-page-info-expand-and-book-buttons-desktop.png)
+        	-	Similarly, the footer section of each page is interactive: 
+            	- Each icon links to something, whether that is Facebook or WhatsApp;
+            	- The contact email address and telephone numbers are live linked;
+            	- The destinations are listed and are live linked.
+				- [Footer, all pages](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/user-stories-screen-shots/footer.png)
+
+    	6) As a first time visitor who is also on vacation, I want to be sure that I have made the right choice of tour company, so customer reviews and social comments about 
+        the company are very important.
+        	-	On the home page, whether on smaller devices or larger ones, there are some clearly displayed customer reviews. These, of course, can be added to over time. 
+            Eventually, it may even be advantageous to add a reviews page to the site, hence there is a link to send in reviews with photos of the customers on the tour as 
+            well as links to review sites such as TripAdvisor: 
+            ["Review us" links, home page](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/user-stories-screen-shots/reviews-section-home-page.png)
+        	-	Within the footer on each page, the visitor has access to the company’s Facebook, Instagram, Twitter and (most importantly) TripAdvisor pages. 
+            These pages offer unbiased reviews, and are openly accessible to eventual customers: 
+            [Social links, all pages](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/user-stories-screen-shots/footer.png)
+
+	- #### Repeat Visitor Goals
+    	1) As a returning visitor, I want to be able to add my story to the many reviews I have seen on the website.
+        	-	The returning visitor should not need to access the destination pages in order to leave a review. But conversely, the visitor should be able to leave a 
+            review in different places, since reviews left directly with the site owners can be policed, and may thus be biased. Consequently, on the home page, the visitor 
+            has the option via prominent buttons to leave a review either on:
+            	- Facebook;
+            	- TripAdvisor;
+            	- Or via direct communication with the company itself.
+				- [Review Us directly or through social media](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/user-stories-screen-shots/review-us-directly-or-through-social-sites.png)
+
+    	2) As I will be returning to the site almost definitely after having taken a tour, I want to both be reminded of the fun I had, and also be able to inform others about the 
+        service offered by the company. Thus, good navigation and design are important, but so is the general informative nature of the services and sights offered on the site.
+        	-	Navigation has been discussed heavily for the first time visitor. Please see these points, as they are the same for the repeat visitor. 
+        	-	The design of the site, having as it does, easy to see access points via the bold blue buttons allows the repeat visitor to easily guide their “word-of-mouth” 
+            referrals to each section of the website.
+
+	- #### Frequent Visitor Goals
+    	1) As a frequent visitor, I will probably be a professional in the tourist industry, since most people visit specific areas on vacation once only.
+        	-	Most travel professionals use booking sites such as Viator. However, via Nicer Tours intended distribution of mail-shots to professionals, the professional will 
+            need to access the site itself in order to benefit from any special offers. It is partly for this that the discount popover has been included, along with the easy 
+            booking options on the book now page. This also means that there is a constant flow of traffic to the site, and as a result, new tour destinations or offers will 
+            be seen by a growing audience: 
+            [Call-to-Action with up-to-date current offers, home page](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/user-stories-screen-shots/call-to-action-current-offers.png)
+
+- ### Testing Code
+	- #### Tools Used:
+
+		1. [W3C HTML](https://validator.w3.org/) was used to verify the HTML code:
+			* [Index.html](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/code-verification-ms2/html-verified/validator.w3.org-index-html.png)	
+			* [tour-of-nice.html](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/code-verification-ms2/html-verified/validator.w3.org-tour-of-nice-html.png)
+			* [tour-of-monaco.html](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/code-verification-ms2/html-verified/validator.w3.org-tour-of-monaco-html.png)
+			* [tour-of-st-paul-de-vence.html](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/code-verification-ms2/html-verified/validator.w3.org-tour-of-st-paul-de-vence-html.png)
+			* [personal-tour.html](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/code-verification-ms2/html-verified/validator.w3.org-personal-tour-html.png)
+			* [book-now.html](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/code-verification-ms2/html-verified/validator.w3.org-book-now-html.png)
+			* [payment.html](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/code-verification-ms2/html-verified/validator.w3.org-pyment-html.png)
 
-This website was tested using the following tools:
+		2. [W3C CSS](https://jigsaw.w3.org/css-validator/) was used to ensure there were no CSS code errors in this project:
+			* [CSS](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/code-verification-ms2/css-verified/jigsaw.w3.org_css-validator-Nicer-Tours-CSS.png)
 
-1. [W3C HTML](https://validator.w3.org/) was used to verify the HTML code:
-	* [Index.html](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration//documentation/code-verification-ms2/html-verified/validator.w3.org-index-html.png)	
-	* [tour-of-nice.html](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration//documentation/code-verification-ms2/html-verified/validator.w3.org-tour-of-nice-html.png)
-	* [tour-of-monaco.html](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration//documentation/code-verification-ms2/html-verified/validator.w3.org-tour-of-monaco-html.png)
-	* [tour-of-st-paul-de-vence.html](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration//documentation/code-verification-ms2/html-verified/validator.w3.org-tour-of-st-paul-de-vence-html.png)
-	* [personal-tour.html](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration//documentation/code-verification-ms2/html-verified/validator.w3.org-personal-tour-html.png)
-	* [book-now.html](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration//documentation/code-verification-ms2/html-verified/validator.w3.org-book-now-html.png)
-	* [payment.html](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration//documentation/code-verification-ms2/html-verified/validator.w3.org-pyment-html.png)
+		3. [JSHint](https://jshint.com/) was used for the verification of the JavaScript:
+			* [tour-of-nice.js](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/code-verification-ms2/javascript-verified/jshint.com-tour-of-nice-js.png)
+			* [tour-of-monaco.js](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/code-verification-ms2/javascript-verified/jshint.com-tour-of-monaco-js.png)
+			* [tour-of-st-paul.js](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/code-verification-ms2/javascript-verified/jshint.com-tour-of-st-paul-js.png)
+			* [personal-tour.js](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/code-verification-ms2/javascript-verified/jshint.com-personal-tour-js.png)
+			* [sendEmail.js](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/code-verification-ms2/javascript-verified/jshint.com-sendEmail-js.png)
+			* [payment.js](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/code-verification-ms2/javascript-verified/jshint.com-payment-js.png)
+			* [make-payment.js](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/code-verification-ms2/javascript-verified/jshint.com-make-payment-js.png)
 
-2. [W3C CSS](https://jigsaw.w3.org/css-validator/) was used to ensure there were no CSS code errors in this project:
-	* [CSS](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration//documentation/code-verification-ms2/css-verified/jigsaw.w3.org_css-validator-Nicer-Tours-CSS.png)
+		4. Google Chrome's Dev Tool was used extensively while writing this website. The JavaScript was tested almost line by line, whether that be in Console (to check for general errors), in Applications (to check for errors in sessionStorage), or Sources (to find the reason(s) pieces of code were not working).
 
-3. [JSHint](https://jshint.com/) was used for the verification of the JavaScript:
-	* [tour-of-nice.js](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration//documentation/code-verification-ms2/javascript-verified/jshint.com-tour-of-nice-js.png)
-	* [tour-of-monaco.js](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration//documentation/code-verification-ms2/javascript-verified/jshint.com-tour-of-monaco-js.png)
-	* [tour-of-st-paul.js](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration//documentation/code-verification-ms2/javascript-verified/jshint.com-tour-of-st-paul-js.png)
-	* [personal-tour.js](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration//documentation/code-verification-ms2/javascript-verified/jshint.com-personal-tour-js.png)
-	* [sendEmail.js](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration//documentation/code-verification-ms2/javascript-verified/jshint.com-sendEmail-js.png)
-	* [payment.js](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration//documentation/code-verification-ms2/javascript-verified/jshint.com-payment-js.png)
-	* [make-payment.js](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration//documentation/code-verification-ms2/javascript-verified/jshint.com-make-payment-js.png)
+		5. The [Lighthouse plugin for Google Chrome](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk?hl) was used for speed checking and "tweaking" setting for maximal optimisation for web deployment.
+			* [index.html](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/code-verification-ms2/lighthouse/justin-sawyer.github.io_2021-01-28_index.html)
+			* [tour-of-nice.html](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/code-verification-ms2/lighthouse/justin-sawyer.github.io_2021-01-28_tour-of-nice.html)
+			* [tour-of-monaco.html](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/code-verification-ms2/lighthouse/justin-sawyer.github.io_2021-01-28_tour-of-monaco.html)
+			* [tour-of-st-paul-de-vence.html](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/code-verification-ms2/lighthouse/justin-sawyer.github.io_2021-01-28_tour-of-st-paul-de-vence.html)
+			* [personal-tour.html](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/code-verification-ms2/lighthouse/justin-sawyer.github.io_2021-01-28_personal-tour.html)
+			* [book-now.html](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/code-verification-ms2/lighthouse/justin-sawyer.github.io_2021-01-28_book-your-tour.html)
+			* [payment.html](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/code-verification-ms2/lighthouse/justin-sawyer.github.io_2021-01-28_payment.html)
 
-4. Google Chrome's Dev Tool was used extensively while writing this website. The JavaScript was tested almost line by line, whether that be in Console (to check for general errors), in Applications (to check for errors in sessionStorage), or Sources (to find the reason(s) pieces of code were not working).
+- ### Testing Code: Details
+	This project has been a labour of love and has taken many, many hours to complete. Code was tested exhaustively to check for errors and bugs:
 
-5. The [Lighthouse plugin for Google Chrome](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk?hl) was used for speed checking and "tweaking" setting for maximal optimisation for web deployment.
-	* [index.html](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/code-verification-ms2/lighthouse/justin-sawyer.github.io_2021-01-28_index.html)
-	* [tour-of-nice.html](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/code-verification-ms2/lighthouse/justin-sawyer.github.io_2021-01-28_tour-of-nice.html)
-	* [tour-of-monaco.html](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/code-verification-ms2/lighthouse/justin-sawyer.github.io_2021-01-28_tour-of-monaco.html)
-	* [tour-of-st-paul-de-vence.html](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/code-verification-ms2/lighthouse/justin-sawyer.github.io_2021-01-28_tour-of-st-paul-de-vence.html)
-	* [personal-tour.html](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/code-verification-ms2/lighthouse/justin-sawyer.github.io_2021-01-28_personal-tour.html)
-	* [book-now.html](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/code-verification-ms2/lighthouse/justin-sawyer.github.io_2021-01-28_book-your-tour.html)
-	* [payment.html](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/code-verification-ms2/lighthouse/justin-sawyer.github.io_2021-01-28_payment.html)
+	- ### Google Maps JavaScript code, Tours of Nice, Monaco and St-Paul de Vence:
 
-## Public Testing
+		The Google Maps code itself has been taken from the [Google Maps API](https://developers.google.com/maps/documentation/javascript/overview) but has been heavily modified to suit the needs of this website:
 
-## Code Testing
-This project has been a labour of love and has taken many, many hours to complete. Code was tested exhaustively to check for errors and bugs:
+		1. Markers and Infowindows:
 
-### Google Maps JavaScript code, Tours of Nice, Monaco and St-Paul de Vence:
+			The original idea for this site was to have Infowindows for each Point of interest on all screen sizes, whether mobile, tablet or desktop. However, it soon became clear that no matter how the map was zoomed upon first displaying online, this was not a practical solution for mobile screens: the Points of Interest being often very near to each other meant that the Infowindow was more often than not blocking other markers and/or Infowindows. A prime example of this can be seen below:
 
-The Google Maps code itself has been taken from the [Google Maps API](https://developers.google.com/maps/documentation/javascript/overview) but has been heavily modified to suit the needs of this website:
+			<img src="documentation/testing-ms2/markers-covered-original-map-size.png">
 
-#### Markers and Infowindows:
+			One solution for this was to have markers only for screen sizes of landscape view on tablets and higher. Thus, the original code from Google Maps API was changed from
 
-The original idea for this site was to have Infowindows for each Point of interest on all screen sizes, whether mobile, tablet or desktop. However, it soon became clear that no matter how the map was zoomed upon first displaying online, this was not a practical solution for mobile screens: the Points of Interest being often very near to each other meant that the Infowindow was more often than not blocking other markers and/or Infowindows. A prime example of this can be seen below:
+			<img src="documentation/testing-ms2/markers.png">
 
-<img src="documentation/testing-ms2/markers-covered-original-map-size.png">
+			to
 
-One solution for this was to have markers only for screen sizes of landscape view on tablets and higher. Thus, the original code from Google Maps API was changed from
+			<img src="documentation/testing-ms2/markers-map-size.png">
 
-<img src="documentation/testing-ms2/markers.png">
+			However, this still only solved half of the problem. The standard size of Google Maps has a landscape styled viewport, while many of the Places of Interest featured on Nicer Tours tours were more on a North-South axis. Thus the decision was taken to vary the size of the map height both depending on the screen size and of the Points of Interest being highlighted. Thus, outside of the Google Maps API code, jQuery was added. The jQuery was not added for a general map view, but for each section of the tour in question: Thus clicking on a certain button on the tour page will bring the map into view - that is, change its status from hidden to visible, adjust its size and orientation, adjust its centre point to make the markers (and/or Infowindows) appear in the most centralised position possible for each screen size, and make sure that each map is displayed within the viewer's screen - that is, once the viewer clicks the button, the page scrolls to the top of the buttons (keeping them visible on the screen) rather than having the map appear outside of the viewing scope of the device. The image below highlights this:
 
-to
+			<img src="documentation/testing-ms2/map-zoom.png">
 
-<img src="documentation/testing-ms2/markers-map-size.png">
+			It was decided to keep the CSS inline rather than creating classes and using the .addClass() command to ensure that the maps did not fall back to a default size. It was also decided that for each map view not to set a default map.setZoom() level if the map being viewed called for it, but rather have each screen size stating the map view for the same reason. 
 
-However, this still only solved half of the problem. The standard size of Google Maps has a landscape styled viewport, while many of the Places of Interest featured on Nicer Tours tours were more on a North-South axis. Thus the decision was taken to vary the size of the map height both depending on the screen size and of the Points of Interest being highlighted. Thus, outside of the Google Maps API code, jQuery was added. The jQuery was not added for a general map view, but for each section of the tour in question: Thus clicking on a certain button on the tour page will bring the map into view - that is, change its status from hidden to visible, adjust its size and orientation, adjust its centre point to make the markers (and/or Infowindows) appear in the most centralised position possible for each screen size, and make sure that each map is displayed within the viewer's screen - that is, once the viewer clicks the button, the page scrolls to the top of the buttons (keeping them visible on the screen) rather than having the map appear outside of the viewing scope of the device. The image below highlights this:
+			Whilst setting the map zoom levels and viewing the results using GitPods screen viewer, it was noticed that the central part of the map did not always centralise the markers for each zoom level. Thus, again, we can see in the image above that the map.setCenter() zoom levels have been adjusted for the best viewing experience for each screen size and orientation.
 
-<img src="documentation/testing-ms2/map-zoom.png">
+			Although the result will never be perfect - some Places of Interest are almost "next-door nieghbours" to each other - a good example of the viewing experience can be seen in this finished example, taken from the [Tour of St. Paul de Vence) page, from the white "St Paul de Vence" button:
 
-It was decided to keep the CSS inline rather than creating classes and using the .addClass() command to ensure that the maps did not fall back to a default size. It was also decided that for each map view not to set a default map.setZoom() level if the map being viewed called for it, but rather have each screen size stating the map view for the same reason. 
+			<img src="documentation/testing-ms2/markers-st-paul-mobile.png">
 
-Whilst setting the map zoom levels and viewing the results using GitPods screen viewer, it was noticed that the central part of the map did not always centralise the markers for each zoom level. Thus, again, we can see in the image above that the map.setCenter() zoom levels have been adjusted for the best viewing experience for each screen size and orientation.
+		2. Markers and viewports:
 
-Although the result will never be perfect - some Places of Interest are almost "next-door nieghbours" to each other - a good example of the viewing experience can be seen in this finished example, taken from the [Tour of St. Paul de Vence) page, from the white "St Paul de Vence" button:
+			The original idea for these pages was to have Infowindows with a link attached to them. Upon clicking these links, the user would be taken to an information window detailing a description of the place in question, with photos and reviews taken from the Google Maps API:
 
-<img src="documentation/testing-ms2/markers-st-paul-mobile.png">
+			<img src="documentation/testing-ms2/link-in-infowindow.png">
 
-#### Markers and viewports:
+			However, it was found that the behaviour of the infowindow was inconsistent. If the link directs to an outside source (using the target"_blank" method in the HTML), the behaviour was always as expected. However, directing a link to an element id within the same page HTML did not always work as expected. At times, the window being brought into view would not be brought to the top of the scroll position. Also, with the markers themselves acting as onclick events, it was decided that having links in the infowindows was overkill, and also contributed to the general "clutter" of the map being viewed. Thus, this idea was dropped.
 
-The original idea for these pages was to have Infowindows with a link attached to them. Upon clicking these links, the user would be taken to an information window detailing a description of the place in question, with photos and reviews taken from the Google Maps API:
+		3. On Click Events with Markers:
 
-<img src="documentation/testing-ms2/link-in-infowindow.png">
+			As can be seen in the online version of this website, clicking a marker on a map in these "general tour" pages descends the viewpoint to a photo, description, and certain buttons - Reviews, Find Out More, and Back To Map. However, the [Google Places API](https://developers.google.com/maps/documentation/javascript/places) is not a perfect source: 
 
-However, it was found that the behaviour of the infowindow was inconsistent. If the link directs to an outside source (using the target"_blank" method in the HTML), the behaviour was always as expected. However, directing a link to an element id within the same page HTML did not always work as expected. At times, the window being brought into view would not be brought to the top of the scroll position. Also, with the markers themselves acting as onclick events, it was decided that having links in the infowindows was overkill, and also contributed to the general "clutter" of the map being viewed. Thus, this idea was dropped.
+			Some places are listed twice as can be seen here:
 
-#### On Click Events with Markers:
+			<img src="documentation/testing-ms2/double-listing-example.png">
 
-As can be seen in the online version of this website, clicking a marker on a map in these "general tour" pages descends the viewpoint to a photo, description, and certain buttons - Reviews, Find Out More, and Back To Map. However, the [Google Places API](https://developers.google.com/maps/documentation/javascript/places) is not a perfect source: 
+			Others may not have reviews or photos associated with them. Prime examples of this are city squares. Google Maps and Places highlight primarily businesses and POINTS of interest rather than streets or geographic locations. And of course, streets and squares do not have websites associated with them!
 
-Some places are listed twice as can be seen here:
+			Further, it was discovered that almost all places in the Google Places API are lacking a decent description.
 
-<img src="documentation/testing-ms2/double-listing-example.png">
+			These were dealt with in the following ways:
 
-Others may not have reviews or photos associated with them. Prime examples of this are city squares. Google Maps and Places highlight primarily businesses and POINTS of interest rather than streets or geographic locations. And of course, streets and squares do not have websites associated with them!
+			Each marker, as they are custom markers, has had key/value attributes added to them, as can be seen below:
 
-Further, it was discovered that almost all places in the Google Places API are lacking a decent description.
+			<img src="documentation/testing-ms2/marker-keys.png">
 
-These were dealt with in the following ways:
+			As can be seen above, the markers have lat/lng keys for their map position, as well as a title, description, and a request key to obtain information from the Google Places API.
 
-Each marker, as they are custom markers, has had key/value attributes added to them, as can be seen below:
+		4. Places lacking desciptions:
 
-<img src="documentation/testing-ms2/marker-keys.png">
+			Since the vast majority of places in the Places API were lacking descriptions, the developer was faced with a choice: either get this information from a different API or write their own description, with information being taken from different sources. The developer looked at many different APIs - TripAdvisor, Booking, Yelp to name just a few of them. However, the descriptions offered were more review descriptions along the lines of "Nice place, I'd visit it again" rather than descriptions detailing the place itself. Thus the developer looked to the [wikipedia.com API](https://www.mediawiki.org/wiki/API:Main_page) for a solution. However, the developer found that he could almost always get a good description of the Place of Interest in question, but that the description was not always in English. For example, while the main cathedral in Nice has an entry in the French wikipedia, it does not have one in the English version. For viewers lacking an auto-translate on their device, this would not be ideal. Thus, the decision was taken to write a description, often taken from several sources and adapted, with each of those sources being credited in the code, as can be seen on line 96 of the above image.
 
-As can be seen above, the markers have lat/lng keys for their map position, as well as a title, description, and a request key to obtain information from the Google Places API.
 
-#### Places lacking desciptions:
-Since the vast majority of places in the Places API were lacking descriptions, the developer was faced with a choice: either get this information from a different API or write their own description, with information being taken from different sources. The developer looked at many different APIs - TripAdvisor, Booking, Yelp to name just a few of them. However, the descriptions offered were more review descriptions along the lines of "Nice place, I'd visit it again" rather than descriptions detailing the place itself. Thus the developer looked to the [wikipedia.com API](https://www.mediawiki.org/wiki/API:Main_page) for a solution. However, the developer found that he could almost always get a good description of the Place of Interest in question, but that the description was not always in English. For example, while the main cathedral in Nice has an entry in the French wikipedia, it does not have one in the English version. For viewers lacking an auto-translate on their device, this would not be ideal. Thus, the decision was taken to write a description, often taken from several sources and adapted, with each of those sources being credited in the code, as can be seen on line 96 of the above image.
+		5. Places lacking images: 
+		
+			Within the main Google Maps JavaScript is the following code to retrieve image from their JSON listings:
 
+			<img src="documentation/testing-ms2/image-code.png">
 
-#### Places lacking images: 
-Within the main Google Maps JavaScript is the following code to retrieve image from their JSON listings:
+			For those listings without images, one of two solutions was used: either to get a specific image URL or to add an extra key/value to the marker in question. Thus, for example, if the page being viewed was lacking an image for one specific location, the following code was used, with the original block of code housed inside the else statement:
 
-<img src="documentation/testing-ms2/image-code.png">
+			<img src="documentation/testing-ms2/place-without-image-code.png">
 
-For those listings without images, one of two solutions was used: either to get a specific image URL or to add an extra key/value to the marker in question. Thus, for example, if the page being viewed was lacking an image for one specific location, the following code was used, with the original block of code housed inside the else statement:
+			While if a "general tour" page had more than one place lacking an image in the Places API, the following block of code was written, again with the original code housed in the else statement:
 
-<img src="documentation/testing-ms2/place-without-image-code.png">
+			<img src="documentation/testing-ms2/places-without-image-code.png">
 
-While if a "general tour" page had more than one place lacking an image in the Places API, the following block of code was written, again with the original code housed in the else statement:
+			Where this second solution was used, the extra key/value can be seen below:
 
-<img src="documentation/testing-ms2/places-without-image-code.png">
+			<img src="documentation/testing-ms2/place-without-image-key-code.png">
 
-Where this second solution was used, the extra key/value can be seen below:
+			Where either of these solutions has been used, the source of the image is credited within the code and is viewable on the user's device in small print within the description.
 
-<img src="documentation/testing-ms2/place-without-image-key-code.png">
+		5. Places lacking websites:
 
-Where either of these solutions has been used, the source of the image is credited within the code and is viewable on the user's device in small print within the description.
+			Again, as above, it is almost always the case that a street, a square, or a village does not have a listing in the Google Places API. Thus gain the developer was left with a choice: either write code that sent the viewer to a search engine and allow the viewers to research the place themselves, or to state on the page that the place listed does not have a website.
 
-#### Places lacking websites:
-Again, as above, it is almost always the case that a street, a square, or a village does not have a listing in the Google Places API. Thus gain the developer was left with a choice: either write code that sent the viewer to a search engine and allow the viewers to research the place themselves, or to state on the page that the place listed does not have a website.
+			It was decided that the latter of these options was the best idea, as feedback indicated that going having a "Find Out More" button for that listing implied that there is a website. It was felt by the developer also that the point of the website is to keep viewers on this website rather than possibly have the viewer lose interest when being directed elsewhere. Thus, where the Place of Interest does not have a website, the JSON request in the marker's key/values should not include a search for a website, and that the button in the HTML code (within the JavaScript code) should be replaced with a different element. 
 
-It was decided that the latter of these options was the best idea, as feedback indicated that going having a "Find Out More" button for that listing implied that there is a website. It was felt by the developer also that the point of the website is to keep viewers on this website rather than possibly have the viewer lose interest when being directed elsewhere. Thus, where the Place of Interest does not have a website, the JSON request in the marker's key/values should not include a search for a website, and that the button in the HTML code (within the JavaScript code) should be replaced with a different element. 
+			An example of the JSON request for a location without website:
 
-An example of the JSON request for a location without website:
+			<img src="documentation/testing-ms2/place-without-website-code.png">
 
-<img src="documentation/testing-ms2/place-without-website-code.png">
+			The code within the Google Maps funcion:
 
-The code within the Google Maps funcion:
+			<img src="documentation/testing-ms2/place-without-website-api-code.png">
 
-<img src="documentation/testing-ms2/place-without-website-api-code.png">
+			Since there is a distinct possibility that certain places contained in Nicer Tours currently without websites may indeed have a website in the near future - the city of Nice has applied for a UNESCO World Heritage Listing for the Promenade des Anglais, for example - it was decided to simply change the button element to a paragraph element without altering the classes within the element, for ease of to development when these places do eventually get their websites. However, the key/value within the JSON request was removed to guard against any spurious listing that might appear in the Google Places API.
 
-Since there is a distinct possibility that certain places contained in Nicer Tours currently without websites may indeed have a website in the near future - the city of Nice has applied for a UNESCO World Heritage Listing for the Promenade des Anglais, for example - it was decided to simply change the button element to a paragraph element without altering the classes within the element, for ease of to development when these places do eventually get their websites. However, the key/value within the JSON request was removed to guard against any spurious listing that might appear in the Google Places API.
+		6. Places lacking reviews:
 
-#### Places lacking reviews:
-Similarly to the above situations, not all Google Places contain reviews. To overcome this, either the key/value for the JSON request for the Place in question was amended (as is the case for the Promenade des Anglais, which contained a Rating value but no review and did not look good on the published page), or the key/value was left intact (in the event people do leave a review in the future) and the Google Maps function was amended.
-The image below shows the original code for getting the Google Place review:
+			Similarly to the above situations, not all Google Places contain reviews. To overcome this, either the key/value for the JSON request for the Place in question was amended (as is the case for the Promenade des Anglais, which contained a Rating value but no review and did not look good on the published page), or the key/value was left intact (in the event people do leave a review in the future) and the Google Maps function was amended.
 
-<img src="documentation/testing-ms2/reviews.png">
+			The image below shows the original code for getting the Google Place review:
 
-While this image shows the code added to ensure that if a Place has no review, this is mentioned in the rendered version. The original code is within the else statement:
+			<img src="documentation/testing-ms2/reviews.png">
 
-<img src="documentation/testing-ms2/reviews-missing.png">
+			While this image shows the code added to ensure that if a Place has no review, this is mentioned in the rendered version. The original code is within the else statement:
 
-Each of the above, and the jQuery code to ensure the buttons work as expected has been extensively tested by both the developer and the public. Eliminating the elements when they are missing from a Google Place has cleared all errors logged to the console.
+			<img src="documentation/testing-ms2/reviews-missing.png">
 
-### Google Maps JavaScript code, Create Your Tour:
-The points above apply also for the "Create Your Tour" page, however there are also some distinct code elements that are worth mentioning here.
+			Each of the above, and the jQuery code to ensure the buttons work as expected has been extensively tested by both the developer and the public. Eliminating the elements when they are missing from a Google Place has cleared all errors logged to the console.
 
-#### Searching from the searchbar:
-As stated above, Google Places sometimes contains duplicate entries. While developing this website, the developer was occasionally finding console errors being thrown while searching for a place and not selecting a place from the dropdown menu. To eliminate these errors, which seem to be coming from the Google Places API itself, the developer has both mentioned within the HTML that the reader should choose from the dropdown menu, and within the JavaScript code for that page.
+	- ### Google Maps JavaScript code, Create Your Tour:
+		The points above apply also for the "Create Your Tour" page, however there are also some distinct code elements that are worth mentioning here.
 
-The images below show the inserted code:
-<img src="documentation/testing-ms2/choose-from-dropdown-html.png">
-<img src="documentation/testing-ms2/choose-from-dropdown-js-alert.png">
+		1. Searching from the searchbar:
+			
+			As stated above, Google Places sometimes contains duplicate entries. While developing this website, the developer was occasionally finding console errors being thrown while searching for a place and not selecting a place from the dropdown menu. To eliminate these errors, which seem to be coming from the Google Places API itself, the developer has both mentioned within the HTML that the reader should choose from the dropdown menu, and within the JavaScript code for that page.
 
-#### Add To Itinerary element:
-While this page was being tested by the public, the developer received messages saying that the popup detailing the items added to the itinerary were being duplicated.
+			The images below show the inserted code:
+			<img src="documentation/testing-ms2/choose-from-dropdown-html.png">
+			<img src="documentation/testing-ms2/choose-from-dropdown-js-alert.png">
 
-The original JavaScript code for this part of the published page is beneath:
-<img src="documentation/testing-ms2/place-added-to-itinerary-original-code.png">
+		2. Add To Itinerary element:
 
-The developer looked into this and realised that since sessionStorage saves values as strings, while the "Added To Itinerary" alert only displays each added value once, when it came to retrieving these entries to be displayed in the "Send Your Message" popup, places were being duplicated. The images below show the effect.
+			While this page was being tested by the public, the developer received messages saying that the popup detailing the items added to the itinerary were being duplicated.
 
-Place added alert displays as it should:
-<img src="documentation/testing-ms2/place-added-alert.png">
+			The original JavaScript code for this part of the published page is beneath:
+			<img src="documentation/testing-ms2/place-added-to-itinerary-original-code.png">
 
-Send Itinerary popup duplicates entries:
-<img src="documentation/testing-ms2/send-itinerary-popup.png">
+			The developer looked into this and realised that since sessionStorage saves values as strings, while the "Added To Itinerary" alert only displays each added value once, when it came to retrieving these entries to be displayed in the "Send Your Message" popup, places were being duplicated. The images below show the effect.
 
-The developer toyed with the idea of creating empty keys for the key/values within sessionStorage, as shown below:
-<img src="documentation/testing-ms2/new-key-sessionStorage.png">
+			Place added alert displays as it should:
+			<img src="documentation/testing-ms2/place-added-alert.png">
 
-However, if the developer created ten keys, what would happen if one day a future client wants an itinerary with eleven places? The developer realised that the message popup would then duplicate again. So, another idea was needed. After many hours of research, the developer found a piece of code on StackOverflow ([link here](https://stackoverflow.com/a/16844054/14773450)) that filters out duplicated strings within the sessionStorage Object:
-<img src="documentation/testing-ms2/filter-duplicates-from-sessionStorage.png">
+			Send Itinerary popup duplicates entries:
+			<img src="documentation/testing-ms2/send-itinerary-popup.png">
 
-After changing the alert and message popup to contain the variable `removeRepeatedEntries` rather than `placeAddedToItinerary`, the developer tested this code both in console and on the published page. This elegant piece of code solved the duplicate entries appearing issue.
+			The developer toyed with the idea of creating empty keys for the key/values within sessionStorage, as shown below:
+			<img src="documentation/testing-ms2/new-key-sessionStorage.png">
 
-Thus, the final code for this part of the "Create Your Tour" page is as follows:
-<img src="documentation/testing-ms2/add-to-itinerary-final-code.png">
+			However, if the developer created ten keys, what would happen if one day a future client wants an itinerary with eleven places? The developer realised that the message popup would then duplicate again. So, another idea was needed. After many hours of research, the developer found a piece of code on StackOverflow ([link here](https://stackoverflow.com/a/16844054/14773450)) that filters out duplicated strings within the sessionStorage Object:
+			<img src="documentation/testing-ms2/filter-duplicates-from-sessionStorage.png">
 
-### Book Now page
-The developer applied many of the lessons learned from the previous testing for these pages. However, upon testing the "Proceed to Payment" button on the "Book Now" page, there were some strange, unexpected results.
+			After changing the alert and message popup to contain the variable `removeRepeatedEntries` rather than `placeAddedToItinerary`, the developer tested this code both in console and on the published page. This elegant piece of code solved the duplicate entries appearing issue.
 
-The intended result is that once the future customer has filled in the REQUIRED fields in the booking form, an alert should be displayed and upon clicking "OK" in that alert, the customer should be taken to the "Payment" page.
+			Thus, the final code for this part of the "Create Your Tour" page is as follows:
+			<img src="documentation/testing-ms2/add-to-itinerary-final-code.png">
 
-Otherwise, if any of the required fields are empty, a different alert should be displayed, asking the customer to fill in all the required fields.
+	- ### Book Now page
+		The developer applied many of the lessons learned from the previous testing for these pages. However, upon testing the "Proceed to Payment" button on the "Book Now" page, there were some strange, unexpected results.
 
-Alert when all fields blank:
-<img src="documentation/testing-ms2/all-fields-blank-result.png">
+		The intended result is that once the future customer has filled in the REQUIRED fields in the booking form, an alert should be displayed and upon clicking "OK" in that alert, the customer should be taken to the "Payment" page.
 
-Alert when all fields completed:
-<img src="documentation/testing-ms2/all-fields-completed.png">
+		Otherwise, if any of the required fields are empty, a different alert should be displayed, asking the customer to fill in all the required fields.
 
-But, with the original code, when all required fields were filled, the correct alert was displayed. As was the case when none of the required fields were filled.
+		Alert when all fields blank:
+		<img src="documentation/testing-ms2/all-fields-blank-result.png">
 
-Unfortunately, however, when some - but not all - of the required fields were filled, the customer was receiving the incorrect alert and was thus able to access the payment page, but then was unable to proceed any further:
-<img src="documentation/testing-ms2/some-fields-blank.png">
+		Alert when all fields completed:
+		<img src="documentation/testing-ms2/all-fields-completed.png">
 
-The original code for this was adapted from code found on StackOverFlow ([link here](https://stackoverflow.com/a/47532256/14773450)) and is shown beneath:
-<img src="documentation/testing-ms2/required-fields-code.png">
+		But, with the original code, when all required fields were filled, the correct alert was displayed. As was the case when none of the required fields were filled.
 
-Thinking that the problem may be in the deployment of the code, the code was run through JSHints to check for errors. Once the code had been cleaned up properly, the developer tried to redeploy the code and see the results.
+		Unfortunately, however, when some - but not all - of the required fields were filled, the customer was receiving the incorrect alert and was thus able to access the payment page, but then was unable to proceed any further:
+		<img src="documentation/testing-ms2/some-fields-blank.png">
 
-The same event was persisting: while some but not all fields were blank, the customer was able to proceed further.
+		The original code for this was adapted from code found on StackOverFlow ([link here](https://stackoverflow.com/a/47532256/14773450)) and is shown beneath:
+		<img src="documentation/testing-ms2/required-fields-code.png">
 
-The developer examined console, where no errors were being logged.
+		Thinking that the problem may be in the deployment of the code, the code was run through JSHints to check for errors. Once the code had been cleaned up properly, the developer tried to redeploy the code and see the results.
 
-The developer then turned to the stored values in sessionStorage, and found no errors here: if a value had been entered, it was stored; if a value had not been entered, nothing was stored. All seemed to be good here.
+		The same event was persisting: while some but not all fields were blank, the customer was able to proceed further.
 
-The developer then turned to debugging the code via the web console:
-<img src="documentation/testing-ms2/debugging.png">
+		The developer examined console, where no errors were being logged.
 
-Again, no errors could be found here - both functions seemed to be accessible.
+		The developer then turned to the stored values in sessionStorage, and found no errors here: if a value had been entered, it was stored; if a value had not been entered, nothing was stored. All seemed to be good here.
 
-It was thanks to the valuable insight of another developer that this developer was able to solve this conundrum. The colleague explained that required fields in input elements in HTML code and JavaScript do not play nicely together.
+		The developer then turned to debugging the code via the web console:
+		<img src="documentation/testing-ms2/debugging.png">
 
-It was effectively this that had been causing the anomaly.
+		Again, no errors could be found here - both functions seemed to be accessible.
 
-Under advice from his colleague, the developer first tried again using this snippet of code:
-<img src="documentation/testing-ms2/booking-form-validate-1.png">
+		It was thanks to the valuable insight of another developer that this developer was able to solve this conundrum. The colleague explained that required fields in input elements in HTML code and JavaScript do not play nicely together.
 
-Then the developer tried the following:
-<img src="documentation/testing-ms2/booking-form-validate-2.png">
+		It was effectively this that had been causing the anomaly.
 
-Neither of these worked.
+		Under advice from his colleague, the developer first tried again using this snippet of code:
+		<img src="documentation/testing-ms2/booking-form-validate-1.png">
 
-The developer then tried a further, third solution:
-<img src="documentation/testing-ms2/booking-form-validate-3.png">
+		Then the developer tried the following:
+		<img src="documentation/testing-ms2/booking-form-validate-2.png">
 
-This snippet of code worked.
+		Neither of these worked.
 
-The final code for this dilemma is seen here:
-<img src="documentation/testing-ms2/move-to-payment-solution-code.png">
+		The developer then tried a further, third solution:
+		<img src="documentation/testing-ms2/booking-form-validate-3.png">
 
-### Payment page
-The developer had found errors within this page too. Effectively, the calculation of
+		This snippet of code worked.
 
-(Price of Tour * Number of Participants)
+		The final code for this dilemma is seen here:
+		<img src="documentation/testing-ms2/move-to-payment-solution-code.png">
 
-was working correctly.
+	- ### Payment page
+		
+		The developer had found errors within this page too. Effectively, the calculation of
 
-As was applying the discount when the discount code was entered:
+		(Price of Tour * Number of Participants)
 
-((Price of Tour * Number of Participants) - 10%)
+		was working correctly.
 
-However, when it came to viewing the payment page when no discount was applied, the Discount Code field was seen as being "undefined".
+		As was applying the discount when the discount code was entered:
 
-The original code for sessionStorage:
-<img src="documentation/testing-ms2/get-discount-code-undefined-code.png">
+		((Price of Tour * Number of Participants) - 10%)
 
-The solution was simply to pre-define an entry for the discount code in sessionStorage:
-<img src="documentation/testing-ms2/get-discount-code-defined-code.png">
+		However, when it came to viewing the payment page when no discount was applied, the Discount Code field was seen as being "undefined".
 
-## Lighthouse Results
-Many of the results seen in the Lighthouse files are due to elements outside of this website:
+		The original code for sessionStorage:
+		<img src="documentation/testing-ms2/get-discount-code-undefined-code.png">
 
-1.	Render Blocking Resources:
-Having read the report, I used both "defer" and "async" methods within the tags as suggested. Neither method improved page load time discernably, and both methods partly broke the rendering of the page online (example: the links in the navigation bar beneath the banner image no longer changed colour as they should when moused over). Because of this, the website uses neither method to stop render blocking.
-2. Font Rendering:
-The suggested fixes within the Lighthouse documentation are for inline files or scripts. This website uses a Google Font that is loaded within the CSS using the "@import url("") methods, for which there is no fix available.
+		The solution was simply to pre-define an entry for the discount code in sessionStorage:
+		<img src="documentation/testing-ms2/get-discount-code-defined-code.png">
 
-3. Contrast Ratio for certain elements:
-As previously mentioned, these colours were chosen as they are opposites on the colour spectrum. The call-to-action banner actually changes colour subtly. It is possibly this that is causing the Contract Ration to be called into question.
+- ### Lighthouse Results
+	Many of the results seen in the Lighthouse files are due to elements outside of this website:
 
-4. Links without discernable names:
-Links in question are Font Awesome icons
+	1.	Render Blocking Resources:
 
-5. Browser error logged to Console:
-This browser error is due to sessionStorage being empty until it is filled from entries in the input elements on the [Book Now](https://8000-dabd8e84-22f4-49e8-973f-a1efde410b00.ws-eu03.gitpod.io/book-your-tour.html) page.
+		Having read the report, I used both "defer" and "async" methods within the tags as suggested. Neither method improved page load time discernably, and both methods partly broke the rendering of the page online (example: the links in the navigation bar beneath the banner image no longer changed colour as they should when moused over). Because of this, the website uses neither method to stop render blocking.
+	
+	2. Font Rendering:
 
+		The suggested fixes within the Lighthouse documentation are for inline files or scripts. This website uses a Google Font that is loaded within the CSS using the "@import url("") methods, for which there is no fix available.
+
+	3. Contrast Ratio for certain elements:
+
+		As previously mentioned, these colours were chosen as they are opposites on the colour spectrum. The call-to-action banner actually changes colour subtly. It is possibly this that is causing the Contract Ration to be called into question.
+
+	4. Links without discernable names:
+
+		Links in question are Font Awesome icons
+
+	5. Browser error logged to Console:
+
+		This browser error is due to sessionStorage being empty until it is filled from entries in the input elements on the [Book Now](https://8000-dabd8e84-22f4-49e8-973f-a1efde410b00.ws-eu03.gitpod.io/book-your-tour.html) page.
 ## Deployment
 - ### GitHub
 	This site was published to GitHub and deployed as a live site via the following steps:
@@ -431,7 +540,7 @@ This browser error is due to sessionStorage being empty until it is filled from 
 
 	2) Click "Settings" in the menu just above the file listings:
 
-	<img src="documentation/deployment-screen-shots/settings.png">
+	<img src="documentation/deployment-screen-shots/settings-ms2.png">
 
 	3) Scroll down to GitHub Pages and select "Master Branch" from the Source list:
 
@@ -439,16 +548,16 @@ This browser error is due to sessionStorage being empty until it is filled from 
 
 	4) The page will refresh. Scroll down again to GitHub Pages and select the now live [link](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/index.html):
 
-	<img src="documentation/deployment-screen-shots/link.png">
+	<img src="documentation/deployment-screen-shots/link-ms2.png">
 
 - ### Forking the GitHub repository
 	Making a fork is like making a duplicate, from which one can edit the repository without affecting the original.
 
-	1) Log in to GitHub and locate the [repository](https://github.com/Justin-Sawyer/nicer-tours).
+	1) Log in to GitHub and locate the [repository](https://github.com/Justin-Sawyer/Nicer-Tours-MS2-with-Maps-Integration).
 
 	2) Click "Fork":
 
-	<img src="documentation/deployment-screen-shots/fork.png">
+	<img src="documentation/deployment-screen-shots/fork-ms2.png">
 
 	3) A fork should now have been created in your GitHub account.
 
@@ -457,9 +566,9 @@ This browser error is due to sessionStorage being empty until it is filled from 
 
 	1) Log in to GitHub and locate the [repository](https://github.com/Justin-Sawyer/nicer-tours).
 
-	2) Click the green "Code" button:
+	2) Click the "Code" button:
 
-	<img src="documentation/deployment-screen-shots/clone.png">
+	<img src="documentation/deployment-screen-shots/clone-ms2.png">
 
 	3) Either click "Open with GitHub Desktop" and follow the prompts in the GitHub Desktop application, or alternatively follow the instructions 
 from [this link](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository#cloning-a-repository-to-github-desktop),
