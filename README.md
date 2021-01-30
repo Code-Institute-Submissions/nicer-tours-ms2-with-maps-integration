@@ -317,13 +317,13 @@ would like to visit.
         errors), in Applications (to check for errors in sessionStorage), or Sources (to find the reason(s) pieces of code were not working).
 
 		5. The [Lighthouse plugin for Google Chrome](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk?hl) was used for speed checking and "tweaking" setting for maximal optimisation for web deployment.
-			* [index.html](https://justin-sawyer.github.io/nicer-tours-ms2-with-maps-integration/documentation/code-verification-ms2/lighthouse/justin-sawyer.github.io_2021-01-28_index.html)
-			* [tour-of-nice.html](https://justin-sawyer.github.io/nicer-tours-ms2-with-maps-integration/documentation/code-verification-ms2/lighthouse/justin-sawyer.github.io_2021-01-28_tour-of-nice.html)
-			* [tour-of-monaco.html](https://justin-sawyer.github.io/nicer-tours-ms2-with-maps-integration/documentation/code-verification-ms2/lighthouse/justin-sawyer.github.io_2021-01-28_tour-of-monaco.html)
-			* [tour-of-st-paul-de-vence.html](https://justin-sawyer.github.io/nicer-tours-ms2-with-maps-integration/documentation/code-verification-ms2/lighthouse/justin-sawyer.github.io_2021-01-28_tour-of-st-paul-de-vence.html)
-			* [personal-tour.html](https://justin-sawyer.github.io/nicer-tours-ms2-with-maps-integration/documentation/code-verification-ms2/lighthouse/justin-sawyer.github.io_2021-01-28_personal-tour.html)
-			* [book-now.html](https://justin-sawyer.github.io/nicer-tours-ms2-with-maps-integration/documentation/code-verification-ms2/lighthouse/justin-sawyer.github.io_2021-01-28_book-your-tour.html)
-			* [payment.html](https://justin-sawyer.github.io/nicer-tours-ms2-with-maps-integration/documentation/code-verification-ms2/lighthouse/justin-sawyer.github.io_2021-01-28_payment.html)
+			* [index.html](https://justin-sawyer.github.io/nicer-tours-ms2-with-maps-integration/documentation/code-verification-ms2/lighthouse/justin-sawyer.github.io_2021-01-30_index.html)
+			* [tour-of-nice.html](https://justin-sawyer.github.io/nicer-tours-ms2-with-maps-integration/documentation/code-verification-ms2/lighthouse/justin-sawyer.github.io_2021-01-30_tour-of-nice.html)
+			* [tour-of-monaco.html](https://justin-sawyer.github.io/nicer-tours-ms2-with-maps-integration/documentation/code-verification-ms2/lighthouse/justin-sawyer.github.io_2021-01-30_tour-of-monaco.html)
+			* [tour-of-st-paul-de-vence.html](https://justin-sawyer.github.io/nicer-tours-ms2-with-maps-integration/documentation/code-verification-ms2/lighthouse/justin-sawyer.github.io_2021-01-30_tour-of-st-paul-de-vence.html)
+			* [personal-tour.html](https://justin-sawyer.github.io/nicer-tours-ms2-with-maps-integration/documentation/code-verification-ms2/lighthouse/justin-sawyer.github.io_2021-01-30_personal-tour.html)
+			* [book-now.html](https://justin-sawyer.github.io/nicer-tours-ms2-with-maps-integration/documentation/code-verification-ms2/lighthouse/justin-sawyer.github.io_2021-01-30_book-your-tour.html)
+			* [payment.html](https://justin-sawyer.github.io/nicer-tours-ms2-with-maps-integration/documentation/code-verification-ms2/lighthouse/justin-sawyer.github.io_2021-01-30_payment.html)
 
 - ### Testing Code: Details
 	This project has been a labour of love and has taken many, many hours to complete. Code was tested exhaustively to check for errors and bugs:
