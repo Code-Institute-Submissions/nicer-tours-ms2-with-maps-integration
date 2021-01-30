@@ -1,33 +1,33 @@
 <h1 align="center"><a href="https://justin-sawyer.github.io/nicer-tours/index.html">Nicer Tours</a></h1>
 
-<img src="documentation/deployment-screen-shots/screenshot.png">
+<img src="documentation/image-aid/screenshot.png">
 
-This is the website for Nicer Tours, a new company offering sightseeing tours of the South of France.
+This is the new, improved website for Nicer Tours, a company offering sightseeing tours of the South of France, particularly in the Nice area.
 
-Nicer Tours guarantee tour departures through their "Guaranteed Departure" tour option, the only tour company able to offer this.
-Since tours have to be economically viable, many tours are cancelled during the off-season. Guaranteed departure allows the company to 
-run a profitable organisation all year round.
+Nicer Tours guarantee tour departures through their "Guaranteed Departure" tour option, the only tour company able to offer this. Since tours have to be economically viable, many tours are cancelled during the off-season. Guaranteed departure allows the company to run a profitable organisation all year round.
 
-However, the Guaranteed Departure option is not heavily promoted, because promoting a loss-leader is not a good business idea. Regular 
-(Flexible Departures) are promoted as a means to allow the customer to believe they are getting the best possible deal, since they 
-always pay the lowest price in this option. Equally, promoting Flexible Departure options allows the company to run with a maximum 
+However, the Guaranteed Departure option is not heavily promoted, because promoting a loss-leader is not a good business idea. Regular (Flexible Departures) are promoted as a means to allow the customer to believe they are getting the best possible deal, since they always pay the lowest price in this option. Equally, promoting Flexible Departure options allows the company to run with a maximum 
 amount of customers for each tour.
 
-## User Experience (UX)
+A new feature for the Nicer Tours website is the possibility to be able to create your own tour without having to leave the confines of the website. On the "Create Your Tour" page, users have a handy Google Map biased to the Nice area, in which they can search for and research any places they would like to visit. 
+
+The future customer can select that Place of Interest and add it to their own itinerary and then send the company a preconfigured email stating the exact Points of Interest they would like to visit.
 
 - ### User stories:
     - #### First time visitors:
 		1) As a first time visitor, I am either planning or am on my vacation in Nice, France and I want to visit a website that informs me about the most interesting sights and places I can visit while on this vacation.
 
-        2) I want to have my interest aroused while I view the website, and thus choose to make a booking for a tour.
+        2) I want to have my interest piqued while I view the website, and thus choose to make a booking for a tour.
 
-        3) As a first time visitor to the website and perhaps to the geographical area covered in the site, and being on vacation, I do not want to feel pressured into buying. However a little special offer may help me choose this company rather than another.
+		3) I have perhaps been directed here by reviews seen online on agency sites such as TripAdvisor or Viator. While these sites are very good at providing reviews of services offered, they are not designed to offer in-depth details of what exactly a tour may consist of. Before I decide to book a tour, I would like to find out more about some of the places I will see on each tour. Alternatively, if nothing suits my tastes, I would like the possibility of creating my own personal tour.
 
-        4) I want to be able to navigate through the website easily, and be prompted where necessary to either contact the site creators (and service vendor) or make a booking easily if I choose to.
+        4) As a first time visitor to the website and perhaps to the geographical area covered in the site, and being on vacation, I do not want to feel pressured to buy. However, a little special offer may help me choose this company rather than another.
 
-        5) As a first time visitor who is also on vacation, I want to be sure that I have made the right choice of tour company, so customer reviews and social comments about the company are very important.
+        5) I want to be able to navigate through the website easily and be prompted where necessary to either contact the site creators (and service vendor) or make a booking easily if I choose to.
 
-    - #### Returning visitors:
+        6) As a first time visitor who is also on vacation, I want to be sure that I have made the right choice of tour company, so customer reviews and social comments about the company are very important.
+
+	- #### Returning visitors:
 
         1) As a returning visitor, I want to be able to add my story to the many reviews I have seen on the website.
 
@@ -39,23 +39,22 @@ amount of customers for each tour.
 
 - ### Design:
     - #### Colour scheme:
-        The project uses three main colours, all emblematic of the city of Nice. These three colours are the Yves Klein International Blue, contrasted with orange, and a pure white.
+        The project uses three main colours, both emblematic of the city of Nice. These three colours are the Yves Klein International Blue, contrasted with orange, and a pure white.
 
         1) Nice - main city of the *Côte d'Azur* which in itself means Blue Coast - is famous for its blue skies and blue sea. The Yves Klein International Blue (rgb 0,47,167) was created by the artist Yves Klein, himself born in Nice.
 
-        2) Orange reminds the viewer of the Mediterranean sun, and is also the opposite of blue on colour wheels.
+        2) Orange reminds the viewer of the Mediterranean sun and is also the opposite of blue on color wheels.
 
-        3) A pure, simple white background was chosen as white represents light, another quality for which Nice and the surrounding area 
-        is famous.
+        3) A pure, simple white background was chosen as white represents light, another quality of which Nice and the surrounding area is famous for.
 
     - #### Typography:
 
-        Again, two distinct font styles have been used, but each compliments the other.
+        Again, two distinct font styles have been used, but each complements the other.
 
         1) Titles, headings and other "special use cases" (for example, the Call To Action banner) use the Poiret One font. This font was chosen as it represents the *Belle Epoque* era of the 1920s and 30s, a time when the *Côte d'Azur* and Nice itself were
 amongst the most fashionable of destinations.
 
-        2) The Open Sans font was chosen as the typeset for the main body of the website. Although Poiret One is an extremely elegant font, it would have been overkill to use this font uniquely. Thus, the equally elegant Open Sans font was chosen to compliment Poiret One.
+        2) The Open Sans font was chosen as the typeset for the main body of the website. Although Poiret One is an extremely elegant font, it would have been overkill to use this font uniquely. Thus, the equally elegant Open Sans font was chosen to compliment.
 
         Both fonts use Sans Serif as a fallback if for in any case the chosen fonts do not render.
 
@@ -66,13 +65,39 @@ amongst the most fashionable of destinations.
 - ### Wireframes:
     [Home page for Desktop](https://justin-sawyer.github.io/nicer-tours/documentation/wireframe/desktop-home.png)
 
-    [Tours for Desktop](https://justin-sawyer.github.io/nicer-tours/documentation/wireframe/desktop-tours.png)
+    [Public Tours for Desktop - first site version](https://justin-sawyer.github.io/nicer-tours/documentation/wireframe/desktop-tours.png)
+
+	[Public Tours for Desktop - addition of Google Maps  - second site version](https://justin-sawyer.github.io/nicer-tours/documentation/wireframe/desktop-tour-pages-after-button-press-to-reveal-google-map.png)
+
+	[Public Tours for Desktop - addition of description section - second site version](https://justin-sawyer.github.io/nicer-tours/documentation/wireframe/desktop-tour-pages-upon-marker-click-desktop.png)
+
+	[Public Tours for Desktop - addition of reviews section - second site version](https://justin-sawyer.github.io/nicer-tours/documentation/wireframe/desktop-tour-pages-reviews-button-clicked.png)
+
+	[Create Your Own Tours for Desktop - new page](https://justin-sawyer.github.io/nicer-tours/documentation/wireframe/desktop-personal-tours-create-your-own-tour-opening-view.png)
+
+	[Create Your Own Tours for Desktop - after entering search value in Google Maps](https://justin-sawyer.github.io/nicer-tours/documentation/wireframe/desktop-personal-tours-value-added-to-search.png)
+
+	[Create Your Own Tours for Desktop - after adding to itinerary](https://justin-sawyer.github.io/nicer-tours/documentation/wireframe/desktop-personal-tours-popup.png)
+
+	[Create Your Own Tours for Desktop - after clicking "Send Us Your Itinerary" button](https://justin-sawyer.github.io/nicer-tours/documentation/wireframe/desktop-personal-tours-modal.png)
 
     [Book Now for Desktop](https://justin-sawyer.github.io/nicer-tours/documentation/wireframe/desktop-book-now.png)
 
     [Home page for Mobile](https://justin-sawyer.github.io/nicer-tours/documentation/wireframe/mobile-home.png)
 
-    [Tours for Mobile](https://justin-sawyer.github.io/nicer-tours/documentation/wireframe/mobile-tours.png)
+    [Public Tours for Mobile - first site version](https://justin-sawyer.github.io/nicer-tours/documentation/wireframe/mobile-tours.png)
+
+	[Public Tours for Mobile - addition of description section - second site version](https://justin-sawyer.github.io/nicer-tours/documentation/wireframe/mobile-after-marker-click.png)
+
+	[Public Tours for Mobile - addition of reviews section - second site version](https://justin-sawyer.github.io/nicer-tours/documentation/wireframe/mobile-after-review-click.png)
+
+	[Create Your Own Tours for Mobile - new page](https://justin-sawyer.github.io/nicer-tours/documentation/wireframe/mobile-create-your-own-tour-opening-view.png)
+
+	[Create Your Own Tours for Mobile - after entering search value in Google Maps](https://justin-sawyer.github.io/nicer-tours/documentation/wireframe/mobile-value-enetered-in-map.png)
+
+	[Create Your Own Tours for Mobile - after adding to itinerary](https://justin-sawyer.github.io/nicer-tours/documentation/wireframe/mobile-popup.png)
+
+	[Create Your Own Tours for Mobile - after clicking "Send Us Your Itinerary" button](https://justin-sawyer.github.io/nicer-tours/documentation/wireframe/mobile-popup.png)
 
     [Book Now for Mobile](https://justin-sawyer.github.io/nicer-tours/documentation/wireframe/mobile-book-now.png)
 
@@ -242,7 +267,7 @@ It was decided that the latter of these options was the best idea, as feedback i
 
 An example of the JSON request for a location without website:
 
-<img src="documentation/testing-ms2/place-without-website-key-code.png">
+<img src="documentation/testing-ms2/place-without-website-code.png">
 
 The code within the Google Maps funcion:
 
