@@ -1,6 +1,6 @@
 <h1 align="center"><a href="https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/index.html">Nicer Tours</a></h1>
 
-<img src="documentation/image-aid/screenshot.png">
+<img src="documentation/deployment-screen-shots/screenshot.png">
 
 This is the new, improved website for Nicer Tours, a company offering sightseeing tours of the South of France, particularly in the Nice area.
 
@@ -416,7 +416,7 @@ This browser error is due to sessionStorage being empty until it is filled from 
 - ### GitHub
 	This site was published to GitHub and deployed as a live site via the following steps:
 
-	1) Log in to GitHub and locate the [repository](https://github.com/Justin-Sawyer/nicer-tours).
+	1) Log in to GitHub and locate the [repository](https://github.com/Justin-Sawyer/Nicer-Tours-MS2-with-Maps-Integration).
 
 	2) Click "Settings" in the menu just above the file listings:
 
