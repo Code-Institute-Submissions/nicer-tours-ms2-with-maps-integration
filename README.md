@@ -1,4 +1,4 @@
-<h1 align="center"><a href="https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/index.html">Nicer Tours v2.0</a></h1>
+<h1 align="center"><a href="https://justin-sawyer.github.io/nicer-tours-ms2-with-maps-integration/index.html">Nicer Tours v2.0</a></h1>
 
 <img src="documentation/deployment-screen-shots/screenshot.png">
 
@@ -78,43 +78,43 @@ would like to visit.
         used as a further navigational aid on the home page.
 
 - ### Wireframes:
-    [Home page for Desktop](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/wireframe/desktop-home.png)
+    [Home page for Desktop](https://justin-sawyer.github.io/nicer-tours-ms2-with-maps-integration/documentation/wireframe/desktop-home.png)
 
-    [Public Tours for Desktop - first site version](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/wireframe/desktop-tours.png)
+    [Public Tours for Desktop - first site version](https://justin-sawyer.github.io/nicer-tours-ms2-with-maps-integration/documentation/wireframe/desktop-tours.png)
 
-	[Public Tours for Desktop - addition of Google Maps  - second site version](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/wireframe/desktop-tour-pages-after-button-press-to-reveal-google-map.png)
+	[Public Tours for Desktop - addition of Google Maps  - second site version](https://justin-sawyer.github.io/nicer-tours-ms2-with-maps-integration/documentation/wireframe/desktop-tour-pages-after-button-press-to-reveal-google-map.png)
 
-	[Public Tours for Desktop - addition of description section - second site version](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/wireframe/desktop-tour-pages-upon-marker-click-desktop.png)
+	[Public Tours for Desktop - addition of description section - second site version](https://justin-sawyer.github.io/nicer-tours-ms2-with-maps-integration/documentation/wireframe/desktop-tour-pages-upon-marker-click-desktop.png)
 
-	[Public Tours for Desktop - addition of reviews section - second site version](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/wireframe/desktop-tour-pages-reviews-button-clicked.png)
+	[Public Tours for Desktop - addition of reviews section - second site version](https://justin-sawyer.github.io/nicer-tours-ms2-with-maps-integration/documentation/wireframe/desktop-tour-pages-reviews-button-clicked.png)
 
-	[Create Your Own Tours for Desktop - new page](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/wireframe/desktop-personal-tours-create-your-own-tour-opening-view.png)
+	[Create Your Own Tours for Desktop - new page](https://justin-sawyer.github.io/nicer-tours-ms2-with-maps-integration/documentation/wireframe/desktop-personal-tours-create-your-own-tour-opening-view.png)
 
-	[Create Your Own Tours for Desktop - after entering search value in Google Maps](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/wireframe/desktop-personal-tours-value-added-to-search.png)
+	[Create Your Own Tours for Desktop - after entering search value in Google Maps](https://justin-sawyer.github.io/nicer-tours-ms2-with-maps-integration/documentation/wireframe/desktop-personal-tours-value-added-to-search.png)
 
-	[Create Your Own Tours for Desktop - after adding to itinerary](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/wireframe/desktop-personal-tours-popup.png)
+	[Create Your Own Tours for Desktop - after adding to itinerary](https://justin-sawyer.github.io/nicer-tours-ms2-with-maps-integration/documentation/wireframe/desktop-personal-tours-popup.png)
 
-	[Create Your Own Tours for Desktop - after clicking "Send Us Your Itinerary" button](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/wireframe/desktop-personal-tours-modal.png)
+	[Create Your Own Tours for Desktop - after clicking "Send Us Your Itinerary" button](https://justin-sawyer.github.io/nicer-tours-ms2-with-maps-integration/documentation/wireframe/desktop-personal-tours-modal.png)
 
-    [Book Now for Desktop](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/wireframe/desktop-book-now.png)
+    [Book Now for Desktop](https://justin-sawyer.github.io/nicer-tours-ms2-with-maps-integration/documentation/wireframe/desktop-book-now.png)
 
-    [Home page for Mobile](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/wireframe/mobile-home.png)
+    [Home page for Mobile](https://justin-sawyer.github.io/nicer-tours-ms2-with-maps-integration/documentation/wireframe/mobile-home.png)
 
-    [Public Tours for Mobile - first site version](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/wireframe/mobile-tours.png)
+    [Public Tours for Mobile - first site version](https://justin-sawyer.github.io/nicer-tours-ms2-with-maps-integration/documentation/wireframe/mobile-tours.png)
 
-	[Public Tours for Mobile - addition of description section - second site version](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/wireframe/mobile-after-marker-click.png)
+	[Public Tours for Mobile - addition of description section - second site version](https://justin-sawyer.github.io/nicer-tours-ms2-with-maps-integration/documentation/wireframe/mobile-after-marker-click.png)
 
-	[Public Tours for Mobile - addition of reviews section - second site version](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/wireframe/mobile-after-review-click.png)
+	[Public Tours for Mobile - addition of reviews section - second site version](https://justin-sawyer.github.io/nicer-tours-ms2-with-maps-integration/documentation/wireframe/mobile-after-review-click.png)
 
-	[Create Your Own Tours for Mobile - new page](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/wireframe/mobile-create-your-own-tour-opening-view.png)
+	[Create Your Own Tours for Mobile - new page](https://justin-sawyer.github.io/nicer-tours-ms2-with-maps-integration/documentation/wireframe/mobile-create-your-own-tour-opening-view.png)
 
-	[Create Your Own Tours for Mobile - after entering search value in Google Maps](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/wireframe/mobile-value-enetered-in-map.png)
+	[Create Your Own Tours for Mobile - after entering search value in Google Maps](https://justin-sawyer.github.io/nicer-tours-ms2-with-maps-integration/documentation/wireframe/mobile-value-enetered-in-map.png)
 
-	[Create Your Own Tours for Mobile - after adding to itinerary](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/wireframe/mobile-popup.png)
+	[Create Your Own Tours for Mobile - after adding to itinerary](https://justin-sawyer.github.io/nicer-tours-ms2-with-maps-integration/documentation/wireframe/mobile-popup.png)
 
-	[Create Your Own Tours for Mobile - after clicking "Send Us Your Itinerary" button](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/wireframe/mobile-popup.png)
+	[Create Your Own Tours for Mobile - after clicking "Send Us Your Itinerary" button](https://justin-sawyer.github.io/nicer-tours-ms2-with-maps-integration/documentation/wireframe/mobile-popup.png)
 
-    [Book Now for Mobile](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/wireframe/mobile-book-now.png)
+    [Book Now for Mobile](https://justin-sawyer.github.io/nicer-tours-ms2-with-maps-integration/documentation/wireframe/mobile-book-now.png)
 
 ## Features:
 -	This website is fully responsive and interactive.
@@ -175,21 +175,21 @@ would like to visit.
         the most interesting sights and places I can visit while on this vacation.
         	-	Upon opening this website, the user is presented with a stunning banner image of the Bay of Angels. 
         	-	Within the navigation menu on desktop, the user can clearly discern three "must-see" places, and is led to them via this menu. 
-            [Desktop Navigation](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/user-stories-screen-shots/nav-menu-desktop.png)
+            [Desktop Navigation](https://justin-sawyer.github.io/nicer-tours-ms2-with-maps-integration/documentation/user-stories-screen-shots/nav-menu-desktop.png)
         	-	Upon opening this website on mobile, although the navigation menu is hidden by the "burger” icon, the user can still clearly see the most interesting 
             places to visit, since the 3 carousels are directly beneath the main banner image. A tag-line for each place is followed by a link that allows the user to discover 
             more about their choice of destination. (It is precisely for this reason that the Call-to-Action is positioned beneath the carousels on smaller devices.) 
-            [Tablet Navigation](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/user-stories-screen-shots/tour-page-info-expand-and-book-buttons-desktop.png)
+            [Tablet Navigation](https://justin-sawyer.github.io/nicer-tours-ms2-with-maps-integration/documentation/user-stories-screen-shots/tour-page-info-expand-and-book-buttons-desktop.png)
 
     	2) I want to have my interest piqued while I view the website, and thus choose to make a booking for a tour.
         	-	The user's interest is piqued, but not overwhelmed. This is achieved tin different ways, depending on the screen size the user uses:
             -	On larger devices (desktops and tablets), the user is presented with a carousel of images of the destination, with a brief summary of 
             the place itself. Should the user wish to discover more within the site page, each white background description button expands to reveal more information. 
             To the left, the user can see two blue buttons, one of which is called "Book Now!" and leads the user to the booking page: 
-            [Desktop Book Now button, tour pages ](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/user-stories-screen-shots/tour-page-info-expand-and-book-buttons-desktop.png)
+            [Desktop Book Now button, tour pages ](https://justin-sawyer.github.io/nicer-tours-ms2-with-maps-integration/documentation/user-stories-screen-shots/tour-page-info-expand-and-book-buttons-desktop.png)
             -   On smaller mobile devices (telephones rather than tablets), the user is presented with the same carousel, a simple tag line and the description buttons expand to 
             reveal more information. Similarly, beneath the tour departure times information, the user can be taken to the booking page via the blue "Book Now!" button: 
-            [Smartphone Book Now button, tour pages](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/user-stories-screen-shots/tour-page-info-expand-and-book-buttons-mobile.png)
+            [Smartphone Book Now button, tour pages](https://justin-sawyer.github.io/nicer-tours-ms2-with-maps-integration/documentation/user-stories-screen-shots/tour-page-info-expand-and-book-buttons-mobile.png)
 
 		3) I have perhaps been directed here by reviews seen online on agency sites such as TripAdvisor or Viator. While these sites are very good at providing reviews of 
         services offered, they are not designed to offer in-depth details of what exactly a tour may consist of. 
@@ -200,29 +200,29 @@ would like to visit.
             they may decide to reserve. However, upon clicking each of the white "in-depth" buttons the user is presented with details of that *area* of the city. 
             Beneath is a map with markers, and upon each click of the marker, the user can find out about that particular Place of Interest and see a photo of it. 
             Should the user wish, from here, he or she may click on the "Reviews" or "Find Out More" buttons, where they are available. Not all Places in the Google Places API 
-            have reviews or websites, thus the user is only presented with these buttons where the element exists in Google's database. [Upon clicking a place button: public tour pages](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/user-stories-screen-shots/public-tour-button-clicked.png)
-              \  [All details available in Google Places API: public tour pages](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/user-stories-screen-shots/marker-clicked-all-options-available.png)
-              \  [No website available in Google Places API: public tour pages](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/user-stories-screen-shots/marker-clicked-no-website.png)
-              \  [No reviews available in Google Places API: public tour pages](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/user-stories-screen-shots/marker-clicked-no-reviews.png)
+            have reviews or websites, thus the user is only presented with these buttons where the element exists in Google's database. [Upon clicking a place button: public tour pages](https://justin-sawyer.github.io/nicer-tours-ms2-with-maps-integration/documentation/user-stories-screen-shots/public-tour-button-clicked.png)
+              \  [All details available in Google Places API: public tour pages](https://justin-sawyer.github.io/nicer-tours-ms2-with-maps-integration/documentation/user-stories-screen-shots/marker-clicked-all-options-available.png)
+              \  [No website available in Google Places API: public tour pages](https://justin-sawyer.github.io/nicer-tours-ms2-with-maps-integration/documentation/user-stories-screen-shots/marker-clicked-no-website.png)
+              \  [No reviews available in Google Places API: public tour pages](https://justin-sawyer.github.io/nicer-tours-ms2-with-maps-integration/documentation/user-stories-screen-shots/marker-clicked-no-reviews.png)
 			
             - On tablet portrait orientation screen size and smaller, the user sees only the markers, to keep the map itself uncluttered.
-            [Only markers on smaller devices](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/user-stories-screen-shots/marker-no-labels-for-small-devices.png)
+            [Only markers on smaller devices](https://justin-sawyer.github.io/nicer-tours-ms2-with-maps-integration/documentation/user-stories-screen-shots/marker-no-labels-for-small-devices.png)
 			- On larger devices - tablet landscape orientation and higher - the user sees both the marker and the name of that specific Point of Interest. 
             The extra space of a larger screen allows for this and offers an enhanced user experience.
 			- Upon opening the "Create Your Own Tour" page, the user has a brief explanation of how to use the map below: the user can see clearly how to operate the map search 
             bar and how to select an item from the dropdown menu.
 			- The more attentive reader may notice - even though it is also stated in the text above the map - that the results being displayed within the dropdown are biased 
             towards the geographical confines of the map itself.
-            [Location bias for map](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/user-stories-screen-shots/location-bias.png)
+            [Location bias for map](https://justin-sawyer.github.io/nicer-tours-ms2-with-maps-integration/documentation/user-stories-screen-shots/location-bias.png)
 			- Once a specific Point of Interest has been chosen from the dropdown menu, the user is then presented with photos and reviews of the Place. Again, due to the occasional 
             limitations of the Google Places API, ir specific details are not available - no reviews, for example - the user is told so.
-            [Details missing for Google Place](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/user-stories-screen-shots/place-search-no-place.png)
+            [Details missing for Google Place](https://justin-sawyer.github.io/nicer-tours-ms2-with-maps-integration/documentation/user-stories-screen-shots/place-search-no-place.png)
 			- The user can now choose, should they so wish, to add that specific Place to their itinerary. Upon doing so, the user is alerted to the fact that it has indeed been added.
-            [Place added to itinerary](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/user-stories-screen-shots/added-to-itinerary.png)
+            [Place added to itinerary](https://justin-sawyer.github.io/nicer-tours-ms2-with-maps-integration/documentation/user-stories-screen-shots/added-to-itinerary.png)
 			- If the user changes their mind about their choices, they also have the option of clearing their entries via the "Clear Itinerary" button.
 			- Once the user is satisfied with their choices, the user can then send -  without having to leave the page to compose an email - a message to Nicer Tours. Within the 
             message text of the popup that appears, the user can clearly see the choices they have made, and are able to edit this message should they so wish.
-            [Send itinerary popup](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/user-stories-screen-shots/send-itinerary.png)
+            [Send itinerary popup](https://justin-sawyer.github.io/nicer-tours-ms2-with-maps-integration/documentation/user-stories-screen-shots/send-itinerary.png)
 			- Upon sending the message, the user is directed to a page which clearly states that the message has been received.
 
     	4) As a first time visitor to the website and perhaps to the geographical area covered in the site, and being on vacation, I do not want to feel pressured to buy. 
@@ -231,10 +231,10 @@ would like to visit.
             From each destination page, should the user choose, they can make a booking. 
         	-	The Call-to-Action on smaller devices is situated beneath the carousels precisely to hint, rather than lead. There IS the possibility of a little offer, 
             should the user choose to accept it. 
-            [Smaller device "Call-to-Action" prominence, home page](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/user-stories-screen-shots/call-to-action-prominence-home-home-page-portable-devices.png)
+            [Smaller device "Call-to-Action" prominence, home page](https://justin-sawyer.github.io/nicer-tours-ms2-with-maps-integration/documentation/user-stories-screen-shots/call-to-action-prominence-home-home-page-portable-devices.png)
 			- The Call-to-Action is also repeated, but this time more prominently, on the page where the offer applies. 
             It is not a repetitive pop up screaming from each page, but rather, a simple reminder. 
-            [All devices "Call-to-Action" prominence, tour pages](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/user-stories-screen-shots/call-to-action-prominence-home-tour-page-all-devices.png)
+            [All devices "Call-to-Action" prominence, tour pages](https://justin-sawyer.github.io/nicer-tours-ms2-with-maps-integration/documentation/user-stories-screen-shots/call-to-action-prominence-home-tour-page-all-devices.png)
 			- Equally, it is for this reason that the booking page is not featured in the top level navigation links.
 
     	5) I want to be able to navigate through the website easily, and be prompted where necessary to either contact the site creators (and service vendor) or make a booking 
@@ -246,24 +246,24 @@ would like to visit.
             subsections or destinations (for example, half day tours, full day tours, private tours, shore excursions for cruise ship passengers…)
         	-	The buttons in the Call-to-Action on the home page allows the customer to note the offer code by pressing the Discount Code button, find out more 
             (directs to the tour page in question, and thus this button is absent in the tour page Call-to-Action) and make a booking from the same place: 
-            [Call-to-Action buttons, tour pages](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/user-stories-screen-shots/call-to-action-buttons-home-page.png)
+            [Call-to-Action buttons, tour pages](https://justin-sawyer.github.io/nicer-tours-ms2-with-maps-integration/documentation/user-stories-screen-shots/call-to-action-buttons-home-page.png)
         	-	From each tour page, should the user wish, the possibility to either contact the site creator or make a booking is clearly presented with bold blue buttons. 
-            [Desktop Contact Us button, tour pages](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/user-stories-screen-shots/tour-page-info-expand-and-book-buttons-desktop.png)
+            [Desktop Contact Us button, tour pages](https://justin-sawyer.github.io/nicer-tours-ms2-with-maps-integration/documentation/user-stories-screen-shots/tour-page-info-expand-and-book-buttons-desktop.png)
         	-	Similarly, the footer section of each page is interactive: 
             	- Each icon links to something, whether that is Facebook or WhatsApp;
             	- The contact email address and telephone numbers are live linked;
             	- The destinations are listed and are live linked.
-				- [Footer, all pages](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/user-stories-screen-shots/footer.png)
+				- [Footer, all pages](https://justin-sawyer.github.io/nicer-tours-ms2-with-maps-integration/documentation/user-stories-screen-shots/footer.png)
 
     	6) As a first time visitor who is also on vacation, I want to be sure that I have made the right choice of tour company, so customer reviews and social comments about 
         the company are very important.
         	-	On the home page, whether on smaller devices or larger ones, there are some clearly displayed customer reviews. These, of course, can be added to over time. 
             Eventually, it may even be advantageous to add a reviews page to the site, hence there is a link to send in reviews with photos of the customers on the tour as 
             well as links to review sites such as TripAdvisor: 
-            ["Review us" links, home page](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/user-stories-screen-shots/reviews-section-home-page.png)
+            ["Review us" links, home page](https://justin-sawyer.github.io/nicer-tours-ms2-with-maps-integration/documentation/user-stories-screen-shots/reviews-section-home-page.png)
         	-	Within the footer on each page, the visitor has access to the company’s Facebook, Instagram, Twitter and (most importantly) TripAdvisor pages. 
             These pages offer unbiased reviews, and are openly accessible to eventual customers: 
-            [Social links, all pages](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/user-stories-screen-shots/footer.png)
+            [Social links, all pages](https://justin-sawyer.github.io/nicer-tours-ms2-with-maps-integration/documentation/user-stories-screen-shots/footer.png)
 
 	- #### Repeat Visitor Goals
     	1) As a returning visitor, I want to be able to add my story to the many reviews I have seen on the website.
@@ -273,7 +273,7 @@ would like to visit.
             	- Facebook;
             	- TripAdvisor;
             	- Or via direct communication with the company itself.
-				- [Review Us directly or through social media](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/user-stories-screen-shots/review-us-directly-or-through-social-sites.png)
+				- [Review Us directly or through social media](https://justin-sawyer.github.io/nicer-tours-ms2-with-maps-integration/documentation/user-stories-screen-shots/review-us-directly-or-through-social-sites.png)
 
     	2) As I will be returning to the site almost definitely after having taken a tour, I want to both be reminded of the fun I had, and also be able to inform others about the 
         service offered by the company. Thus, good navigation and design are important, but so is the general informative nature of the services and sights offered on the site.
@@ -287,43 +287,43 @@ would like to visit.
             need to access the site itself in order to benefit from any special offers. It is partly for this that the discount popover has been included, along with the easy 
             booking options on the book now page. This also means that there is a constant flow of traffic to the site, and as a result, new tour destinations or offers will 
             be seen by a growing audience: 
-            [Call-to-Action with up-to-date current offers, home page](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/user-stories-screen-shots/call-to-action-current-offers.png)
+            [Call-to-Action with up-to-date current offers, home page](https://justin-sawyer.github.io/nicer-tours-ms2-with-maps-integration/documentation/user-stories-screen-shots/call-to-action-current-offers.png)
 
 - ### Testing Code
 	- #### Tools Used:
 
 		1. [W3C HTML](https://validator.w3.org/) was used to verify the HTML code:
-			* [Index.html](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/code-verification-ms2/html-verified/validator.w3.org-index-html.png)	
-			* [tour-of-nice.html](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/code-verification-ms2/html-verified/validator.w3.org-tour-of-nice-html.png)
-			* [tour-of-monaco.html](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/code-verification-ms2/html-verified/validator.w3.org-tour-of-monaco-html.png)
-			* [tour-of-st-paul-de-vence.html](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/code-verification-ms2/html-verified/validator.w3.org-tour-of-st-paul-de-vence-html.png)
-			* [personal-tour.html](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/code-verification-ms2/html-verified/validator.w3.org-personal-tour-html.png)
-			* [book-now.html](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/code-verification-ms2/html-verified/validator.w3.org-book-now-html.png)
-			* [payment.html](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/code-verification-ms2/html-verified/validator.w3.org-pyment-html.png)
+			* [Index.html](https://justin-sawyer.github.io/nicer-tours-ms2-with-maps-integration/documentation/code-verification-ms2/html-verified/validator.w3.org-index-html.png)	
+			* [tour-of-nice.html](https://justin-sawyer.github.io/nicer-tours-ms2-with-maps-integration/documentation/code-verification-ms2/html-verified/validator.w3.org-tour-of-nice-html.png)
+			* [tour-of-monaco.html](https://justin-sawyer.github.io/nicer-tours-ms2-with-maps-integration/documentation/code-verification-ms2/html-verified/validator.w3.org-tour-of-monaco-html.png)
+			* [tour-of-st-paul-de-vence.html](https://justin-sawyer.github.io/nicer-tours-ms2-with-maps-integration/documentation/code-verification-ms2/html-verified/validator.w3.org-tour-of-st-paul-de-vence-html.png)
+			* [personal-tour.html](https://justin-sawyer.github.io/nicer-tours-ms2-with-maps-integration/documentation/code-verification-ms2/html-verified/validator.w3.org-personal-tour-html.png)
+			* [book-now.html](https://justin-sawyer.github.io/nicer-tours-ms2-with-maps-integration/documentation/code-verification-ms2/html-verified/validator.w3.org-book-now-html.png)
+			* [payment.html](https://justin-sawyer.github.io/nicer-tours-ms2-with-maps-integration/documentation/code-verification-ms2/html-verified/validator.w3.org-pyment-html.png)
 
 		2. [W3C CSS](https://jigsaw.w3.org/css-validator/) was used to ensure there were no CSS code errors in this project:
-			* [CSS](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/code-verification-ms2/css-verified/jigsaw.w3.org_css-validator-Nicer-Tours-CSS.png)
+			* [CSS](https://justin-sawyer.github.io/nicer-tours-ms2-with-maps-integration/documentation/code-verification-ms2/css-verified/jigsaw.w3.org_css-validator-Nicer-Tours-CSS.png)
 
 		3. [JSHint](https://jshint.com/) was used for the verification of the JavaScript:
-			* [tour-of-nice.js](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/code-verification-ms2/javascript-verified/jshint.com-tour-of-nice-js.png)
-			* [tour-of-monaco.js](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/code-verification-ms2/javascript-verified/jshint.com-tour-of-monaco-js.png)
-			* [tour-of-st-paul.js](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/code-verification-ms2/javascript-verified/jshint.com-tour-of-st-paul-js.png)
-			* [personal-tour.js](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/code-verification-ms2/javascript-verified/jshint.com-personal-tour-js.png)
-			* [sendEmail.js](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/code-verification-ms2/javascript-verified/jshint.com-sendEmail-js.png)
-			* [payment.js](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/code-verification-ms2/javascript-verified/jshint.com-payment-js.png)
-			* [make-payment.js](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/code-verification-ms2/javascript-verified/jshint.com-make-payment-js.png)
+			* [tour-of-nice.js](https://justin-sawyer.github.io/nicer-tours-ms2-with-maps-integration/documentation/code-verification-ms2/javascript-verified/jshint.com-tour-of-nice-js.png)
+			* [tour-of-monaco.js](https://justin-sawyer.github.io/nicer-tours-ms2-with-maps-integration/documentation/code-verification-ms2/javascript-verified/jshint.com-tour-of-monaco-js.png)
+			* [tour-of-st-paul.js](https://justin-sawyer.github.io/nicer-tours-ms2-with-maps-integration/documentation/code-verification-ms2/javascript-verified/jshint.com-tour-of-st-paul-js.png)
+			* [personal-tour.js](https://justin-sawyer.github.io/nicer-tours-ms2-with-maps-integration/documentation/code-verification-ms2/javascript-verified/jshint.com-personal-tour-js.png)
+			* [sendEmail.js](https://justin-sawyer.github.io/nicer-tours-ms2-with-maps-integration/documentation/code-verification-ms2/javascript-verified/jshint.com-sendEmail-js.png)
+			* [payment.js](https://justin-sawyer.github.io/nicer-tours-ms2-with-maps-integration/documentation/code-verification-ms2/javascript-verified/jshint.com-payment-js.png)
+			* [make-payment.js](https://justin-sawyer.github.io/nicer-tours-ms2-with-maps-integration/documentation/code-verification-ms2/javascript-verified/jshint.com-make-payment-js.png)
 
 		4. Google Chrome's Dev Tool was used extensively while writing this website. The JavaScript was tested almost line by line, whether that be in Console (to check for general 
         errors), in Applications (to check for errors in sessionStorage), or Sources (to find the reason(s) pieces of code were not working).
 
 		5. The [Lighthouse plugin for Google Chrome](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk?hl) was used for speed checking and "tweaking" setting for maximal optimisation for web deployment.
-			* [index.html](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/code-verification-ms2/lighthouse/justin-sawyer.github.io_2021-01-28_index.html)
-			* [tour-of-nice.html](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/code-verification-ms2/lighthouse/justin-sawyer.github.io_2021-01-28_tour-of-nice.html)
-			* [tour-of-monaco.html](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/code-verification-ms2/lighthouse/justin-sawyer.github.io_2021-01-28_tour-of-monaco.html)
-			* [tour-of-st-paul-de-vence.html](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/code-verification-ms2/lighthouse/justin-sawyer.github.io_2021-01-28_tour-of-st-paul-de-vence.html)
-			* [personal-tour.html](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/code-verification-ms2/lighthouse/justin-sawyer.github.io_2021-01-28_personal-tour.html)
-			* [book-now.html](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/code-verification-ms2/lighthouse/justin-sawyer.github.io_2021-01-28_book-your-tour.html)
-			* [payment.html](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/code-verification-ms2/lighthouse/justin-sawyer.github.io_2021-01-28_payment.html)
+			* [index.html](https://justin-sawyer.github.io/nicer-tours-ms2-with-maps-integration/documentation/code-verification-ms2/lighthouse/justin-sawyer.github.io_2021-01-28_index.html)
+			* [tour-of-nice.html](https://justin-sawyer.github.io/nicer-tours-ms2-with-maps-integration/documentation/code-verification-ms2/lighthouse/justin-sawyer.github.io_2021-01-28_tour-of-nice.html)
+			* [tour-of-monaco.html](https://justin-sawyer.github.io/nicer-tours-ms2-with-maps-integration/documentation/code-verification-ms2/lighthouse/justin-sawyer.github.io_2021-01-28_tour-of-monaco.html)
+			* [tour-of-st-paul-de-vence.html](https://justin-sawyer.github.io/nicer-tours-ms2-with-maps-integration/documentation/code-verification-ms2/lighthouse/justin-sawyer.github.io_2021-01-28_tour-of-st-paul-de-vence.html)
+			* [personal-tour.html](https://justin-sawyer.github.io/nicer-tours-ms2-with-maps-integration/documentation/code-verification-ms2/lighthouse/justin-sawyer.github.io_2021-01-28_personal-tour.html)
+			* [book-now.html](https://justin-sawyer.github.io/nicer-tours-ms2-with-maps-integration/documentation/code-verification-ms2/lighthouse/justin-sawyer.github.io_2021-01-28_book-your-tour.html)
+			* [payment.html](https://justin-sawyer.github.io/nicer-tours-ms2-with-maps-integration/documentation/code-verification-ms2/lighthouse/justin-sawyer.github.io_2021-01-28_payment.html)
 
 - ### Testing Code: Details
 	This project has been a labour of love and has taken many, many hours to complete. Code was tested exhaustively to check for errors and bugs:
@@ -651,7 +651,7 @@ would like to visit.
 	5. Browser error logged to Console:
 
 		This browser error is due to sessionStorage being empty until it is filled from entries in the input elements on the 
-        [Book Now](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/book-your-tour.html) page.
+        [Book Now](https://justin-sawyer.github.io/nicer-tours-ms2-with-maps-integration/book-your-tour.html) page.
 
 - ### Known Bugs:
 	- The w3.org HTML validator suggests using a "polyfiller" to ensure all browsers are compatible with the "date" attribute in the form on the Book Now page.
@@ -672,7 +672,7 @@ would like to visit.
 
 	<img src="documentation/deployment-screen-shots/github-pages.png">
 
-	4) The page will refresh. Scroll down again to GitHub Pages and select the now live [link](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/index.html):
+	4) The page will refresh. Scroll down again to GitHub Pages and select the now live [link](https://justin-sawyer.github.io/nicer-tours-ms2-with-maps-integration/index.html):
 
 	<img src="documentation/deployment-screen-shots/link-ms2.png">
 
