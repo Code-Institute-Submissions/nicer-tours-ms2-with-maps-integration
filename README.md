@@ -129,7 +129,7 @@ This website was tested using the following tools:
 2. [W3C CSS](https://jigsaw.w3.org/css-validator/) was used to ensure there were no CSS code errors in this project:
 	* [CSS](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration//documentation/code-verification-ms2/css-verified/jigsaw.w3.org_css-validator-Nicer-Tours-CSS.png)
 
-3. [JSHint](https://jshint.com/) was used for the verifcation of the JavaScript:
+3. [JSHint](https://jshint.com/) was used for the verification of the JavaScript:
 	* [tour-of-nice.js](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration//documentation/code-verification-ms2/javascript-verified/jshint.com-tour-of-nice-js.png)
 	* [tour-of-monaco.js](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration//documentation/code-verification-ms2/javascript-verified/jshint.com-tour-of-monaco-js.png)
 	* [tour-of-st-paul.js](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration//documentation/code-verification-ms2/javascript-verified/jshint.com-tour-of-st-paul-js.png)
@@ -138,7 +138,7 @@ This website was tested using the following tools:
 	* [payment.js](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration//documentation/code-verification-ms2/javascript-verified/jshint.com-payment-js.png)
 	* [make-payment.js](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration//documentation/code-verification-ms2/javascript-verified/jshint.com-make-payment-js.png)
 
-4. Google Chrome's Dev Tool was used extensively while writing this website. The JavaScript was tested almost line by line, whether that be in Console (to check for general errors), in Applications (to check for errors in sessionStorage) or Sources (to find the reason(s) pieces of code were not working).
+4. Google Chrome's Dev Tool was used extensively while writing this website. The JavaScript was tested almost line by line, whether that be in Console (to check for general errors), in Applications (to check for errors in sessionStorage), or Sources (to find the reason(s) pieces of code were not working).
 
 5. The [Lighthouse plugin for Google Chrome](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk?hl) was used for speed checking and "tweaking" setting for maximal optimisation for web deployment.
 	* [index.html](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/code-verification-ms2/lighthouse/justin-sawyer.github.io_2021-01-28_index.html)
@@ -152,7 +152,7 @@ This website was tested using the following tools:
 ## Public Testing
 
 ## Code Testing
-This project has been a labour of love, and has taken many, many hours to complete. Code was tested exhaustively to check for errors and bugs:
+This project has been a labour of love and has taken many, many hours to complete. Code was tested exhaustively to check for errors and bugs:
 
 ### Google Maps JavaScript code, Tours of Nice, Monaco and St-Paul de Vence:
 
@@ -160,7 +160,7 @@ The Google Maps code itself has been taken from the [Google Maps API](https://de
 
 #### Markers and Infowindows:
 
-The original idea for this site was to have Infowindows for each Point of interest on all screen sizes, whether mobile, tablet, or desktop. However, it soon became clear that no matter how the map was zoomed upon first displaying online, this was not a practical solution for mobile screens: the Points of Interest being often very near to each other meant that the Infowindow was more often than not blocking other markers and/or Infowindows. A prime example of this can be seen below:
+The original idea for this site was to have Infowindows for each Point of interest on all screen sizes, whether mobile, tablet or desktop. However, it soon became clear that no matter how the map was zoomed upon first displaying online, this was not a practical solution for mobile screens: the Points of Interest being often very near to each other meant that the Infowindow was more often than not blocking other markers and/or Infowindows. A prime example of this can be seen below:
 
 <img src="documentation/testing-ms2/markers-covered-original-map-size.png">
 
@@ -190,7 +190,7 @@ The original idea for these pages was to have Infowindows with a link attached t
 
 <img src="documentation/testing-ms2/link-in-infowindow.png">
 
-However, it was found that the behaviour of the infowindow was inconsistent. If the link directs to an outside source (using the target"_blank" method in the HTML), the behaviour was always as expected. However, directing a link to an element id within the same page HTML, did not always work as expected. At times, the window being brought into view would not be brought to the top of the scroll position. Also, with the markers themselves acting as onclick events, it was decided that having links in the infowindows was overkill, and also contributed to the general "clutter" of the map being viewed. Thus, this idea was dropped.
+However, it was found that the behaviour of the infowindow was inconsistent. If the link directs to an outside source (using the target"_blank" method in the HTML), the behaviour was always as expected. However, directing a link to an element id within the same page HTML did not always work as expected. At times, the window being brought into view would not be brought to the top of the scroll position. Also, with the markers themselves acting as onclick events, it was decided that having links in the infowindows was overkill, and also contributed to the general "clutter" of the map being viewed. Thus, this idea was dropped.
 
 #### On Click Events with Markers:
 
@@ -217,7 +217,7 @@ Since the vast majority of places in the Places API were lacking descriptions, t
 
 
 #### Places lacking images: 
-Within the main Google Maps JavaScript is the follosing code to retrieve image from their JSON listings:
+Within the main Google Maps JavaScript is the following code to retrieve image from their JSON listings:
 
 <img src="documentation/testing-ms2/image-code.png">
 
@@ -248,10 +248,10 @@ The code within the Google Maps funcion:
 
 <img src="documentation/testing-ms2/place-without-website-api-code.png">
 
-Since there is a distinct possibility that certain places contained in Nicer Tours currently without websites may indeed have a website in the near future - the city of Nice has applied for a UNESCO World Heritage Listing for the Promenade des Anglais, for example - it was decided to simply change the button element to a paragraph element without altering the classes within the element, for ease of to develpment when these places do eventually get their websites. However, the key/value within the JSON request was removed to guard against any spurious listing that might appear in the Google Places API.
+Since there is a distinct possibility that certain places contained in Nicer Tours currently without websites may indeed have a website in the near future - the city of Nice has applied for a UNESCO World Heritage Listing for the Promenade des Anglais, for example - it was decided to simply change the button element to a paragraph element without altering the classes within the element, for ease of to development when these places do eventually get their websites. However, the key/value within the JSON request was removed to guard against any spurious listing that might appear in the Google Places API.
 
 #### Places lacking reviews:
-Similarly to the above situations, not all Google Places contain reviews. To over come this, either the key/value for the JSON request for the Place in question was amended (as is the case for the Promenade des Anglais, which contained a Rating value but no review and did not look good on the publiched page), or the key/value was left intact (in the event people do leave a review in the future) and the Google Maps function was amended.
+Similarly to the above situations, not all Google Places contain reviews. To overcome this, either the key/value for the JSON request for the Place in question was amended (as is the case for the Promenade des Anglais, which contained a Rating value but no review and did not look good on the published page), or the key/value was left intact (in the event people do leave a review in the future) and the Google Maps function was amended.
 The image below shows the original code for getting the Google Place review:
 
 <img src="documentation/testing-ms2/reviews.png">
@@ -260,7 +260,7 @@ While this image shows the code added to ensure that if a Place has no review, t
 
 <img src="documentation/testing-ms2/reviews-missing.png">
 
-Each of the above, and the jQuery code to ensure the buttons work as expectd has been extensively tested by both the developer and the public. Eliminating the elements when they are missing from a Google Place has cleared all errors logged to the console.
+Each of the above, and the jQuery code to ensure the buttons work as expected has been extensively tested by both the developer and the public. Eliminating the elements when they are missing from a Google Place has cleared all errors logged to the console.
 
 ### Google Maps JavaScript code, Create Your Tour:
 The points above apply also for the "Create Your Tour" page, however there are also some distinct code elements that are worth mentioning here.
@@ -278,7 +278,7 @@ While this page was being tested by the public, the developer received messages 
 The original JavaScript code for this part of the published page is beneath:
 <img src="documentation/testing-ms2/place-added-to-itinerary-original-code.png">
 
-The developer looked into this and realised that since sessionStorage saves values as strings, while the "Added To Itinerary" alert only displays each added once, when it came to retrieve these entries to be displayed in the "Send Your Message" popup, places were being duplcated. The images below show the effect.
+The developer looked into this and realised that since sessionStorage saves values as strings, while the "Added To Itinerary" alert only displays each added value once, when it came to retrieving these entries to be displayed in the "Send Your Message" popup, places were being duplicated. The images below show the effect.
 
 Place added alert displays as it should:
 <img src="documentation/testing-ms2/place-added-alert.png">
@@ -289,7 +289,7 @@ Send Itinerary popup duplicates entries:
 The developer toyed with the idea of creating empty keys for the key/values within sessionStorage, as shown below:
 <img src="documentation/testing-ms2/new-key-sessionStorage.png">
 
-However, if the developer created ten keys, what would happen if one day a furure client wants an itinerary with eleven places? The devloper realised that the message popup would then duplicate again. So, another iddea was needed. After many hours of research, the devloper found a piece of code on StackOverflow ([link here](https://stackoverflow.com/a/16844054/14773450)) that filters out duplicated strings within the sessionStorage Object:
+However, if the developer created ten keys, what would happen if one day a future client wants an itinerary with eleven places? The developer realised that the message popup would then duplicate again. So, another idea was needed. After many hours of research, the developer found a piece of code on StackOverflow ([link here](https://stackoverflow.com/a/16844054/14773450)) that filters out duplicated strings within the sessionStorage Object:
 <img src="documentation/testing-ms2/filter-duplicates-from-sessionStorage.png">
 
 After changing the alert and message popup to contain the variable `removeRepeatedEntries` rather than `placeAddedToItinerary`, the developer tested this code both in console and on the published page. This elegant piece of code solved the duplicate entries appearing issue.
@@ -310,9 +310,9 @@ Alert when all fields blank:
 Alert when all fields completed:
 <img src="documentation/testing-ms2/all-fields-completed.png">
 
-But, with the original code, when all required fields were filled, the correct alert displayed. As was the case when none of the required fields were filled.
+But, with the original code, when all required fields were filled, the correct alert was displayed. As was the case when none of the required fields were filled.
 
-Unfortuantely, however, when some - but not all - of the required fields were filled, the customer was receiving the incorrect alert and was thus able to access the payment page, but then was unable to proceed any further:
+Unfortunately, however, when some - but not all - of the required fields were filled, the customer was receiving the incorrect alert and was thus able to access the payment page, but then was unable to proceed any further:
 <img src="documentation/testing-ms2/some-fields-blank.png">
 
 The original code for this was adapted from code found on StackOverFlow ([link here](https://stackoverflow.com/a/47532256/14773450)) and is shown beneath:
@@ -322,9 +322,9 @@ Thinking that the problem may be in the deployment of the code, the code was run
 
 The same event was persisting: while some but not all fields were blank, the customer was able to proceed further.
 
-The developer exampined console, where no errors were being logged.
+The developer examined console, where no errors were being logged.
 
-Th developer then turned to the stored values in sessionStorage, and found no errors here: if a value had been entered, it was stored; if a value had not been entered, nothing was stored. All seemed to be good here.
+The developer then turned to the stored values in sessionStorage, and found no errors here: if a value had been entered, it was stored; if a value had not been entered, nothing was stored. All seemed to be good here.
 
 The developer then turned to debugging the code via the web console:
 <img src="documentation/testing-ms2/debugging.png">
@@ -335,7 +335,7 @@ It was thanks to the valuable insight of another developer that this developer w
 
 It was effectively this that had been causing the anomaly.
 
-Under advice from his collaegue, the developer first tried again using this snippet of code:
+Under advice from his colleague, the developer first tried again using this snippet of code:
 <img src="documentation/testing-ms2/booking-form-validate-1.png">
 
 Then the developer tried the following:
@@ -358,7 +358,7 @@ The developer had found errors within this page too. Effectively, the calculatio
 
 was working correctly.
 
-As was applying the discount when the discount code was enetered:
+As was applying the discount when the discount code was entered:
 
 ((Price of Tour * Number of Participants) - 10%)
 
@@ -386,15 +386,6 @@ Links in question are Font Awesome icons
 
 5. Browser error logged to Console:
 This browser error is due to sessionStorage being empty until it is filled from entries in the input elements on the [Book Now](https://8000-dabd8e84-22f4-49e8-973f-a1efde410b00.ws-eu03.gitpod.io/book-your-tour.html) page.
-
-
-
-
-
-
-
-
-
 
 ## Deployment
 - ### GitHub
