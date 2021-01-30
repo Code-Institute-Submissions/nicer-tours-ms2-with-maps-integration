@@ -137,19 +137,19 @@ amongst the most fashionable of destinations.
 
 	[GitPod](https://www.gitpod.io/) was used as the writing tool. 
 
-	[GitHub](https://www.gitpod.io/) was used as the repository for the files within this project.
+	[GitHub](https://github.com/) was used as the repository for the files within this project.
 
 	[Preview for Mac](https://support.apple.com/en-gb/guide/preview/welcome/mac) was used for image sizing (height and width).
 
 	[Squash](https://www.realmacsoftware.com/squash/) was used to lighten the weight of image files.
 
-	[Balsamiq](https://balsamiq.com) and [Pencil] (https://pencil.evolus.vn/) were used for the creation of the wireframes.
+	[Balsamiq](https://balsamiq.com) and [Pencil](https://pencil.evolus.vn/) were used for the creation of the wireframes.
 
 	[Markdown Editor](https://iwaki.info/markdown-editor-mac/en/index.html) was used for the writing of this README.md file.
 
-	[Google Maps and Places](https://en.wikipedia.org/wiki/Google_Maps) was used extensively throughout this project because of its familiarity with end-users.
+	[Google Maps](https://developers.google.com/maps/documentation/javascript/overview) and [Places](https://developers.google.com/places/web-service/overview) was used extensively throughout this project because of its familiarity with end-users.
 
-## Testing x
+## Testing
 
 This website was tested using the following tools:
 
