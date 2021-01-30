@@ -1,174 +1,50 @@
-let personName;
-$(".book-now-form-name").on("change", function() {
-    personName = this.value;
-});
+$(document).ready(function() {
+    document.getElementById("tour-chosen").innerText = sessionStorage.tour;
+    document.getElementById("no-of-pax").innerText = sessionStorage.quantity;
+    document.getElementById("date-chosen").innerText = sessionStorage.date;
+    document.getElementById("option-chosen").innerText = sessionStorage.tourOption;
+    document.getElementById("code-chosen").innerText = sessionStorage.code;
 
-let email;
-$(".book-now-form-email").on("change", function() {
-    email = this.value;
-});
 
-let tel;
-$(".book-now-form-tel").on("change", function() {
-    tel = this.value;
-});
-
-let tour;
-$("#tour").on("change", function() {
-    tour = this.value;
-});
-
-let date;
-$(".book-now-form-date").on("change", function() {
-    date = this.value;
-});
-
-let quantity;
-$("#quantity").on("change", function() {
-    quantity = this.value;
-});
-
-let code;
-$("#discount-code").on("change", function() {
-    code = this.value;
-});
-
-let tourOption;
-$("#tour-type-option").on("change", function() {
-    tourOption = this.value;
-});
-
-let tc;
-$("#t-and-c").on("change", function() {
-    tc = this.value;
-});
-
-$(".btn-go-to-payment").on("click", function() {
-    $(".required").each(function() {
-        if ($('#booking-form').is(':invalid') != 0) {
-            doThis();
-            return false;
-
-        } else {
-            doThat();
-            return false;
-        }
+    // From https://stackoverflow.com/a/45173647/14773450
+    $('form').submit(function (event) {
+        alert("Many thanks. Your payment has been received and your tour is booked!");
+        event.preventDefault();
     });
+    
+    let price = sessionStorage.tour.split(" ");
+    let priceWithoutEuro = price[1];
+    let priceAlone = priceWithoutEuro.slice(0, -1);
+    let priceOfTour = parseInt(priceAlone);
+    
+    let tourChosen = sessionStorage.tour;
 
-    function doThis() {
-        alert("Please fill in all the fields");
-    }
-
-    function doThat() {
-        function ask(question, yes, no){
-            if (confirm(question)) {
-                yes();
-            } else {
-                no();
-            }
+    let pax = parseInt(sessionStorage.quantity);
+    
+    let totalCost = "";
+    let discountApplied = "";
+    let discountCode = sessionStorage.getItem("code");
+    
+    let tourOptionCode = sessionStorage.getItem("tourOption");
+    
+    if ((discountCode === "NICER10MONACO") && (tourOptionCode === "Flexibility") && 
+        ((tourChosen === "Monaco-Half-Day: 79€ pp") || (tourChosen === "Monaco-Full-Day: 119€ pp"))) {
+            discountApplied = (priceOfTour * pax) * 0.9;
+            document.getElementById("total-cost").innerText = discountApplied.toFixed(2);
+        } else {
+            totalCost = priceOfTour * pax;
+            document.getElementById("total-cost").innerText = totalCost;
         }
-
-
-        function yes() {            
-            if (sessionStorage.getItem("personName") === null) {
-                sessionStorage.setItem("personName", "");
-            }
-
-            if (sessionStorage.getItem("email") === null) {
-                sessionStorage.setItem("email", "");
-            }
-
-            if (sessionStorage.getItem("tel") === null) {
-                sessionStorage.setItem("tel", "");
-            }
-
-            if (sessionStorage.getItem("tour") === null) {
-                sessionStorage.setItem("tour", "");
-            }
-
-            if (sessionStorage.getItem("date") === null) {
-                sessionStorage.setItem("date", "");
-            }
-
-            if (sessionStorage.getItem("quantity") === null) {
-                sessionStorage.setItem("quantity", "");
-            }
-
-            if (sessionStorage.getItem("code") === null) {
-                sessionStorage.setItem("code", "");
-            }
-
-            if (sessionStorage.getItem("tourOption") === null) {
-                sessionStorage.setItem("tourOption", "");
-            }
-
-            if (sessionStorage.getItem("tc") === null) {
-                sessionStorage.setItem("tc", "");
-            }
-
-            var getName = personName;
-            sessionStorage.setItem("personName", sessionStorage.getItem("personName") + getName);
-            sessionStorage.getItem('personName');
-            
-            var getEmail = email;
-            sessionStorage.setItem("email", sessionStorage.getItem("email") + getEmail);
-            sessionStorage.getItem('email');
-
-            var getTel = tel;
-            sessionStorage.setItem("tel", sessionStorage.getItem("tel") + getTel);
-            sessionStorage.getItem('tel');
-
-            var getTour = tour;
-            sessionStorage.setItem("tour", sessionStorage.getItem("tour") + getTour);
-            sessionStorage.getItem('tour');
-
-            var getDate = date;
-            sessionStorage.setItem("date", sessionStorage.getItem("date") + getDate);
-            sessionStorage.getItem('date');
-
-            var getQuantity = quantity;
-            sessionStorage.setItem("quantity", sessionStorage.getItem("quantity") + getQuantity);
-            sessionStorage.getItem('quantity');
-
-            var getCode = code;
-            if (getCode === undefined) {
-                sessionStorage.setItem("code", "No Discount Code");
-                sessionStorage.getItem("code");
-            } else {
-                sessionStorage.setItem("code", sessionStorage.getItem("code") + getCode);
-                sessionStorage.getItem('code');
-            }
-
-            var getTourOption = tourOption;
-            sessionStorage.setItem("tourOption", sessionStorage.getItem("tourOption") + getTourOption);
-            sessionStorage.getItem('tourOption');
-
-            var getTC = tc;
-            sessionStorage.setItem("tc", sessionStorage.getItem("tc") + getTC);
-            sessionStorage.getItem('tc');
-            
-            window.open("payment.html", "_self");
-        }
-
-        function no() {
-            sessionStorage.clear();
-        }
-        
-        ask(`Clicking "ok" will send you to the payment page. Before clicking, please check these details carefully.
-
-            Name: ${personName}
-            email: ${email}
-            Telephone: ${tel}
-            Tour: ${tour}
-            Date: ${date}
-            No. of people: ${quantity}
-            Tour Type: ${tourOption}
-        
-If you entered a DISCOUNT CODE, it will be applied directly when you click "OK".
-
-IMPORTANT:
-You also confirm you have read our Terms and Conditions`, yes, no);
-
-        return false;
-    }
+    
+        window.onunload = function() {
+        sessionStorage.removeItem("personName");
+        sessionStorage.removeItem("email");
+        sessionStorage.removeItem("tel");
+        sessionStorage.removeItem("tour");
+        sessionStorage.removeItem("date");
+        sessionStorage.removeItem("quantity");
+        sessionStorage.removeItem("code");
+        sessionStorage.removeItem("tourOption");
+        sessionStorage.removeItem("tc");
+    };
 });

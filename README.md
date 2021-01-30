@@ -297,7 +297,78 @@ After changing the alert and message popup to contain the variable `removeRepeat
 Thus, the final code for this part of the "Create Your Tour" page is as follows:
 <img src="documentation/testing-ms2/add-to-itinerary-final-code.png">
 
+### Book Now page
+The developer applied many of the lessons learned from the previous testing for these pages. However, upon testing the "Proceed to Payment" button on the "Book Now" page, there were some strange, unexpected results.
 
+The intended result is that once the future customer has filled in the REQUIRED fields in the booking form, an alert should be displayed and upon clicking "OK" in that alert, the customer should be taken to the "Payment" page.
+
+Otherwise, if any of the required fields are empty, a different alert should be displayed, asking the customer to fill in all the required fields.
+
+Alert when all fields blank:
+<img src="documentation/testing-ms2/all-fields-blank-result.png">
+
+Alert when all fields completed:
+<img src="documentation/testing-ms2/all-fields-completed.png">
+
+But, with the original code, when all required fields were filled, the correct alert displayed. As was the case when none of the required fields were filled.
+
+Unfortuantely, however, when some - but not all - of the required fields were filled, the customer was receiving the incorrect alert and was thus able to access the payment page, but then was unable to proceed any further:
+<img src="documentation/testing-ms2/some-fields-blank.png">
+
+The original code for this was adapted from code found on StackOverFlow ([link here](https://stackoverflow.com/a/47532256/14773450)) and is shown beneath:
+<img src="documentation/testing-ms2/required-fields-code.png">
+
+Thinking that the problem may be in the deployment of the code, the code was run through JSHints to check for errors. Once the code had been cleaned up properly, the developer tried to redeploy the code and see the results.
+
+The same event was persisting: while some but not all fields were blank, the customer was able to proceed further.
+
+The developer exampined console, where no errors were being logged.
+
+Th developer then turned to the stored values in sessionStorage, and found no errors here: if a value had been entered, it was stored; if a value had not been entered, nothing was stored. All seemed to be good here.
+
+The developer then turned to debugging the code via the web console:
+<img src="documentation/testing-ms2/debugging.png">
+
+Again, no errors could be found here - both functions seemed to be accessible.
+
+It was thanks to the valuable insight of another developer that this developer was able to solve this conundrum. The colleague explained that required fields in input elements in HTML code and JavaScript do not play nicely together.
+
+It was effectively this that had been causing the anomaly.
+
+Under advice from his collaegue, the developer first tried again using this snippet of code:
+<img src="documentation/testing-ms2/booking-form-validate-1.png">
+
+Then the developer tried the following:
+<img src="documentation/testing-ms2/booking-form-validate-2.png">
+
+Neither of these worked.
+
+The developer then tried a further, third solution:
+<img src="documentation/testing-ms2/booking-form-validate-3.png">
+
+This snippet of code worked.
+
+The final code for this dilemma is seen here:
+<img src="documentation/testing-ms2/move-to-payment-solution-code.png">
+
+### Payment page
+The developer had found errors within this page too. Effectively, the calculation of
+
+(Price of Tour * Number of Participants)
+
+was working correctly.
+
+As was applying the discount when the discount code was enetered:
+
+((Price of Tour * Number of Participants) - 10%)
+
+However, when it came to viewing the payment page when no discount was applied, the Discount Code field was seen as being "undefined".
+
+The original code for sessionStorage:
+<img src="documentation/testing-ms2/get-discount-code-undefined-code.png">
+
+The solution was simply to pre-define an entry for the discount code in sessionStorage:
+<img src="documentation/testing-ms2/get-discount-code-defined-code.png">
 
 ## Lighthouse Results
 Many of the results seen in the Lighthouse files are due to elements outside of this website:
@@ -315,6 +386,10 @@ Links in question are Font Awesome icons
 
 5. Browser error logged to Console:
 This browser error is due to sessionStorage being empty until it is filled from entries in the input elements on the [Book Now](https://8000-dabd8e84-22f4-49e8-973f-a1efde410b00.ws-eu03.gitpod.io/book-your-tour.html) page.
+
+
+
+
 
 
 
