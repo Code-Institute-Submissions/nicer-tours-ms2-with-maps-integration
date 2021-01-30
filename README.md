@@ -201,9 +201,9 @@ would like to visit.
             Beneath is a map with markers, and upon each click of the marker, the user can find out about that particular Place of Interest and see a photo of it. 
             Should the user wish, from here, he or she may click on the "Reviews" or "Find Out More" buttons, where they are available. Not all Places in the Google Places API 
             have reviews or websites, thus the user is only presented with these buttons where the element exists in Google's database. [Upon clicking a place button: public tour pages](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/user-stories-screen-shots/public-tour-button-clicked.png)
-            \[All details available in Google Places API: public tour pages](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/user-stories-screen-shots/marker-clicked-all-options-available.png)
-            \[No website available in Google Places API: public tour pages](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/user-stories-screen-shots/marker-clicked-no-website.png)
-            \[No reviews available in Google Places API: public tour pages](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/user-stories-screen-shots/marker-clicked-no-reviews.png)
+              \  [All details available in Google Places API: public tour pages](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/user-stories-screen-shots/marker-clicked-all-options-available.png)
+              \  [No website available in Google Places API: public tour pages](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/user-stories-screen-shots/marker-clicked-no-website.png)
+              \  [No reviews available in Google Places API: public tour pages](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/user-stories-screen-shots/marker-clicked-no-reviews.png)
 			
             - On tablet portrait orientation screen size and smaller, the user sees only the markers, to keep the map itself uncluttered.
             [Only markers on smaller devices](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/user-stories-screen-shots/marker-no-labels-for-small-devices.png)
