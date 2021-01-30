@@ -1,4 +1,4 @@
-<h1 align="center"><a href="https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/index.html">Nicer Tours</a></h1>
+<h1 align="center"><a href="https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/index.html">Nicer Tours v2.0</a></h1>
 
 <img src="documentation/deployment-screen-shots/screenshot.png">
 
@@ -102,29 +102,36 @@ amongst the most fashionable of destinations.
     [Book Now for Mobile](https://justin-sawyer.github.io/Nicer-Tours-MS2-with-Maps-Integration/documentation/wireframe/mobile-book-now.png)
 
 ## Features:
--	This website is fully responsive.
+-	This website is fully responsive and interactive.
 
--	It includes certain interactive elements, such as modals and popovers.
-
--	Although the project is not being marked on the inclusion of JavaScript elements, I have chosen to include one in the inclusion of the Call To Action popover. I included it for the challenge of making it work.
+-	The interactivity of this website is powered by the JavaScript language, as well as jQuery and JSON from the Google Maps API.
 
 ## Technologies Used:
-- ### Languages:
+- ### Languages
 	[HTML5](https://en.wikipedia.org/wiki/HTML5)
 
 	[CSS](https://en.wikipedia.org/wiki/CSS)
 
 	[JavaScript](https://en.wikipedia.org/wiki/JavaScript)
 
+	[jQuery](https://en.wikipedia.org/wiki/JQuery)
+
+	[JSON](https://en.wikipedia.org/wiki/JSON)
+
+	[APIs](https://en.wikipedia.org/wiki/API)
+
 - ### Frameworks, Libraries & Programs:
+	[Bootstrap v4.5.2](https://getbootstrap.com/) forms the vast majority of the "formatting code" - the gird system, containers, button elements, etc. - of this website. It was used because of its responsiveness and because it is compatible with so many browsers. While the underlying code may be from Bootstrap, I have in places heavily modified it (or tried to!). A good example of this is the Navigation bar. The colours used, the position of the site name and the colour of the "burger" icon. Credit for additional code used within is given in the HTML files themselves.
 
-	[Bootstrap v4.5.2](https://getbootstrap.com/) forms the vast majority of the "formatting code" (the grid system, containers, button elements etc.) of this website. It was used because of its responsiveness and because it is compatible with so many browsers. While the underlying code may be from Bootstrap, I have in places heavily modified it (or tried to!). A good example of this is the Navigation bar. The colours used, the position of the site name and the colour of the "burger" icon. Credit for additional code used within is given in the HTML files themselves.
+	[Google Fonts](https://fonts.google.com/) was used to import the different fonts (Poiret One and Open Sans) used on this website.
 
-	[Google Fonts](https://fonts.google.com/) were used to import the different fonts (Poiret One and Open Sans) used on this website.
+	[Font Awesome v4.7.0](https://fontawesome.com/v4.7.0/) was used for the social icons seen in the footer of each page are from here, since they are so easily recognisable.
 
-	[Font Awesome v4.7.0](https://fontawesome.com/v4.7.0/) was used for the social icons seen in the footer of each page.
+	[Popper.js](https://popper.js.org/) was used for the positioning of the popover in the Call To Action.
 
-	[Popper.js](https://popper.js.org/) was used for the little piece of JavaScript in this project: the positioning of the popover in the Call To Action.
+	[jQuery](https://jquery.com/) was used to add functionality to the HTML and JavaScript handling.
+
+	[emailjs](https://www.emailjs.com/) was used for handling the messages to email functionality.
 
 	[Git](https://git-scm.com) was used for version control.
 
@@ -132,13 +139,17 @@ amongst the most fashionable of destinations.
 
 	[GitHub](https://www.gitpod.io/) was used as the repository for the files within this project.
 
-	[Preview for Mac](https://support.apple.com/en-gb/guide/preview/welcome/mac) was used for image sizing (both in terms of height and width, and weight of file).
+	[Preview for Mac](https://support.apple.com/en-gb/guide/preview/welcome/mac) was used for image sizing (height and width).
 
-	[Balsamiq](https://balsamiq.com) was used for the creation of the wireframes.
+	[Squash](https://www.realmacsoftware.com/squash/) was used to lighten the weight of image files.
 
-    [Compress PNG](https://compresspng.com/) was used for compressing images in the User Stories section of this README.md file.
+	[Balsamiq](https://balsamiq.com) and [Pencil] (https://pencil.evolus.vn/) were used for the creation of the wireframes.
 
-## Testing
+	[Markdown Editor](https://iwaki.info/markdown-editor-mac/en/index.html) was used for the writing of this README.md file.
+
+	[Google Maps and Places](https://en.wikipedia.org/wiki/Google_Maps) was used extensively throughout this project because of its familiarity with end-users.
+
+## Testing x
 
 This website was tested using the following tools:
 
