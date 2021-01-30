@@ -11,12 +11,13 @@ function initMap() {
     let service = new google.maps.places.PlacesService(map);
 //---------------------------------------------------------------------------------------------------- Markers
     //Eze Village marker
+    //Description from https://en.wikipedia.org/wiki/%C3%88ze
     let markerEzeVillage = {
         lat: 43.728071, 
         lng: 7.361423,
         title: `Eze Village`,
         description: `<h3 class="poi-sub-heading">From Nietzsche to Disney....</h3>
-                    <!-- Text from https://en.wikipedia.org/wiki/%C3%88ze -->
+                    
                     <p class="poi-text">This small mediaeval village is famous for its beauty and charm. Its many shops, art galleries, hotels and restaurants attract a 
                     large number of tourists and honeymooners. As a result, Èze has become dubbed by some a <i>village-musée</i>, a "museum village", as few residents of 
                     local origin live here. From Èze there are gorgeous views of the Mediterranean Sea. </p>
@@ -35,12 +36,13 @@ function initMap() {
     };
     
     //Parfumerie Fragonard marker
+    //Description from https://www.fragonard.com/en/about-fragonard
     let markerFragonard = {
         lat: 43.729799, 
         lng: 7.363225,
         title: `Parfumerie Fragonard`,
         description: `<h3 class="poi-sub-heading">A passionate dedication...</h3>
-                    <!-- Text from https://www.fragonard.com/en/about-fragonard -->
+                    
                     <p class="poi-text">It was shortly before the First World War that Eugène Fuchs, an entrepreneur at heart who had already 
                     been seduced by the magic of perfume, decided to set up his own perfumery based on the novel concept of selling perfumery 
                     products directly to the tourists who were beginning to discover the French Rivera’s charms. Parfumerie Fragonard was opened 
@@ -63,12 +65,13 @@ function initMap() {
     };
     
     //Monaco Panorama marker
+    //Description by self and https://en.wikipedia.org/wiki/T%C3%AAte_de_Chien
     let markerPanoramaMonaco = {
         lat: 43.731520, 
         lng: 7.402095,
         title: `The Dog's Head Moutain`,
         description: `<h3 class="poi-sub-heading">To see is to believe... </h3>
-                    <!-- Text by self and https://en.wikipedia.org/wiki/T%C3%AAte_de_Chien -->
+                    
                     <p class="poi-text">The <i>Tête de Chien</i> (Dog's Head) is a 550 m (1,804 ft) high rock promontory near the village of La Turbie in the Alpes-Maritimes 
                     department of France. It overlooks the Principality of Monaco, and is the highest point on the Grande Corniche road.</p>
                     <p class="poi-text">The American diplomat Samuel S. Cox, in his 1870 travel book Search for Winter Sunbeams in the Riviera, Corsica, Algiers and Spain 
@@ -88,12 +91,13 @@ function initMap() {
     };
 
     //Oceanographic Museum marker
+    //Description by self and https://en.wikipedia.org/wiki/Oceanographic_Museum_of_Monaco
     let markerOceanographicMuseum = {
         lat: 43.731458, 
         lng: 7.425484,
         title: `Oceaographic Museum, Monaco`,
         description: `<h3 class="poi-sub-heading">Towering 85m out of the sea... Home of the Yellow Submarine</h3>
-                    <!-- Text by self and https://en.wikipedia.org/wiki/Oceanographic_Museum_of_Monaco -->
+                    
                     <p class="poi-text">The Oceanographic Museum was inaugurated in 1910 by Monaco's modernist reformer, Prince Albert I. Jacques-Yves 
                     Cousteau was director from 1957 to 1988, whose submarine which inspired The Beatles is on display at the entrance to the museum.</p>
                     <p class="poi-text">The museum is home to exhibitions and collections of various species of sea fauna (starfish, seahorses, turtles, 
@@ -114,12 +118,13 @@ function initMap() {
     };
 
     //Monaco Cathedral marker
+    //Description from https://en.wikipedia.org/wiki/Cathedral_of_Our_Lady_Immaculate
     let markerMonacoCathedral = {
         lat: 43.731272, 
         lng:7.422480,
         title: `Saint Nicholas Cathedral, Monaco`,
         description: `<h3 class="poi-sub-heading">Pay your respects to Grace Kelly, Princess of Monaco.</h3>
-                    <!-- Text from https://en.wikipedia.org/wiki/Cathedral_of_Our_Lady_Immaculate -->
+                    
                     <p class="poi-text">The <i>Cathédrale de Notre-Dame-Immaculée</i> (Cathedral of Our Lady Immaculate) or Saint Nicholas Cathedral 
                     is the cathedral of the Roman Catholic Archdiocese of Monaco, where many of the Grimaldis were buried, including Grace Kelly and — more 
                     recently — Prince Rainier III.</p>
@@ -141,12 +146,13 @@ function initMap() {
 
 
     //Monaco Palace marker
+    //Description from https://en.wikipedia.org/wiki/Prince%27s_Palace_of_Monaco
     let markerMonacoPalace = {
         lat: 43.731694, 
         lng: 7.419830,
         title: `Palais Princier, Monaco`,
         description: `<h3 class="poi-sub-heading">700 years of rule.</h3>
-                    <!-- Text from https://en.wikipedia.org/wiki/Prince%27s_Palace_of_Monaco -->
+                    
                     <p class="poi-text">The  <i>Palais princier de Monaco</i> (Prince's Palace of Monaco) is the official residence of the Sovereign Prince 
                     of Monaco. Built in 1191 as a Genoese fortress, during its long and often dramatic history it has been bombarded and besieged by many 
                     foreign powers. Since the end of the 13th century, it has been the stronghold and home of the Grimaldi family who first captured it in 
@@ -174,12 +180,13 @@ function initMap() {
     };
 
     //Casino marker
+    //Text from https://en.wikipedia.org/wiki/Monte_Carlo_Casino
     let markerCasino = {
         lat: 43.738916, 
         lng: 7.428046,
         title: `Casino de Monte-Carlo`,
         description: `<h3 class="poi-sub-heading">From ruin to riches...</h3>
-                    <!-- Text from https://en.wikipedia.org/wiki/Monte_Carlo_Casino -->
+                    
                     <p class="poi-text">The idea of opening a gambling casino in Monaco belongs to Princess Caroline, a shrewd, business-minded spouse of Prince Florestan. 
                     Revenues from the proposed venture were supposed to save the House of Grimaldi from bankruptcy. The ruling family's persistent financial problems became 
                     especially acute after the loss of tax revenue from two breakaway towns, Menton and Roquebrune, which declared independence from Monaco in 1848 and refused 
@@ -208,12 +215,13 @@ function initMap() {
     };
 
     //Hotel de Paris marker
+    //Description from https://fr.wikipedia.org/wiki/H%C3%B4tel_de_Paris_Monte-Carlo, https://en.wikipedia.org/wiki/H%C3%B4tel_de_Paris_Monte-Carlo and self -->
     let markerHotelDeParis = {
         lat: 43.738823, 
         lng: 7.426947,
         title: `Hotel de Paris Monte-Carlo`,
         description: `<h3 class="poi-sub-heading">The "James Bond Hotel"</h3>
-                    <!-- Text from https://fr.wikipedia.org/wiki/H%C3%B4tel_de_Paris_Monte-Carlo, https://en.wikipedia.org/wiki/H%C3%B4tel_de_Paris_Monte-Carlo and self -->
+                    
                     <p class="poi-text">This prestigious palace was founded on the <i>Place du Casino</i> in Monte-Carlo by Prince Charles III of Monaco and François Blanc, 
                     from plans by the French architect Godinot de la Bretonnerie. It was inaugurated in 1864, next to the future <i>Place du Casino</i> (inaugurated: 1868), 
                     <i>Casino de Monte-Carlo</i> and <i>Opéra de Monte-Carlo</i> (1879), and <i>Hôtel Hermitage Monte-Carlo</i> (1896).</p>
@@ -232,12 +240,13 @@ function initMap() {
     };
 
     //Café de Paris marker
+    //Description from https://en.wikipedia.org/wiki/Caf%C3%A9_de_Paris_(Monaco)
     let markerCafeDeParis = {
         lat: 43.739749, 
         lng: 7.428005,
         title: `Casino Café de Paris`,
         description: `<h3 class="poi-sub-heading">Watching the cars go by!</h3>
-                    <!-- Text from self -->
+                    
                     <p class="poi-text">Founded in 1868, at the same time as Monte Carlo, with its <i>Casino de Monte-Carlo</i> and the <i>Hôtel de Paris</i> by François Blanc 
                     and Prince Charles III of Monaco, it was originally baptized <i>Café Divan</i>. It was transformed several times until the 1930s, then completely renovated 
                     in 1988 in the <i>Belle Époque</i> style of the 1900s like the old Parisian bistros.</p>
@@ -253,12 +262,13 @@ function initMap() {
     };
 
     //Grand Prix de Monaco Monte-Carlo
+    //Description from https://en.wikipedia.org/wiki/Monaco_Grand_Prix. Image from https://commons.wikimedia.org/wiki/File:Circuit_de_Monaco_1950.png
     let markerMCF1Route = {
         lat: 43.735732, 
         lng: 7.421280,
         title: `Grand Prix de Monaco Monte-Carlo Racetrack`,
         description: `<h3 class="poi-sub-heading">Vroom! Vroom!</h3>
-                    <!-- Text from self -->
+                    
                     <p class="poi-text"><i>Le Circuit de Monaco</i> is a street circuit laid out on the city streets of Monte Carlo and La Condamine around the harbour 
                     of the principality of Monaco. It is commonly referred to as "Monte Carlo" because it is largely inside the Monte Carlo neighbourhood of Monaco.</p>
 

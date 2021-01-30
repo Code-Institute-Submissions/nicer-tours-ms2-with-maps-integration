@@ -12,12 +12,13 @@ function initMap() {
     let service = new google.maps.places.PlacesService(map);
 //---------------------------------------------------------------------------------------------------- Markers
     //Promenade des Anglais marker
+    //Description from https://en.wikipedia.org/wiki/Promenade_des_Anglais
     let markerProm = {
         lat: 43.695316, 
         lng: 7.267793,
         title: `Promenade des Anglais`,
         description: `<h3 class="poi-sub-heading"><i>La Prom</i>: France's most iconic seaside boulevard.</h3>
-                    <!-- Text from https://en.wikipedia.org/wiki/Promenade_des_Anglais -->
+                    
                     <p class="poi-text">In the second half of the 18th century, the English aristocracy took to spending the winter in Nice, 
                     enjoying the panorama along the coast. In 1820, when a particularly harsh winter further north brought an influx of beggars to Nice, 
                     the English put forward a proposal for a walkway along the sea, and the beggars were employed to construct it. It was funded 
@@ -36,12 +37,14 @@ function initMap() {
     };
     
     //Place Masséna marker
+    //Description from https://en.wikipedia.org/wiki/Place_Mass%C3%A9na 
+    //Image from https://upload.wikimedia.org/wikipedia/commons/4/47/Cours_Saleya_-_Chapelle_de_la_Mis%C3%A9ricorde_-_Nice.jpeg
     let markerPlaceMassena = {
         lat: 43.697400, 
         lng: 7.270230,
         title: `Place Masséna`,
         description: `<h3 class="poi-sub-heading">Nice's primary city square.</h3>
-                    <!-- Text from https://en.wikipedia.org/wiki/Place_Mass%C3%A9na -->
+                    
                     <p class="poi-text">Named after André Masséna. Its layout was designed by Joseph Vernier in 1843-1844.</p>
                     <p class="poi-text">The Place Masséna is the main square of the city. Before the Paillon River was covered over, 
                     the <i>Pont-Neuf</i> was the only practicable way between the old town and the modern one. The square was thus divided 
@@ -60,12 +63,13 @@ function initMap() {
     };
     
     //Opera House marker
+    //Description by self and https://www.opera-nice.org/en/the-theater/historic 
     let markerOperaHouse = {
         lat: 43.69547, 
         lng: 7.27253,
         title: `L'Opéra de Nice Opera House`,
         description: `<h3 class="poi-sub-heading">From a little wooden theatre to a grand dame of the <i>Italianate</i> style</h3>
-                    <!-- Text by self and https://www.opera-nice.org/en/the-theater/historic -->
+                    
                     <p class="poi-text">The Marchioness Alli-Maccarani acquired permission to turn her former residence into a theatre from Amadeus III, 
                     King of Sardinia, under who's jurisdiction the County of Nice fell. Thus the little <i>Théâtre Maccarani</i>, named after its owners, 
                     was built at the site of the present-day opera house in the 18th century.</p>
@@ -84,12 +88,13 @@ function initMap() {
     };
 
     //Flower Market marker
+    //Description by self 
     let markerFlowerMarket = {
         lat: 43.69572, 
         lng: 7.27528,
         title: `The Flower Market of the Old Town`,
         description: `<h3 class="poi-sub-heading">Discover the heart of <i>Vieux Nice</i></h3>
-                    <!-- Text by self -->
+                    
                     <p class="poi-text">The old town of Nice with its world-famous flower market - once the trading point for 35 
                     tonnes of flowers per day! These flowers fed the perfume and candy industry of the region.</p>
                     <p class="poi-text">Try the local specialities in the <i>Provençal</i> market: <strong><i>socca</i></strong>, the traditional 
@@ -106,12 +111,13 @@ function initMap() {
     };
 
     //St Reparate Church marker
+    //Description from https://en.wikipedia.org/wiki/Nice_Cathedral 
     let markerStReparateChurch = {
         lat: 43.697294, 
         lng: 7.275965,
         title: `St. Réparate Church`,
         description: `<h3 class="poi-sub-heading">Seat of the Diocese of Nice and named after Saint Reparata.</h3>
-                    <!-- Text from https://en.wikipedia.org/wiki/Nice_Cathedral -->
+                    
                     <p class="poi-text">The original cathedral on the site, called St Mary of the Castle, was consecrated in 1049. In 1060, relics 
                     belonging to Saint Reparata arrived in Nice. By 1075, a chapel dedicated to St Reparata was constructed at the foot of the now destroyed 
                     castle of Nice (see Castle Hill).</p>
@@ -130,12 +136,13 @@ function initMap() {
 
 
     //Castle Hill marker
+    //Description from https://en.wikipedia.org/wiki/Castle_of_Nice 
     let markerCastleHill = {
         lat: 43.694835, 
         lng: 7.281103,
         title: `Castle Hill`,
         description: `<h3 class="poi-sub-heading">Castle Hill with its spectacular views over <i>Vieux Nice</i> (the old town) and <i>La Prom</i>.</h3>
-                    <!-- Text from https://en.wikipedia.org/wiki/Castle_of_Nice -->
+                    
                     <p class="poi-text">The Castle of Nice was a citadel used for military purposes. Built at the top of a hill, it stood overlooking the bay of 
                     Nice from the 11th century to the 18th century. It was besieged several times, particularly in 1543 and in 1691, before it was taken by French 
                     troops in 1705 and finally destroyed in 1706 by command of Louis XIV.</p>
@@ -151,12 +158,13 @@ function initMap() {
     };
 
     //Rauba-Capeù Memorial marker
+    //Description from https://en.nicetourisme.com/nice/74-quai-rauba-capeu and self 
     let markerRaubaCapeu = {
         lat:43.693849, 
         lng: 7.281250,
         title: `WWI Memorial "Rauba-Capeù"`,
         description: `<h3 class="poi-sub-heading">The <strong>"Hat Thief"</strong> memorial to Nice's fallen soldiers.</h3>
-                    <!-- Text from https://en.nicetourisme.com/nice/74-quai-rauba-capeu and myself -->
+                    
                     <p class="poi-text">At the foot of Castle Hill, the Promenade becomes the <i>Quai des États-Unis</i> in front of the old town. Then, as you round the headland, 
                     it becomes <i>Rauba Capeu</i>, which offers one of the finest vistas on the Mediterranean Sea and the beautiful blue and ochre nuances along the Prom.</p>
 
@@ -172,12 +180,13 @@ function initMap() {
     };
 
     //Nice Port marker
+    //Description from https://en.nicetourisme.com/by-boat and self 
     let markerPortLympia = {
         lat: 43.695379, 
         lng: 7.284777,
         title: `Port de Nice Lympia`,
         description: `<h3 class="poi-sub-heading">That <strong><i>most</i></strong> Mediterranean of ports</h3>
-                    <!-- Text from https://en.nicetourisme.com/by-boat and self -->
+                    
                     <p class="poi-text">The Port of Nice is actually named Port Lympia, as it was once the estuary of the Lympia spring, which was diverted when the 
                     construction of the port commenced in 1700.  It is surrounded by 18th-century buildings of Genoese style, and its architecture was inspired by the 
                     Italian Renaissance and influenced by the baroque urban planning of Turin.</p>
@@ -191,12 +200,13 @@ function initMap() {
     };
 
     //Nice View Point marker
+    //Description from self 
     let markerBayOfAngelsView = {
         lat:43.689128, 
         lng: 7.296206,
         title: `Belvedére du Mont Boron`,
         description: `<h3 class="poi-sub-heading">Simply breathtaking!</h3>
-                    <!-- Text from self -->
+                    
                     <p class="poi-text">Offering unrivalled views over the Bay of Angels, the viewpoint of the <i>Belvedére du Mont Boron</i> is a view 
                     that should be on everyone's bucket list!</p>
 
@@ -210,12 +220,13 @@ function initMap() {
     };
 
     //Arènes de Cimiez marker
+    //Description from https://en.nicetourisme.com/nice/94-jardin-des-arenes-de-cimiez 
     let markerArenesDeCimiez = {
         lat:43.720492, 
         lng: 7.276909,
         title: `Arènes de Cimiez Garden`,
         description: `<h3 class="poi-sub-heading">Hear the echoes of the great Jazz Stars as you stroll through the gardens.</h3>
-                    <!-- Text from https://en.nicetourisme.com/nice/94-jardin-des-arenes-de-cimiez -->
+                    
                     <p class="poi-text">Across from the Monastery of Cimiez, this garden is a vast olive grove, with thousands of 
                     centuries-old trees; the lawns are easily accessible to everyone, which makes this a favourite haunt for family 
                     outings.</p>
@@ -229,13 +240,14 @@ function initMap() {
     };
 
     //Matisse Museum marker
+    //Description from http://www.nicetrotter.fr/art-musee-matisse-de-nice-cimiez-125.html and http://www.musee-matisse-nice.org/ 
     let markerMatisseMuseum = {
         lat:43.71938, 
         lng: 7.27624,
         title: `Matisse Museum`,
         description: `<h3 class="poi-sub-heading">The <i>Musée Matisse</i> is one of the must-see museums for any visitor to Nice.</h3>
-                    <!-- Text from http://www.nicetrotter.fr/art-musee-matisse-de-nice-cimiez-125.html and http://www.musee-matisse-nice.org/ -->
-                    <p class="poi-text">Inaugurated in 1963 on the second floor of the Villa des Arènes, situated within the 
+                    
+        <p class="poi-text">Inaugurated in 1963 on the second floor of the Villa des Arènes, situated within the 
                     archeological site in Cimiez, the Musée Matisse holds the artist's and his heirs' gifts to the 
                     City of Nice.</p>
 
@@ -252,12 +264,13 @@ function initMap() {
     };
 
     //Archaeology Museum marker
+    //Description from https://frenchriviera.travel/archaeological-museum-nice/ 
     let markerArchaeologyMuseum = {
         lat:43.71928, 
         lng: 7.27511,
         title: `Archaeology Museum`,
         description: `<h3 class="poi-sub-heading">A treasure trove of artefacts dating from the Bronze Age to the Middle Ages.</h3>
-                    <!-- Text from https://frenchriviera.travel/archaeological-museum-nice/ -->
+                    
                     <p class="poi-text">The most valuable items found over the years in Cimiez and near Nice have been housed 
                     together in the archaeological museum in Cimiez. Some of them were excavated during archaeological research, 
                     while others were found in the wrecks of ancient ships sunk near the Côte d’Azur. From 1960, the museum 
@@ -274,12 +287,13 @@ function initMap() {
     };
     
     //Cimiez Monastery marker
+    //Description from https://fr.wikipedia.org/wiki/Monast%C3%A8re_de_Cimiez
     let markerCimiezMonastery = {
         lat:43.71998, 
         lng: 7.27881,
         title: `The Monastery of Cimiez`,
         description: `<h3 class="poi-sub-heading">Brother Marc and the history of San Francisco.</h3>
-                    <!-- Text from https://fr.wikipedia.org/wiki/Monast%C3%A8re_de_Cimiez-->
+                    
                     <p class="poi-text">The monastery of Cimiez was founded in the VIII<sup>th</sup> century by the Benedictine Order, 
                     and was rebuilt by the monks of the Abbey of Saint-Pons. It brings together the Church of Our Lady of the Assumption 
                     (XV<sup>th</sup> century) and the Franciscan museum that traces the Franciscan way of life in Nice from the 8<sup>th</sup> century.</p>
@@ -297,12 +311,13 @@ function initMap() {
     };
 
     //Notre Dame marker
+    //Description from https://www.iberia.com/es/destination-guide/nice/basilique-notre-dame-de-lassomption/ 
     let markerNotreDame = {
         lat:43.703672, 
         lng: 7.265758,
         title: `Notre-Dame de l’Assomption Basilica`,
         description: `<h3 class="poi-sub-heading">Neo-Gothic church famous for its large rose window, and colourful stained-glass windows.</h3>
-                    <!-- Text from https://www.iberia.com/es/destination-guide/nice/basilique-notre-dame-de-lassomption/ -->
+                    
                     <p class="poi-text">The similarity between this building and the Cathedral of Notre- Dame in Paris is more than obvious, 
                     but that doesn't stop it from standing as a real symbol of Nice. In fact, this basilica is the largest in the city, and it's even 
                     bigger than the city's cathedral.</p>
@@ -320,12 +335,13 @@ function initMap() {
     };
 
     //Russian Cathedral marker
+    //Description from https://en.wikipedia.org/wiki/Russian_Orthodox_Cathedral,_Nice and self 
     let markerRussianCathedral = {
         lat:43.703810, 
         lng: 7.253920,
         title: `St. Nicholas Russian Orthodox Cathedral`,
         description: `<h3 class="poi-sub-heading">The largest Eastern Orthodox cathedral in Western Europe.</h3>
-                    <!-- Text from https://en.wikipedia.org/wiki/Russian_Orthodox_Cathedral,_Nice and self -->
+                    
                     <p class="poi-text">In the mid-19th century, Russian nobility visited Nice and the French Riviera, following the 
                     trend established decades earlier by the English upper class and nobility. In 1864, immediately after the railway reached Nice, 
                     Tsar Alexander II visited by train and was attracted by the pleasant climate. Thus began an association between Russians and the 

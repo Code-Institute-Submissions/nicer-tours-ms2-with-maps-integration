@@ -11,12 +11,13 @@ function initMap() {
     let service = new google.maps.places.PlacesService(map);
 //---------------------------------------------------------------------------------------------------- Markers
     //Red Carpet marker
+    //Description from https://en.wikipedia.org/wiki/Palais_des_Festivals_et_des_Congr%C3%A8s 
     let markerRedCarpet = {
         lat: 43.551022, 
         lng: 7.017962,
         title: `The Red Carpet in Cannes`,
         description: `<h3 class="poi-sub-heading">Selfies and selfies... just like the stars!</h3>
-                    <!-- Text from https://en.wikipedia.org/wiki/Palais_des_Festivals_et_des_Congr%C3%A8s -->
+                    
                     <p class="poi-text">The <i>Palais des Festivals et des Congrès</i> (Palace of Festivals and Conferences) is the venue for the Cannes Film Festival, the Cannes 
                     Lions International Festival of Creativity and the NRJ Music Award.</p>
 
@@ -35,12 +36,13 @@ function initMap() {
     };
     
     //Juan les Pins Jazz marker
+    //Description from https://www.fragonard.com/en/about-fragonard 
     let markerJazzAtJuan = {
         lat: 43.566970, 
         lng: 7.115160,
         title: `Juan les Pins`,
         description: `<h3 class="poi-sub-heading">🎶 "You talk like Marlene Dietrich..." 🎶</h3>
-                    <!-- Text from https://www.fragonard.com/en/about-fragonard -->
+                    
                     <p class="poi-text">Situated west of the town of Antibes on the western slope of the ridge, halfway to the old fishery village of Golfe-Juan 
                     (where Napoleon landed in 1815), it had been an area with many stone pine trees (<i>pins</i> in French), where the inhabitants of Antibes used 
                     to go for a promenade, for a picnic in the shadow of the stone pine trees or to collect tree branches and cones for their stoves.</p>
@@ -58,12 +60,13 @@ function initMap() {
     };
     
     //Eden Roc marker
+    //Description by self and https://en.wikipedia.org/wiki/Hotel_du_Cap 
     let markerEdenRoc = {
         lat: 43.549169, 
         lng: 7.121597,
         title: `Hôtel du Cap Eden Roc`,
         description: `<h3 class="poi-sub-heading">Only the best...</h3>
-                    <!-- Text by self and https://en.wikipedia.org/wiki/Hotel_du_Cap -->
+                    
                     <p class="poi-text">The <i>Hôtel du Cap-Eden-Roc</i> is a resort hotel in Antibes on the French Riviera. Built in 1869 as a private mansion, 
                     it opened as a hotel in 1887.</p>
 
@@ -85,12 +88,13 @@ function initMap() {
     };
 
     //Marché d'Antibes marker
+    //Description by self and https://www.antibesjuanlespins.com/en/must-see-must-do/the-markets 
     let markerMarketAntibes = {
         lat: 43.581322, 
         lng: 7.127588,
         title: `Marché Provençal d'Antibes`,
         description: `<h3 class="poi-sub-heading">Only the most authentic produce of the region.</h3>
-                    <!-- Text by self and https://www.antibesjuanlespins.com/en/must-see-must-do/the-markets -->
+                    
                     <p class="poi-text">Every day is a warm celebration. The Provençal market sets out each morning its rich stalls, a festival of fragrances and accents, 
                     and offers an infinite diversity of fresh regional produce: delicatessen and cheese from the mountains, specialities, spices and bouquets of cut or 
                     dried flowers, the fruit of men's labour and nature's generosity.</p>
@@ -108,12 +112,13 @@ function initMap() {
     };
 
     //Port Vauban marker
+    //Description from https://en.wikipedia.org/wiki/Port_Vauban 
     let markerBillionairesQuay = {
         lat: 43.585697, 
         lng:7.129433,
         title: `Port Vauban, Antibes`,
         description: `<h3 class="poi-sub-heading">Pay your respects to Grace Kelly, Princess of Monaco.</h3>
-                    <!-- Text from https://en.wikipedia.org/wiki/Port_Vauban -->
+                    
                     <p class="poi-text"><i>Port Vauban</i> is a French yachting harbor located in Antibes on the French Riviera. Originally a natural 
                     harbour in use since before the Roman Empire, the port was fortified by Sébastien Le Prestre, Seigneur de Vauban, later Marquis de Vauban, 
                     King Louis XIV's military engineer.</p>
@@ -135,12 +140,13 @@ function initMap() {
 
 
     //Colombe d'Or marker
+    //Description from http://www.la-colombe-dor.com/history.html 
     let markerColombedOr = {
         lat: 43.698967, 
         lng: 7.121971,
         title: `Colombe d'Or Hotel`,
         description: `<h3 class="poi-sub-heading"><i>"La Provence a un trésor; c'est une Colombe d'Or"</i>: César.</h3>
-                    <!-- Text from http://www.la-colombe-dor.com/history.html -->
+                    
                     <p class="poi-text">The <i>Colombe d’Or</i> started life in 1920 as “<i>Chez Robinson</i>”, a café bar with an open air-terrace where people 
                     would dance at weekends. It soon attracted characters from the neighbourhood, which gave the idea to Paul with the support of his wife Baptistine “Titine”, 
                     to extend and reopen as the Colombe d’Or, an inn of 3 rooms. The friendly atmosphere together with Paul’s deep interest in the arts brought the 
@@ -168,12 +174,13 @@ function initMap() {
     };
 
     //Folon Chapel marker
+    //Description from http://static.apidae-tourisme.com/filestore/objets-touristiques/documents/202/131/4948938.pdf 
     let markerFolonChapel = {
         lat: 43.697077, 
         lng: 7.122446,
         title: `"Folon Chapel"`,
         description: `<h3 class="poi-sub-heading">“Creating something spiritual, trying to understand the deep meaning of a place, is a real joy”: Folon.</h3>
-                    <!-- Text from http://static.apidae-tourisme.com/filestore/objets-touristiques/documents/202/131/4948938.pdf -->
+                    
                     <p class="poi-text">Jean-Michel Folon died in 2005; decorating the <i>chapelle des Pénitents Blancs</i> was one of his last projects. Visiting this chapel, 
                     one discovers admirable works designed by the Belgian artist: a mosaic, stained glass windows, sculptures and paintings, all embellishing the walls and the 
                     ceiling of the chapel.</p>
@@ -191,12 +198,14 @@ function initMap() {
     };
 
     //Fountain marker
+    //Description from https://www.saint-pauldevence.com/en/history/ and self 
+    // Image from https://upload.wikimedia.org/wikipedia/commons/d/db/Saint_Paul_de_Vence_sa_fontaine_-_Jean-Charles_GUILLO.jpg
     let markerFontaine = {
         lat: 43.696588, 
         lng: 7.122063,
         title: `La Place de la Grande Fontaine`,
         description: `<h3 class="poi-sub-heading">""The fountain's silvery murmur plays on": Verlaine.</h3>
-                    <!-- Text from https://www.saint-pauldevence.com/en/history/ and self -->
+                    
                     <p class="poi-text">The fountain at the heart of the village fills St-Paul's medieval vaults with music.</p>
 
                     <p class="poi-text">Redesigned in the 17th and again in the 19th century, this square has always been the busiest spot in the village. From dawn until 
@@ -214,12 +223,13 @@ function initMap() {
     };
 
     //Ramparts marker
+    //Description from https://www.saint-pauldevence.com/en/fiches/monuments/town-wall-16th-c/ 
     let markerRamparts = {
         lat: 43.696088, 
         lng: 7.122934,
         title: `The Ramparts`,
         description: `<h3 class="poi-sub-heading">A mediaeval stronghold.</h3>
-                    <!-- Text from https://www.saint-pauldevence.com/en/fiches/monuments/town-wall-16th-c/ -->
+                    
                     <p class="poi-text">Saint-Paul de Vence's bastioned fortifications hug the contours of the rocky spur on which the village stands. Curtain walls and bastions 
                     were constructed on the order of François I in the 1540s, forming a one-kilometre perimeter that has undergone only slight modifications since the 16th century. 
                     They were designed by Jean de Saint-Rémy, Commander of the Artillery and an expert in fortifications. His name first cropped up in the 1530s, when François I 
@@ -241,12 +251,13 @@ function initMap() {
     };
 
     //Chagall Grave marker
+    //Description from https://www.saint-pauldevence.com/en/history/celebrities/marc-chagall-vitebsk-saint-paul-de-vence/ 
     let markerChagall = {
         lat: 43.694862, 
         lng: 7.123162,
         title: `Tomb of Marc Chagall (No. 152)`,
         description: `<h3 class="poi-sub-heading">From Vitebsk to St-Paul-de-Vence</h3>
-                    <!-- Text from https://www.saint-pauldevence.com/en/history/celebrities/marc-chagall-vitebsk-saint-paul-de-vence/ -->
+                    
                     <p class="poi-text">Marc Chagall travelled the world his whole life long. Exile and exploration took him from the banks of the Vivna to the shores of the 
                     Mediterranean, from the western wall in Jerusalem to the ramparts of Saint-Paul de Vence.</p>
 
