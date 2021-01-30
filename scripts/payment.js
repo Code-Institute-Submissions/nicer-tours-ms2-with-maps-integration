@@ -162,11 +162,12 @@ $(".btn-go-to-payment").on("click", function() {
             Tour: ${tour}
             Date: ${date}
             No. of people: ${quantity}
-            Discount Code: ${code}
             Tour Type: ${tourOption}
+        
+If you entered a DISCOUNT CODE, it will be applied directly when you click "OK".
 
-            IMPORTANT:
-            You also confirm you have read our Terms and Conditions`, yes, no);
+IMPORTANT:
+You also confirm you have read our Terms and Conditions`, yes, no);
 
         return false;
     }

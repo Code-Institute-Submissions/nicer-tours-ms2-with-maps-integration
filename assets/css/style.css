@@ -709,7 +709,7 @@ border-color: rgba(0,47,167,0.75)!important;
     width: 100%;
 }
 
-hr {
+.gray {
   border: 1px solid lightgrey;
 }
 

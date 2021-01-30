@@ -3,6 +3,7 @@ $(document).ready(function() {
     document.getElementById("no-of-pax").innerText = sessionStorage.quantity;
     document.getElementById("date-chosen").innerText = sessionStorage.date;
     document.getElementById("option-chosen").innerText = sessionStorage.tourOption;
+    document.getElementById("code-chosen").innerText = sessionStorage.code;
 
 
     // From https://stackoverflow.com/a/45173647/14773450
