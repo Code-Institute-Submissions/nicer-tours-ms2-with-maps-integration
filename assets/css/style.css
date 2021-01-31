@@ -227,7 +227,8 @@ background-color: white;
 .promotion,
 .tour-destinations,
 .tour-options,
-.tour-reviews {
+.tour-reviews,
+.create-tour {
     padding-left: 16px;
     padding-right: 16px;
     padding-top: 8px;
@@ -624,9 +625,11 @@ border-color: rgba(0,47,167,0.75)!important;
     .tour-destinations {
         order: 1;
     }
-
-    .promotion {
+    .create-tour {
         order: 2;
+    }
+    .promotion {
+        order: 3;
     }
 
     .call-to-action {

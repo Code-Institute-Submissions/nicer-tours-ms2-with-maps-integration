@@ -157,14 +157,14 @@ $(".btn-go-to-payment").on("click", function() {
         
         ask(`Clicking "ok" will send you to the payment page. Before clicking, please check these details carefully.
 
-            Name: ${personName}
-            email: ${email}
-            Telephone: ${tel}
-            Tour: ${tour}
-            Date: ${date}
-            No. of people: ${quantity}
-            Tour Type: ${tourOption}
-        
+Name: ${personName}
+email: ${email}
+Telephone: ${tel}
+Tour: ${tour}
+Date: ${date}
+No. of people: ${quantity}
+Tour Type: ${tourOption}
+
 If you entered a DISCOUNT CODE, it will be applied directly when you click "OK".
 
 IMPORTANT:

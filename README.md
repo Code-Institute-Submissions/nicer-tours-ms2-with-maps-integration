@@ -5,7 +5,7 @@
 This is the new, improved website for Nicer Tours, a company offering sightseeing tours of the South of France, particularly in the Nice area.
 
 Nicer Tours guarantee tour departures through their "Guaranteed Departure" tour option, the only tour company able to offer this. Since tours have to be 
-economically viable, many tours are cancelled during the off-season. Guaranteed departure allows the company to run a profitable organisation all year round.
+economically viable, many tours are cancelled during the off-season. Guaranteed Departure allows the company to run a profitable organisation all year round.
 
 However, the Guaranteed Departure option is not heavily promoted, because promoting a loss-leader is not a good business idea. Regular (Flexible Departures) are 
 promoted as a means to allow the customer to believe they are getting the best possible deal, since they always pay the lowest price in this option. Equally, promoting 
@@ -57,7 +57,7 @@ would like to visit.
 
         2) Orange reminds the viewer of the Mediterranean sun and is also the opposite of blue on color wheels.
 
-        3) A pure, simple white background was chosen as white represents light, another quality of which Nice and the surrounding area is famous for.
+        3) A pure, simple white background was chosen as white represents light, another quality for which Nice and the surrounding area is famous for.
 
     - #### Typography:
 
@@ -182,7 +182,7 @@ would like to visit.
             [Tablet Navigation](https://justin-sawyer.github.io/nicer-tours-ms2-with-maps-integration/documentation/user-stories-screen-shots/tour-page-info-expand-and-book-buttons-desktop.png)
 
     	2) I want to have my interest piqued while I view the website, and thus choose to make a booking for a tour.
-        	-	The user's interest is piqued, but not overwhelmed. This is achieved tin different ways, depending on the screen size the user uses:
+        	-	The user's interest is piqued, but not overwhelmed. This is achieved in different ways, depending on the screen size the user uses:
             -	On larger devices (desktops and tablets), the user is presented with a carousel of images of the destination, with a brief summary of 
             the place itself. Should the user wish to discover more within the site page, each white background description button expands to reveal more information. 
             To the left, the user can see two blue buttons, one of which is called "Book Now!" and leads the user to the booking page: 
@@ -215,7 +215,7 @@ would like to visit.
             towards the geographical confines of the map itself.
             [Location bias for map](https://justin-sawyer.github.io/nicer-tours-ms2-with-maps-integration/documentation/user-stories-screen-shots/location-bias.png)
 			- Once a specific Point of Interest has been chosen from the dropdown menu, the user is then presented with photos and reviews of the Place. Again, due to the occasional 
-            limitations of the Google Places API, ir specific details are not available - no reviews, for example - the user is told so.
+            limitations of the Google Places API, where specific details are not available - no reviews, for example - the user is told so.
             [Details missing for Google Place](https://justin-sawyer.github.io/nicer-tours-ms2-with-maps-integration/documentation/user-stories-screen-shots/place-search-no-place.png)
 			- The user can now choose, should they so wish, to add that specific Place to their itinerary. Upon doing so, the user is alerted to the fact that it has indeed been added.
             [Place added to itinerary](https://justin-sawyer.github.io/nicer-tours-ms2-with-maps-integration/documentation/user-stories-screen-shots/added-to-itinerary.png)
@@ -239,12 +239,12 @@ would like to visit.
 
     	5) I want to be able to navigate through the website easily, and be prompted where necessary to either contact the site creators (and service vendor) or make a booking 
         easily if I choose to.
-        	-	From experience with people of an elder generation, the carousel beneath the banner image is very important for ease of navigation. 
-            The developer has had feedback from numerous people of an elder generation that they still are not used to navigating through the burger icon. 
+        	-	From experience with people of an older generation, the carousel beneath the banner image is very important for ease of navigation. 
+            The developer has had feedback from numerous people of an older generation that they still are not used to navigating through the burger icon. 
             The carousels also allow for growth within the business - as new tours are developed and marketed, each carousel can be replaced with what is currently 
             the biggest seller, or most appealing tour. Accordingly, this allows for the navigation menu (whether as an icon, or as a text menu) to grow, into possible 
             subsections or destinations (for example, half day tours, full day tours, private tours, shore excursions for cruise ship passengers…)
-        	-	The buttons in the Call-to-Action on the home page allows the customer to note the offer code by pressing the Discount Code button, find out more 
+        	-	The buttons in the Call-to-Action on the home page allow the customer to note the offer code by pressing the Discount Code button, find out more 
             (directs to the tour page in question, and thus this button is absent in the tour page Call-to-Action) and make a booking from the same place: 
             [Call-to-Action buttons, tour pages](https://justin-sawyer.github.io/nicer-tours-ms2-with-maps-integration/documentation/user-stories-screen-shots/call-to-action-buttons-home-page.png)
         	-	From each tour page, should the user wish, the possibility to either contact the site creator or make a booking is clearly presented with bold blue buttons. 
@@ -335,7 +335,7 @@ would like to visit.
 
 		1. Markers and Infowindows:
 
-			The original idea for this site was to have Infowindows for each Point of interest on all screen sizes, whether mobile, tablet or desktop. However, it soon became 
+			The original idea for this site was to have Infowindows for each Point of Interest on all screen sizes, whether mobile, tablet or desktop. However, it soon became 
             clear that no matter how the map was zoomed upon first displaying online, this was not a practical solution for mobile screens: the Points of Interest being often 
             very near to each other meant that the Infowindow was more often than not blocking other markers and/or Infowindows. A prime example of this can be seen below:
 
@@ -350,7 +350,7 @@ would like to visit.
 			<img src="documentation/testing-ms2/markers-map-size.png">
 
 			However, this still only solved half of the problem. The standard size of Google Maps has a landscape styled viewport, while many of the Places of Interest featured on 
-            Nicer Tours tours were more on a North-South axis. Thus the decision was taken to vary the size of the map height both depending on the screen size and of the Points of 
+            Nicer Tours tours were more on a North-South axis. Thus the decision was taken to vary the size of the map height both depending on the screen size and on the Points of 
             Interest being highlighted. Thus, outside of the Google Maps API code, jQuery was added. The jQuery was not added for a general map view, but for each section of the 
             tour in question: Thus clicking on a certain button on the tour page will bring the map into view - that is, change its status from hidden to visible, adjust its size 
             and orientation, adjust its centre point to make the markers (and/or Infowindows) appear in the most centralised position possible for each screen size, and make sure 
@@ -445,11 +445,11 @@ would like to visit.
 
 		5. Places lacking websites:
 
-			Again, as above, it is almost always the case that a street, a square, or a village does not have a listing in the Google Places API. Thus gain the developer was left with 
-            a choice: either write code that sent the viewer to a search engine and allow the viewers to research the place themselves, or to state on the page that the place listed 
+			Again, as above, it is almost always the case that a street, a square, or a village does not have a listing in the Google Places API. Thus again the developer was left with 
+            a choice: either write code that sent the viewer to a search engine and allows the viewer to research the place themselves, or to state on the page that the place listed 
             does not have a website.
 
-			It was decided that the latter of these options was the best idea, as feedback indicated that going having a "Find Out More" button for that listing implied that there 
+			It was decided that the latter of these options was the best idea, as feedback indicated that having a "Find Out More" button for that listing implied that there 
             is a website. It was felt by the developer also that the point of the website is to keep viewers on this website rather than possibly have the viewer lose interest when 
             being directed elsewhere. Thus, where the Place of Interest does not have a website, the JSON request in the marker's key/values should not include a search for a website, 
             and that the button in the HTML code (within the JavaScript code) should be replaced with a different element. 
@@ -464,7 +464,7 @@ would like to visit.
 
 			Since there is a distinct possibility that certain places contained in Nicer Tours currently without websites may indeed have a website in the near future - the city of 
             Nice has applied for a UNESCO World Heritage Listing for the Promenade des Anglais, for example - it was decided to simply change the button element to a paragraph 
-            element without altering the classes within the element, for ease of to development when these places do eventually get their websites. However, the key/value within 
+            element without altering the classes within the element, for ease of development when these places do eventually get their websites. However, the key/value within 
             the JSON request was removed to guard against any spurious listing that might appear in the Google Places API.
 
 		6. Places lacking reviews:
