@@ -49,7 +49,7 @@ function createMap() {
 
                 <div class="col-12 order-2" id="attraction-image"></div>
 
-                <div class="col-12 order-12 buttons-and-links">
+                <div class="col-12 order-3 buttons-and-links">
                     <div class="row">
                         <div class="col-xl-4 col-sm-6 order-xl-1 order-1 more-info" style="text-align:left">
                         </div>
@@ -60,6 +60,9 @@ function createMap() {
                             <button class="btn btn-light btn-block back-to-map-button" onclick="backToMap()">Back To Map</button>
                         </div>
                     </div>
+                </div>
+                <div class="col-12 order-4">
+                    <p>Unless stated otherwise, all place images and reviews come from Google Maps.</p>
                 </div>
             </div>`;
 

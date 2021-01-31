@@ -328,7 +328,7 @@ function initMap() {
                             <h2 id="poi-title-name"></h2>
                         </div>
                         <div class="col-12 order-2" id="attraction-image"></div>
-                        <div class="col-12 order-12 buttons-and-links">
+                        <div class="col-12 order-3 buttons-and-links">
                             <div class="row">
                                 <div class="col-lg-4 col-sm-6 order-xl-1 order-1 reviews" style="text-align:left">
                                     <button class="btn btn-light btn-block reviews" onclick="seeReviews()">See Reviews</button>
@@ -339,6 +339,9 @@ function initMap() {
                                     <button class="btn btn-light btn-block back-to-map" onclick="backToMap()">Back To Map</button>
                                 </div>
                             </div>
+                        </div>
+                        <div class="col-12 order-4">
+                            <p>Unless stated otherwise, all place images and reviews come from Google Maps.</p>
                         </div>
                     </div>`;
 
