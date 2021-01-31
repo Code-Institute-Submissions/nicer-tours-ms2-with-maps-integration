@@ -117,7 +117,7 @@ function initMap() {
         lat: 43.585697, 
         lng:7.129433,
         title: `Port Vauban, Antibes`,
-        description: `<h3 class="poi-sub-heading">Pay your respects to Grace Kelly, Princess of Monaco.</h3>
+        description: `<h3 class="poi-sub-heading">The <strong><i>billionaires'</i></strong> quay.</h3>
                     
                     <p class="poi-text"><i>Port Vauban</i> is a French yachting harbor located in Antibes on the French Riviera. Originally a natural 
                     harbour in use since before the Roman Empire, the port was fortified by Sébastien Le Prestre, Seigneur de Vauban, later Marquis de Vauban, 
